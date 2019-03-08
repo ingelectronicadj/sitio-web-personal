@@ -8,6 +8,19 @@
     display: none;
   }
 
+  .ir-arriba {
+    display:none;
+    padding:30px;
+    background-repeat: no-repeat;
+    font-size:20px;
+    color:#577399;
+    cursor:pointer;
+    position: fixed;
+    bottom:20px;
+    right:20px;
+    z-index: 2;
+}
+
   @media only screen and (max-width: 768px) {
     .movil img{
       display: block;
