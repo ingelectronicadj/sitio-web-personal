@@ -21,6 +21,14 @@
     z-index: 2;
 }
 
+.flags{
+  border-radius: 40%;
+}
+
+.social{
+  text-align:center;
+}
+
   @media only screen and (max-width: 768px) {
     .movil img{
       display: block;
