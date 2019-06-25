@@ -4,7 +4,7 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-resume/blob/master/LICENSE)
  */
 
-body {
+ body {
   font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   padding-top: 54px;
   color: #868e96;
@@ -72,7 +72,7 @@ p.lead {
 }
 
 .social-icons a:hover {
-  background-color: #577399;
+  background-color: #343A40;
 }
 
 .dev-icons {
@@ -80,7 +80,7 @@ p.lead {
 }
 
 .dev-icons .list-inline-item i:hover {
-  color: #577399;
+  color: #343A40;
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
@@ -176,17 +176,17 @@ section.resume-section .resume-item .resume-date {
 }
 
 .bg-primary {
-  background-color: #577399 !important;
+  background-color: #343A40 !important;
 }
 
 .text-primary {
-  color: #577399 !important;
+  color: #rgba(255, 0, 0, 0.877) !important;
 }
 
 a {
-  color: #577399;
+  color: #343A40;
 }
 
 a:hover, a:focus, a:active {
-  color: #BDD5EA;
+  color: rgba(255, 0, 0, 0.877);
 }
