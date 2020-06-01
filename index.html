@@ -2,7 +2,6 @@
 <html lang="es">
 
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="CV Diego Mena. Electronic engineer, hacker with experience in the development of digital products, passionate about science and technology.">
@@ -19,9 +18,28 @@
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" >
     <!-- Custom styles for this template -->
     <link href="css/resume.min.css" rel="stylesheet">
+    <style>
+      @media screen and (max-width:425px) {
+        #navbar{
+          display: none;
+        }
+      }
+    </style>
   </head>
 
   <body id="page-top">
+    <!--Script para validacion freeCodeCamp-->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <header id="header">
+      <nav id="navbar">
+        <ul class="horizontal">
+          <li><a href="#experience" class="nav-link js-scroll-trigger">Experiencia</a></li>
+          <li><a href="#skills" class="nav-link js-scroll-trigger">Habilidades</a></li>
+          <li><a href="#projects" class="nav-link js-scroll-trigger">Proyectos</a></li>
+        </ul>
+      </nav>
+    </header>
+
     <!--Boton hacia arriba-->
     <a class="ir-arriba"  href="#" title="Volver arriba">
         <span class="fa-stack">
@@ -46,7 +64,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">Acerca de mí</a>
+            <a class="nav-link js-scroll-trigger" href="#welcome-section">Acerca de mí</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#experience">Experiencia</a>
@@ -68,7 +86,7 @@
     </nav>
     
     <div class="container-fluid p-0">
-      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="welcome-section">
         <div class="my-auto">
           <h1 class="mb-0">Diego
             <span class="text-primary">Mena</span>
@@ -87,7 +105,7 @@
             Investigador sobre herramientas de uso educativo digital y especialista en la ejecución de proyectos 
             orientados a Internet. </p>
           <div class="social social-icons">
-            <a href="https://github.com/diegiot" title="Github" target="_blank">
+            <a href="https://github.com/diegiot" title="Github" id="profile-link" target="_blank">
               <i class="fab fa-github"></i>
             </a>
             <a href="https://es.stackoverflow.com/users/175575/diego-javier-brown" title="Stack Overflow" target="_blank">
@@ -226,6 +244,18 @@
             <li><i class="fa-li fa fa-check"></i> Experto en Testing &amp; Debugging</li>
           </ul>
         </div>
+      </section>
+
+      <hr class="m-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
+        <div class="my-auto">
+          <h2 class="mb-5">Proyectos</h2>
+          <p class="lead mb-5">Espacio para una galería de proyectos, usa la clase project-tile</p>
+          <div class="subheading mb-3 project-tile">Sección en construcción.</div>
+          <a href="https://noticias.unad.edu.co/index.php/unad-noticias/todas/3326-conoce-la-nueva-estructura-tecnopedagogica-de-los-cursos-en-el-campus-virtual-de-la-unad" target="_blank">
+            Enlace a proyectos
+          </a>
       </section>
 
       <hr class="m-0">
