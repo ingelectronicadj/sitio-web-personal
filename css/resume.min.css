@@ -250,6 +250,16 @@ ul.horizontal {
 
 ul.horizontal li {
   float: left;
+  background-color: #fff;
+  border: 1px dotted #abc;
+}
+
+.first-nav {
+  border-radius: 0 0 0 15px;
+}
+
+.last-nav {
+  border-radius: 0 0 15px 0;
 }
 
 /*Para el toogle de contraste*/
@@ -355,6 +365,7 @@ ul.horizontal li {
 }
 
 /**Gallery*/
+
 /* Position the image container (needed to position the left and right arrows) */
 
 .container {
@@ -362,24 +373,27 @@ ul.horizontal li {
 }
 
 /* Hide the images by default */
+
 .mySlides {
   display: none;
 }
 
 /* Add a pointer when hovering over the thumbnail images */
+
 .cursor {
   cursor: pointer;
 }
 
-.first-slide{
+.first-slide {
   border-radius: 15px 0 0 15px;
 }
 
-.last-slide{
+.last-slide {
   border-radius: 0 15px 15px 0;
 }
 
 /* Next & previous buttons */
+
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -387,7 +401,7 @@ ul.horizontal li {
   width: auto;
   padding: 16px;
   margin-top: -50px;
-  color: white;
+  color: rgba(255, 0, 0, 0.877) !important;
   font-weight: bold;
   font-size: 20px;
   border-radius: 0 3px 3px 0;
@@ -397,12 +411,14 @@ ul.horizontal li {
 }
 
 /* Position the "next button" to the right */
+
 .next {
   right: 15px;
   border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
+
 .prev:hover, .next:hover {
   background-color: rgba(255, 0, 0, 0.877);
   color: #fff !important;
@@ -410,6 +426,7 @@ ul.horizontal li {
 }
 
 /* Number text (1/3 etc) */
+
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
@@ -419,6 +436,7 @@ ul.horizontal li {
 }
 
 /* Container for image text */
+
 .caption-container {
   display: flex;
   justify-content: center;
@@ -428,7 +446,7 @@ ul.horizontal li {
   color: white;
 }
 
-.caption-container p{
+.caption-container p {
   margin: 10px;
 }
 
@@ -439,15 +457,18 @@ ul.horizontal li {
 }
 
 /* Six columns side by side */
+
 .column {
   float: left;
   width: 16.66%;
 }
 
 /* Add a transparency effect for thumnbail images */
+
 .demo {
   opacity: 0.6;
 }
+
 .active, .demo:hover {
   opacity: 1;
 }
