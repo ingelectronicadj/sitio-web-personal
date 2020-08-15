@@ -254,6 +254,7 @@
           liderazgo de equipos, adaptabilidad a entornos laborales bajo presión, habilidades ejecutivas para administrar
           tareas por objetivos, capacidad para escuchar a las personas y capacidad de recuperación.</p>
         <div class="subheading mb-3">Herramientas para desarrollo de Software</div>
+        <p class="lead mb-1">Seleccione los iconos para abrir certificaciones.</p>
         <ul class="list-inline dev-icons">
           <a class="url-certificate" href="https://www.sololearn.com/Certificate/1014-9629246/pdf/"
             onclick="window.open('https://www.sololearn.com/Certificate/1014-9629246/pdf/','','location=yes,scrollbars=yes,resizable=yes,width=1000,height=700,left='+(screen.availWidth/2-500)+',top='+(screen.availHeight/2-350)+'');return false;">
@@ -328,12 +329,88 @@
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
       <div class="my-auto">
         <h2 class="mb-5">Proyectos</h2>
-        <p class="lead mb-5">Espacio para una galería de proyectos, usa la clase project-tile</p>
-        <div class="subheading mb-3 project-tile">Sección en construcción.</div>
-        <a href="https://noticias.unad.edu.co/index.php/unad-noticias/todas/3326-conoce-la-nueva-estructura-tecnopedagogica-de-los-cursos-en-el-campus-virtual-de-la-unad"
-          target="_blank">
-          Enlace a proyectos
-        </a>
+        <p class="lead mb-5">Para ver todos los proyectos consulte mi cuenta
+          <a class="text-primary" href="https://gitlab.com/ingelectronicadj" target="_blank"
+            rel="noopener noreferrer">Gitlab</a>
+          o mi cuenta
+          <a class="text-primary" href="https://github.com/ingelectronicadj" target="_blank"
+            rel="noopener noreferrer">Github</a>.
+          <br>Entre los proyectos más destacados se encuentran:
+        </p>
+      </div>
+      <div class="container">
+
+        <!-- Full-width images with number text -->
+        <div class="mySlides">
+          <div class="numbertext">1 / 6</div>
+          <img src="img/gallery/telemetria-lorawan.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 6</div>
+          <img src="img/gallery/pcb-kicad.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 6</div>
+
+          <img src="img/gallery/reproductor-lsc.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">4 / 6</div>
+          <img src="img/gallery/visor-molecules.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">5 / 6</div>
+          <img src="img/gallery/cursos-unad.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">6 / 6</div>
+          <img src="img/gallery/review-block.png" style="width:100%">
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Image text -->
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+        <!-- Thumbnail images -->
+        <div class="row">
+          <div class="column">
+            <img class="demo cursor first-slide" src="img/thumbnail/telemetria-lorawan.jpg" style="width:100%"
+              onclick="currentSlide(1)" alt="Solución IoT para temeletría usando redes LPWAN">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="img/thumbnail/pcb-kicad.jpg" style="width:100%" onclick="currentSlide(2)"
+              alt="Tarjeta Shield para control de motores por Bluetooth">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="img/thumbnail/reproductor-lsc.png" style="width:100%"
+              onclick="currentSlide(3)"
+              alt="Reproductor de videos con inteprete de lengua de señas, subtitulos, glosario y variaciones de velocidad">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="img/thumbnail/visor-molecules.jpg" style="width:100%"
+              onclick="currentSlide(4)" alt="Interfaz para visualización de estructuras moleculares">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="img/thumbnail/cursos-unad.png" style="width:100%" onclick="currentSlide(5)"
+              alt="Cursos UNAD totalmente adaptables con criterios de accesibilidad web">
+          </div>
+          <div class="column">
+            <img class="demo cursor last-slide" src="img/thumbnail/review-block.png" style="width:100%"
+              onclick="currentSlide(6)"
+              alt="Herramienta para automatizar la configuración de foros, cuestionarios, tareas y revisar funcionalidad de enlaces">
+          </div>
+        </div>
+      </div>
     </section>
 
     <hr class="m-0">
@@ -341,15 +418,13 @@
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
       <div class="my-auto">
         <h2 class="mb-5">Intereses</h2>
-        <p>Además de ser un desarrollador web, disfruto la mayor parte de mi tiempo diseñando circuitos electrónicos.
-          En mi tiempo libre disfruto de la naturaleza, salgo a hacer ejercicio, leo un buen libro y escucho música
-          (crossover).
+        <p class="lead mb-5">Además de ser un desarrollador web, disfruto la mayor parte de mi tiempo diseñando
+          circuitos electrónicos o investigando herramientas de codigo abierto, como buen entusiasta de la informática.
+          La música que utilizo para trabajar o relajarme es la música epica, clasica o metal.
           Mi color favorito es el cian y mi fruta favorita es el tamarindo.</p>
-        <p class="mb-0">Entre mis intereses se encuentran las plataformas abiertas para Internet de cosas compatibles
-          con las tecnologías LPWAN (Sigfox, LoRa y NB-IoT),
-          el software de código abierto para representación y análisis de datos en tiempo real, plataformas de datos
-          abiertas, Kicad para el diseño de impresos.
-          Circuitos e instrumentación industrial.</p>
+        <p class="lead mb-5">Entre mis intereses se encuentran las tecnologías para el Internet de cosas, el software de
+          código abierto para representación y análisis de datos en tiempo real, plataformas de datos abiertos y nuevas
+          herramientas de uso educativo digital.</p>
       </div>
     </section>
 
@@ -414,6 +489,7 @@
   <script src="js/resume.min.js"></script>
   <!--Accessibility-->
   <script src="js/accessibility.js"></script>
+  <script src="js/gallery.js"></script>
 </body>
 
 </html>

@@ -199,12 +199,13 @@ a:active, a:focus, a:hover {
   z-index: 2;
 }
 
-.flags-lang{
+.flags-lang {
   margin: 10px 3px 0px 3px;
 }
+
 .flags {
   border-radius: 30px;
-  box-shadow: 0 0 0 2px rgba(255,255,255,.1), 0 0 8px #abc;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, .1), 0 0 8px #abc;
 }
 
 .djShadow {
@@ -278,7 +279,7 @@ ul.horizontal li {
   right: 0;
   border-radius: 30px;
   -webkit-box-shadow: 0 0 0 2px #777, 0 0 4px #777;
-  box-shadow: 0 0 0 2px rgba(255,255,255,.1), 0 0 4px #abc;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, .1), 0 0 4px #abc;
   cursor: pointer;
   border: 0 solid transparent;
   overflow: hidden;
@@ -338,19 +339,117 @@ ul.horizontal li {
   background-color: #FF1F1F;
 }
 
-.btn-contrast{
+.btn-contrast {
   margin: 4px;
 }
 
 .control-high-contrast, .control-high-contrast:hover, .high-contrast, .high-contrast:hover {
   background-color: #000 !important;
   color: #fff !important;
-  border-top: 1px solid rgba(255,255,255,.1);
+  border-top: 1px solid rgba(255, 255, 255, .1);
   transition: 1s;
 }
 
-.url-certificate{
+.url-certificate {
   text-decoration: none !important;
+}
+
+/**Gallery*/
+/* Position the image container (needed to position the left and right arrows) */
+
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+.first-slide{
+  border-radius: 15px 0 0 15px;
+}
+
+.last-slide{
+  border-radius: 0 15px 15px 0;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: #fff;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 15px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(255, 0, 0, 0.877);
+  color: #fff !important;
+  transition: 0.4s;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.caption-container p{
+  margin: 10px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+.active, .demo:hover {
+  opacity: 1;
 }
 
 @media only screen and (max-width: 768px) {
@@ -374,7 +473,7 @@ ul.horizontal li {
   #navbar {
     display: none;
   }
-  .toogleContainer{
+  .toogleContainer {
     margin-top: -10px;
   }
 }
