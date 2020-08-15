@@ -349,6 +349,9 @@ ul.horizontal li {
   transition: 1s;
 }
 
+.url-certificate{
+  text-decoration: none !important;
+}
 
 @media only screen and (max-width: 768px) {
   .movil img {
