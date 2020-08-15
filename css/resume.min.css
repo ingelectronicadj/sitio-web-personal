@@ -338,6 +338,18 @@ ul.horizontal li {
   background-color: #FF1F1F;
 }
 
+.btn-contrast{
+  margin: 4px;
+}
+
+.control-high-contrast, .control-high-contrast:hover, .high-contrast, .high-contrast:hover {
+  background-color: #000 !important;
+  color: #fff !important;
+  border-top: 1px solid rgba(255,255,255,.1);
+  transition: 1s;
+}
+
+
 @media only screen and (max-width: 768px) {
   .movil img {
     display: block;
