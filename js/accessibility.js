@@ -8,14 +8,3 @@ function contrast_type(classContrast) {
     //Quita la seleccion de contraste
     $(".fa-stack,.ir-arriba,.text-primary,.flags-lang,.prev,.next,.nav-link").toggleClass(classContrast);
 }
-
-//Transicion entre paginas
-document.onreadystatechange = function() {
-    if (document.readyState !== "complete") {
-        document.querySelector("body").style.visibility = "hidden";
-        document.querySelector("#loader").style.visibility = "visible";
-    } else {
-        document.querySelector("#loader").style.display = "none";
-        document.querySelector("body").style.visibility = "visible";
-    }
-};
