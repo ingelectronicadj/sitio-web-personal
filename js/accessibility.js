@@ -8,3 +8,12 @@ function contrast_type(classContrast) {
     //Quita la seleccion de contraste
     $(".fa-stack,.ir-arriba,.text-primary,.flags-lang,.prev,.next,.nav-link").toggleClass(classContrast);
 }
+
+window.onload = function () {
+    btn_contrast = document.getElementById("checkSwitch").checked;
+    if (btn_contrast == true) {
+        contrast_type("high-contrast");
+    } else {
+        console.log("no hay bug al reload");
+    }
+}
