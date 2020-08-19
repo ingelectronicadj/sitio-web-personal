@@ -6,7 +6,7 @@ function contrast_type(classContrast) {
     $("hr").toggleClass(classContrast);
     $("nav").toggleClass(classContrast);
     //Quita la seleccion de contraste
-    $(".fa-stack,.ir-arriba,.text-primary,.flags-lang,.prev,.next,.nav-link,.navbar-toggler-icon").toggleClass(classContrast);
+    $(".fa-stack,.ir-arriba,.text-primary,.flags-lang,.prev,.next,.nav-link,.navbar-toggler-icon,#caption").toggleClass(classContrast);
 }
 
 window.onload = function () {
