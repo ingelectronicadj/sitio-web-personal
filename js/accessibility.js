@@ -6,14 +6,31 @@ function contrast_type(classContrast) {
     $("hr").toggleClass(classContrast);
     $("nav").toggleClass(classContrast);
     //Quita la seleccion de contraste
-    $(".fa-stack,.ir-arriba,.text-primary,.flags-lang,.prev,.next,.nav-link").toggleClass(classContrast);
+    $(".fa-stack,.ir-arriba,.text-primary,.flags-lang,.prev,.next,.nav-link,.navbar-toggler-icon").toggleClass(classContrast);
 }
 
 window.onload = function () {
-    btn_contrast = document.getElementById("checkSwitch").checked;
-    if (btn_contrast == true) {
+    get_contrast();
+}
+
+//LocalStorage: Guarda cadena de texto en el navegador del usuario en formato JSON {clave: valor}
+//setItem => Guarda info || getItem => Obtener info
+var status_btn_contrast = document.getElementById("checkSwitch");
+var status_contrast_localStorage = localStorage.getItem("status_contrast");
+
+function set_contrast() {
+    var status_btn_contrast = document.getElementById("checkSwitch").checked;
+    localStorage.setItem("status_contrast", status_btn_contrast);
+}
+
+function get_contrast() {
+    var status_contrast_localStorage = localStorage.getItem("status_contrast");
+    if (status_contrast_localStorage == "true") {
+        document.getElementById("checkSwitch").checked = true;
         contrast_type("high-contrast");
     } else {
-        console.log("no hay bug al reload");
+        set_contrast();
     }
 }
+
+status_btn_contrast.addEventListener("click", set_contrast);
