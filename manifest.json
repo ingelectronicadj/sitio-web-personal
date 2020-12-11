@@ -10,16 +10,6 @@
     "scope": "./",
     "lang": "Spanish; Castilian",
     "icons": [{
-            "src": "./img/pwa/icon_1024.png",
-            "sizes": "1024x1024",
-            "type": "image/png"
-        },
-        {
-            "src": "./img/pwa/icon_512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        },
-        {
             "src": "./img/pwa/icon_384.png",
             "sizes": "384x384",
             "type": "image/png"
@@ -61,5 +51,15 @@
         }
     ],
     "url": "https://diegiot.tk",
-    "screenshots": []
+    "screenshots": [{
+            "src": "./img/pwa/screenshot1.png",
+            "sizes": "1280x720",
+            "type": "image/png"
+        },
+        {
+            "src": "./img/pwa/screenshot2.png",
+            "sizes": "1280x720",
+            "type": "image/png"
+        }
+    ]
 }
