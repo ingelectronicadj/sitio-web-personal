@@ -31,7 +31,8 @@ const CACHE_NAME = 'v1_cache_CV_Diego',
         './vendor/jquery-easing/jquery.easing.min.js',
         './js/resume.min.js',
         './js/accessibility.js',
-        './js/gallery.js'
+        './js/gallery.js',
+        './en/index.html'
     ];
 
 //durante la fase de instalación, generalmente se almacena en caché los activos estáticos
