@@ -9,7 +9,6 @@
     <meta name="keywords" content="Diego Mena, Diego Javier Mena, Diego Amado, Diego Javier Mena Amado, iot developer">
 
     <title>CV Diego Mena</title>
-    <link rel="icon" type="image/png" href="img/favicon-diego.png" />
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom fonts for this template -->
@@ -21,13 +20,16 @@
     <!--<link href="css/resume.css" rel="stylesheet">-->
     <!--Iconos fa fa-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Manifest -->
+
+    <!--Progresive Web Aplication-->
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="shortcut icon" type="image/png" href="img/favicon-diego.png">
+    <link rel="apple-touch-icon" href="./img/pwa/icon_128.png">
+    <link rel="apple-touch-startup-image" href="./img/pwa/icon_384.png">
     <link rel="manifest" href="./manifest.json">
-    <!-- Service Worker -->
-    <script src="./pwaupdate.js">
-        const el = document.createElement('pwa-update');
-        document.body.appendChild(el);
-    </script>
 </head>
 
 <body id="page-top">
@@ -468,6 +470,9 @@
     <!--Accessibility-->
     <script src="js/accessibility.js"></script>
     <script src="js/gallery.js"></script>
+
+    <!-- Service Worker -->
+    <script src="./script.js"></script>
 </body>
 
 </html>

@@ -8,7 +8,7 @@
     "display": "standalone",
     "start_url": "./?utm_source=web_app_manifest",
     "scope": "./",
-    "lang": "Spanish; Castilian",
+    "lang": "es",
     "icons": [{
             "src": "./img/pwa/icon_384.png",
             "sizes": "384x384",
