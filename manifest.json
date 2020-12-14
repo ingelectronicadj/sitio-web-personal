@@ -3,7 +3,7 @@
     "short_name": "CV Diego",
     "description": "Bienvenidos a mi aplicación Web progresiva, este es mi currículo profesional",
     "background_color": "#2B2B2B",
-    "theme_color": "#ff0000",
+    "theme_color": "#2B2B2B",
     "orientation": "portrait",
     "display": "standalone",
     "start_url": "./?utm_source=web_app_manifest",
