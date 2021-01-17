@@ -244,6 +244,7 @@ a:hover {
     overflow: hidden;
     position: fixed;
     top: 0;
+    z-index: 10;
 }
 
 ul.horizontal {
@@ -370,96 +371,6 @@ ul.horizontal li {
     text-decoration: none!important;
 }
 
-.container {
-    position: relative;
-}
-
-.mySlides {
-    display: none;
-}
-
-.cursor {
-    cursor: pointer;
-}
-
-.first-slide {
-    border-radius: 15px 0 0 15px;
-}
-
-.last-slide {
-    border-radius: 0 15px 15px 0;
-}
-
-.next,
-.prev {
-    cursor: pointer;
-    position: absolute;
-    top: 40%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: rgba(255, 0, 0, .877)!important;
-    font-weight: 700;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-    background-color: #fff;
-}
-
-.next {
-    right: 15px;
-    border-radius: 3px 0 0 3px;
-}
-
-.next:hover,
-.prev:hover {
-    background-color: rgba(255, 0, 0, .877);
-    color: #fff!important;
-    transition: .4s;
-}
-
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
-.caption-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #222;
-    padding: 2px 16px;
-    color: #fff;
-}
-
-.caption-container p {
-    margin: 10px;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.column {
-    float: left;
-    width: 16.66%;
-}
-
-.demo {
-    opacity: .6;
-}
-
-.active,
-.demo:hover {
-    opacity: 1;
-}
-
 @media only screen and (max-width:768px) {
     .movil img {
         display: block;
@@ -483,14 +394,6 @@ ul.horizontal li {
     }
     .toogleContainer {
         margin-top: -10px
-    }
-    .next,
-    .prev {
-        padding: 8px;
-        font-size: 15px;
-    }
-    .caption-container p {
-        text-align: center;
     }
     .list-inline {
         text-align: center;
