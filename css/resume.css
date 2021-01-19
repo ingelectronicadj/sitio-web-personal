@@ -207,12 +207,9 @@ a:hover {
     z-index: 2;
 }
 
-.flags-lang {
-    margin: 10px 3px 0 3px;
-}
-
 .flags {
     width: 28px;
+    margin: 10px 3px 0 3px;
 }
 
 .djShadow {
