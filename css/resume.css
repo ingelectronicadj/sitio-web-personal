@@ -178,6 +178,7 @@ section.resume-section .resume-item .resume-date {
 
 .text-primary {
     color: rgba(255, 0, 0, .877)!important;
+    font-weight: bold;
 }
 
 a {
