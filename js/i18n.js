@@ -1,13 +1,12 @@
 var data = {
     es: {
-        nav_menu: ['Experiencia', 'Habilidades', 'Proyectos'],
-        vertical_menu: ['Acerca de mí', 'Experiencia', 'Educación', 'Habilidades', 'Intereses', 'Premios'],
+        nav_menu: ['Experiencia', 'Habilidades', 'Proyectos', 'Acerca de mí', 'Experiencia', 'Educación', 'Habilidades', 'Intereses', 'Premios'],
+        section: ['Experiencia', 'Educación', 'Habilidades', 'Proyectos', 'Intereses', 'Premios &amp; Reconocimientos'],
         about_me: {
             profesion: '<b>DESARROLLADOR DE </br> SOFTWARE Y HARDWARE</b> <br />Apasionado por la ciencia y las tecnologías libres. <br />E-mail: <a href="mailto:ingelectronicadj@gmail.com">ingelectronicadj@gmail.com</a> <br />Contacto: <a href="tel:3213842659">(+0571) 321 3842659</a>',
             legend: 'Ingeniero electrónico con experiencia en el desarrollo de productos digitales, apasionado por la ciencia y la tecnología. Promotor de software libre y hardware de diseño abierto. Investigador sobre herramientas de uso educativo digital y especialista en la ejecución de proyectos orientados a Internet.'
         },
         experience: {
-            title: 'Experiencia',
             jobs: [{
                     title: 'Gestor Tecnopedagógico',
                     company: 'Universidad Nacional Abierta y a Distancia - UNAD',
@@ -35,7 +34,6 @@ var data = {
             ]
         },
         education: {
-            title: 'Educación',
             studies: [{
                     title: 'Ingeniero Electrónico',
                     college: 'Universidad Distrital Francisco José de Caldas',
@@ -55,25 +53,21 @@ var data = {
             ]
         },
         skills: {
-            title: 'Habilidades',
             intro: 'Capacidad para la investigación, el autoaprendizaje, la resolución de problemas con creatividad e innovación, capacidad para escuchar a las personas y capacidad de recuperación. Facilidad de expresión oral, liderazgo de equipos, adaptabilidad a entornos laborales bajo presión, habilidades sociales y habilidades ejecutivas para administrar tareas por objetivos.',
             subtitles: ['Herramientas para desarrollo de Software', 'Herramientas para gestión de proyectos', 'Perfil Frontend'],
             text: 'Seleccione los iconos para abrir certificaciones.',
             featured: ['Diseño web completamente adaptable', 'Facilidad de trabajo con librerias en Javascript', 'Auditor con experiencia en accesibilidad web']
         },
         projects: {
-            title: 'Proyectos',
             intro: 'Entre los proyectos más destacados se encuentran:',
             legend: 'Para ver todos los proyectos consulte mi cuenta <a class="text-primary" href="https://gitlab.com/ingelectronicadj" target="_blank" rel="noopener noreferrer">Gitlab</a> o mi cuenta <a class="text-primary" href="https://github.com/ingelectronicadj" target="_blank" rel="noopener noreferrer">Github</a>.'
         },
         interests: {
-            title: 'Intereses',
             intro: 'Entre mis intereses profesionales destaco el hecho de poder innovar siempre que sea posible, claramente, sin perder de vista el ciclo de vida de los productos o servicios que se encuentren en producción. Como entusiasta de la informática desde niño, he sido dado a la investigación y el autoaprendizaje, esta fortaleza me ha llevado con el paso del tiempo a formular mejores preguntas y dar con hallazgos interesantes en tecnologías para el internet de cosas, el analisis masivo de datos, la inteligencia artificial y la automatización de procesos.',
             objective: 'Me interesa en gran medida aportar en temas de educación y a su vez disminuir la brecha digital. Considero que la educación es un pilar fundamental de la sociedad, y por ello, desde mis capacidades y experiencias aporto en la formación de formadores sobre nuevas herramientas de uso educativo digital.',
             goal: 'Desde el análisis de los objetivos de desarrollo sostenible me interesa poder contribuir a la soberanía alimentaria(hambre cero), la educación de calidad, la energía asequible y no contaminante como acción por el clima, así como la conectividad a internet como derecho fundamental. Me interesa mucho aportar significativamente a esa gran red que llamamos internet y me capacito diariamente para ser consecuente con mis intereses.'
         },
         awards: {
-            title: 'Premios &amp; Reconocimientos',
             prize: [
                 '<i class="fa-li fa fa-trophy text-warning"></i> Ponente - Premio Interamericano en Modelos Educativos Innovadores en Eduación Superior MEIN - 2020',
                 '<i class="fa-li fa fa-trophy text-warning"></i> 1 <sup>rd</sup> Lugar - AngelHack - IBM & Hurify - Proyecto IceB: party IoT whit wearables and beacons Bluetooth - 2018',
@@ -90,14 +84,13 @@ var data = {
 
     },
     en: {
-        nav_menu: ['Experience', 'Skills', 'Projects'],
-        vertical_menu: ['About me', 'Experience', 'Education', 'Skills', 'Interests', 'Awards'],
+        nav_menu: ['Experience', 'Skills', 'Projects', 'About me', 'Experience', 'Education', 'Skills', 'Interests', 'Awards'],
+        section: ['Experience', 'Education', 'Skills', 'Projects', 'Interests', 'Awards &amp; Acknowledgments'],
         about_me: {
             profesion: '<b> DEVELOPER OF </br> SOFTWARE AND HARDWARE </b> <br /> Passionate about science and free technologies. <br /> E-mail: <a href="mailto:ingelectronicadj@gmail.com"> ingelectronicadj@gmail.com </a> <br /> Contact: <a href="tel:3213842659"> (+0571 ) 321 3842659 </a>',
             legend: 'Electronic engineer with experience in the development of digital products, passionate about science and technology. Promoter of free software and open design hardware. Researcher on tools for digital educational use and specialist in the execution of Internet-oriented projects.'
         },
         experience: {
-            title: 'Experience',
             jobs: [{
                     title: 'Techno-pedagogical Auditor',
                     company: 'National University - UNAD',
@@ -125,7 +118,6 @@ var data = {
             ]
         },
         education: {
-            title: 'Education',
             studies: [{
                     title: 'Electronic Engineer',
                     college: 'District University FJC',
@@ -145,25 +137,21 @@ var data = {
             ]
         },
         skills: {
-            title: 'Skills',
             intro: 'Capacity for research, self-learning, creative and innovative problem solving, ability to listen to people and resilience. Ease of oral expression, team leadership, adaptability to work environments under pressure, social skills and executive skills to manage tasks by objectives. ',
             subtitles: ['Software development tools', 'Project management tools', 'Frontend profile'],
             text: 'Select the icons to open certifications.',
             featured: ['Fully adaptable web design', 'Ease of working with Javascript libraries', 'Auditor with experience in web accessibility']
         },
         projects: {
-            title: 'Projects',
             intro: 'Among the most outstanding projects are:',
             legend: 'To see all the projects check my account <a class="text-primary" href="https://gitlab.com/ingelectronicadj" target="_blank" rel="noopener noreferrer"> Gitlab </a> or my account <a class="text-primary" href="https://github.com/ingelectronicadj" target="_blank" rel="noopener noreferrer"> Github </a>. '
         },
         interests: {
-            title: 'Interests',
             intro: 'Among my professional interests I highlight the fact of being able to innovate whenever possible, clearly, without losing sight of the life cycle of the products or services that are in production. As a computer enthusiast since I was a child, I have been given to research and self-learning, this strength has led me over time to ask better questions and come up with interesting findings in technologies for the internet of things, the massive data analysis , artificial intelligence and process automation. ',
             objective: 'I am very interested in contributing to education issues and at the same time reducing the digital divide. I consider that education is a fundamental pillar of society, and therefore, from my capacities and experiences, I contribute in the training of trainers on new tools for digital educational use. ',
             goal: 'From the analysis of the sustainable development goals, I am interested in being able to contribute to food sovereignty (zero hunger), quality education, affordable and non-polluting energy as an action for climate, as well as internet connectivity as a right fundamental. I am very interested in contributing significantly to that great network that we call the Internet and I train myself daily to be consistent with my interests. '
         },
         awards: {
-            title: 'Awards & amp; Acknowledgments',
             prize: [
                 '<i class = "fa-li fa fa-trophy text-warning"> </i> Speaker - Inter-American Award for Innovative Educational Models in Higher Education MEIN - 2020',
                 '<i class = "fa-li fa fa-trophy text-warning"> </i> 1 <sup> rd </sup> Place - AngelHack - IBM & Hurify - Project IceB: party IoT whit wearables and beacons Bluetooth - 2018 ',
@@ -179,17 +167,17 @@ var data = {
     }
 }
 
-function changeLang(type) {
-    switch (type) {
-        case 'es':
+function addTextFor(element, text) {
+    for (let i = 0; i <= element.length; i++) {
+        var tomelo = document.getElementsByClassName(element);
+        tomelo[i].innerHTML = text[i];
 
-            break;
-
-        case 'en':
-
-            break;
-
-        default:
-            break;
     }
+}
+
+function changeLang(lang) {
+    addTextFor('nav-link', data[lang].nav_menu);
+    addTextFor('award', data[lang].awards.prize);
+    addTextFor('title-section', data[lang].section);
+
 }

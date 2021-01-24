@@ -162,6 +162,7 @@ section.resume-section .resume-item .resume-date {
     }
     section.resume-section .resume-item .resume-date {
         min-width: 18rem;
+        margin-right: 10%;
     }
 }
 
@@ -177,7 +178,8 @@ section.resume-section .resume-item .resume-date {
 }
 
 .text-primary {
-    color: rgba(255, 0, 0, .877)!important;
+    color: #343a40 !important;
+    font-weight: bold;
 }
 
 a {
