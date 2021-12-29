@@ -286,7 +286,7 @@ ul.horizontal li {
     top: -10px;
 }
 
-.switch .slider {
+.switch .sliderContrast {
     position: absolute;
     top: 0;
     left: 0;
@@ -311,29 +311,29 @@ ul.horizontal li {
     align-items: center;
 }
 
-.switch .slider i {
+.switch .sliderContrast i {
     z-index: 10;
     opacity: 1;
     position: relative;
 }
 
-.switch .slider i:before {
+.switch .sliderContrast i:before {
     font-size: 16px;
     position: absolute;
     color: #fff;
 }
 
-.switch .slider .icon-moon {
+.switch .sliderContrast .icon-moon {
     top: -8px;
     right: 6px;
 }
 
-.switch .slider .icon-sun {
+.switch .sliderContrast .icon-sun {
     top: -8px;
     right: 8px;
 }
 
-.switch .slider:before {
+.switch .sliderContrast:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -348,7 +348,7 @@ ul.horizontal li {
     opacity: .7;
 }
 
-.switch input:checked+.slider:before {
+.switch input:checked+.sliderContrast:before {
     -webkit-transform: translateX(30px);
     transform: translateX(30px);
     background-color: #ff1f1f;
