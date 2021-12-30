@@ -168,6 +168,7 @@
     width: 900px;
     height: 480px;
     overflow: hidden;
+    border: 2px solid #000;
 }
 
 .slider__thumb {
