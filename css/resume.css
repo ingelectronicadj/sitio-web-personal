@@ -103,7 +103,8 @@ p.lead {
         -ms-flex-direction: column;
         flex-direction: column;
         width: 17rem;
-        height: 100vh
+        height: 100vh;
+        border-right: 1px solid #F9FAFB;
     }
     #sideNav .navbar-brand {
         display: -webkit-box;
@@ -363,7 +364,6 @@ ul.horizontal li {
 .high-contrast:hover {
     background-color: #000!important;
     color: #fff!important;
-    border-top: 1px solid rgba(255, 255, 255, .1);
     transition: 1s;
 }
 
