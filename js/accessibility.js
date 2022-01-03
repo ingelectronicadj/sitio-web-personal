@@ -9,7 +9,7 @@ function contrast_type(classContrast) {
     $(".fa-stack,.ir-arriba,.text-primary,.flags-lang,.prev,.next,.nav-link,.navbar-toggler-icon,#caption").toggleClass(classContrast);
 }
 
-window.onload = function () {
+window.onload = function() {
     get_contrast();
 }
 

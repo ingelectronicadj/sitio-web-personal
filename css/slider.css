@@ -139,7 +139,9 @@
     height: 480px;
     overflow: hidden;
     visibility: hidden;
-    background-color: #24262e;
+    background-color: #343A40;
+    border: 6px double #FFF;
+    box-shadow: 0 0 0 1px #fff, inset 0 0 0 1px #fff;
 }
 
 .slider__loading {
@@ -168,7 +170,6 @@
     width: 900px;
     height: 480px;
     overflow: hidden;
-    border: 2px solid #000;
 }
 
 .slider__thumb {
