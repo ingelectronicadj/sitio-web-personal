@@ -203,7 +203,7 @@ a:hover {
     color: #343a40;
     cursor: pointer;
     position: fixed;
-    bottom: 20px;
+    bottom: 40px;
     right: 20px;
     z-index: 2;
 }
@@ -239,6 +239,7 @@ a:hover {
 }
 
 #navbar {
+    background-color: transparent !important;
     display: flex;
     justify-content: center;
     width: 100%;
