@@ -203,7 +203,7 @@ a:hover {
     color: #343a40;
     cursor: pointer;
     position: fixed;
-    bottom: 40px;
+    bottom: 20px;
     right: 20px;
     z-index: 2;
 }
@@ -391,12 +391,19 @@ ul.horizontal li {
 
 @media screen and (max-width:425px) {
     #navbar {
-        display: none
+        display: none;
+    }
+    .navbar {
+        padding: .5rem 1rem .5rem 0;
     }
     .toogleContainer {
         margin-top: -10px
     }
     .list-inline {
         text-align: center;
+    }
+    .ir-arriba {
+        bottom: 50px;
+        right: 10px;
     }
 }
