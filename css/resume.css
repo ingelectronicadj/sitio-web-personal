@@ -274,7 +274,6 @@ ul.horizontal li {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
 }
 
 .switch {
@@ -390,7 +389,7 @@ ul.horizontal li {
     }
 }
 
-@media screen and (max-width:425px) {
+@media screen and (max-width:768px) {
     #navbar {
         display: none;
     }
@@ -403,6 +402,7 @@ ul.horizontal li {
     }
     .toogleContainer {
         align-items: flex-start;
+        margin: auto;
     }
     .switch {
         top: -14px;
