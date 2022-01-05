@@ -10,7 +10,9 @@
 
     <title>CV Diego Mena</title>
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <!-- Custom fonts for this template -->
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="preload" as="style" onload="this.rel='stylesheet'">
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="preload" as="style" onload="this.rel='stylesheet'">
@@ -75,13 +77,13 @@
             </a>
         </span>
         <div class="toogleContainer" data-aos="zoom-in-left" data-aos-delay="150">
-            <label id="switchTheme" class="switch" for="checkSwitch">
-            <input id="checkSwitch" type="checkbox" class="btn-contrast" onclick='contrast_type("high-contrast")'>
-            <div class="sliderContrast">
-                <i class="fa fa-sun-o icon-sun"></i>
-                <i class="fa fa-moon-o icon-moon"></i>
-            </div>
-        </label>
+            <label id="switchTheme" class="switch">
+                <input id="checkSwitch" type="checkbox" class="btn-contrast" onclick='contrast_type("high-contrast")'>
+                <div class="sliderContrast">
+                    <i title="Sin contraste" class="fa fa-sun-o icon-sun"></i>
+                    <i title="Alto contraste" class="fa fa-moon-o icon-moon"></i>
+                </div>
+            </label>
             <a class="flags-lang" title="Español" href="#">
                 <img class="flags" src="img/colombia.webp" alt="Español" />
             </a>
@@ -599,7 +601,8 @@
 
     <!-- Bootstrap core JavaScript -->
     <script src="./vendor/jquery/jquery.min.js"></script>
-    <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!--<script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <!-- Plugin JavaScript -->
     <script src="./vendor/jquery-easing/jquery.easing.min.js"></script>

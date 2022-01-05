@@ -375,7 +375,7 @@ ul.horizontal li {
 @media only screen and (max-width:768px) {
     .movil img {
         display: block;
-        width: 50%;
+        width: 45%;
         margin: auto;
     }
     h1 {
