@@ -1,0 +1,13 @@
+Para descargar subtitulos del siguiente video de youtube https://youtu.be/54SHb1EL1e8
+
+1. Agrega subtitle.to/ antes de la URL y presione enter, ejemplo: 
+https://subtitle.to/youtu.be/54SHb1EL1e8
+
+2. Descargue los archivos .srt de los idiomas que desea
+
+3. Se necesita convertir los archivos .srt a .vtt ingresando al sitio: 
+http://www.3playmedia.com/services-features/tools/captions-format-converter/
+
+4. Copie y pegue el contenido del archivo a convertir y presione el boton "Convert my file"
+
+5. Al descargarse el archivo convertido, asigne un nombre corto y almacene para su uso.

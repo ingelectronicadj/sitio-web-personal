@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Audio Simulador</title>
+    <!-- Able Player CSS -->
+    <link rel="stylesheet" href="./css/ableplayer.min.css" type="text/css" />
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <audio id="audio1" width="480" preload="auto" data-able-player data-skin="2020">
+            <source type="audio/mpeg" src="./audio/frenchsong.mp3"/>
+            <source type="audio/ogg" src="./audio/frenchsong.ogg"/>
+        </audio>
+    </div>
+
+    <div class="container">
+        <audio id="audio2" width="480" preload="auto" data-able-player data-skin="2020" loop></audio>
+
+        <ul class="able-playlist" data-player="audio2" data-embedded>
+            <li data-poster="something.jpg">
+                <span class="able-source" data-type="audio/mpeg" data-src="./audio/paulallen.mp3"></span>
+                <span class="able-source" data-type="audio/ogg" data-src="./audio/paulallen.ogg"></span>
+                <button>The Paul Allen Song</button>
+            </li>
+            <li>
+                <span class="able-source" data-type="audio/mpeg" data-src="./audio/php70alpha.mp3"></span>
+                <span class="able-source" data-type="audio/ogg" data-src="./audio/php70alpha.ogg"></span>
+                <button>PHP 7.0 Alpha</button>
+            </li>
+            <li>
+                <span class="able-source" data-type="audio/mpeg" data-src="./audio/frenchsong.mp3"></span>
+                <span class="able-source" data-type="audio/ogg" data-src="./audio/frenchsong.ogg"></span>
+                <button lang="fr">Une Chanson Française</button>
+            </li>
+            <li>
+                <span class="able-source" data-type="audio/mpeg" data-src="./audio/everyday.mp3"></span>
+                <span class="able-source" data-type="audio/ogg" data-src="./audio/everyday.ogg"></span>
+                <button>Every Day</button>
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- Dependencias -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./js/js.cookie.js"></script>
+    <!-- Able Player JavaScript -->
+    <script src="./js/ableplayer.min.js"></script>
+
+</body>
+
+</html>
