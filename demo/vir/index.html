@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Video Simulador</title>
+    <!-- Able Player CSS -->
+    <link rel="stylesheet" href="./css/ableplayer.min.css" type="text/css" />
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <video id="video1" preload="auto" width="800" data-able-player data-skin="2020" playsinline>
+            <source type="video/webm" src="videos/wwa.webm" data-sign-src="videos/wwa_sign.webm" data-sign-es-src="videos/wwa_sign.webm"  data-aspect-ratio="4:3" srclang="es" label="Español"/>  
+                <track kind="subtitles" src="sub/english.vtt" srclang="en" label="English"/>
+                <track kind="subtitles" src="sub/italian.vtt" srclang="it" label="Italiano"/>
+                <track kind="subtitles" src="sub/spanish.vtt" srclang="es" label="Español"/>
+                <track kind="subtitles" src="sub/catalan.vtt" srclang="ca" label="Catalá"/>
+        </video>
+    </div>
+
+    <!-- Dependencias -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./js/js.cookie.js"></script>
+    <!-- Able Player JavaScript -->
+    <script src="./js/ableplayer.min.js"></script>
+
+</body>
+
+</html>

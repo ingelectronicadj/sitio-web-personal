@@ -38,7 +38,6 @@ h3 {
 }
 
 p.lead {
-    text-align: justify;
     font-size: 1.15rem;
     font-weight: 400
 }
@@ -104,7 +103,8 @@ p.lead {
         -ms-flex-direction: column;
         flex-direction: column;
         width: 17rem;
-        height: 100vh
+        height: 100vh;
+        border-right: 1px solid #F9FAFB;
     }
     #sideNav .navbar-brand {
         display: -webkit-box;
@@ -178,7 +178,7 @@ section.resume-section .resume-item .resume-date {
 }
 
 .text-primary {
-    color: #343a40 !important;
+    color: rgba(255, 0, 0, .877)!important;
     font-weight: bold;
 }
 
@@ -237,6 +237,7 @@ a:hover {
 }
 
 #navbar {
+    background-color: transparent !important;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -284,7 +285,7 @@ ul.horizontal li {
     top: -10px;
 }
 
-.switch .slider {
+.switch .sliderContrast {
     position: absolute;
     top: 0;
     left: 0;
@@ -309,29 +310,29 @@ ul.horizontal li {
     align-items: center;
 }
 
-.switch .slider i {
+.switch .sliderContrast i {
     z-index: 10;
     opacity: 1;
     position: relative;
 }
 
-.switch .slider i:before {
+.switch .sliderContrast i:before {
     font-size: 16px;
     position: absolute;
     color: #fff;
 }
 
-.switch .slider .icon-moon {
+.switch .sliderContrast .icon-moon {
     top: -8px;
     right: 6px;
 }
 
-.switch .slider .icon-sun {
+.switch .sliderContrast .icon-sun {
     top: -8px;
     right: 8px;
 }
 
-.switch .slider:before {
+.switch .sliderContrast:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -346,7 +347,7 @@ ul.horizontal li {
     opacity: .7;
 }
 
-.switch input:checked+.slider:before {
+.switch input:checked+.sliderContrast:before {
     -webkit-transform: translateX(30px);
     transform: translateX(30px);
     background-color: #ff1f1f;
@@ -362,7 +363,6 @@ ul.horizontal li {
 .high-contrast:hover {
     background-color: #000!important;
     color: #fff!important;
-    border-top: 1px solid rgba(255, 255, 255, .1);
     transition: 1s;
 }
 
@@ -373,7 +373,7 @@ ul.horizontal li {
 @media only screen and (max-width:768px) {
     .movil img {
         display: block;
-        width: 50%;
+        width: 45%;
         margin: auto;
     }
     h1 {
@@ -387,14 +387,22 @@ ul.horizontal li {
     }
 }
 
-@media screen and (max-width:425px) {
+@media screen and (max-width:768px) {
     #navbar {
-        display: none
-    }
-    .toogleContainer {
-        margin-top: -10px
+        display: none;
     }
     .list-inline {
         text-align: center;
+    }
+    .ir-arriba {
+        bottom: 50px;
+        right: 10px;
+    }
+    .toogleContainer {
+        align-items: flex-start;
+        margin: auto;
+    }
+    .switch {
+        top: -14px;
     }
 }
