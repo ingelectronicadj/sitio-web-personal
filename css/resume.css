@@ -162,6 +162,7 @@ section.resume-section .resume-item .resume-date {
     }
     section.resume-section .resume-item .resume-date {
         min-width: 18rem;
+        margin-right: 10%;
     }
 }
 
@@ -208,12 +209,9 @@ a:hover {
     z-index: 2;
 }
 
-.flags-lang {
-    margin: 10px 3px 0 3px;
-}
-
 .flags {
     width: 28px;
+    margin: 10px 3px 0 3px;
 }
 
 .djShadow {
