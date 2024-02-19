@@ -9,12 +9,6 @@ function contrast_type(classContrast) {
     $(".fa-stack,.ir-arriba,.text-primary,.flags-lang,.prev,.next,.nav-link,.navbar-toggler-icon,#caption").toggleClass(classContrast);
 }
 
-window.onload = function() {
-    get_contrast();
-}
-
-//LocalStorage: Guarda cadena de texto en el navegador del usuario en formato JSON {clave: valor}
-//setItem => Guarda info || getItem => Obtener info
 var status_btn_contrast = document.getElementById("checkSwitch");
 var status_contrast_localStorage = localStorage.getItem("status_contrast");
 
@@ -34,3 +28,26 @@ function get_contrast() {
 }
 
 status_btn_contrast.addEventListener("click", set_contrast);
+
+function handleClickFocus(event) {
+    event.preventDefault(); // Evitar la acción predeterminada del enlace
+
+    const targetId = this.getAttribute('href'); // Obtener el ID del destino
+
+    const targetElement = document.querySelector(targetId); // Seleccionar el elemento destino
+
+    if (targetElement) {
+        targetElement.tabIndex = -1; // Establecer el índice de tabulación para permitir el enfoque
+        targetElement.focus(); // Enfocar el elemento destino
+        targetElement.removeAttribute('tabindex'); // Eliminar el índice de tabulación después del enfoque
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    get_contrast();
+
+    const menuLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', handleClickFocus);
+    });
+});
