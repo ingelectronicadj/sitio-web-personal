@@ -99,6 +99,12 @@ p.lead {
     color: #e11414
 }
 
+.slick-next:focus .slick-next-icon, .slick-next:focus .slick-prev-icon, .slick-prev:focus .slick-next-icon, .slick-prev:focus .slick-prev-icon,
+.slick-dots li button:focus .slick-dot-icon:before,
+.slick-autoplay-toggle-button:focus, .slick-autoplay-toggle-button:hover{
+    color: #e11414 !important;
+}
+
 #sideNav .navbar-nav .nav-item .nav-link {
     font-weight: 800;
     letter-spacing: .05rem;
