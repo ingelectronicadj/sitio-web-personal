@@ -22,6 +22,10 @@ body {
     margin: auto;
 }
 
+.thumbnail {
+    padding: 0 5px;
+}
+
 .navbar-dark .navbar-nav .nav-link { 
     color: rgba(255,255,255,.7);
 }
@@ -48,7 +52,7 @@ h2 {
 }
 
 h3 {
-    font-size: 2rem
+    font-size: 1.5rem
 }
 
 p.lead {
@@ -67,7 +71,7 @@ p.lead {
     display: inline-block;
     height: 3.5rem;
     width: 3.5rem;
-    background-color: #343a40;
+    background-color: #343a40 !important;
     color: #fff!important;
     border-radius: 100%;
     text-align: center;
