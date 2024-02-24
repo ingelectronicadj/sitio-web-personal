@@ -12,6 +12,7 @@ body {
     border-radius: 5px;
 }
 
+/******Slick Slider*******/
 .img-responsive {
     max-width: 100%;
     height: auto;
@@ -26,6 +27,36 @@ body {
     padding: 0 5px;
 }
 
+/******Skip navigation*******/
+
+.skip-main {
+    height: 1px;
+    left: -999px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px;
+    z-index: -999;
+}
+
+.skip-main:focus,
+.skip-main:active {
+    border-radius: 15px;
+    border: 4px solid #e11414;
+    background-color: #343A40;
+    color: #fff;
+    height: auto;
+    font-size: 1.2em;
+    left: auto;
+    margin: 10px 3%;
+    overflow: auto;
+    padding: 5px;
+    text-align: center;
+    top: auto;
+    width: 28%;
+    z-index: 999;
+}
+/*************/
 .navbar-dark .navbar-nav .nav-link { 
     color: rgba(255,255,255,.7);
 }
