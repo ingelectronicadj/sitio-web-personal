@@ -1,5 +1,6 @@
 var data = {
     es: {
+        buttons:['Saltar al contenido principal','Menu hamburguesa de navagación','Volver arriba'],
         nav_menu: ['Experiencia', 'Habilidades', 'Proyectos', 'Acerca de mí', 'Experiencia', 'Educación', 'Habilidades', 'Intereses', 'Premios'],
         section: ['Experiencia', 'Educación', 'Habilidades', 'Proyectos', 'Intereses', 'Premios &amp; Reconocimientos'],
         about_me: {
@@ -84,6 +85,7 @@ var data = {
 
     },
     en: {
+        buttons:['Skip to main content','Toggle navigation','Back to top'],
         nav_menu: ['Experience', 'Skills', 'Projects', 'About me', 'Experience', 'Education', 'Skills', 'Interests', 'Awards'],
         section: ['Experience', 'Education', 'Skills', 'Projects', 'Interests', 'Awards &amp; Acknowledgments'],
         about_me: {
