@@ -1,3 +1,50 @@
+var langWords = {
+    select: function(word, language = null) {
+        languageSelected = 0;
+        var wordToSelect = null;
+
+        if (!language) {
+            language = document.documentElement.lang;
+        }
+
+        switch (language) {
+            case 'es':
+            case 'es-co':
+                languageSelected = 0;
+                break;
+            case 'en':
+            case 'en-us':
+                languageSelected = 1;
+                break;
+           /*case 'fr':
+                languageSelected = 2;
+                break;
+            */
+            default:
+                languageSelected = 1;
+                break;
+        }
+
+        //español, inglés, frances
+
+        words = {
+            'skip-to-main-content': ['Saltar al contenido principal', 'Skip to main content'],
+            
+        }
+
+        try {
+            wordToSelect = words[word][languageSelected];
+        } catch (error) {
+            //console.log('No se ha encontrado la palabra ( ' + word + ' ) para el idioma: ( ' + language + " ). Se carga palabra ( X-X-X-X-X-X-X ) ");
+            wordToSelect = 'X-X-X-X-X-X-X';
+        }
+
+        return wordToSelect;
+    }
+
+}
+
+
 // Saltar al contenido principal
 
 // Experiencia
