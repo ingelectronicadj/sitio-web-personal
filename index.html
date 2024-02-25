@@ -60,15 +60,7 @@
         </nav>
     </header>
 
-    <!--Boton hacia arriba-->
-    <a class="ir-arriba" href="#" title="Volver arriba" role="button">
-        <span class="fa-stack">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
-        </span>
-    </a>
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <div class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
         <span class="navbar-brand d-none d-lg-block">
             <a class="js-scroll-trigger" href="#page-top">
                 <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="./img/diego_javier_mena.jpg"
@@ -76,24 +68,24 @@
             </a>
         </span>
         <div class="toogleContainer" data-aos="fade-right" data-aos-delay="150">
-            <label id="switchTheme" class="switch">
+            <label id="switchTheme" class="switch" aria-label="Modo oscuro">
                 <input id="checkSwitch" type="checkbox" class="btn-contrast" onclick='contrast_type("high-contrast")'>
                 <div class="sliderContrast">
                     <i title="Sin contraste" class="fa fa-sun-o icon-sun"></i>
                     <i title="Alto contraste" class="fa fa-moon-o icon-moon"></i>
                 </div>
             </label>
-            <a class="flags-lang" title="Español" href="#">
+            <a class="flags-lang" title="Traducir sitio al Español" href="#">
                 <img class="flags" src="./img/colombia.webp" alt="Español" />
             </a>
-            <a class="flags-lang" title="English" href="#" onclick="alerts.typeWarning('Multilenguaje en desarrollo', 'Funcionalidad i18n en desarrollo, vuelva más tarde');">
-                <img class="flags" src="./img/usa.webp" alt="Ingles" />
+            <a class="flags-lang" title="Traducir sitio al Inglés" href="#" onclick="alerts.typeWarning('Multilenguaje en desarrollo', 'Funcionalidad i18n en desarrollo, vuelva más tarde');">
+                <img class="flags" src="./img/usa.webp" alt="Inglés" />
             </a>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <nav class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item" data-aos="fade-right" data-aos-delay="150">
                     <a class="nav-link js-scroll-trigger" href="#welcome-section">Acerca de mí</a>
@@ -114,8 +106,8 @@
                     <a class="nav-link js-scroll-trigger" href="#awards">Eventos</a>
                 </li>
             </ul>
-        </div>
-    </nav>
+        </nav>
+    </div>
 <main>
     <section class="resume-section p-3 p-lg-5 d-flex d-column" id="welcome-section">
         <div class="my-auto">
@@ -129,24 +121,24 @@
                 <!-- Usar estilo subheading -->
                 <p><b>DESARROLLADOR DE </br> SOFTWARE Y HARDWARE</b>
                     <br />Apasionado por la ciencia y las tecnologías libres.
-                    <br />E-mail: <a href="mailto:ingelectronicadj@gmail.com">ingelectronicadj@gmail.com</a>
-                    <br />Contacto: <a href="tel:3059395154">(+0571) 305 9395154</a>
+                    <br />E-mail: <a href="mailto:ingelectronicadj@gmail.com" aria-label="Correo personal: ingelectronicadj@gmail.com">ingelectronicadj@gmail.com</a>
+                    <br />Contacto: <a href="tel:3059395154" aria-label="Telefono con codigo de país +571, número 3059395154">(+0571) 305 9395154</a>
                     <br /><i class="fas fa-download"></i>
                     <a href="./docs/Hoja_de_Vida.pdf" class="link-new-window"> Hoja de vida en PDF</a>
                 </p>
             </div>
             <p class="lead mb-4" data-aos="fade-right" data-aos-delay="500" data-aos-anchor-placement="top-bottom">Ingeniero electrónico, especialista en gestión de proyectos, con más de 7 años de experiencia en el desarrollo de productos digitales accesibles (Software y Hardware). Encargado de diseñar y desarrollar soluciones tecnológicas efectivas y accesibles para garantizar que la innovación beneficie a todas las personas, sin importar sus capacidades.</p>
             <div class="social social-icons">
-                <a href="https://www.linkedin.com/in/ingelectronicadj/" title="Linkedin" target="_blank" rel="noopener noreferrer" data-aos="zoom-in-down" data-aos-delay="600" data-aos-anchor-placement="top-bottom">
+                <a href="https://www.linkedin.com/in/ingelectronicadj/" title="Red profesional Linkedin" target="_blank" rel="noopener noreferrer" data-aos="zoom-in-down" data-aos-delay="600" data-aos-anchor-placement="top-bottom">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="https://github.com/ingelectronicadj" title="Github" id="profile-link" target="_blank" rel="noopener noreferrer" data-aos="zoom-in-down" data-aos="zoom-in-down" data-aos-delay="700" data-aos-anchor-placement="top-bottom">
+                <a href="https://github.com/ingelectronicadj" title="Repositorios Github" id="profile-link" target="_blank" rel="noopener noreferrer" data-aos="zoom-in-down" data-aos="zoom-in-down" data-aos-delay="700" data-aos-anchor-placement="top-bottom">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://gitlab.com/ingelectronicadj" title="Gitlab" target="_blank" rel="noopener noreferrer" data-aos="zoom-in-down" data-aos-delay="800" data-aos-anchor-placement="top-bottom">
+                <a href="https://gitlab.com/ingelectronicadj" title="Repositorios Gitlab" target="_blank" rel="noopener noreferrer" data-aos="zoom-in-down" data-aos-delay="800" data-aos-anchor-placement="top-bottom">
                     <i class="fab fa-gitlab"></i>
                 </a>
-                <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000067902" title="CvLac" target="_blank" rel="noopener noreferrer" data-aos="zoom-in-down" data-aos-delay="900" data-aos-anchor-placement="top-bottom">
+                <a href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000067902" title="Perfil en CvLac" target="_blank" rel="noopener noreferrer" data-aos="zoom-in-down" data-aos-delay="900" data-aos-anchor-placement="top-bottom">
                     <i class="fas fa-book-reader"></i>
                 </a>
             </div>
@@ -261,19 +253,19 @@
             <div class="subheading mb-3" data-aos="fade-right">Perfil Desarrollador Frontend</div>
             <ul class="fa-ul mb-0" data-aos="fade-right">
                 <li><i class="fa-li fa fa-check"></i> Especialista en Accesibilidad Web -
-                    <a class="text-primary link-new-window" href="https://platzi.com/p/ingelectronicadj/learning-path/8962-web-accesibilidad/diploma/detalle/">Certificado</a>
+                    <a class="text-primary link-new-window" href="https://platzi.com/p/ingelectronicadj/learning-path/8962-web-accesibilidad/diploma/detalle/" aria-label="Certificado de Especialista en Accesibilidad Web">Certificado</a>
                 </li>
                 <li><i class="fa-li fa fa-check"></i> Especialista en Soporte de TI -
-                    <a class="text-primary link-new-window" href="https://www.credly.com/badges/b2c193b8-3b05-44ce-b5ae-f2c3c4989a5a">Certificado</a>
+                    <a class="text-primary link-new-window" href="https://www.credly.com/badges/b2c193b8-3b05-44ce-b5ae-f2c3c4989a5a" aria-label="Certificado de Especialista en Soporte de TI">Certificado</a>
                 </li>
                 <li><i class="fa-li fa fa-check"></i> Especialista en Diseño Web Responsive -
-                    <a class="text-primary link-new-window" href="https://www.freecodecamp.org/certification/ingelectronicadj/responsive-web-design">Certificado</a>
+                    <a class="text-primary link-new-window" href="https://www.freecodecamp.org/certification/ingelectronicadj/responsive-web-design" aria-label="Certificado de Especialista en Diseño Web Responsive">Certificado</a>
                 </li>
                 <li><i class="fa-li fa fa-check"></i> Nivel de Javascript Avanzado -
-                    <a class="text-primary link-new-window" href="https://www.freecodecamp.org/certification/ingelectronicadj/javascript-algorithms-and-data-structures">Certificado</a>
+                    <a class="text-primary link-new-window" href="https://www.freecodecamp.org/certification/ingelectronicadj/javascript-algorithms-and-data-structures" aria-label="Certificado de Javascript Avanzado">Certificado</a>
                 </li>
                 <li><i class="fa-li fa fa-check"></i> Especialista en Optimización web -
-                    <a class="text-primary link-new-window" href="https://platzi.com/p/ingelectronicadj/course/1973-web-performance/diploma/detalle/">Certificado</a>
+                    <a class="text-primary link-new-window" href="https://platzi.com/p/ingelectronicadj/course/1973-web-performance/diploma/detalle/" aria-label="Certificado de Especialista en Optimización web">Certificado</a>
                 </li>
             </ul>
         </div>
@@ -283,8 +275,8 @@
         <div class="my-auto" data-aos="fade-right">
             <h2 class="mb-2">Proyectos</h2>
             <p class="lead">Para ver todos los proyectos consulte mi cuenta
-                <a class="text-primary" href="https://gitlab.com/ingelectronicadj" target="_blank" rel="noopener noreferrer">Gitlab</a> o mi cuenta
-                <a class="text-primary" href="https://github.com/ingelectronicadj" target="_blank" rel="noopener noreferrer">Github</a>.
+                <a class="text-primary" href="https://gitlab.com/ingelectronicadj" target="_blank" rel="noopener noreferrer" aria-label="Repositorio de proyectos en Gitlab">Gitlab</a> o mi cuenta
+                <a class="text-primary" href="https://github.com/ingelectronicadj" target="_blank" rel="noopener noreferrer" aria-label="Repositorio de proyectos en Github">Github</a>.
                 Entre los proyectos más destacados se encuentran:</p>
             <div class="sliderProjects">
                 <div class="slider-for">
@@ -503,10 +495,14 @@
             </ul>
         </div>
     </section>
+    <!--Boton hacia arriba-->
+    <a class="ir-arriba" href="#" title="Volver arriba" role="button">
+        <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
 </main>
-    
-
-
     <!-- Bootstrap core JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
