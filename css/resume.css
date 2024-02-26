@@ -355,10 +355,14 @@ ul.horizontal li {
     border-radius: 5px;
 }
 
+.high-contrast hr {
+    border-top: 1px solid #f9fafb !important;
+}
+
 .high-contrast ul.horizontal li,
 .high-contrast ul.horizontal li a {
     background-color: #010101 !important;
-    color: #fff!important;
+    color: #f9fafb!important;
 }
 .high-contrast .first-nav a{
     border-radius: 0 0 0 15px !important;
