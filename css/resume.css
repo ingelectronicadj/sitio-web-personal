@@ -350,6 +350,12 @@ ul.horizontal li {
     color: #fff!important;
 }
 
+.high-contrast .text-primary,
+.high-contrast .text-primary:hover,
+.high-contrast .text-primary:focus {
+    color: #fff!important;
+}
+
 @media (min-width:992px) {
     body {
         padding-top: 0;
