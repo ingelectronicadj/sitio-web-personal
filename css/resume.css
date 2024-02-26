@@ -232,7 +232,7 @@ ul.horizontal {
 ul.horizontal li {
     float: left;
     background-color: #fff;
-    border: 1px dotted #abc;
+    border: 1px solid #abc;
 }
 
 .first-nav {
@@ -336,13 +336,35 @@ ul.horizontal li {
 .control-high-contrast:hover,
 .high-contrast,
 .high-contrast:hover {
-    background-color: #13161C!important;
+    background-color: #13161C !important;
     color: #fff!important;
 }
 
+/* Ajustes al modo oscuro */
 .high-contrast #sideNav, .high-contrast nav, .high-contrast .navbar-brand,
 .high-contrast nav:hover{
-    background-color: #010101!important;
+    background-color: #010101 !important;
+}
+
+.high-contrast p, .high-contrast p:hover,
+.high-contrast h3, .high-contrast h3:hover,
+.high-contrast b, .high-contrast b:hover,
+.high-contrast .subheading, .high-contrast .subheading:hover {
+    background-color: #1E2229 !important;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+.high-contrast ul.horizontal li,
+.high-contrast ul.horizontal li a {
+    background-color: #010101 !important;
+    color: #fff!important;
+}
+.high-contrast .first-nav a{
+    border-radius: 0 0 0 15px !important;
+}
+.high-contrast .last-nav a{
+    border-radius: 0 0 15px 0 !important;
 }
 
 .high-contrast .sliderProjects button,
