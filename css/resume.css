@@ -347,6 +347,8 @@ ul.horizontal li {
 }
 
 .high-contrast p, .high-contrast p:hover,
+.high-contrast .fa-ul, .high-contrast .fa-ul:hover,
+.high-contrast .resume-content, .high-contrast .resume-content:hover,
 .high-contrast h3, .high-contrast h3:hover,
 .high-contrast b, .high-contrast b:hover,
 .high-contrast .subheading, .high-contrast .subheading:hover {
@@ -356,7 +358,11 @@ ul.horizontal li {
 }
 
 .high-contrast hr {
-    border-top: 1px solid #f9fafb !important;
+    border-top: 1px dashed #f9fafb !important;
+}
+
+.high-contrast #sideNav {
+    border-right: 1px dashed #f9fafb !important;
 }
 
 .high-contrast ul.horizontal li,
