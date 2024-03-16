@@ -48,7 +48,7 @@
     <!--Script para validacion freeCodeCamp-->
     <!--<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>-->
     <header id="header">
-        <nav id="navbar" aria-label="Navegación por elementos destacados">
+        <nav id="navbar" aria-label="Destacados">
             <ul class="horizontal">
                 <li class="first-nav"><a href="#experience" class="nav-link js-scroll-trigger">Experiencia</a></li>
                 <li><a href="#skills" class="nav-link js-scroll-trigger">Habilidades</a></li>
@@ -64,7 +64,7 @@
                 alt="Fotografía Diego Mena" title="Fotografía Diego Mena" data-aos="zoom-in">
             </a>
         </span>
-        <div class="toogleContainer" data-aos="fade-right" data-aos-delay="150">
+        <div class="toogleContainer" data-aos="fade-right" data-aos-delay="150" role="region" aria-label="Contraste y selección de idioma">
             <label id="switchTheme" class="switch" aria-label="Modo oscuro">
                 <input id="checkSwitch" type="checkbox" class="btn-contrast" onclick='toggleContrast("high-contrast")'>
                 <div class="sliderContrast">
@@ -79,10 +79,10 @@
                 <img class="flags" src="./img/usa.webp" alt="Inglés" />
             </a>
         </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Menu hamburguesa de navagación">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Navegación Menu hamburguesa">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <nav class="collapse navbar-collapse" id="navbarSupportedContent">
+        <nav class="collapse navbar-collapse" id="navbarSupportedContent" aria-label="Principal">
             <ul class="navbar-nav">
                 <li class="nav-item" data-aos="fade-right" data-aos-delay="150">
                     <a class="nav-link js-scroll-trigger" href="#welcome-section">Acerca de mí</a>
@@ -100,7 +100,7 @@
                     <a class="nav-link js-scroll-trigger" href="#interests">Intereses</a>
                 </li>
                 <li class="nav-item" data-aos="fade-right" data-aos-delay="900" data-aos-anchor-placement="top-bottom">
-                    <a class="nav-link js-scroll-trigger" href="#awards">Eventos</a>
+                    <a class="nav-link js-scroll-trigger" href="#awards">Reconocimientos</a>
                 </li>
             </ul>
         </nav>
@@ -537,7 +537,7 @@
             speed: 300,
             fade: true,
             asNavFor: '.slider-nav',
-            instructionsText: 'Al cambiar el contenido actual de este carrusel, cambiará el contenido actual del carrusel de miniaturas que le sigue.',
+            instructionsText: 'Al cambiar el contenido actual de este carrusel, cambiará el contenido de miniaturas que le sigue.',
             regionLabel: 'Carrusel de imágenes principal',
             lazyLoad: 'ondemand',
             autoplay: true,
@@ -551,8 +551,8 @@
             dots: true,
             centerMode: true,
             arrows: false,
-            instructionsText: 'Cambiar el contenido actual de este carrusel cambiará el contenido del carrusel principal que le antecede.',
-            regionLabel: 'thumbnail carousel',
+            instructionsText: 'Al cambiar el contenido actual de este carrusel cambiará el contenido del principal que le antecede.',
+            regionLabel: 'Carrusel de miniaturas',
             lazyLoad: 'ondemand'
             });
         });
