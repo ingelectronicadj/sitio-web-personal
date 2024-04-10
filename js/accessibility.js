@@ -39,11 +39,41 @@ function handleClickFocus(event) {
     }
 }
 
+function ocultarIconosInaccesibles() {
+    let iconos = document.querySelectorAll('.mb2mm-arrow, [class^="fab fa-"]'); //.iconel i, .static-icon i, ...
+    // Verificar si se encontraron iconos antes de intentar ocultarlos
+    if (iconos.length === 0) {
+        console.warn('No se encontraron iconos para ocultar.');
+        return;
+    }
+    iconos.forEach(function(icono) {
+        icono.setAttribute('aria-hidden', 'true');
+    });
+}
+
+function agregarSpanEnlacesExternos() {
+    let enlacesExternos = document.querySelectorAll('.link-new-window');
+    if (enlacesExternos.length === 0) {
+        console.warn('No se encontraron enlaces con la clase .link-new-window".');
+        return;
+    }
+    enlacesExternos.forEach(function(enlace) {
+        let span = document.createElement('span');
+        span.textContent = '(Abre en una nueva ventana)';
+        span.classList.add('sr-only');
+        enlace.appendChild(span);
+    });
+}
+
+
+// DOM Listo
 document.addEventListener('DOMContentLoaded', () => {
     const status_btn_contrast = document.getElementById("checkSwitch");
     status_btn_contrast.addEventListener("click", setContrast);
     getContrast();
-
+    ocultarIconosInaccesibles();
+    agregarSpanEnlacesExternos();
+    
     const menuLinks = document.querySelectorAll('.navbar-nav .nav-link');
     menuLinks.forEach(link => {
         link.addEventListener('click', handleClickFocus);
