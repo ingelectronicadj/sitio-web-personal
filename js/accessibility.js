@@ -19,7 +19,7 @@ function getContrast() {
     let status_contrast_localStorage = localStorage.getItem("status_contrast");
     if (status_contrast_localStorage == "true") {
         document.getElementById("checkSwitch").checked = true;
-        toggleContrast("high-contrast");
+        toggleContrast("dark");
     } else {
         setContrast();
     }

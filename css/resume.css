@@ -7,7 +7,7 @@ body {
 
 /* Ajuste de foco */
 *:focus {
-    outline: 2px solid #046B71; /* Estilo de borde al enfocar */
+    outline: 2px dashed #046B71; /* Estilo de borde al enfocar */
     outline-offset: 1px; /* Separación del borde al elemento */
     border-radius: 5px;
 }
@@ -16,7 +16,7 @@ body {
 .img-responsive {
     max-width: 100%;
     height: auto;
-}
+}           
 
 .sliderProjects {
     width: 90%;
@@ -330,62 +330,6 @@ ul.horizontal li {
 
 .btn-contrast {
     margin: 4px;
-}
-
-.control-high-contrast,
-.control-high-contrast:hover,
-.high-contrast,
-.high-contrast:hover {
-    background-color: #13161C !important;
-    color: #fff!important;
-}
-
-/* Ajustes al modo oscuro */
-.high-contrast #sideNav, .high-contrast nav, .high-contrast .navbar-brand,
-.high-contrast nav:hover{
-    background-color: #010101 !important;
-}
-
-.high-contrast p, .high-contrast p:hover,
-.high-contrast .fa-ul, .high-contrast .fa-ul:hover,
-.high-contrast .resume-content, .high-contrast .resume-content:hover,
-.high-contrast h3, .high-contrast h3:hover,
-.high-contrast b, .high-contrast b:hover,
-.high-contrast .subheading, .high-contrast .subheading:hover {
-    background-color: #1E2229 !important;
-    padding: 0 5px;
-    border-radius: 5px;
-}
-
-.high-contrast hr {
-    border-top: 1px dashed #f9fafb !important;
-}
-
-.high-contrast #sideNav {
-    border-right: 1px dashed #f9fafb !important;
-}
-
-.high-contrast ul.horizontal li,
-.high-contrast ul.horizontal li a {
-    background-color: #010101 !important;
-    color: #f9fafb!important;
-}
-.high-contrast .first-nav a{
-    border-radius: 0 0 0 15px !important;
-}
-.high-contrast .last-nav a{
-    border-radius: 0 0 15px 0 !important;
-}
-
-.high-contrast .sliderProjects button,
-.high-contrast .sliderProjects button span {
-    color: #fff!important;
-}
-
-.high-contrast .text-primary,
-.high-contrast .text-primary:hover,
-.high-contrast .text-primary:focus {
-    color: #fff!important;
 }
 
 @media (min-width:992px) {
