@@ -6,11 +6,17 @@ body {
 }
 
 /* Ajuste de foco */
-*:focus {
+*:focus-visible {
     outline: 2px solid #046B71; /* Estilo de borde al enfocar */
     outline-offset: 1px; /* Separacion del borde al elemento */
     box-shadow: 0 0 0 4px #fff; /*Fondo del borde del elemento */
     border-radius: 5px;
+}
+
+.horizontal a:focus-visible {
+    outline: 2px solid #046B71; /* Estilo de borde al enfocar */
+    outline-offset: -1px; /* Separacion del borde al elemento */
+    border-radius: 6px;
 }
 
 /******Slick Slider*******/
@@ -26,6 +32,12 @@ body {
 
 .thumbnail {
     padding: 0 5px;
+}
+.slick-slide a {
+    margin: 0 5px;
+}
+.slick-initialized .slick-slide {
+    padding-bottom: 5px;
 }
 
 /******Skip navigation*******/
@@ -377,6 +389,7 @@ ul.horizontal li {
         -ms-flex-positive: 0;
         flex-grow: 0;
         width: 100%;
+        margin-top: 5px;
         margin-bottom: auto
     }
     #sideNav .navbar-collapse .navbar-nav {
