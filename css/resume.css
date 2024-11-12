@@ -7,7 +7,7 @@ body {
 
 /* Ajuste de foco */
 *:focus {
-    outline: 2px dashed #046B71; /* Estilo de borde al enfocar */
+    outline: 2px solid #046B71; /* Estilo de borde al enfocar */
     outline-offset: 1px; /* Separacion del borde al elemento */
     box-shadow: 0 0 0 4px #fff; /*Fondo del borde del elemento */
     border-radius: 5px;
