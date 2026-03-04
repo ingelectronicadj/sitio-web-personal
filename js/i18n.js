@@ -63,7 +63,7 @@ var i18n = {
       "exp2-company": "Superintendencia de Industria y Comercio",
       "exp2-description":
         "<b>Funciones:</b> Realizar revisiones de accesibilidad en distintos productos digitales y secciones de la sede electrónica de la entidad, aplicando las directrices de la WCAG 2.2 y el Anexo 01 de la Resolución 1519 de 2020 del MinTIC. Contribuir en la identificación e implementación de mejoras de usabilidad y accesibilidad desde la fase de diseño de interfaces, incluyendo la capacitación a desarrolladores y creadores de contenido. Realizar pruebas de accesibilidad y calidad (QA) para diligenciar instrumentos como el FURAG e ITA, participar en la documentación y seguimiento de las actualizaciones necesarias para mantener y ampliar las mejoras de accesibilidad digital implementadas.",
-      "exp2-date": "Dic 2024 - Actualidad",
+      "exp2-date": "Dic 2024 - Dic 2025",
 
       "exp3-title": "Gestor Tecnopedagógico",
       "exp3-company":
@@ -91,13 +91,13 @@ var i18n = {
       "edu1-college": "Universidad Nacional Abierta y a Distancia",
       "edu1-description":
         "Actividades y asociaciones: Investigación y desarrollo (I+D). Miembro de la Red de Gestión Tecnopedagógica de cursos y recursos educativos digitales. Responsable por: Tecnologías de inclusión y accesibilidad web.",
-      "edu1-date": "Diciembre 2024",
+      "edu1-date": "Agosto 2025",
 
       "edu2-title": "Especialista en Gestión de Proyectos",
       "edu2-college": "Universidad Nacional Abierta y a Distancia",
       "edu2-description":
         "Actividades y asociaciones: Investigación y desarrollo (I+D). Miembro de la Red de Gestión Tecnopedagógica de cursos y recursos educativos digitales. Responsable por: Tecnologías de inclusión y accesibilidad web.",
-      "edu2-date": "Abril 2022",
+      "edu2-date": "Agosto 2022",
 
       "edu3-title": "Ingeniero Electrónico",
       "edu3-college": "Universidad Distrital Francisco José de Caldas",
@@ -223,12 +223,6 @@ var i18n = {
         "Tema: Herramientas tecnológicas que aportan a los procesos de inclusión educativa.",
       "award8-date": "Julio 2020",
 
-      "award9-text":
-        "Ponente -  IV Congreso Internacional Virtual en Investigación e Innovación en Ingeniería",
-      "award9-topic":
-        "Tema: Sistema IoT para el monitoreo y control de fuentes de luz artificial.",
-      "award9-date": "Mayo 2018",
-
       // Back to top
       "back-to-top": "Volver arriba",
 
@@ -301,7 +295,7 @@ var i18n = {
       "exp2-company": "Superintendence of Industry and Commerce",
       "exp2-description":
         "<b>Responsibilities:</b> Perform accessibility reviews on various digital products and sections of the entity's electronic headquarters, applying the WCAG 2.2 guidelines and Annex 01 of Resolution 1519 of 2020 from MinTIC. Contribute to the identification and implementation of usability and accessibility improvements from the interface design phase, including training developers and content creators. Perform accessibility and quality assurance (QA) tests for instruments such as FURAG and ITA, participate in the documentation and tracking of updates needed to maintain and expand the implemented digital accessibility improvements.",
-      "exp2-date": "Dec 2024 - Present",
+      "exp2-date": "Dec 2024 - Dec 2025",
 
       "exp3-title": "Techno-pedagogical Manager",
       "exp3-company":
@@ -329,13 +323,13 @@ var i18n = {
       "edu1-college": "National Open and Distance University",
       "edu1-description":
         "Activities and associations: Research and development (R&D). Member of the Techno-pedagogical Management Network for courses and digital educational resources. Responsible for: Inclusion technologies and web accessibility.",
-      "edu1-date": "December 2024",
+      "edu1-date": "August 2025",
 
       "edu2-title": "Specialist in Project Management",
       "edu2-college": "National Open and Distance University",
       "edu2-description":
         "Activities and associations: Research and development (R&D). Member of the Techno-pedagogical Management Network for courses and digital educational resources. Responsible for: Inclusion technologies and web accessibility.",
-      "edu2-date": "April 2022",
+      "edu2-date": "August 2022",
 
       "edu3-title": "Electronic Engineer",
       "edu3-college": "Francisco José de Caldas District University",
@@ -458,12 +452,6 @@ var i18n = {
       "award8-topic":
         "Topic: Technological tools that contribute to educational inclusion processes.",
       "award8-date": "July 2020",
-
-      "award9-text":
-        "Speaker - IV International Virtual Congress on Engineering Research and Innovation",
-      "award9-topic":
-        "Topic: IoT system for monitoring and controlling artificial light sources.",
-      "award9-date": "May 2018",
 
       // Back to top
       "back-to-top": "Back to top",
