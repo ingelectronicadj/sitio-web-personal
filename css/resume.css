@@ -300,13 +300,18 @@ a:hover {
 .ir-arriba {
   display: none;
   background-repeat: no-repeat;
-  font-size: 20px;
+  font-size: 22px; /* Hasil 44px lingaran dengan fa-stack-2x */
   color: #00262b;
   cursor: pointer;
   position: fixed;
   bottom: 13%;
   right: 20px;
   z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.ir-arriba:hover {
+  transform: scale(1.1);
 }
 
 .flags {
@@ -557,12 +562,20 @@ ul.horizontal li {
   #navbar {
     display: none;
   }
+  .sliderProjects {
+    width: 82%;
+  }
+  @media screen and (max-width: 375px) {
+    .sliderProjects {
+      width: 75%;
+    }
+  }
   .list-inline {
     text-align: center;
   }
   .ir-arriba {
     bottom: 80px;
-    right: 10px;
+    right: 25px;
   }
   .toogleContainer {
     align-items: flex-start;
@@ -573,6 +586,33 @@ ul.horizontal li {
   }
   .slider-nav .slick-list {
     display: none;
+  }
+
+  /* Carrusel móvil: ocultar puntos de paginación y ajustar flechas */
+  .slider-nav .slick-dots {
+    display: none !important;
+  }
+
+  .slick-prev,
+  .slick-next {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 32px !important;
+    height: 32px !important;
+    z-index: 10;
+  }
+
+  .slick-prev {
+    left: -15px !important;
+  }
+
+  .slick-next {
+    right: -15px !important;
+  }
+
+  .slick-prev .slick-prev-icon:before,
+  .slick-next .slick-next-icon:before {
+    font-size: 18px !important;
   }
 }
 
@@ -600,8 +640,8 @@ ul.horizontal li {
   align-items: center !important;
   justify-content: center !important;
   padding: 0 !important;
-  width: 40px !important;
-  height: 40px !important;
+  width: 32px !important;
+  height: 32px !important;
   background-color: #046b71 !important;
   border-radius: 50% !important;
   z-index: 10;
@@ -632,7 +672,7 @@ ul.horizontal li {
 .slick-next:hover .slick-next-icon,
 .slick-prev:focus .slick-prev-icon,
 .slick-next:focus .slick-next-icon {
-  font-size: 24px !important;
+  font-size: 22px !important;
   color: white !important;
   opacity: 1 !important;
   margin: 0 !important;
@@ -698,6 +738,9 @@ ul.horizontal li {
   }
   #navbarSupportedContent .nav-item:nth-child(6) {
     animation-delay: 0.35s;
+  }
+  #navbarSupportedContent .nav-item:nth-child(7) {
+    animation-delay: 0.4s;
   }
 
   .navbar-toggler {

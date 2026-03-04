@@ -25,6 +25,7 @@ var i18n = {
       "nav-experience-side": "Experiencia",
       "nav-education": "Educación",
       "nav-skills-side": "Habilidades",
+      "nav-projects-side": "Proyectos",
       "nav-interests": "Intereses",
       "nav-awards": "Reconocimientos",
 
@@ -257,6 +258,7 @@ var i18n = {
       "nav-experience-side": "Experience",
       "nav-education": "Education",
       "nav-skills-side": "Skills",
+      "nav-projects-side": "Projects",
       "nav-interests": "Interests",
       "nav-awards": "Awards",
 
