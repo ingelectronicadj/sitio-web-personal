@@ -683,8 +683,10 @@ ul.horizontal li:last-child {
   .slick-next .slick-next-icon:before {
     font-size: 18px !important;
   }
+}
 
-  /* Forzar contenedores apilados en tablets */
+/* Forzar contenedores apilados en tablets y laptops pequeñas (hasta 1024px) */
+@media screen and (max-width: 1024px) {
   .resume-item {
     flex-direction: column !important;
   }
@@ -705,6 +707,10 @@ ul.horizontal li:last-child {
   section.resume-section {
     min-height: 100vh;
   }
+}
+
+/* El layout horizontal de experiencia comienza después de 1024px */
+@media (min-width: 1025px) {
   section.resume-section .resume-item .resume-date {
     min-width: 18rem;
     margin-right: 10%;
