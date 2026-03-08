@@ -157,7 +157,7 @@ p.lead {
     "Segoe UI Symbol",
     "Noto Color Emoji";
   font-size: 1.5rem;
-  border: 1px solid transparent; /* Sincronización con modo oscuro */
+  border: 2px solid transparent; /* Sincronización con modo oscuro (2px) */
 }
 
 .social-icons a {
@@ -243,11 +243,11 @@ section.resume-section .resume-item .resume-date {
 
 /* Micro-animación: hover en items de experiencia/educación */
 .resume-item {
-  border-left: 5px solid transparent; /* Grosor apreciable */
+  border: 2px solid transparent; /* Base de 2px para todos los lados */
+  border-left: 5px solid transparent; /* Grosor apreciable en el acento lateral */
   padding: 1.5rem !important;
   border-radius: 8px; /* Reducido ligeramente para balancear */
   margin-bottom: 1rem;
-  border: 2px solid transparent; /* Grosor aumentado y sincronización con modo oscuro */
   transition:
     border-left-color 0.3s ease,
     transform 0.2s ease,
@@ -323,7 +323,7 @@ a:hover {
 .ir-arriba {
   display: none;
   background-repeat: no-repeat;
-  font-size: 22px; /* Hasil 44px lingaran dengan fa-stack-2x */
+  font-size: 20px; /* Tamaño del círculo de 40px (fa-stack-2x) */
   color: #00262b;
   cursor: pointer;
   position: fixed;
@@ -594,7 +594,7 @@ ul.horizontal li:last-child {
     font-size: 14px;
     text-align: center;
     border-radius: 12px;
-    border: 1px solid transparent; /* Sincronización con modo oscuro */
+    border: 2px solid transparent; /* Sincronización con modo oscuro (2px) */
     margin: 0 1rem 1rem 1rem;
     transition: background-color 0.3s ease;
   }
@@ -740,7 +740,7 @@ ul.horizontal li:last-child {
 .dark .slick-prev,
 .dark .slick-next {
   background-color: #1e2229 !important;
-  border: 1px solid #046b71 !important;
+  border: 2px solid #046b71 !important; /* Mantenido en 2px para evitar saltos */
 }
 
 .dark .slick-prev:hover,

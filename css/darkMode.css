@@ -27,7 +27,6 @@ body.dark b {
   color: #f9fafb !important;
 }
 
-/* Bloques sin fondo para un look más limpio (solicitado por el usuario) */
 body.dark .resume-item,
 body.dark .textMovil,
 body.dark .subheading,
@@ -36,6 +35,10 @@ body.dark .fa-ul {
   border: 2px solid transparent !important; /* Grosor aumentado para sincronización */
   box-shadow: none !important;
   transition: background-color 0.3s ease !important; /* Asegurar transición suave */
+}
+
+body.dark .resume-item {
+  border-left: 5px solid transparent !important; /* Preservar el acento lateral de 5px */
 }
 
 /* Efecto hover suave para estos contenedores en modo oscuro */
@@ -50,9 +53,9 @@ body.dark .fa-ul:hover {
   ) !important; /* Fondo muy suave (2%) */
 }
 
-/* Ajuste para el subheading: eliminar padding innecesario sin fondo */
+/* Ajuste para el subheading: mantener sincronización de dimensiones */
 body.dark .subheading {
-  padding: 0 !important;
+  background-color: transparent !important;
 }
 
 /* No aplicar fondos individuales a textos para evitar el efecto de "resaltado" */
@@ -143,16 +146,14 @@ body.dark .flags {
   background-color: transparent !important;
 }
 
-/* Fix específico para el botón "Volver arriba": Diseño de contorno (outlined) */
+/* Fix específico para el botón "Volver arriba": Sólido y del tamaño de los botones del carrusel */
 body.dark .ir-arriba .fa-circle {
-  color: transparent !important;
-  border: 1px solid #00bcd4 !important;
-  border-radius: 50% !important;
+  color: #00bcd4 !important; /* Círculo cyan sólido */
 }
 
 body.dark .ir-arriba .fa-arrow-up,
 body.dark .ir-arriba .fa-arrow-up:before {
-  color: #00bcd4 !important; /* Flecha cyan sobre fondo oscuro */
+  color: #13161c !important; /* Flecha oscura sobre fondo cyan */
 }
 
 /* Estilo para el interruptor (switch) de modo oscuro */
@@ -169,6 +170,7 @@ body.dark #sideNav .nav-link {
   color: rgba(255, 255, 255, 0.6) !important;
   background-color: transparent !important;
   border-left: 5px solid transparent !important; /* Indicador lateral izquierdo */
+  padding: 0.5rem 1rem !important; /* Sincronización de padding con modo claro */
   transition: all 0.3s ease !important;
 }
 
