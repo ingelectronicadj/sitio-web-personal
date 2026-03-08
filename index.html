@@ -20,22 +20,12 @@
     <!-- Preconexiones a orígenes CDN externos -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="preconnect"
-      href="https://stackpath.bootstrapcdn.com"
-      crossorigin
-    />
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
 
     <title>CV Diego Mena</title>
-    <!-- Bootstrap core CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
+    <!-- Bootstrap core CSS (local) -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
 
     <!-- Custom fonts for this template -->
     <link
@@ -1491,14 +1481,8 @@
         </span>
       </a>
     </main>
-    <!-- Bootstrap core JavaScript -->
+    <!-- jQuery (requerido por Slick Slider) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-      defer
-    ></script>
 
     <!-- Plugin JavaScript -->
     <script
@@ -1543,9 +1527,29 @@
       defer
     ></script>
 
-    <!-- Inicialización de eventos (reemplaza inline onclick) -->
+    <!-- Inicialización de eventos y toggle del navbar (reemplaza Bootstrap JS) -->
     <script defer>
       document.addEventListener("DOMContentLoaded", function () {
+        // Navbar collapse toggle (reemplaza Bootstrap JS)
+        const toggler = document.querySelector(".navbar-toggler");
+        const collapse = document.getElementById("navbarSupportedContent");
+        if (toggler && collapse) {
+          toggler.addEventListener("click", function () {
+            const isExpanded = collapse.classList.contains("show");
+            collapse.classList.toggle("show");
+            toggler.setAttribute("aria-expanded", String(!isExpanded));
+          });
+
+          // Cerrar menú con ESC (accesibilidad para teclado)
+          document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && collapse.classList.contains("show")) {
+              collapse.classList.remove("show");
+              toggler.setAttribute("aria-expanded", "false");
+              toggler.focus();
+            }
+          });
+        }
+
         // Cambio de idioma con banderas
         document
           .getElementById("flag-es")
@@ -1559,6 +1563,7 @@
             e.preventDefault();
             i18n.changeLang("en");
           });
+
         // Toggle de contraste / modo oscuro
         document
           .getElementById("checkSwitch")

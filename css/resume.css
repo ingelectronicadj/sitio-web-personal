@@ -140,6 +140,24 @@ p.lead {
   font-weight: 400;
 }
 
+/* --- Espaciado sección "Acerca de mí" --- */
+#welcome-section h1 {
+  margin-bottom: 1.5rem;
+}
+
+#welcome-section .textMovil {
+  margin-bottom: 2rem;
+}
+
+#welcome-section p.lead {
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+}
+
+#welcome-section .social-icons {
+  margin-top: 1.5rem;
+}
+
 .subheading {
   text-transform: uppercase;
   font-weight: 500;
@@ -171,10 +189,12 @@ p.lead {
   font-size: 1.5rem;
   line-height: 3.5rem;
   margin-right: 1rem;
+  border: 1px solid transparent; /* Sincronización con modo oscuro */
   transition:
     background-color 0.3s ease,
     transform 0.3s ease,
-    box-shadow 0.3s ease;
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .social-icons a:last-child {
@@ -578,29 +598,34 @@ ul.horizontal li:last-child {
   }
 }
 
-@media screen and (max-width: 768px) {
+/* Tablet y móvil: layout apilado con foto reducida */
+@media screen and (max-width: 991px) {
   .movil img {
     display: block;
     width: 45%;
-    margin: 0 auto 20px auto; /* Añadir espacio debajo de la imagen */
+    margin: 0 auto 20px auto;
   }
 
   h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
+  }
+
+  h2 {
+    font-size: 2.2rem;
   }
   .textMovil {
     padding: 1rem !important;
     font-size: 14px;
     text-align: center;
     border-radius: 12px;
-    border: 2px solid transparent; /* Sincronización con modo oscuro (2px) */
+    border: 2px solid transparent;
     margin: 0 1rem 1rem 1rem;
     transition: background-color 0.3s ease;
   }
 
   .textMovil p {
-    margin-bottom: 0.5rem; /* Reducir espacio interno */
+    margin-bottom: 0.5rem;
   }
 
   #navbar {
@@ -632,7 +657,6 @@ ul.horizontal li:last-child {
     display: none;
   }
 
-  /* Carrusel móvil: ocultar puntos de paginación y ajustar flechas */
   .slider-nav .slick-dots {
     display: none !important;
   }
@@ -658,9 +682,25 @@ ul.horizontal li:last-child {
   .slick-next .slick-next-icon:before {
     font-size: 18px !important;
   }
+
+  /* Forzar contenedores apilados en tablets */
+  .resume-item {
+    flex-direction: column !important;
+  }
+
+  .resume-date {
+    margin-bottom: 0.5rem;
+  }
 }
 
-@media (min-width: 768px) {
+/* Tablets: foto más pequeña que en móvil */
+@media screen and (min-width: 769px) and (max-width: 991px) {
+  .movil img {
+    width: 30%;
+  }
+}
+
+@media (min-width: 992px) {
   section.resume-section {
     min-height: 100vh;
   }
