@@ -157,6 +157,7 @@ p.lead {
     "Segoe UI Symbol",
     "Noto Color Emoji";
   font-size: 1.5rem;
+  border: 1px solid transparent; /* Sincronización con modo oscuro */
 }
 
 .social-icons a {
@@ -209,13 +210,20 @@ p.lead {
   letter-spacing: 0.05rem;
   text-transform: uppercase;
   text-align: center;
+  color: rgba(255, 255, 255, 0.6) !important;
   transition:
     color 0.3s ease,
-    padding-left 0.3s ease;
+    background-color 0.3s ease,
+    border-left-color 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-left: 5px solid transparent; /* Indicador lateral izquierdo */
 }
 
-#sideNav .navbar-nav .nav-item .nav-link:hover {
-  padding-left: 5px;
+#sideNav .navbar-nav .nav-item .nav-link:hover,
+#sideNav .navbar-nav .nav-item .nav-link.active {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.05) !important; /* Resalte suave */
+  border-left-color: #046b71; /* Accent recto y grueso */
 }
 
 #sideNav .navbar-toggler:focus {
@@ -235,18 +243,33 @@ section.resume-section .resume-item .resume-date {
 
 /* Micro-animación: hover en items de experiencia/educación */
 .resume-item {
-  border-left: 3px solid transparent;
-  padding-left: 12px;
+  border-left: 5px solid transparent; /* Grosor apreciable */
+  padding: 1.5rem !important;
+  border-radius: 8px; /* Reducido ligeramente para balancear */
+  margin-bottom: 1rem;
+  border: 2px solid transparent; /* Grosor aumentado y sincronización con modo oscuro */
   transition:
-    border-color 0.3s ease,
-    transform 0.2s ease;
+    border-left-color 0.3s ease,
+    transform 0.2s ease,
+    background-color 0.3s ease;
+}
+
+.resume-item p {
+  margin-bottom: 0.5rem;
 }
 
 .resume-item:hover {
-  border-left-color: #046b71;
-  transform: translateX(4px);
+  border-left-color: #046b71; /* Accent recto y grueso */
+  transform: translateX(5px);
+  background-color: rgba(4, 107, 113, 0.03); /* Fondo más suave (3%) */
 }
 
+/* Reducir espacio vertical en descripciones cortas (Reconocimientos) */
+.small-text {
+  font-size: 0.9rem;
+  line-height: 1.2;
+  margin-top: 2px;
+}
 /* Animación sutil de aparición para secciones */
 @keyframes fadeInUp {
   from {
@@ -373,20 +396,31 @@ ul.horizontal {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: inline-flex;
+  border: 1px solid #abc;
+  border-radius: 0 0 15px 15px; /* Solo curvas inferiores */
+  overflow: hidden;
 }
 
 ul.horizontal li {
-  float: left;
   background-color: #fff;
-  border: 1px solid #abc;
+  border-right: 1px solid #abc;
+  transition: background-color 0.3s ease;
 }
 
-.first-nav {
-  border-radius: 0 0 0 15px;
+ul.horizontal li:hover,
+ul.horizontal li:has(a.active) {
+  background-color: rgba(4, 107, 113, 0.03); /* Cambio de tono muy leve */
 }
 
-.last-nav {
-  border-radius: 0 0 15px 0;
+ul.horizontal li a:hover,
+ul.horizontal li a.active {
+  text-shadow: 0.5px 0 0 currentColor; /* Simula negrita sin desplazamiento */
+  text-decoration: none;
+}
+
+ul.horizontal li:last-child {
+  border-right: none;
 }
 
 .toogleContainer {
@@ -548,17 +582,27 @@ ul.horizontal li {
   .movil img {
     display: block;
     width: 45%;
-    margin: auto;
+    margin: 0 auto 20px auto; /* Añadir espacio debajo de la imagen */
   }
+
   h1 {
     font-size: 4rem;
     text-align: center;
   }
   .textMovil {
-    padding-top: 10px;
+    padding: 1rem !important;
     font-size: 14px;
     text-align: center;
+    border-radius: 12px;
+    border: 1px solid transparent; /* Sincronización con modo oscuro */
+    margin: 0 1rem 1rem 1rem;
+    transition: background-color 0.3s ease;
   }
+
+  .textMovil p {
+    margin-bottom: 0.5rem; /* Reducir espacio interno */
+  }
+
   #navbar {
     display: none;
   }
@@ -633,27 +677,54 @@ ul.horizontal li {
   }
 }
 
-/* Mejoras en las flechas del slider */
 .slick-prev,
 .slick-next {
+  width: 40px !important;
+  height: 40px !important;
+  background-color: transparent !important;
+  border: 2px solid #046b71 !important;
+  border-radius: 50% !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  padding: 0 !important;
-  width: 32px !important;
-  height: 32px !important;
-  background-color: #046b71 !important;
-  border-radius: 50% !important;
-  z-index: 10;
-  transition:
-    background-color 0.3s ease,
-    transform 0.2s ease;
+  z-index: 100 !important;
+  transition: all 0.3s ease;
+  font-size: 0 !important; /* Esconde texto por defecto de Slick */
+  color: transparent !important;
+  line-height: 0 !important;
+}
+
+.slick-prev-icon,
+.slick-next-icon {
+  display: none !important; /* Elimina duplicados de temas externos */
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-family: "Font Awesome 5 Free" !important;
+  font-weight: 900 !important;
+  font-size: 20px !important;
+  color: #046b71 !important; /* Visible en modo claro */
+  opacity: 1 !important;
+  display: block !important;
+}
+
+.slick-prev:before {
+  content: "\f060" !important;
+}
+
+.slick-next:before {
+  content: "\f061" !important;
 }
 
 .slick-prev:hover,
 .slick-next:hover {
-  background-color: #00262b !important;
-  transform: translateY(-50%) scale(1.1);
+  background-color: #046b71 !important;
+}
+
+.slick-prev:hover:before,
+.slick-next:hover:before {
+  color: #ffffff !important;
 }
 
 .slick-prev {
@@ -664,37 +735,7 @@ ul.horizontal li {
   right: -45px !important;
 }
 
-.slick-prev:before,
-.slick-next:before,
-.slick-prev .slick-prev-icon,
-.slick-next .slick-next-icon,
-.slick-prev:hover .slick-prev-icon,
-.slick-next:hover .slick-next-icon,
-.slick-prev:focus .slick-prev-icon,
-.slick-next:focus .slick-next-icon {
-  font-size: 22px !important;
-  color: white !important;
-  opacity: 1 !important;
-  margin: 0 !important;
-  line-height: 0 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: 100% !important;
-  height: 100% !important;
-}
-
-.slick-prev .slick-prev-icon:before {
-  content: "\f060" !important;
-  font-family: "Font Awesome 5 Free" !important;
-  font-weight: 900 !important;
-}
-
-.slick-next .slick-next-icon:before {
-  content: "\f061" !important;
-  font-family: "Font Awesome 5 Free" !important;
-  font-weight: 900 !important;
-}
+/* Eliminados bloques conflictivos */
 
 .dark .slick-prev,
 .dark .slick-next {
@@ -712,9 +753,15 @@ ul.horizontal li {
   #navbarSupportedContent {
     background-color: #023d42;
     border-radius: 10px;
-    padding: 10px 0;
+    padding: 10px 0 !important;
     margin-top: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border: 1px solid transparent; /* Reserva espacio para el borde de modo oscuro */
+  }
+
+  #navbarSupportedContent .nav-link {
+    padding: 15px 20px !important; /* Espaciado estandarizado para evitar saltos */
+    transition: background-color 0.2s ease;
   }
 
   #navbarSupportedContent .nav-item {
@@ -749,9 +796,11 @@ ul.horizontal li {
     transition:
       transform 0.3s ease,
       background-color 0.3s ease;
-    border: none;
+    border: 2px solid #046b71; /* Borde visible en modo claro */
     outline: none;
     margin-right: 15px;
+    border-radius: 8px;
+    padding: 4px 8px;
   }
 
   .navbar-toggler[aria-expanded="true"] {

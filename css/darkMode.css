@@ -1,88 +1,231 @@
-.dark,
-.dark:hover {
+/* --- Refactor: Modo Oscuro basado en body class --- */
+body {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease !important;
+}
+
+body.dark {
   background-color: #13161c !important;
-  color: #fff !important;
-}
-
-/* Ajustes al modo oscuro */
-.dark #sideNav,
-.dark nav,
-.dark .navbar-brand,
-.dark nav:hover {
-  background-color: #010101 !important;
-}
-
-.dark p,
-.dark p:hover,
-.dark .fa-ul,
-.dark .fa-ul:hover,
-.dark .resume-content,
-.dark .resume-content:hover,
-.dark h3,
-.dark h3:hover,
-.dark b,
-.dark b:hover,
-.dark .subheading,
-.dark .subheading:hover {
-  background-color: #1e2229 !important;
-  box-shadow:
-    5px 0 0 0 #1e2229,
-    -5px 0 0 0 #1e2229 !important;
-  border-radius: 5px;
-}
-
-.dark hr {
-  border-top: 1px dashed #f9fafb !important;
-}
-
-.dark #sideNav {
-  border-right: 1px dashed #f9fafb !important;
-}
-
-.dark ul.horizontal li,
-.dark ul.horizontal li a {
-  background-color: #010101 !important;
   color: #f9fafb !important;
 }
-.dark .first-nav a {
-  border-radius: 0 0 0 15px !important;
-}
-.dark .last-nav a {
-  border-radius: 0 0 15px 0 !important;
+
+/* Todos los textos dentro de body.dark */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark h6,
+body.dark p,
+body.dark span,
+body.dark li,
+body.dark a,
+body.dark em,
+body.dark strong,
+body.dark b {
+  color: #f9fafb !important;
 }
 
-.dark .sliderProjects button,
-.dark .sliderProjects button span {
-  color: #fff !important;
+/* Bloques sin fondo para un look más limpio (solicitado por el usuario) */
+body.dark .resume-item,
+body.dark .textMovil,
+body.dark .subheading,
+body.dark .fa-ul {
+  background-color: transparent !important;
+  border: 2px solid transparent !important; /* Grosor aumentado para sincronización */
+  box-shadow: none !important;
+  transition: background-color 0.3s ease !important; /* Asegurar transición suave */
+}
+
+/* Efecto hover suave para estos contenedores en modo oscuro */
+body.dark .resume-item:hover,
+body.dark .subheading:hover,
+body.dark .fa-ul:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.02
+  ) !important; /* Fondo muy suave (2%) */
+}
+
+/* Ajuste para el subheading: eliminar padding innecesario sin fondo */
+body.dark .subheading {
+  padding: 0 !important;
+}
+
+/* No aplicar fondos individuales a textos para evitar el efecto de "resaltado" */
+body.dark p,
+body.dark h3,
+body.dark b,
+body.dark span,
+body.dark a {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  /* Eliminado padding: 0 para mantener sincronización con el modo claro */
+}
+
+/* Ajustes específicos de contenedores */
+body.dark #sideNav,
+body.dark nav,
+body.dark .navbar-brand,
+body.dark .navbar {
+  background-color: #010101 !important;
+}
+
+body.dark hr {
+  border-top: 1px dashed rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Flechas del slider en modo oscuro: solo contorno */
+body.dark .slick-prev,
+body.dark .slick-next {
+  border-color: #00bcd4 !important;
+  background-color: transparent !important;
+  color: #00bcd4 !important; /* Icono del mismo color que el borde */
+}
+
+body.dark .slick-prev:before,
+body.dark .slick-next:before {
+  color: #00bcd4 !important; /* Asegurar color del pseudo-elemento */
+}
+
+body.dark .slick-prev:hover,
+body.dark .slick-next:hover {
+  background-color: rgba(0, 188, 212, 0.1) !important;
+}
+
+body.dark #sideNav {
+  border-right: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+body.dark ul.horizontal {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+body.dark ul.horizontal li {
+  background-color: #010101 !important;
+  border-right-color: rgba(255, 255, 255, 0.1) !important;
+  transition: background-color 0.3s ease;
+}
+
+body.dark ul.horizontal li:hover,
+body.dark ul.horizontal li:has(a.active) {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.03
+  ) !important; /* Variación de fondo muy leve */
+}
+
+body.dark ul.horizontal li a:hover,
+body.dark ul.horizontal li a.active {
+  text-shadow: 0.5px 0 0 currentColor !important; /* Simula negrita sin desplazamiento */
+}
+
+body.dark ul.horizontal li a {
+  color: #f9fafb !important;
+}
+
+body.dark .text-primary {
+  color: #00bcd4 !important; /* Un cyan más vibrante para modo oscuro */
+  font-weight: 700;
+}
+
+/* Correcciones de iconos y elementos interactivos */
+body.dark .navbar-toggler-icon,
+body.dark .ir-arriba,
+body.dark .toogleContainer,
+body.dark .flags-lang,
+body.dark .flags {
   background-color: transparent !important;
 }
 
-.dark .text-primary,
-.dark .text-primary:hover,
-.dark .text-primary:focus {
-  color: #fff !important;
+/* Fix específico para el botón "Volver arriba": Diseño de contorno (outlined) */
+body.dark .ir-arriba .fa-circle {
+  color: transparent !important;
+  border: 1px solid #00bcd4 !important;
+  border-radius: 50% !important;
 }
 
-/* Corrección: menú hamburguesa visible en modo oscuro */
-.dark.navbar-toggler-icon,
-.dark .navbar-toggler-icon {
-  background-color: transparent !important;
+body.dark .ir-arriba .fa-arrow-up,
+body.dark .ir-arriba .fa-arrow-up:before {
+  color: #00bcd4 !important; /* Flecha cyan sobre fondo oscuro */
 }
 
-/* Corrección: botón volver arriba visible en modo oscuro */
-.dark.ir-arriba,
-.dark .ir-arriba,
-.dark.fa-stack,
-.dark .fa-stack {
-  background-color: transparent !important;
+/* Estilo para el interruptor (switch) de modo oscuro */
+body.dark .sliderContrast {
+  box-shadow: 0 0 0 2px rgba(0, 188, 212, 0.4) !important;
 }
 
-/* Corrección: contenedor de contraste e idioma en modo oscuro */
-.dark.toogleContainer,
-.dark .toogleContainer,
-.dark.flags-lang,
-.dark .flags-lang,
-.dark .flags,
-.dark.flags {
+body.dark .sliderContrast:before {
+  background-color: #00bcd4 !important;
+}
+
+/* Asegurar que los enlaces en el sideNav se vean bien */
+body.dark #sideNav .nav-link {
+  color: rgba(255, 255, 255, 0.6) !important;
   background-color: transparent !important;
+  border-left: 5px solid transparent !important; /* Indicador lateral izquierdo */
+  transition: all 0.3s ease !important;
+}
+
+body.dark #sideNav .nav-link:hover,
+body.dark #sideNav .nav-link.active {
+  color: #00bcd4 !important;
+  background-color: rgba(
+    0,
+    188,
+    212,
+    0.05
+  ) !important; /* Resalte suave en cyan */
+  border-left-color: #00bcd4 !important; /* Accent recto y grueso en cyan */
+}
+
+/* --- Mejoras Menú Hamburguesa en Modo Oscuro --- */
+
+/* Borde visible para el botón del menú */
+body.dark .navbar-toggler {
+  border: 2px solid #00bcd4 !important;
+  border-radius: 8px !important;
+}
+
+/* Color del icono de hamburguesa */
+body.dark .navbar-toggler-icon {
+  filter: brightness(0) invert(1) !important; /* Hacer las líneas blancas */
+  opacity: 0.8;
+}
+
+/* Fondo para el menú desplegado (evitar que sea todo plano) */
+@media screen and (max-width: 991px) {
+  body.dark #navbarSupportedContent {
+    background-color: #1e2229 !important; /* Tono de gris carbón para profundidad */
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+  }
+
+  body.dark #navbarSupportedContent .nav-link {
+    border-bottom: none !important; /* Quitar líneas de separación */
+    transition: background-color 0.2s ease;
+  }
+
+  body.dark #navbarSupportedContent .nav-link:hover {
+    background-color: rgba(0, 188, 212, 0.1) !important;
+    color: #00bcd4 !important;
+  }
+}
+
+/* Iconos sociales en modo oscuro */
+body.dark .social-icons a {
+  background-color: #1e2229 !important;
+  border: 1px solid rgba(0, 188, 212, 0.3) !important;
+  color: #00bcd4 !important; /* Iconos en cyan para mejor visibilidad */
+}
+
+body.dark .social-icons a:hover {
+  background-color: #00bcd4 !important;
+  color: #13161c !important;
+  border-color: #00bcd4 !important;
 }
