@@ -54,6 +54,7 @@
 .dark .sliderProjects button,
 .dark .sliderProjects button span {
   color: #fff !important;
+  background-color: transparent !important;
 }
 
 .dark .text-primary,
