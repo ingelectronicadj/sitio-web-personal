@@ -1,0 +1,11 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://diegomena.rocks/sitemap.xml
+
+# Bloquear carpetas no relevantes para indexación
+Disallow: /a11y/
+Disallow: /vendor/
+Disallow: /docs/

@@ -462,7 +462,7 @@ ul.horizontal li {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #ff1f1f;
+  background-color: #046b71;
   border-radius: 30px;
   -webkit-transform: translateX(-30px);
   transform: translateX(-30px);
@@ -475,7 +475,7 @@ ul.horizontal li {
 .switch input:checked + .sliderContrast:before {
   -webkit-transform: translateX(30px);
   transform: translateX(30px);
-  background-color: #ff1f1f;
+  background-color: #046b71;
 }
 
 .btn-contrast {
@@ -686,12 +686,14 @@ ul.horizontal li {
 
 .slick-prev .slick-prev-icon:before {
   content: "\f060" !important;
-  font-family: "FontAwesome" !important;
+  font-family: "Font Awesome 5 Free" !important;
+  font-weight: 900 !important;
 }
 
 .slick-next .slick-next-icon:before {
   content: "\f061" !important;
-  font-family: "FontAwesome" !important;
+  font-family: "Font Awesome 5 Free" !important;
+  font-weight: 900 !important;
 }
 
 .dark .slick-prev,

@@ -17,6 +17,17 @@
     />
     <link rel="shortcut icon" type="image/png" href="./img/favicon-diego.png" />
 
+    <!-- Preconexiones a orígenes CDN externos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preconnect"
+      href="https://stackpath.bootstrapcdn.com"
+      crossorigin
+    />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+
     <title>CV Diego Mena</title>
     <!-- Bootstrap core CSS -->
     <link
@@ -43,11 +54,9 @@
     <!-- Custom styles for this template -->
     <link href="./css/resume.min.css?version=1" rel="stylesheet" />
     <link rel="stylesheet" href="./css/darkMode.min.css" />
-    <!-- Iconos fa fa -->
-    <link
-      rel="preconnect stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <!-- Slick Slider CSS (movido al head para evitar render-blocking en body) -->
+    <link rel="stylesheet" href="./css/slick.min.css" />
+    <link rel="stylesheet" href="./css/accessible-slick-theme.min.css" />
 
     <!-- Progresive Web Aplication 
     <meta name="MobileOptimized" content="width">
@@ -118,9 +127,12 @@
       <header class="navbar-brand d-none d-lg-block">
         <img
           class="img-fluid img-profile rounded-circle mx-auto mb-2"
-          src="./img/profile-pic.png"
+          src="./img/profile-pic.webp"
           alt="Fotografía Diego Mena"
           title="Fotografía Diego Mena"
+          width="1024"
+          height="1024"
+          fetchpriority="high"
         />
       </header>
       <div
@@ -135,22 +147,17 @@
           data-i18n-aria="contrast-label"
           aria-label="Modo oscuro"
         >
-          <input
-            id="checkSwitch"
-            type="checkbox"
-            class="btn-contrast"
-            onclick="toggleContrast('dark')"
-          />
+          <input id="checkSwitch" type="checkbox" class="btn-contrast" />
           <div class="sliderContrast">
             <i
               data-i18n-title="sun-title"
               title="Sin contraste"
-              class="fa fa-sun-o icon-sun"
+              class="fas fa-sun icon-sun"
             ></i>
             <i
               data-i18n-title="moon-title"
               title="Alto contraste"
-              class="fa fa-moon-o icon-moon"
+              class="fas fa-moon icon-moon"
             ></i>
           </div>
         </label>
@@ -160,12 +167,14 @@
           data-i18n-title="flag-es-title"
           title="Sitio en Español"
           href="#"
-          onclick="
-            event.preventDefault();
-            i18n.changeLang('es');
-          "
         >
-          <img class="flags" src="./img/colombia.webp" alt="Español" />
+          <img
+            class="flags"
+            src="./img/colombia.webp"
+            alt="Español"
+            width="28"
+            height="28"
+          />
         </a>
         <a
           class="flags-lang"
@@ -173,12 +182,14 @@
           data-i18n-title="flag-en-title"
           title="Traducir sitio al Inglés"
           href="#"
-          onclick="
-            event.preventDefault();
-            i18n.changeLang('en');
-          "
         >
-          <img class="flags" src="./img/usa.webp" alt="Inglés" />
+          <img
+            class="flags"
+            src="./img/usa.webp"
+            alt="Inglés"
+            width="28"
+            height="28"
+          />
         </a>
       </div>
       <button
@@ -270,8 +281,11 @@
           <div class="movil">
             <img
               class="movil rounded-circle"
-              src="./img/profile-pic.png"
+              src="./img/profile-pic.webp"
               alt="Fotografía Diego Mena"
+              width="1024"
+              height="1024"
+              loading="lazy"
             />
           </div>
           <div class="textMovil mb-5">
@@ -615,7 +629,7 @@
           <ul class="fa-ul mb-0">
             <li>
               <span class="fa-li" aria-hidden="true">
-                <i class="fa fa-check" aria-hidden="true"></i>
+                <i class="fas fa-check" aria-hidden="true"></i>
               </span>
               <span data-i18n="skill1"
                 >Especialista en Accesibilidad Web -
@@ -635,7 +649,7 @@
 
             <li>
               <span class="fa-li" aria-hidden="true">
-                <i class="fa fa-check" aria-hidden="true"></i>
+                <i class="fas fa-check" aria-hidden="true"></i>
               </span>
               <span data-i18n="skill2">Especialista en UX Research - </span>
               <a
@@ -653,7 +667,7 @@
 
             <li>
               <span class="fa-li" aria-hidden="true">
-                <i class="fa fa-check" aria-hidden="true"></i>
+                <i class="fas fa-check" aria-hidden="true"></i>
               </span>
               <span data-i18n="skill3"
                 >Especialista en Gestión de Proyectos -
@@ -673,7 +687,7 @@
 
             <li>
               <span class="fa-li" aria-hidden="true">
-                <i class="fa fa-check" aria-hidden="true"></i>
+                <i class="fas fa-check" aria-hidden="true"></i>
               </span>
               <span data-i18n="skill4">Scrum Master - </span>
               <a
@@ -691,7 +705,7 @@
 
             <li>
               <span class="fa-li" aria-hidden="true">
-                <i class="fa fa-check" aria-hidden="true"></i>
+                <i class="fas fa-check" aria-hidden="true"></i>
               </span>
               <span data-i18n="skill5">Especialista en Soporte de TI - </span>
               <a
@@ -709,7 +723,7 @@
 
             <li>
               <span class="fa-li" aria-hidden="true">
-                <i class="fa fa-check" aria-hidden="true"></i>
+                <i class="fas fa-check" aria-hidden="true"></i>
               </span>
               <span data-i18n="skill6"
                 >Especialista en Diseño Web Responsive -
@@ -729,7 +743,7 @@
 
             <li>
               <span class="fa-li" aria-hidden="true">
-                <i class="fa fa-check" aria-hidden="true"></i>
+                <i class="fas fa-check" aria-hidden="true"></i>
               </span>
               <span data-i18n="skill7">Nivel de Javascript Avanzado - </span>
               <a
@@ -747,7 +761,7 @@
 
             <li>
               <span class="fa-li" aria-hidden="true">
-                <i class="fa fa-check" aria-hidden="true"></i>
+                <i class="fas fa-check" aria-hidden="true"></i>
               </span>
               <span data-i18n="skill8"
                 >Especialista en Optimización Web -
@@ -821,7 +835,7 @@
                     >Resultados de Accesibilidad Web para la sede electrónica de
                     la SIC</span
                   >
-                  <i class="fa fa-external-link" aria-hidden="true"></i
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i
                 ></a>
               </div>
               <div>
@@ -841,7 +855,7 @@
                     >Agenda del Séptimo Seminario de Accesibilidad Web e
                     Inclusión en la Educación Virtual</span
                   >
-                  <i class="fa fa-external-link" aria-hidden="true"></i
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i
                 ></a>
               </div>
               <div>
@@ -859,7 +873,7 @@
                   ><span data-i18n="project3-link"
                     >Foro educativo distrital 2024</span
                   >
-                  <i class="fa fa-external-link" aria-hidden="true"></i
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i
                 ></a>
               </div>
               <div>
@@ -875,7 +889,7 @@
                   ><span data-i18n="project4-link"
                     >Implementación de Ghost CMS para Assersum</span
                   >
-                  <i class="fa fa-external-link" aria-hidden="true"></i
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i
                 ></a>
               </div>
               <div>
@@ -893,7 +907,7 @@
                   ><span data-i18n="project5-link"
                     >LMS MinCIT - Sistema de gestión de aprendizaje</span
                   >
-                  <i class="fa fa-external-link" aria-hidden="true"></i
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i
                 ></a>
               </div>
               <div>
@@ -911,7 +925,7 @@
                   ><span data-i18n="project6-link"
                     >Post de la clase final - Clase 20</span
                   >
-                  <i class="fa fa-external-link" aria-hidden="true"></i
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i
                 ></a>
               </div>
               <div>
@@ -929,7 +943,7 @@
                   ><span data-i18n="project7-link"
                     >Repositorio del proyecto</span
                   >
-                  <i class="fa fa-external-link" aria-hidden="true"></i
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i
                 ></a>
               </div>
               <div>
@@ -947,7 +961,7 @@
                   ><span data-i18n="project8-link"
                     >Diseño de PCB - esquemáticos</span
                   >
-                  <i class="fa fa-external-link" aria-hidden="true"></i
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i
                 ></a>
               </div>
               <div>
@@ -965,7 +979,7 @@
                   ><span data-i18n="project9-link"
                     >Demo del reproductor multimedia accesible</span
                   >
-                  <i class="fa fa-external-link" aria-hidden="true"></i
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i
                 ></a>
               </div>
               <div>
@@ -983,7 +997,7 @@
                   ><span data-i18n="project10-link"
                     >Repositorio del proyecto</span
                   >
-                  <i class="fa fa-external-link" aria-hidden="true"></i
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i
                 ></a>
               </div>
               <div>
@@ -1011,7 +1025,7 @@
                   ><span data-i18n="project12-link"
                     >Reconocimiento Buena Práctica Organizacional</span
                   >
-                  <i class="fa fa-external-link" aria-hidden="true"></i
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i
                 ></a>
               </div>
               <div>
@@ -1029,7 +1043,7 @@
                   ><span data-i18n="project13-link"
                     >Sitio web de implementación rápida</span
                   >
-                  <i class="fa fa-external-link" aria-hidden="true"></i
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i
                 ></a>
               </div>
               <div>
@@ -1045,7 +1059,7 @@
                   ><span data-i18n="project14-link"
                     >Sitio web de atención dental profesional</span
                   >
-                  <i class="fa fa-external-link" aria-hidden="true"></i
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i
                 ></a>
               </div>
               <div>
@@ -1063,7 +1077,7 @@
                   ><span data-i18n="project15-link"
                     >Sitio web de Servicios de Ingeniería Catastral</span
                   >
-                  <i class="fa fa-external-link" aria-hidden="true"></i
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i
                 ></a>
               </div>
               <div>
@@ -1079,7 +1093,7 @@
                   ><span data-i18n="project16-link"
                     >Sitio web de Canchas y Estructuras Deportivas</span
                   >
-                  <i class="fa fa-external-link" aria-hidden="true"></i
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i
                 ></a>
               </div>
             </div>
@@ -1251,7 +1265,7 @@
           </h2>
           <div class="resume-item d-flex flex-column flex-md-row mb-4">
             <div class="resume-content mr-auto">
-              <i class="fa fa-user-circle" aria-hidden="true"></i>
+              <i class="fas fa-user-circle" aria-hidden="true"></i>
               <a
                 href="https://datateca.unad.edu.co/cdn-para-cursos-moodle/seminario-accesibilidad-web/2024/"
                 class="link-new-window"
@@ -1276,7 +1290,7 @@
           </div>
           <div class="resume-item d-flex flex-column flex-md-row mb-4">
             <div class="resume-content mr-auto">
-              <i class="fa fa-user-circle" aria-hidden="true"></i>
+              <i class="fas fa-user-circle" aria-hidden="true"></i>
               <a
                 href="https://datateca.unad.edu.co/cdn-para-cursos-moodle/seminario-accesibilidad-web/2023/"
                 class="link-new-window"
@@ -1301,7 +1315,7 @@
           </div>
           <div class="resume-item d-flex flex-column flex-md-row mb-4">
             <div class="resume-content mr-auto">
-              <i class="fa fa-user-circle" aria-hidden="true"></i>
+              <i class="fas fa-user-circle" aria-hidden="true"></i>
               <a
                 href="https://datateca.unad.edu.co/cdn-para-cursos-moodle/seminario-accesibilidad-web/2022/"
                 class="link-new-window"
@@ -1326,7 +1340,7 @@
           </div>
           <div class="resume-item d-flex flex-column flex-md-row mb-4">
             <div class="resume-content mr-auto">
-              <i class="fa fa-user-circle" aria-hidden="true"></i>
+              <i class="fas fa-user-circle" aria-hidden="true"></i>
               <a
                 href="https://datateca.unad.edu.co/cdn-para-cursos-moodle/seminario-accesibilidad-web/2021/"
                 class="link-new-window"
@@ -1350,7 +1364,7 @@
           </div>
           <div class="resume-item d-flex flex-column flex-md-row mb-4">
             <div class="resume-content mr-auto">
-              <i class="fa fa-user-circle" aria-hidden="true"></i>
+              <i class="fas fa-user-circle" aria-hidden="true"></i>
               <a
                 href="https://www.credly.com/badges/f515f9a1-ad2f-4bb2-9f1b-63e46fd6c261/public_url"
                 class="link-new-window"
@@ -1374,7 +1388,7 @@
           </div>
           <div class="resume-item d-flex flex-column flex-md-row mb-4">
             <div class="resume-content mr-auto">
-              <i class="fa fa-user-circle" aria-hidden="true"></i>
+              <i class="fas fa-user-circle" aria-hidden="true"></i>
               <a
                 href="https://datateca.unad.edu.co/contenidos/publicaciones/Comunicaciones_VIMEP/2021/certificados/1016025188_PONENTE_2020.pdf"
                 class="link-new-window"
@@ -1399,7 +1413,7 @@
           </div>
           <div class="resume-item d-flex flex-column flex-md-row mb-4">
             <div class="resume-content mr-auto">
-              <i class="fa fa-user-circle" aria-hidden="true"></i>
+              <i class="fas fa-user-circle" aria-hidden="true"></i>
               <a
                 href="https://drive.google.com/file/d/1RMghXX6oeaEzbUoDMj0MSmpJJLFhiY_o/view?usp=sharing"
                 class="link-new-window"
@@ -1424,7 +1438,7 @@
           </div>
           <div class="resume-item d-flex flex-column flex-md-row mb-4">
             <div class="resume-content mr-auto">
-              <i class="fa fa-user-circle" aria-hidden="true"></i>
+              <i class="fas fa-user-circle" aria-hidden="true"></i>
               <a
                 href="https://drive.google.com/file/d/1BtXH0BCtjy2C60dIG5S7b7dlOsiIU6wM/view?usp=sharing"
                 class="link-new-window"
@@ -1458,8 +1472,8 @@
         role="button"
       >
         <span class="fa-stack">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+          <i class="fas fa-circle fa-stack-2x"></i>
+          <i class="fas fa-arrow-up fa-stack-1x fa-inverse"></i>
         </span>
       </a>
     </main>
@@ -1469,72 +1483,36 @@
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
+      defer
     ></script>
 
     <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"
+      defer
+    ></script>
 
     <!-- Custom scripts for this template -->
-    <script src="./js/resume.min.js"></script>
+    <script src="./js/resume.min.js" defer></script>
 
     <!-- Para apertura de certificados-->
-    <script src="./js/openLink.js"></script>
+    <script src="./js/openLink.js" defer></script>
 
     <!-- Slick Slider -->
-    <link rel="stylesheet" type="text/css" href="./css/slick.min.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="./css/accessible-slick-theme.min.css"
-    />
-    <!-- Cadenas no traducidas: Siguiente contenido, Anterior contenido, Ir al contenido -->
-    <script type="text/javascript" src="./js/slick.min.js"></script>
+    <script type="text/javascript" src="./js/slick.min.js" defer></script>
+    <script src="./js/slick-init.js" defer></script>
 
     <!-- Manejo de alertas -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="./js/alerts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <script src="./js/alerts.js" defer></script>
 
     <!-- Internacionalización (i18n) -->
-    <script src="./js/i18n.js"></script>
-    <script>
-      /* Slick Slider */
-      $(document).ready(function () {
-        $(".slider-for").slick({
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: true,
-          infinite: true,
-          speed: 300,
-          fade: true,
-          asNavFor: ".slider-nav",
-          instructionsText:
-            "Al cambiar el contenido actual de este carrusel, cambiará el contenido de miniaturas que le sigue.",
-          regionLabel: "Carrusel de imágenes principal",
-          lazyLoad: "ondemand",
-          autoplay: true,
-          autoplaySpeed: 3000,
-        });
-
-        $(".slider-nav").slick({
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          asNavFor: ".slider-for",
-          dots: true,
-          centerMode: true,
-          focusOnSelect: true,
-          arrows: false,
-          instructionsText:
-            "Al cambiar el contenido actual de este carrusel cambiará el contenido del principal que le antecede.",
-          regionLabel: "Carrusel de miniaturas",
-          lazyLoad: "ondemand",
-        });
-      });
-    </script>
+    <script src="./js/i18n.js" defer></script>
 
     <!--Accessibility-->
-    <script src="./js/accessibility.min.js"></script>
+    <script src="./js/accessibility.min.js" defer></script>
     <!-- focus title section from navbar -->
-    <script src="./js/navbar-focus.js"></script>
+    <script src="./js/navbar-focus.js" defer></script>
 
     <!-- Service Worker 
     <script src="./script.js"></script>-->
@@ -1548,6 +1526,32 @@
       data-colorIcons="#00262b"
       data-colorToggles="#046b71"
       data-position="bottom-right"
+      defer
     ></script>
+
+    <!-- Inicialización de eventos (reemplaza inline onclick) -->
+    <script defer>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Cambio de idioma con banderas
+        document
+          .getElementById("flag-es")
+          .addEventListener("click", function (e) {
+            e.preventDefault();
+            i18n.changeLang("es");
+          });
+        document
+          .getElementById("flag-en")
+          .addEventListener("click", function (e) {
+            e.preventDefault();
+            i18n.changeLang("en");
+          });
+        // Toggle de contraste / modo oscuro
+        document
+          .getElementById("checkSwitch")
+          .addEventListener("change", function () {
+            toggleContrast("dark");
+          });
+      });
+    </script>
   </body>
 </html>
