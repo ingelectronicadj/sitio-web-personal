@@ -76,3 +76,13 @@
 .dark .fa-stack {
   background-color: transparent !important;
 }
+
+/* Corrección: contenedor de contraste e idioma en modo oscuro */
+.dark.toogleContainer,
+.dark .toogleContainer,
+.dark.flags-lang,
+.dark .flags-lang,
+.dark .flags,
+.dark.flags {
+  background-color: transparent !important;
+}
