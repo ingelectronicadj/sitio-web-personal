@@ -20,11 +20,29 @@ body.dark h6,
 body.dark p,
 body.dark span,
 body.dark li,
-body.dark a,
 body.dark em,
 body.dark strong,
 body.dark b {
   color: #f9fafb !important;
+}
+
+/* Enlaces de contenido: cyan visible y distinguible del texto */
+body.dark a {
+  color: #00bcd4 !important;
+  transition: color 0.2s ease;
+}
+
+/* Spans y texto negrita dentro de enlaces deben heredar el color cyan */
+body.dark a span,
+body.dark a b,
+body.dark a strong {
+  color: inherit !important;
+}
+
+body.dark a:hover,
+body.dark a:focus {
+  color: #4dd0e1 !important;
+  text-decoration: underline;
 }
 
 body.dark .resume-item,
@@ -42,15 +60,14 @@ body.dark .resume-item {
 }
 
 /* Efecto hover suave para estos contenedores en modo oscuro */
-body.dark .resume-item:hover,
+body.dark .resume-item:hover {
+  background-color: rgba(255, 255, 255, 0.02) !important;
+  border-left-color: #00bcd4 !important;
+}
+
 body.dark .subheading:hover,
 body.dark .fa-ul:hover {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.02
-  ) !important; /* Fondo muy suave (2%) */
+  background-color: rgba(255, 255, 255, 0.02) !important;
 }
 
 /* Ajuste para el subheading: mantener sincronización de dimensiones */

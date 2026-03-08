@@ -147,6 +147,7 @@ p.lead {
 
 #welcome-section .textMovil {
   margin-bottom: 2rem;
+  border: 2px solid transparent; /* Sincronización con darkMode.css en desktop */
 }
 
 #welcome-section p.lead {
