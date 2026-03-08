@@ -61,3 +61,17 @@
 .dark .text-primary:focus {
   color: #fff !important;
 }
+
+/* Corrección: menú hamburguesa visible en modo oscuro */
+.dark.navbar-toggler-icon,
+.dark .navbar-toggler-icon {
+  background-color: transparent !important;
+}
+
+/* Corrección: botón volver arriba visible en modo oscuro */
+.dark.ir-arriba,
+.dark .ir-arriba,
+.dark.fa-stack,
+.dark .fa-stack {
+  background-color: transparent !important;
+}
