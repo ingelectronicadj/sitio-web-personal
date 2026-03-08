@@ -154,7 +154,7 @@ var i18n = {
       "project10-title":
         "Interfaz para visualización de estructuras moleculares",
       "project10-link": "Repositorio del proyecto",
-      "project11-title": "Cursos Moodle adaptables con accesibilidad web",
+      "project11-title": "Cursos MOOC - Cursos Masivos Abiertos y en Línea",
       "project12-title": "RPA para configuración rápida de recursos en Moodle",
       "project12-link": "Reconocimiento Buena Práctica Organizacional",
       "project13-title": "Sistema de Webconferencia Educativa y Organizacional",
@@ -165,6 +165,17 @@ var i18n = {
       "project15-link": "Sitio web de Servicios de Ingeniería Catastral",
       "project16-title": "Sitio web de Canchas y Estructuras Deportivas",
       "project16-link": "Sitio web de Canchas y Estructuras Deportivas",
+      "project17-title":
+        "Ajustes de Accesibilidad Web para la Sede electrónica de la SIC",
+      "project17-link":
+        "Sede electrónica de la Superintendencia de Industria y Comercio - SIC",
+      "project18-title":
+        "Ajustes de Accesibilidad Web para la Oficina virtual de propiedad intelectual Colombia - SIPI",
+      "project18-link": "SIPI - Oficina virtual de propiedad intelectual",
+      "project19-title":
+        "Ajustes de Accesibilidad Web para Aplicación hibrida de criptomonedas - Openbank España y Alemania",
+      "project19-link":
+        "Aplicación web para criptomonedas - Openbank España y Alemania",
 
       // Interests section
       "section-interests": "Intereses",
@@ -385,7 +396,7 @@ var i18n = {
       "project9-link": "Accessible multimedia player demo",
       "project10-title": "Interface for molecular structure visualization",
       "project10-link": "Project repository",
-      "project11-title": "Adaptive Moodle courses with web accessibility",
+      "project11-title": "MOOC - Massive Open Online Courses",
       "project12-title": "RPA for quick Moodle resource configuration",
       "project12-link": "Organizational Best Practice Award",
       "project13-title": "Educational and Organizational Web Conference System",
@@ -396,6 +407,17 @@ var i18n = {
       "project15-link": "Cadastral Engineering Services website",
       "project16-title": "Sports Courts and Structures website",
       "project16-link": "Sports Courts and Structures website",
+      "project17-title":
+        "Web Accessibility Adjustments for the SIC Electronic Headquarters",
+      "project17-link":
+        "Electronic Headquarters of the Superintendence of Industry and Commerce - SIC",
+      "project18-title":
+        "Web Accessibility Adjustments for the Colombian Virtual Intellectual Property Office - SIPI",
+      "project18-link": "SIPI - Virtual Intellectual Property Office",
+      "project19-title":
+        "Web Accessibility Adjustments for Hybrid Cryptocurrency Application - Openbank Spain and Germany",
+      "project19-link":
+        "Web application for cryptocurrencies - Openbank Spain and Germany",
 
       // Interests section
       "section-interests": "Interests",
