@@ -129,53 +129,90 @@ var i18n = {
 
       "project1-title":
         "Auditoría de Accesibilidad Web para la sede electrónica de la SIC",
-      "project1-link":
-        "Resultados de Accesibilidad Web para la sede electrónica de la SIC",
+      "project1-link": "Ver resultados de auditoría",
+      "project1-aria":
+        "Ver resultados de la Auditoría de Accesibilidad Web para la sede electrónica de la SIC",
       "project2-title":
         "Séptimo Seminario de Accesibilidad Web e Inclusión en la Educación Virtual",
-      "project2-link":
-        "Agenda del Séptimo Seminario de Accesibilidad Web e Inclusión en la Educación Virtual",
+      "project2-link": "Ver agenda del seminario",
+      "project2-aria":
+        "Ver agenda del Séptimo Seminario de Accesibilidad Web e Inclusión en la Educación Virtual",
       "project3-title": "DataFill Foro educativo distrital 2024",
-      "project3-link": "Foro educativo distrital 2024",
+      "project3-link": "Ver plataforma del foro",
+      "project3-aria":
+        "Ver plataforma DataFill del Foro educativo distrital 2024",
       "project4-title":
         "Sitio web de asesoría y empleo para personas con disCapacidad",
-      "project4-link": "Implementación de Ghost CMS para Assersum",
+      "project4-link": "Ver sitio de Assersum",
+      "project4-aria":
+        "Ver sitio web de Assersum - asesoría y empleo para personas con disCapacidad",
       "project5-title": "Plataforma educativa para MinCIT & Fontur",
-      "project5-link": "LMS MinCIT - Sistema de gestión de aprendizaje",
+      "project5-link": "Ver plataforma LMS",
+      "project5-aria":
+        "Ver plataforma LMS MinCIT - Sistema de gestión de aprendizaje",
       "project6-title":
         "Curso de Accesibilidad Web orientado a entidades de Gobierno",
-      "project6-link": "Post de la clase final - Clase 20",
+      "project6-link": "Ver publicación del curso",
+      "project6-aria":
+        "Ver post de la clase final del Curso de Accesibilidad Web - Clase 20",
       "project7-title": "Solución IoT para temeletría usando redes LPWAN",
-      "project7-link": "Repositorio del proyecto",
+      "project7-link": "Ver repositorio del proyecto",
+      "project7-aria":
+        "Ver repositorio en Github del proyecto Solución IoT para temeletría usando redes LPWAN",
       "project8-title": "Tarjeta Shield para control de motores por Bluetooth",
-      "project8-link": "Diseño de PCB - esquemáticos",
+      "project8-link": "Ver diseño de PCB",
+      "project8-aria":
+        "Ver diseño de PCB y esquemáticos de la Tarjeta Shield para control de motores por Bluetooth",
       "project9-title": "Reproductor de videos con interprete de señas",
-      "project9-link": "Demo del reproductor multimedia accesible",
+      "project9-link": "Ver demo del reproductor",
+      "project9-aria":
+        "Ver demo del Reproductor de videos accesible con interprete de señas",
       "project10-title":
         "Interfaz para visualización de estructuras moleculares",
-      "project10-link": "Repositorio del proyecto",
+      "project10-link": "Ver repositorio del proyecto",
+      "project10-aria":
+        "Ver repositorio en Github de la Interfaz para visualización de estructuras moleculares",
       "project11-title": "Cursos MOOC - Cursos Masivos Abiertos y en Línea",
+      "project11-aria":
+        "Ver catálogo de Cursos MOOC - Cursos Masivos Abiertos y en Línea",
       "project12-title": "RPA para configuración rápida de recursos en Moodle",
-      "project12-link": "Reconocimiento Buena Práctica Organizacional",
+      "project12-link": "Ver reconocimiento",
+      "project12-aria":
+        "Ver Reconocimiento Buena Práctica Organizacional por el proyecto RPA para Moodle",
       "project13-title": "Sistema de Webconferencia Educativa y Organizacional",
-      "project13-link": "Sitio web de implementación rápida",
+      "project13-link": "Ver sitio del proyecto",
+      "project13-aria":
+        "Ver sitio web del Sistema de Webconferencia Educativa y Organizacional",
       "project14-title": "Sitio web de atención dental profesional",
-      "project14-link": "Sitio web de atención dental profesional",
+      "project14-link": "Ver sitio web dental",
+      "project14-aria":
+        "Ver sitio web de atención dental profesional Dentalwhite",
       "project15-title": "Sitio web de Servicios de Ingeniería Catastral",
-      "project15-link": "Sitio web de Servicios de Ingeniería Catastral",
+      "project15-link": "Ver sitio de ingeniería",
+      "project15-aria": "Ver sitio web de Servicios de Ingeniería Catastral",
       "project16-title": "Sitio web de Canchas y Estructuras Deportivas",
-      "project16-link": "Sitio web de Canchas y Estructuras Deportivas",
+      "project16-link": "Ver sitio web de canchas",
+      "project16-aria":
+        "Ver sitio web de Canchas y Estructuras Deportivas Arysdia",
       "project17-title":
         "Ajustes de Accesibilidad Web para la Sede electrónica de la SIC",
-      "project17-link":
-        "Sede electrónica de la Superintendencia de Industria y Comercio - SIC",
+      "project17-link": "Ver sede electrónica",
+      "project17-aria":
+        "Ver Sede electrónica de la Superintendencia de Industria y Comercio - SIC",
       "project18-title":
         "Ajustes de Accesibilidad Web para la Oficina virtual de propiedad intelectual Colombia - SIPI",
-      "project18-link": "SIPI - Oficina virtual de propiedad intelectual",
+      "project18-link": "Ver oficina virtual",
+      "project18-aria": "Ver SIPI - Oficina virtual de propiedad intelectual",
       "project19-title":
         "Ajustes de Accesibilidad Web para Aplicación hibrida de criptomonedas - Openbank España y Alemania",
-      "project19-link":
-        "Aplicación web para criptomonedas - Openbank España y Alemania",
+      "project19-link": "Ver aplicación web",
+      "project19-aria":
+        "Ver Aplicación web para criptomonedas - Openbank España y Alemania",
+      "project20-title":
+        "Panorama de la accesibilidad web en Colombia para sitios web gov.co",
+      "project20-link": "Ver observatorio",
+      "project20-aria":
+        "Ver Panorama de la accesibilidad web en Colombia para sitios web gov.co - 5,000+ sitios gov.co",
 
       // Interests section
       "section-interests": "Intereses",
@@ -373,51 +410,83 @@ var i18n = {
 
       "project1-title":
         "Web Accessibility Audit for the SIC Electronic Headquarters",
-      "project1-link":
-        "Web Accessibility Results for the SIC Electronic Headquarters",
+      "project1-link": "View audit results",
+      "project1-aria":
+        "View web accessibility results for the SIC Electronic Headquarters",
       "project2-title":
         "Seventh Web Accessibility and Inclusion Seminar in Virtual Education",
-      "project2-link":
-        "Agenda of the Seventh Web Accessibility and Inclusion Seminar in Virtual Education",
+      "project2-link": "View seminar agenda",
+      "project2-aria":
+        "View agenda of the Seventh Web Accessibility and Inclusion Seminar in Virtual Education",
       "project3-title": "DataFill District Educational Forum 2024",
-      "project3-link": "District Educational Forum 2024",
+      "project3-link": "View forum platform",
+      "project3-aria":
+        "View DataFill platform for the District Educational Forum 2024",
       "project4-title":
         "Advisory and employment website for people with disabilities",
-      "project4-link": "Ghost CMS implementation for Assersum",
+      "project4-link": "View Assersum site",
+      "project4-aria":
+        "View Assersum website - advisory and employment for people with disabilities",
       "project5-title": "Educational platform for MinCIT & Fontur",
-      "project5-link": "LMS MinCIT - Learning Management System",
+      "project5-link": "View LMS platform",
+      "project5-aria": "View MinCIT LMS platform - Learning Management System",
       "project6-title": "Web Accessibility Course for Government Entities",
-      "project6-link": "Final class post - Class 20",
+      "project6-link": "View course post",
+      "project6-aria": "View post of the final class - Class 20",
       "project7-title": "IoT solution for telemetry using LPWAN networks",
-      "project7-link": "Project repository",
+      "project7-link": "View project repository",
+      "project7-aria":
+        "View Github repository for the IoT solution for telemetry using LPWAN networks",
       "project8-title": "Shield board for motor control via Bluetooth",
-      "project8-link": "PCB design - schematics",
+      "project8-link": "View PCB design",
+      "project8-aria":
+        "View PCB design and schematics for the Shield board for motor control via Bluetooth",
       "project9-title": "Video player with sign language interpreter",
-      "project9-link": "Accessible multimedia player demo",
+      "project9-link": "View player demo",
+      "project9-aria":
+        "View demo of the accessible multimedia player with sign language interpreter",
       "project10-title": "Interface for molecular structure visualization",
-      "project10-link": "Project repository",
+      "project10-link": "View project repository",
+      "project10-aria":
+        "View Github repository for the interface for molecular structure visualization",
       "project11-title": "MOOC - Massive Open Online Courses",
+      "project11-aria": "View MOOC catalogue - Massive Open Online Courses",
       "project12-title": "RPA for quick Moodle resource configuration",
-      "project12-link": "Organizational Best Practice Award",
+      "project12-link": "View recognition",
+      "project12-aria":
+        "View Organizational Best Practice Award for the RPA for Moodle project",
       "project13-title": "Educational and Organizational Web Conference System",
-      "project13-link": "Quick deployment website",
+      "project13-link": "View project site",
+      "project13-aria":
+        "View website for the Educational and Organizational Web Conference System",
       "project14-title": "Professional dental care website",
-      "project14-link": "Professional dental care website",
+      "project14-link": "View dental site",
+      "project14-aria": "View website for Dentalwhite professional dental care",
       "project15-title": "Cadastral Engineering Services website",
-      "project15-link": "Cadastral Engineering Services website",
+      "project15-link": "View engineering site",
+      "project15-aria": "View website for Cadastral Engineering Services",
       "project16-title": "Sports Courts and Structures website",
-      "project16-link": "Sports Courts and Structures website",
+      "project16-link": "View sports site",
+      "project16-aria": "View website for Arysdia Sports Courts and Structures",
       "project17-title":
         "Web Accessibility Adjustments for the SIC Electronic Headquarters",
-      "project17-link":
-        "Electronic Headquarters of the Superintendence of Industry and Commerce - SIC",
+      "project17-link": "View electronic headquarters",
+      "project17-aria":
+        "View Electronic Headquarters of the Superintendence of Industry and Commerce - SIC",
       "project18-title":
         "Web Accessibility Adjustments for the Colombian Virtual Intellectual Property Office - SIPI",
-      "project18-link": "SIPI - Virtual Intellectual Property Office",
+      "project18-link": "View virtual office",
+      "project18-aria": "View SIPI - Virtual Intellectual Property Office",
       "project19-title":
         "Web Accessibility Adjustments for Hybrid Cryptocurrency Application - Openbank Spain and Germany",
-      "project19-link":
-        "Web application for cryptocurrencies - Openbank Spain and Germany",
+      "project19-link": "View web application",
+      "project19-aria":
+        "View web application for cryptocurrencies - Openbank Spain and Germany",
+      "project20-title":
+        "Overview of web accessibility in Colombia for gov.co websites",
+      "project20-link": "View observatory",
+      "project20-aria":
+        "View Overview of web accessibility in Colombia for gov.co websites - 5,000+ gov.co sites",
 
       // Interests section
       "section-interests": "Interests",

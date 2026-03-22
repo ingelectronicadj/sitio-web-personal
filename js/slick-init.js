@@ -22,10 +22,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Carrusel de miniaturas
   $(".slider-nav").slick({
-    slidesToShow: 3,
+    slidesToShow: 5,
     slidesToScroll: 1,
     asNavFor: ".slider-for",
-    dots: true,
+    dots: false,
     centerMode: true,
     focusOnSelect: true,
     arrows: false,
@@ -33,5 +33,13 @@ document.addEventListener("DOMContentLoaded", function () {
       "Al cambiar el contenido actual de este carrusel cambiará el contenido del principal que le antecede.",
     regionLabel: "Carrusel de miniaturas",
     lazyLoad: "ondemand",
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+    ],
   });
 });
