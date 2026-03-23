@@ -42,6 +42,7 @@ var i18n = {
       "about-email-label": "E-mail:",
       "about-contact-label": "Contacto:",
       "about-resume-link": " Hoja de vida en PDF",
+      "about-resume-pdf": "./docs/Hoja_de_Vida_Diego_Mena-ES.pdf",
       "about-description":
         "<b>Ingeniero especializado en desarrollo de productos digitales accesibles</b>, con experiencia en entornos web e híbridos. Magíster en Gerencia de Proyectos, con más de 5 años de experiencia en accesibilidad digital, aseguramiento de calidad (QA) y usabilidad.<br />Actualmente participa en proyectos internacionales en el sector fintech y de criptoactivos para clientes en España y Alemania, aportando en la accesibilidad de sistemas de componentes utilizados por múltiples aplicaciones web. De forma paralela, trabaja con entidades gubernamentales en Colombia, realizando diagnósticos y mejoras de accesibilidad alineadas con la <b>WCAG 2.2</b>, la Directiva Europea <b>EN 301 549</b>, la <b>Sección 508</b> de EE.UU. y la <b>Resolución 1519</b> de 2020 del MinTIC para Colombia.<br />Mi experiencia abarca desde el diseño y pruebas de accesibilidad, hasta la formación de equipos técnicos y la elaboración de reportes para cumplimiento normativo, garantizando altos estándares de calidad e inclusión digital en sectores como e-learning, fintech, comercio electrónico y gobierno.",
 
@@ -323,6 +324,7 @@ var i18n = {
       "about-email-label": "E-mail:",
       "about-contact-label": "Contact:",
       "about-resume-link": " Resume in PDF",
+      "about-resume-pdf": "./docs/Hoja_de_Vida_Diego_Mena-EN.pdf",
       "about-description":
         "<b>Engineer specialized in the development of accessible digital products</b>, with experience in web and hybrid environments. Master in Project Management, with more than 5 years of experience in digital accessibility, quality assurance (QA) and usability.<br />Currently participating in international projects in the fintech and crypto-assets sector for clients in Spain and Germany, contributing to the accessibility of component systems used by multiple web applications. In parallel, works with government entities in Colombia, performing accessibility diagnostics and improvements aligned with <b>WCAG 2.2</b>, the European Directive <b>EN 301 549</b>, the U.S. <b>Section 508</b> and Colombia's <b>Resolution 1519</b> of 2020 from MinTIC.<br />My experience ranges from accessibility design and testing, to training technical teams and preparing compliance reports, ensuring high standards of quality and digital inclusion in sectors such as e-learning, fintech, e-commerce and government.",
 
@@ -609,6 +611,16 @@ var i18n = {
       var ttranslation = this.translations[lang][tkey];
       if (ttranslation !== undefined) {
         tel.setAttribute("title", ttranslation);
+      }
+    }
+    // Actualizar elementos con data-i18n-href (atributo href)
+    var hrefElements = document.querySelectorAll("[data-i18n-href]");
+    for (var h = 0; h < hrefElements.length; h++) {
+      var hel = hrefElements[h];
+      var hkey = hel.getAttribute("data-i18n-href");
+      var htranslation = this.translations[lang][hkey];
+      if (htranslation !== undefined) {
+        hel.setAttribute("href", htranslation);
       }
     }
 

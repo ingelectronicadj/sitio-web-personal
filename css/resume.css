@@ -51,10 +51,11 @@ body {
 
 .slider-for .img-responsive {
   height: 500px;
-  object-fit: cover;
-  object-position: top;
+  object-fit: contain;
+  object-position: center;
   width: 100%;
   border-radius: 5px;
+  background-color: #f8f9fa;
 }
 
 @media (max-width: 768px) {
@@ -79,8 +80,8 @@ body {
 .slider-nav .thumbnail {
   width: 100%;
   aspect-ratio: 16 / 9;
-  object-fit: cover;
-  object-position: top;
+  object-fit: contain;
+  object-position: center;
   border-radius: 6px;
   cursor: pointer;
   transition:
@@ -89,6 +90,7 @@ body {
     box-shadow 0.3s ease;
   border: 3px solid transparent;
   margin: 5px 0;
+  background-color: #f8f9fa;
 }
 
 .slick-current .thumbnail {
@@ -117,6 +119,16 @@ body {
   top: auto;
   width: 1px;
   z-index: -999;
+}
+
+#sideNav {
+  transition: transform 0.4s ease-in-out;
+}
+
+@media (max-width: 991px) and (orientation: landscape) {
+  #sideNav.nav-up {
+    transform: translateY(-100%);
+  }
 }
 
 .skip-main:focus,
@@ -851,6 +863,13 @@ ul.horizontal li:last-child {
     margin-top: 10px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     border: 1px solid transparent; /* Reserva espacio para el borde de modo oscuro */
+  }
+
+  @media (orientation: landscape) {
+    #navbarSupportedContent {
+      max-height: 75vh;
+      overflow-y: auto;
+    }
   }
 
   #navbarSupportedContent .nav-link {

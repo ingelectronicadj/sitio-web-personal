@@ -81,12 +81,49 @@
 
   // Escuchar scroll con throttle para rendimiento
   var scrollTimeout;
+  var lastScrollTop = 0;
+  var delta = 5; // Margen de scroll para activar
+  var navbarHeight = $("#sideNav").outerHeight();
+
   window.addEventListener("scroll", function () {
     if (scrollTimeout) {
       window.cancelAnimationFrame(scrollTimeout);
     }
-    scrollTimeout = window.requestAnimationFrame(updateActiveLink);
+    scrollTimeout = window.requestAnimationFrame(function () {
+      updateActiveLink();
+      handleNavbarVisibility();
+    });
   });
+
+  function handleNavbarVisibility() {
+    var st = window.pageYOffset || document.documentElement.scrollTop;
+
+    // Solo actuar en mobile landscape (ancho < 992 y orientación horizontal)
+    var isMobileLandscape = window.matchMedia(
+      "(max-width: 991px) and (orientation: landscape)",
+    ).matches;
+
+    if (!isMobileLandscape) {
+      $("#sideNav").removeClass("nav-up");
+      return;
+    }
+
+    // Asegurarse de que el scroll sea mayor que el delta
+    if (Math.abs(lastScrollTop - st) <= delta) return;
+
+    // Si se hace scroll hacia abajo y se ha pasado el alto del navbar, ocultar
+    if (st > lastScrollTop && st > navbarHeight) {
+      // Scroll Down
+      $("#sideNav").addClass("nav-up");
+    } else {
+      // Scroll Up
+      if (st + $(window).height() < $(document).height()) {
+        $("#sideNav").removeClass("nav-up");
+      }
+    }
+
+    lastScrollTop = st;
+  }
 
   // Ejecutar al cargar la página
   updateActiveLink();
