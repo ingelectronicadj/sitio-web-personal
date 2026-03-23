@@ -129,9 +129,6 @@
     lastScrollTop = st;
   }
 
-    lastScrollTop = st;
-  }
-
   // Ejecutar al cargar la página
   updateActiveLink();
 })(jQuery);
