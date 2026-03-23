@@ -101,11 +101,12 @@
 
   function handleNavbarVisibility() {
     var $sideNav = $("#sideNav");
-    var st = window.pageYOffset || document.documentElement.scrollTop;
-    var winWidth = window.innerWidth;
-    var winHeight = window.innerHeight;
+    var st = $(window).scrollTop();
+    var winWidth = $(window).width();
+    var winHeight = $(window).height();
 
     // Solo actuar en mobile landscape (ancho < 992 y ancho > alto)
+    // Usamos $(window).width() para mayor consistencia con el simulador
     var isMobileLandscape = winWidth < 992 && winWidth > winHeight;
 
     if (!isMobileLandscape) {
@@ -113,21 +114,20 @@
       return;
     }
 
-    // Asegurarse de que el scroll sea mayor que el delta
-    if (Math.abs(lastScrollTop - st) <= delta) return;
+    // Asegurarse de que el scroll sea mayor que el delta (reducimos a 2 para que sea más sensible al test)
+    if (Math.abs(lastScrollTop - st) <= 2) return;
 
-    var navbarHeight = $sideNav.outerHeight();
-
-    // Si se hace scroll hacia abajo y se ha pasado el alto del navbar, ocultar
-    if (st > lastScrollTop && st > navbarHeight) {
+    // Si se hace scroll hacia abajo (> 20px para estabilidad), ocultar
+    if (st > lastScrollTop && st > 20) {
       // Scroll Down
       $sideNav.addClass("nav-up");
-    } else {
-      // Scroll Up (y no estamos al final de la página)
-      if (st + winHeight < $(document).height()) {
-        $sideNav.removeClass("nav-up");
-      }
+    } else if (st < lastScrollTop) {
+      // Scroll Up - Mostrar inmediatamente
+      $sideNav.removeClass("nav-up");
     }
+
+    lastScrollTop = st;
+  }
 
     lastScrollTop = st;
   }
