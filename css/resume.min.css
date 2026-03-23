@@ -108,7 +108,7 @@ body {
 }
 @media (max-width: 991px) and (orientation: landscape) {
   #sideNav.nav-up {
-    transform: translateY(-100%);
+    transform: translateY(-100%) !important;
   }
 }
 .skip-main:focus,

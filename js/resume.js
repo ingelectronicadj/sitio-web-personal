@@ -82,8 +82,7 @@
   // Escuchar scroll con throttle para rendimiento
   var scrollTimeout;
   var lastScrollTop = 0;
-  var delta = 5; // Margen de scroll para activar
-  var navbarHeight = $("#sideNav").outerHeight();
+  var delta = 10; // Margen de scroll aumentado para mayor estabilidad
 
   window.addEventListener("scroll", function () {
     if (scrollTimeout) {
@@ -95,30 +94,38 @@
     });
   });
 
-  function handleNavbarVisibility() {
-    var st = window.pageYOffset || document.documentElement.scrollTop;
+  // Resetear estado al cambiar orientación o tamaño
+  window.addEventListener("resize", function () {
+    $("#sideNav").removeClass("nav-up");
+  });
 
-    // Solo actuar en mobile landscape (ancho < 992 y orientación horizontal)
-    var isMobileLandscape = window.matchMedia(
-      "(max-width: 991px) and (orientation: landscape)",
-    ).matches;
+  function handleNavbarVisibility() {
+    var $sideNav = $("#sideNav");
+    var st = window.pageYOffset || document.documentElement.scrollTop;
+    var winWidth = window.innerWidth;
+    var winHeight = window.innerHeight;
+
+    // Solo actuar en mobile landscape (ancho < 992 y ancho > alto)
+    var isMobileLandscape = winWidth < 992 && winWidth > winHeight;
 
     if (!isMobileLandscape) {
-      $("#sideNav").removeClass("nav-up");
+      $sideNav.removeClass("nav-up");
       return;
     }
 
     // Asegurarse de que el scroll sea mayor que el delta
     if (Math.abs(lastScrollTop - st) <= delta) return;
 
+    var navbarHeight = $sideNav.outerHeight();
+
     // Si se hace scroll hacia abajo y se ha pasado el alto del navbar, ocultar
     if (st > lastScrollTop && st > navbarHeight) {
       // Scroll Down
-      $("#sideNav").addClass("nav-up");
+      $sideNav.addClass("nav-up");
     } else {
-      // Scroll Up
-      if (st + $(window).height() < $(document).height()) {
-        $("#sideNav").removeClass("nav-up");
+      // Scroll Up (y no estamos al final de la página)
+      if (st + winHeight < $(document).height()) {
+        $sideNav.removeClass("nav-up");
       }
     }
 
