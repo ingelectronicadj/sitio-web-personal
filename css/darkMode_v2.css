@@ -45,6 +45,12 @@ body.dark a:focus {
   text-decoration: underline;
 }
 
+/* Enlace de hoja de vida con estilo hover permanente (Modo Oscuro) */
+body.dark a[data-i18n="about-resume-link"] {
+  color: #4dd0e1 !important;
+  text-decoration: underline !important;
+}
+
 body.dark .resume-item,
 body.dark .textMovil,
 body.dark .subheading,

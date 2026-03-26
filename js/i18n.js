@@ -71,7 +71,7 @@ var i18n = {
       "exp3-company":
         "Equipo de Tecnologías de Inclusión y Accesibilidad Web - UNAD",
       "exp3-description":
-        "Certificación laboral por 5 años y 4 meses.<br><b>Funciones:</b> Aportar en el desarrollo de ambientes virtuales de aprendizaje, auditar recursos educativos digitales en accesibilidad web y desarrollar software para la automatización de procesos.<br><b>Algunos proyectos de gran impacto:</b> Lideré el proceso de actualización tecnológica de la Universidad en el año 2020, desarrollé todas las vistas de aulas modelo para la oferta de cursos de las distintas facultades y logré automatizar varios procesos para que los docentes pudieran crear cursos con estándares de calidad aportando a la NTC6576 - Norma Técnica Colombiana para el Diseño y Oferta de Cursos en Ambientes Virtuales de Aprendizaje.",
+        "Certificación laboral por 5 años y 4 meses.<br><b>Funciones:</b> Aportar en el desarrollo de ambientes virtuales de aprendizaje, auditar recursos educativos digitales en accesibilidad web y desarrollar software para la automatización de procesos.<br><b>Algunos proyectos de gran impacto:</b> Lideré el proceso de actualización tecnológica de la Universidad Nacional Abierta y a Distancia en el año 2020, desarrollé todas las vistas de aulas modelo para la oferta de cursos de las distintas facultades y logré automatizar varios procesos para que los docentes pudieran crear cursos con estándares de calidad aportando a la NTC6576 - Norma Técnica Colombiana para el Diseño y Oferta de Cursos en Ambientes Virtuales de Aprendizaje.",
       "exp3-date": "Sept 2019 - Dic 2024",
 
       "exp4-title": "Experto en accesibilidad web",
@@ -353,7 +353,7 @@ var i18n = {
       "exp3-company":
         "Inclusion Technologies and Web Accessibility Team - UNAD",
       "exp3-description":
-        "Work certification for 5 years and 4 months.<br><b>Responsibilities:</b> Contribute to the development of virtual learning environments, audit digital educational resources for web accessibility and develop software for process automation.<br><b>High-impact projects:</b> Led the University's technological upgrade process in 2020, developed all model classroom views for course offerings across different faculties and automated several processes so that teachers could create courses meeting quality standards contributing to NTC6576 - Colombian Technical Standard for the Design and Offer of Courses in Virtual Learning Environments.",
+        "Work certification for 5 years and 4 months.<br><b>Responsibilities:</b> Contribute to the development of virtual learning environments, audit digital educational resources for web accessibility and develop software for process automation.<br><b>High-impact projects:</b> Led the National Open and Distance University's technological upgrade process in 2020, developed all model classroom views for course offerings across different faculties and automated several processes so that teachers could create courses meeting quality standards contributing to NTC6576 - Colombian Technical Standard for the Design and Offer of Courses in Virtual Learning Environments.",
       "exp3-date": "Sep 2019 - Dec 2024",
 
       "exp4-title": "Web Accessibility Expert",

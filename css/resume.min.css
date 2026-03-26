@@ -643,6 +643,19 @@ ul.horizontal li:last-child {
   .slick-next .slick-next-icon:before {
     font-size: 18px !important;
   }
+  section.resume-section {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+  #welcome-section h1 {
+    margin-bottom: 0.5rem;
+  }
+  .movil img {
+    margin-bottom: 10px;
+  }
+  .textMovil {
+    margin-bottom: 0.5rem !important;
+  }
 }
 @media screen and (max-width: 1024px) {
   .resume-item {
@@ -790,4 +803,8 @@ ul.horizontal li:last-child {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
   }
+}
+a[data-i18n="about-resume-link"] {
+  color: #046b71 !important;
+  text-decoration: underline !important;
 }

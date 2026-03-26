@@ -218,6 +218,12 @@ p.lead {
   margin-top: 1.5rem;
 }
 
+/* Enlace de hoja de vida con estilo hover permanente */
+a[data-i18n="about-resume-link"] {
+  color: #046b71 !important;
+  text-decoration: underline !important;
+}
+
 .subheading {
   text-transform: uppercase;
   font-weight: 500;
@@ -741,6 +747,24 @@ ul.horizontal li:last-child {
   .slick-prev .slick-prev-icon:before,
   .slick-next .slick-next-icon:before {
     font-size: 18px !important;
+  }
+
+  /* Reducción de espaciados para mejor primer renderizado */
+  section.resume-section {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  #welcome-section h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  .movil img {
+    margin-bottom: 10px;
+  }
+
+  .textMovil {
+    margin-bottom: 0.5rem !important;
   }
 }
 
