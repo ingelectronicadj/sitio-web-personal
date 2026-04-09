@@ -231,11 +231,11 @@ var i18n = {
       // Interests section
       "section-interests": "Intereses",
       "interests-p1":
-        "Entre mis intereses profesionales destaco el hecho de poder innovar siempre que sea posible, claramente, sin perder de vista el ciclo de vida de los productos o servicios que se encuentren en producción. Como entusiasta de la informática desde niño, he sido dado a la investigación y el autoaprendizaje, esta fortaleza me ha llevado con el paso del tiempo a formular mejores preguntas y dar con hallazgos interesantes en tecnologías para el internet de cosas, el analisis masivo de datos, la inteligencia artificial y la automatización de procesos.",
+        "En los últimos 3 años, la Inteligencia Artificial ha cautivado mi tiempo libre y enfoque profesional, convirtiéndose en el eje central de mi preparación para un Doctorado en IA. Me motiva profundamente la capacidad de esta tecnología para transformar la veeduría ciudadana y el cumplimiento normativo. Actualmente, planteo el desarrollo de un sistema de accesibilidad impulsado por IA y automatización que permita auditar y dar fe de la inclusión digital en los sitios web gubernamentales de Colombia, garantizando que la tecnología sea un puente y no una barrera para la participación democrática.",
       "interests-p2":
-        "Me interesa en gran medida aportar en temas de educación y a su vez disminuir la brecha digital. Considero que la educación es un pilar fundamental de la sociedad, y por ello, desde mis capacidades y experiencias aporto en la formación de formadores sobre nuevas herramientas de uso educativo digital.",
+        "Como entusiasta de la informática desde niño, mi trayectoria ha evolucionado desde el internet de las cosas (IoT) y la automatización hacia el análisis masivo de datos para fines sociales. Me interesa en gran medida aportar en temas de educación y a su vez disminuir la brecha digital, considerando que la educación es un pilar fundamental de la sociedad.",
       "interests-p3":
-        "Desde el análisis de los objetivos de desarrollo sostenible me interesa poder contribuir a la soberanía alimentaria(hambre cero), la educación de calidad, la energía asequible y no contaminante como acción por el clima, así como la conectividad a internet como derecho fundamental. Me interesa mucho aportar significativamente a esa gran red que llamamos internet y me capacito diariamente para ser consecuente con mis intereses.",
+        "Desde el análisis de los objetivos de desarrollo sostenible me interesa contribuir a la soberanía alimentaria, la educación de calidad y la conectividad a internet como derecho fundamental. Me capacito diariamente para que mi aporte a la red sea significativo y consecuente con mis valores de inclusión y transparencia.",
 
       // Awards section
       "section-awards": "Reconocimientos",
@@ -519,11 +519,11 @@ var i18n = {
       // Interests section
       "section-interests": "Interests",
       "interests-p1":
-        "Among my professional interests I highlight the ability to innovate whenever possible, clearly, without losing sight of the life cycle of products or services in production. As a computer enthusiast since childhood, I have been drawn to research and self-learning. This strength has led me over time to ask better questions and discover interesting findings in technologies for the Internet of Things, big data analysis, artificial intelligence and process automation.",
+        "Over the last 3 years, Artificial Intelligence has captivated my free time and professional focus, becoming the central pillar of my preparation for a PhD in AI. I am deeply motivated by the power of this technology to transform civic oversight and regulatory compliance. Currently, I am proposing the development of an AI-driven accessibility system combined with automation to audit and verify digital inclusion on government websites in Colombia, ensuring that technology serves as a bridge rather than a barrier to democratic participation.",
       "interests-p2":
-        "I am very interested in contributing to educational topics and at the same time reducing the digital divide. I believe that education is a fundamental pillar of society, and therefore, from my capabilities and experiences, I contribute to the training of trainers on new digital educational tools.",
+        "As a computer enthusiast since childhood, my trajectory has evolved from the Internet of Things (IoT) and automation towards massive data analysis for social purposes. I am heavily interested in contributing to educational topics and reducing the digital divide, considering education a fundamental pillar of society.",
       "interests-p3":
-        "From the analysis of the sustainable development goals, I am interested in contributing to food sovereignty (zero hunger), quality education, affordable and clean energy as action for climate, as well as internet connectivity as a fundamental right. I am very interested in contributing significantly to that great network we call the Internet and I train myself daily to be consistent with my interests.",
+        "From the analysis of the sustainable development goals, I am interested in contributing to food sovereignty, quality education, and internet connectivity as a fundamental right. I train myself daily so that my contribution to the network is significant and consistent with my values of inclusion and transparency.",
 
       // Awards section
       "section-awards": "Awards",
