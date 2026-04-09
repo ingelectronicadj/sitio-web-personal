@@ -231,11 +231,11 @@ var i18n = {
       // Interests section
       "section-interests": "Intereses",
       "interests-p1":
-        "En los últimos 3 años, la Inteligencia Artificial ha cautivado mi tiempo libre y enfoque profesional, convirtiéndose en el eje central de mi preparación para un Doctorado en IA. Me motiva profundamente la capacidad de esta tecnología para transformar la veeduría ciudadana y el cumplimiento normativo. Actualmente, planteo el desarrollo de un sistema de accesibilidad impulsado por IA y automatización que permita auditar y dar fe de la inclusión digital en los sitios web gubernamentales de Colombia, garantizando que la tecnología sea un puente y no una barrera para la participación democrática.",
+        "Desde mis inicios como entusiasta de la informática, he creído que la tecnología solo cobra sentido cuando sirve a la sociedad. Hoy, esa convicción se materializa en mi trayectoria como experto en accesibilidad digital, donde he comprendido que para eliminar las barreras a gran escala necesitamos soluciones más inteligentes y robustas.",
       "interests-p2":
-        "Como entusiasta de la informática desde niño, mi trayectoria ha evolucionado desde el internet de las cosas (IoT) y la automatización hacia el análisis masivo de datos para fines sociales. Me interesa en gran medida aportar en temas de educación y a su vez disminuir la brecha digital, considerando que la educación es un pilar fundamental de la sociedad.",
+        "Es aquí donde la Inteligencia Artificial se convierte en el eje de mi visión: más que el núcleo académico de mi futuro Doctorado, la IA es para mí el motor que permitirá automatizar la equidad y cerrar la brecha digital en nuestra región. Mi proyecto principal busca transformar la relación del ciudadano con el Estado, utilizando modelos avanzados para garantizar que los sitios web gubernamentales de Colombia cumplan con estándares de accesibilidad universal. Parto de una premisa innegociable: la tecnología debe ser un derecho, no un privilegio.",
       "interests-p3":
-        "Desde el análisis de los objetivos de desarrollo sostenible me interesa contribuir a la soberanía alimentaria, la educación de calidad y la conectividad a internet como derecho fundamental. Me capacito diariamente para que mi aporte a la red sea significativo y consecuente con mis valores de inclusión y transparencia.",
+        "Mi evolución técnica, desde la automatización siempre ha está guiada por los ODS. Me interesa aportar activamente a comunidades de software libre y a una educación de calidad que no deje a nadie atrás. Cada línea de código que escribo tiene un propósito claro: construir una red más humana, accesible y ética.",
 
       // Awards section
       "section-awards": "Reconocimientos",
@@ -519,11 +519,11 @@ var i18n = {
       // Interests section
       "section-interests": "Interests",
       "interests-p1":
-        "Over the last 3 years, Artificial Intelligence has captivated my free time and professional focus, becoming the central pillar of my preparation for a PhD in AI. I am deeply motivated by the power of this technology to transform civic oversight and regulatory compliance. Currently, I am proposing the development of an AI-driven accessibility system combined with automation to audit and verify digital inclusion on government websites in Colombia, ensuring that technology serves as a bridge rather than a barrier to democratic participation.",
+        "Since my early days as a computer enthusiast, I have believed that technology only makes sense when it serves society. Today, that conviction is materialized in my career as a digital accessibility expert, where I have understood that to eliminate barriers on a large scale we need smarter and more robust solutions.",
       "interests-p2":
-        "As a computer enthusiast since childhood, my trajectory has evolved from the Internet of Things (IoT) and automation towards massive data analysis for social purposes. I am heavily interested in contributing to educational topics and reducing the digital divide, considering education a fundamental pillar of society.",
+        "This is where Artificial Intelligence becomes the axis of my vision: more than the academic core of my future PhD, AI is for me the engine that will allow automating equity and closing the digital divide in our region. My main project seeks to transform the relationship between citizens and the State, using advanced models to ensure that government websites in Colombia comply with universal accessibility standards. I start from a non-negotiable premise: technology must be a right, not a privilege.",
       "interests-p3":
-        "From the analysis of the sustainable development goals, I am interested in contributing to food sovereignty, quality education, and internet connectivity as a fundamental right. I train myself daily so that my contribution to the network is significant and consistent with my values of inclusion and transparency.",
+        "My technical evolution, starting from automation, has always been guided by the SDGs. I am interested in actively contributing to free software communities and to a quality education that leaves no one behind. Every line of code I write has a clear purpose: to build a more human, accessible, and ethical network.",
 
       // Awards section
       "section-awards": "Awards",
