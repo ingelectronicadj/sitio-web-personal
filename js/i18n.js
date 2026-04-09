@@ -67,7 +67,7 @@ var i18n = {
       "exp2-title": "Experto en Accesibilidad Web",
       "exp2-company": "Superintendencia de Industria y Comercio",
       "exp2-description":
-        "<b>Funciones:</b> Realizar revisiones de accesibilidad en distintos productos digitales y secciones de la sede electrónica de la entidad, aplicando las directrices de la <b>WCAG 2.2</b> y el Anexo 01 de la Resolución 1519 de 2020 del MinTIC. Contribuir en la identificación e implementación de mejoras de usabilidad y accesibilidad desde la fase de diseño de interfaces, incluyendo la capacitación a desarrolladores y creadores de contenido. Realizar pruebas de accesibilidad y calidad (QA) para diligenciar instrumentos como el FURAG e ITA, participar en la documentación y seguimiento de las actualizaciones necesarias para mantener y ampliar las mejoras de accesibilidad digital implementadas.",
+        "<b>Funciones:</b> Realizar revisiones de accesibilidad en distintos productos digitales y secciones de la sede electrónica de la entidad, aplicando las directrices de la <b>WCAG 2.2</b> y el Anexo 01 de la <b>Resolución 1519</b> de 2020 del MinTIC. Contribuir en la identificación e implementación de mejoras de usabilidad y accesibilidad desde la fase de diseño de interfaces, incluyendo la capacitación a desarrolladores y creadores de contenido. Realizar pruebas de accesibilidad y calidad (QA) para diligenciar instrumentos como el FURAG e ITA, participar en la documentación y seguimiento de las actualizaciones necesarias para mantener y ampliar las mejoras de accesibilidad digital implementadas.",
       "exp2-date": "Dic 2024 - Dic 2025",
 
       "exp3-title": "Gestor Tecnopedagógico",
@@ -95,19 +95,19 @@ var i18n = {
       "edu1-title": "Magister en Gerencia de Proyectos",
       "edu1-college": "Universidad Nacional Abierta y a Distancia",
       "edu1-description":
-        "Actividades y asociaciones: Investigación y desarrollo (I+D). Miembro de la Red de Gestión Tecnopedagógica de cursos y recursos educativos digitales. Responsable por: Tecnologías de inclusión y accesibilidad web.",
+        'Actividades y asociaciones: Investigación y desarrollo (I+D). Miembro de la Red de Gestión Tecnopedagógica de cursos y recursos educativos digitales. Responsable por: Tecnologías de inclusión y accesibilidad web. <br><b>Tesis:</b> <a href="https://repository.unad.edu.co/handle/10596/69586" target="_blank" rel="noopener noreferrer">Prospectiva de plataforma educativa para la UNAD en zonas de baja o inexistente cobertura a internet</a>.',
       "edu1-date": "Agosto 2025",
 
       "edu2-title": "Especialista en Gestión de Proyectos",
       "edu2-college": "Universidad Nacional Abierta y a Distancia",
       "edu2-description":
-        "Actividades y asociaciones: Investigación y desarrollo (I+D). Miembro de la Red de Gestión Tecnopedagógica de cursos y recursos educativos digitales. Responsable por: Tecnologías de inclusión y accesibilidad web.",
+        'Actividades y asociaciones: Investigación y desarrollo (I+D). Miembro de la Red de Gestión Tecnopedagógica de cursos y recursos educativos digitales. Responsable por: Tecnologías de inclusión y accesibilidad web. <br><b>Tesis:</b> <a href="https://repository.unad.edu.co/handle/10596/47926" target="_blank" rel="noopener noreferrer">Desarrollo de herramienta digital para el apoyo de la gestión tecnopedagógica de cursos en el campus virtual de la UNAD</a>.',
       "edu2-date": "Agosto 2022",
 
       "edu3-title": "Ingeniero Electrónico",
       "edu3-college": "Universidad Distrital Francisco José de Caldas",
       "edu3-description":
-        "Actividades y asociaciones: Investigación y desarrollo (I+D). Exmiembro de los grupos de investigación: GLUD - Grupo Linux Universidad Distrital, GITUD - Grupo de Telecomunicaciones de la Universidad Distrital, LASER - Laboratorio de automatizacion, sistemas embebidos y robótica, TECLIBRE - Semillero de investigación en tecnologías libres.",
+        'Actividades y asociaciones: Investigación y desarrollo (I+D). Exmiembro de los grupos de investigación: GLUD - Grupo Linux Universidad Distrital, GITUD - Grupo de Telecomunicaciones de la Universidad Distrital, LASER - Laboratorio de automatizacion, sistemas embebidos y robótica, TECLIBRE - Semillero de investigación en tecnologías libres. <br><b>Tesis:</b> <a href="https://repository.udistrital.edu.co/items/bd06700a-7131-470b-815f-52061c029aa2" target="_blank" rel="noopener noreferrer">Sistema Iot para el monitoreo y control de fuentes de luz artificial aplicado a la agricultura de precisión</a>.',
       "edu3-date": "Marzo 2018",
 
       // Skills section
@@ -352,7 +352,7 @@ var i18n = {
       "exp2-title": "Web Accessibility Expert",
       "exp2-company": "Superintendence of Industry and Commerce",
       "exp2-description":
-        "<b>Responsibilities:</b> Perform accessibility reviews on various digital products and sections of the entity's electronic headquarters, applying the <b>WCAG 2.2</b> guidelines and Annex 01 of Resolution 1519 of 2020 from MinTIC. Contribute to the identification and implementation of usability and accessibility improvements from the interface design phase, including training developers and content creators. Perform accessibility and quality assurance (QA) tests for instruments such as FURAG and ITA, participate in the documentation and tracking of updates needed to maintain and expand the implemented digital accessibility improvements.",
+        "<b>Responsibilities:</b> Perform accessibility reviews on various digital products and sections of the entity's electronic headquarters, applying the <b>WCAG 2.2</b> guidelines and Annex 01 of <b>Resolution 1519</b> of 2020 from MinTIC. Contribute to the identification and implementation of usability and accessibility improvements from the interface design phase, including training developers and content creators. Perform accessibility and quality assurance (QA) tests for instruments such as FURAG and ITA, participate in the documentation and tracking of updates needed to maintain and expand the implemented digital accessibility improvements.",
       "exp2-date": "Dec 2024 - Dec 2025",
 
       "exp3-title": "Techno-pedagogical Manager",
@@ -380,19 +380,19 @@ var i18n = {
       "edu1-title": "Master in Project Management",
       "edu1-college": "National Open and Distance University",
       "edu1-description":
-        "Activities and associations: Research and development (R&D). Member of the Techno-pedagogical Management Network for courses and digital educational resources. Responsible for: Inclusion technologies and web accessibility.",
+        'Activities and associations: Research and development (R&D). Member of the Techno-pedagogical Management Network for courses and digital educational resources. Responsible for: Inclusion technologies and web accessibility. <br><b>Thesis:</b> <a href="https://repository.unad.edu.co/handle/10596/69586" target="_blank" rel="noopener noreferrer">Prospective for an educational platform for UNAD in areas with low or non-existent internet coverage</a>.',
       "edu1-date": "August 2025",
 
       "edu2-title": "Specialist in Project Management",
       "edu2-college": "National Open and Distance University",
       "edu2-description":
-        "Activities and associations: Research and development (R&D). Member of the Techno-pedagogical Management Network for courses and digital educational resources. Responsible for: Inclusion technologies and web accessibility.",
+        'Activities and associations: Research and development (R&D). Member of the Techno-pedagogical Management Network for courses and digital educational resources. Responsible for: Inclusion technologies and web accessibility. <br><b>Thesis:</b> <a href="https://repository.unad.edu.co/handle/10596/47926" target="_blank" rel="noopener noreferrer">Development of a digital tool to support techno-pedagogical management of courses in the UNAD virtual campus</a>.',
       "edu2-date": "August 2022",
 
       "edu3-title": "Electronic Engineer",
       "edu3-college": "Francisco José de Caldas District University",
       "edu3-description":
-        "Activities and associations: Research and development (R&D). Former member of research groups: GLUD - Linux Group District University, GITUD - Telecommunications Group of the District University, LASER - Laboratory of automation, embedded systems and robotics, TECLIBRE - Research seedbed in free technologies.",
+        'Activities and associations: Research and development (R&D). Former member of research groups: GLUD - Linux Group District University, GITUD - Telecommunications Group of the District University, LASER - Laboratory of automation, embedded systems and robotics, TECLIBRE - Research seedbed in free technologies. <br><b>Thesis:</b> <a href="https://repository.udistrital.edu.co/items/bd06700a-7131-470b-815f-52061c029aa2" target="_blank" rel="noopener noreferrer">IoT system for monitoring and control of artificial light sources applied to precision agriculture</a>.',
       "edu3-date": "March 2018",
 
       // Skills section
