@@ -42,8 +42,8 @@
     />
     <link href="./vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
     <!-- Custom styles for this template -->
-    <link href="./css/resume.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/darkMode_v2.min.css" />
+    <link href="./css/resume-min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/darkMode_v2.css" />
     <!-- Slick Slider CSS (movido al head para evitar render-blocking en body) -->
     <link rel="stylesheet" href="./css/slick.min.css" />
     <link rel="stylesheet" href="./css/accessible-slick-theme.min.css" />
@@ -253,49 +253,107 @@
         id="welcome-section"
       >
         <div class="my-auto">
-          <h1 class="mb-0">
-            Diego
-            <span class="text-primary">Mena</span>
-          </h1>
-          <div class="movil">
-            <img
-              class="movil rounded-circle"
-              src="./img/profile-pic.webp"
-              alt="Fotografía Diego Mena"
-              loading="lazy"
-            />
-          </div>
-          <div class="textMovil mb-3">
-            <!-- Usar estilo subheading -->
-            <p>
-              <span data-i18n="about-profession"
-                ><b>ESPECIALISTA EN ACCESIBILIDAD WEB</b></span
-              >
-              <br /><span data-i18n="about-passion"
-                >Apasionado por la ciencia y las tecnologías libres.</span
-              >
-              <br /><span data-i18n="about-email-label">E-mail:</span>
-              <a
-                href="mailto:ingelectronicadj@gmail.com"
-                aria-label="Correo personal: ingelectronicadj@gmail.com"
-                >ingelectronicadj@gmail.com</a
-              >
-              <br /><span data-i18n="about-contact-label">Contacto:</span>
-              <a
-                href="tel:+573059395154"
-                aria-label="(+0571) 305 9395154 Teléfono con código de país Colombia"
-                >(+0571) 305 9395154</a
-              >
-              <br /><i class="fas fa-download"></i>
-              <a
-                href="./docs/Hoja_de_Vida_Diego_Mena-ES.pdf"
-                class="link-new-window"
-                data-i18n="about-resume-link"
-                data-i18n-href="about-resume-pdf"
-              >
-                Hoja de vida en PDF</a
-              >
-            </p>
+          <div class="welcome-header-row">
+            <div class="welcome-header-text">
+              <h1 class="mb-0">
+                Diego
+                <span class="text-primary">Mena</span>
+              </h1>
+              <div class="movil">
+                <img
+                  class="movil rounded-circle"
+                  src="./img/profile-pic.webp"
+                  alt="Fotografía Diego Mena"
+                  loading="lazy"
+                />
+              </div>
+              <div class="textMovil mb-3">
+                <!-- Usar estilo subheading -->
+                <p>
+                  <span data-i18n="about-profession"
+                    ><b>ESPECIALISTA EN ACCESIBILIDAD WEB</b></span
+                  >
+                  <br /><span data-i18n="about-passion"
+                    >Apasionado por la ciencia y las tecnologías libres.</span
+                  >
+                  <br /><span data-i18n="about-email-label">E-mail:</span>
+                  <a
+                    href="mailto:ingelectronicadj@gmail.com"
+                    aria-label="Correo personal: ingelectronicadj@gmail.com"
+                    >ingelectronicadj@gmail.com</a
+                  >
+                  <br /><span data-i18n="about-contact-label">Contacto:</span>
+                  <a
+                    href="tel:+573059395154"
+                    aria-label="(+0571) 305 9395154 Teléfono con código de país Colombia"
+                    >(+0571) 305 9395154</a
+                  >
+                  <br /><i class="fas fa-download"></i>
+                  <a
+                    href="./docs/Hoja_de_Vida_Diego_Mena-ES.pdf"
+                    class="link-new-window"
+                    data-i18n="about-resume-link"
+                    data-i18n-href="about-resume-pdf"
+                  >
+                    Hoja de vida en PDF</a
+                  >
+                </p>
+              </div>
+            </div>
+            <!-- Carrusel de eventos - visible solo en desktop -->
+            <div class="events-carousel-wrapper d-none d-lg-block">
+              <div class="events-carousel">
+                <div>
+                  <img
+                    class="img-responsive"
+                    data-lazy="./img/carrusel/SLUD-2025-ponente.jpeg"
+                    alt="Diego Mena como ponente en el Seminario Latinoamericano de Uso y Desarrollo de Software Libre SLUD 2025"
+                  />
+                </div>
+                <div>
+                  <img
+                    class="img-responsive"
+                    data-lazy="./img/carrusel/SLUD-2025-charla.jpeg"
+                    alt="Charla de Diego Mena en el evento SLUD 2025"
+                  />
+                </div>
+                <div>
+                  <img
+                    class="img-responsive"
+                    data-lazy="./img/carrusel/SLUD-2025.jpeg"
+                    alt="Participación en el evento SLUD 2025"
+                  />
+                </div>
+                <div>
+                  <img
+                    class="img-responsive"
+                    data-lazy="./img/carrusel/Ponente-google-academy.jpeg"
+                    alt="Diego Mena como ponente en Google Academy"
+                  />
+                </div>
+                <div>
+                  <img
+                    class="img-responsive"
+                    data-lazy="./img/carrusel/Piensa-libre.jpeg"
+                    alt="Participación en el evento Piensa Libre"
+                  />
+                </div>
+                <div>
+                  <img
+                    class="img-responsive"
+                    data-lazy="./img/carrusel/RadioGLUD.jpeg"
+                    alt="Participación en Radio GLUD - Grupo Linux Universidad Distrital"
+                  />
+                </div>
+                <div>
+                  <img
+                    class="img-responsive"
+                    data-lazy="./img/carrusel/Realidad-virtual-UNAD.jpeg"
+                    alt="Demostración de realidad virtual en la UNAD"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
           <p class="lead mb-4" data-i18n="about-description">
             <b

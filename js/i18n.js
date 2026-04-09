@@ -52,6 +52,9 @@ var i18n = {
       "aria-gitlab": "Repositorios Gitlab (Abre en una nueva ventana)",
       "aria-cvlac": "Perfil en CvLac (Abre en una nueva ventana)",
 
+      // Events carousel
+      "events-carousel-title": "Eventos y participaciones",
+
       // Experience section
       "section-experience": "Experiencia",
 
@@ -333,6 +336,9 @@ var i18n = {
       "aria-github": "GitHub repositories (Opens in a new window)",
       "aria-gitlab": "GitLab repositories (Opens in a new window)",
       "aria-cvlac": "CvLac profile (Opens in a new window)",
+
+      // Events carousel
+      "events-carousel-title": "Events and participations",
 
       // Experience section
       "section-experience": "Experience",

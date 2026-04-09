@@ -320,6 +320,7 @@ section.resume-section {
   padding-top: 5rem !important;
   padding-bottom: 5rem !important;
   max-width: 75rem;
+  margin: 0;
 }
 
 section.resume-section .resume-item .resume-date {
@@ -807,34 +808,13 @@ ul.horizontal li:last-child {
   }
 }
 
-.slick-prev,
-.slick-next {
-  width: 40px !important;
-  height: 40px !important;
-  background-color: transparent !important;
-  border: 2px solid #046b71 !important;
-  border-radius: 50% !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  z-index: 100 !important;
-  transition: all 0.3s ease;
-  font-size: 0 !important; /* Esconde texto por defecto de Slick */
-  color: transparent !important;
-  line-height: 0 !important;
-}
-
-.slick-prev-icon,
-.slick-next-icon {
-  display: none !important; /* Elimina duplicados de temas externos */
-}
-
+/* Estilos globales para iconos de flechas Slick */
 .slick-prev:before,
 .slick-next:before {
   font-family: "Font Awesome 5 Free" !important;
   font-weight: 900 !important;
   font-size: 20px !important;
-  color: #046b71 !important; /* Visible en modo claro */
+  color: #046b71 !important;
   opacity: 1 !important;
   display: block !important;
 }
@@ -847,22 +827,46 @@ ul.horizontal li:last-child {
   content: "\f061" !important;
 }
 
-.slick-prev:hover,
-.slick-next:hover {
-  background-color: #046b71 !important;
-}
-
 .slick-prev:hover:before,
 .slick-next:hover:before {
   color: #ffffff !important;
 }
 
-.slick-prev {
-  left: -45px !important;
+.slick-prev-icon,
+.slick-next-icon {
+  display: none !important;
 }
 
-.slick-next {
-  right: -45px !important;
+@media (min-width: 992px) {
+  .slick-prev,
+  .slick-next {
+    width: 40px !important;
+    height: 40px !important;
+    background-color: transparent !important;
+    border: 2px solid #046b71 !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 100 !important;
+    transition: all 0.3s ease;
+    font-size: 0 !important;
+    color: transparent !important;
+    line-height: 0 !important;
+  }
+
+  .slick-prev {
+    left: -45px !important; /* Restaurado y aumentado para mayor separación */
+  }
+
+  .slick-next {
+    right: -45px !important; /* Restaurado y aumentado para mayor separación */
+  }
+
+  .slick-prev:hover,
+  .slick-next:hover {
+    background-color: #046b71 !important;
+  }
 }
 
 /* Eliminados bloques conflictivos */
@@ -944,4 +948,61 @@ ul.horizontal li:last-child {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
   }
+}
+
+/* --- Carrusel de Eventos (solo desktop, lado a lado) --- */
+@media (min-width: 992px) {
+  .welcome-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    max-width: 1080px; /* Ancho máximo controlado para evitar desbordes */
+    margin: 0 auto 2.5rem; /* Centrado dentro de la sección */
+    overflow: visible;
+  }
+
+  .welcome-header-text {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+.events-carousel-wrapper {
+  width: 100%;
+  max-width: 480px;
+  flex-shrink: 0;
+}
+
+@media (min-width: 992px) {
+  .events-carousel-wrapper {
+    width: 40%;
+    margin: 0;
+  }
+}
+
+.events-carousel .img-responsive {
+  height: 280px;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+}
+
+/* Dots del carrusel de eventos */
+.events-carousel .slick-dots {
+  bottom: -25px;
+}
+
+.events-carousel .slick-dots li button:before,
+.events-carousel .slick-dots li button .slick-dot-icon:before {
+  color: #046b71 !important;
+  opacity: 0.4;
+}
+
+.events-carousel .slick-dots li.slick-active button:before,
+.events-carousel .slick-dots li.slick-active button .slick-dot-icon:before {
+  color: #046b71 !important;
+  opacity: 1;
 }

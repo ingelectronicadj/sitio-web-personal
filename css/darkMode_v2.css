@@ -254,3 +254,25 @@ body.dark .social-icons a:hover {
   color: #13161c !important;
   border-color: #00bcd4 !important;
 }
+
+/* --- Carrusel de Eventos en modo oscuro --- */
+body.dark .events-carousel .img-responsive {
+  background-color: #1e2229;
+}
+
+body.dark .events-carousel .slick-dots li button:before,
+body.dark .events-carousel .slick-dots li button .slick-dot-icon:before {
+  color: #00bcd4 !important;
+  opacity: 0.4;
+}
+
+body.dark .events-carousel .slick-dots li.slick-active button:before,
+body.dark
+  .events-carousel
+  .slick-dots
+  li.slick-active
+  button
+  .slick-dot-icon:before {
+  color: #00bcd4 !important;
+  opacity: 1;
+}

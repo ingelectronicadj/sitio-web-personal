@@ -42,4 +42,21 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     ],
   });
+
+  // Carrusel de eventos y participaciones
+  $(".events-carousel").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    infinite: true,
+    fade: true,
+    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    lazyLoad: "ondemand",
+    dots: true,
+    regionLabel: "Carrusel de eventos y participaciones",
+    instructionsText:
+      "Carrusel de fotografías de eventos en los que Diego ha participado.",
+  });
 });
