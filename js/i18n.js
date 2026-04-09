@@ -114,7 +114,17 @@ var i18n = {
       "section-skills": "Habilidades",
       "skills-intro":
         "Capacidad para la investigación, el autoaprendizaje, la resolución de problemas con creatividad e innovación, capacidad para escuchar a las personas y capacidad de recuperación. Facilidad de expresión oral, liderazgo de equipos, adaptabilidad a entornos laborales bajo presión, habilidades sociales y habilidades ejecutivas para administrar tareas por objetivos.",
-      "skills-subtitle": "Perfil Desarrollador Frontend",
+      "skills-subtitle": "Certificaciones y Formación Continua",
+      "skills-tech-stack": "Pila Tecnológica y Competencias",
+      "skills-qa-title": "QA Engineering & Accessibility",
+      "skills-qa-desc":
+        "Experiencia en aseguramiento de calidad de aplicaciones web mediante pruebas funcionales, pruebas de regresión, validación de criterios de aceptación y análisis técnico del DOM. Especializado en pruebas de accesibilidad integradas al proceso de QA, combinando herramientas automáticas (axe DevTools, ARC Toolkit, IBM Equal Access, Lighthouse, WAVE), inspección técnica (Chrome DevTools, análisis de árbol de accesibilidad y semántica) y pruebas manuales con tecnologías de asistencia (NVDA, JAWS, VoiceOver y Talkback). Experiencia documentando defectos de forma técnica y accionable, análisis de causa raíz y acompañamiento a equipos de desarrollo en la remediación.",
+      "skills-auto-title": "Automatización y análisis técnico",
+      "skills-auto-desc":
+        "Uso de Python para procesamiento de datos, apoyo a tareas de automatización, análisis de resultados de pruebas y generación de reportes técnicos. Experiencia trabajando con estructuras de datos, scripts de apoyo a QA y visualización de resultados mediante visores de datos. Entorno GNU/Linux como base para ejecución de herramientas, pruebas y flujos técnicos.",
+      "skills-soft-title": "Base en ingeniería de software y sistemas",
+      "skills-soft-desc":
+        "Fundamentos sólidos en programación estructurada y orientada a objetos, comprensión de lógica de sistemas y arquitectura de software, lo que fortalece la capacidad de diagnóstico técnico, análisis de defectos complejos y comunicación efectiva para resolver incidencias con equipos de desarrollo.",
       skill1: "Especialista en Accesibilidad Web -",
       skill2: "Especialista en UX Research -",
       skill3: "Especialista en Gestión de Proyectos -",
@@ -399,7 +409,17 @@ var i18n = {
       "section-skills": "Skills",
       "skills-intro":
         "Capacity for research, self-learning, creative and innovative problem solving, ability to listen to people and resilience. Ease of oral expression, team leadership, adaptability to work environments under pressure, social skills and executive skills to manage tasks by objectives.",
-      "skills-subtitle": "Frontend Developer Profile",
+      "skills-subtitle": "Certifications & Continuous Learning",
+      "skills-tech-stack": "Technical Stack & Competencies",
+      "skills-qa-title": "QA Engineering & Accessibility",
+      "skills-qa-desc":
+        "Quality assurance experience in web applications through functional testing, regression testing, validation of acceptance criteria and technical DOM analysis. Specialized in accessibility testing integrated into the QA process, combining automated tools (axe DevTools, ARC Toolkit, IBM Equal Access, Lighthouse, WAVE), technical inspection (Chrome DevTools, accessibility tree and semantics analysis) and manual testing with assistive technologies (NVDA, JAWS, VoiceOver and Talkback). Experience documenting defects in a technical and actionable way, root cause analysis and accompanying development teams in remediation.",
+      "skills-auto-title": "Automation and technical analysis",
+      "skills-auto-desc":
+        "Use of Python for data processing, support for automation tasks, analysis of test results and generation of technical reports. Experience working with data structures, scripts to support QA and visualization of results through data viewers. GNU/Linux environment as a basis for running tools, tests and technical flows.",
+      "skills-soft-title": "Software and systems engineering foundation",
+      "skills-soft-desc":
+        "Solid fundamentals in structured and object-oriented programming, understanding of systems logic and software architecture, which strengthens the capacity for technical diagnosis, analysis of complex defects and effective communication to resolve incidents with development teams.",
       skill1: "Web Accessibility Specialist -",
       skill2: "UX Research Specialist -",
       skill3: "Project Management Specialist -",
