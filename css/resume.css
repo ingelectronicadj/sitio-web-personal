@@ -60,12 +60,16 @@ body {
 }
 
 .slider-for > div {
-  padding-bottom: 2.5rem;
+  padding-bottom: 0.5rem;
   position: relative; /* Para que el botón de pausa se posicione relativo a la diapositiva en móviles si es necesario */
 }
 
 .slider-for {
   position: relative;
+}
+
+.slick-slider {
+  margin-bottom: 0px !important;
 }
 
 @media (max-width: 768px) {
@@ -1143,7 +1147,7 @@ ul.horizontal li:last-child {
   border: 1px solid #d1f2f0;
   border-left: 5px solid #046b71;
   padding: 2rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   transition:
