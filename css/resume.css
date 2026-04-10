@@ -426,7 +426,7 @@ section.resume-section .resume-item .resume-date {
   color: #fff;
 }
 
-/* Reducir espacio vertical en descripciones cortas (Reconocimientos) */
+/* Reducir espacio vertical en descripciones cortas (Eventos) */
 .small-text {
   font-size: 0.9rem;
   line-height: 1.2;

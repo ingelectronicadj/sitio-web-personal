@@ -28,7 +28,7 @@ var i18n = {
       "nav-skills-side": "Habilidades",
       "nav-projects-side": "Proyectos",
       "nav-interests": "Intereses",
-      "nav-awards": "Reconocimientos",
+      "nav-awards": "Eventos",
 
       // Toggle & flags
       "contrast-label": "Modo oscuro",
@@ -232,9 +232,9 @@ var i18n = {
       "interests-p1":
         "Desde mis inicios como entusiasta de la informática, he creído que la tecnología solo cobra sentido cuando sirve a la sociedad. Hoy, esa convicción se materializa en mi trayectoria como experto en accesibilidad digital, donde he comprendido que para eliminar las barreras a gran escala necesitamos soluciones más inteligentes y robustas.",
       "interests-p2":
-        "Es aquí donde la Inteligencia Artificial se convierte en el eje de mi visión: más que el núcleo académico de mi futuro Doctorado, la IA es para mí el motor que permitirá automatizar la equidad y cerrar la brecha digital en nuestra región. Mi proyecto principal busca transformar la relación del ciudadano con el Estado, utilizando modelos avanzados para garantizar que los sitios web gubernamentales de Colombia cumplan con estándares de accesibilidad universal. Parto de una premisa innegociable: la tecnología debe ser un derecho, no un privilegio.",
+        "Es aquí donde la Inteligencia Artificial se convierte en el eje de mi visión: más que el núcleo académico de mi futuro Doctorado, la IA es para mí el motor que permitirá automatizar soluciones accesibles y cerrar la brecha digital en el ecosistema global.",
       "interests-p3":
-        "Mi evolución técnica, desde la automatización siempre ha está guiada por los ODS. Me interesa aportar activamente a comunidades de software libre y a una educación de calidad que no deje a nadie atrás. Cada línea de código que escribo tiene un propósito claro: construir una red más humana, accesible y ética.",
+        'Mi evolución técnica, desde la automatización siempre ha está guiada por los ODS y la "Ciencia para la paz", la cual busca comprender las causas de violencia y construir soluciones tecnológicas y sociales que fomenten la convivencia pacífica, la equidad y la justicia social. Me interesa aportar activamente a comunidades de software libre y a una educación de calidad que no deje a nadie atrás. Cada línea de código que escribo tiene un propósito claro: construir una red más humana, accesible y ética.',
 
       // Research section
       "research-header": "Enfoque de Investigación y Propuesta Doctoral",
@@ -243,11 +243,14 @@ var i18n = {
       "research-doctoral-link": "Propuesta Doctoral (Google Docs)",
       "research-bibliometry-link": "Tabla de Bibliometría (Google Sheets)",
       "research-act-p":
-        "Validación de accesibilidad desde la automatización para romper el umbral del conocimiento mediante la consistencia de casos de prueba.",
+        'Romper el umbral del conocimiento mediante la validación de accesibilidad desde la automatización y la consistencia de casos de prueba; integrando el uso de <a href="https://a11y.edudigital.tech/" target="_blank" rel="noopener noreferrer">A11Y PRO SCANNER <span class="visually-hidden" data-i18n="opens-new-tab">(Se abre en una nueva pestaña)</span></a> para auditorías a gran escala bajo normativas internacionales.',
       "research-act-link": "Implementaciones ACT (W3C)",
+      "research-observatory-link":
+        "Observatorio de Accesibilidad Digital Gov.co",
+      "research-registration-link": "Certificado de Registro de Software",
 
       // Awards section
-      "section-awards": "Reconocimientos",
+      "section-awards": "Eventos",
 
       "award1-text":
         "Organizador - Séptimo Seminario de Accesibilidad Web e Inclusión en la Educación Virtual",
@@ -332,7 +335,7 @@ var i18n = {
       "nav-skills-side": "Skills",
       "nav-projects-side": "Projects",
       "nav-interests": "Interests",
-      "nav-awards": "Awards",
+      "nav-awards": "Events",
 
       // Toggle & flags
       "contrast-label": "Dark mode",
@@ -531,9 +534,9 @@ var i18n = {
       "interests-p1":
         "Since my early days as a computer enthusiast, I have believed that technology only makes sense when it serves society. Today, that conviction is materialized in my career as a digital accessibility expert, where I have understood that to eliminate barriers on a large scale we need smarter and more robust solutions.",
       "interests-p2":
-        "This is where Artificial Intelligence becomes the axis of my vision: more than the academic core of my future PhD, AI is for me the engine that will allow automating equity and closing the digital divide in our region. My main project seeks to transform the relationship between citizens and the State, using advanced models to ensure that government websites in Colombia comply with universal accessibility standards. I start from a non-negotiable premise: technology must be a right, not a privilege.",
+        "This is where Artificial Intelligence becomes the axis of my vision: more than the academic core of my future PhD, AI is for me the engine that will allow automating accessible solutions and closing the digital divide in the global ecosystem.",
       "interests-p3":
-        "My technical evolution, starting from automation, has always been guided by the SDGs. I am interested in actively contributing to free software communities and to a quality education that leaves no one behind. Every line of code I write has a clear purpose: to build a more human, accessible, and ethical network.",
+        'My technical evolution, starting from automation, has always been guided by the SDGs and "Science for Peace", which seeks to understand the causes of violence and build technological and social solutions that promote peaceful coexistence, equity and social justice. I am interested in actively contributing to free software communities and to a quality education that leaves no one behind. Every line of code I write has a clear purpose: to build a more human, accessible, and ethical network.',
 
       // Research section
       "research-header": "Research Focus and Doctoral Proposal",
@@ -542,11 +545,13 @@ var i18n = {
       "research-doctoral-link": "Doctoral Proposal (Google Docs)",
       "research-bibliometry-link": "Bibliometry Table (Google Sheets)",
       "research-act-p":
-        "Accessibility validation through automation to break the knowledge threshold through test case consistency.",
+        'Breaking the knowledge threshold through accessibility validation from automation and test case consistency; integrating the use of <a href="https://a11y.edudigital.tech/" target="_blank" rel="noopener noreferrer">A11Y PRO SCANNER <span class="visually-hidden" data-i18n="opens-new-tab">(Opens in a new tab)</span></a> for large-scale auditing under international standards.',
       "research-act-link": "ACT Implementations (W3C)",
+      "research-observatory-link": "Gov.co Digital Accessibility Observatory",
+      "research-registration-link": "Software Registration Certificate",
 
       // Awards section
-      "section-awards": "Awards",
+      "section-awards": "Events",
 
       "award1-text":
         "Organizer - Seventh Web Accessibility and Inclusion Seminar in Virtual Education",
