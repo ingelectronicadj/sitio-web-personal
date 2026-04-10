@@ -17,6 +17,19 @@ body {
   background-color: #fff;
 }
 
+/* Clase de utilidad para accesibilidad: oculta texto pero lo mantiene para lectores de pantalla */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* Ajuste de foco */
 *:focus-visible {
   outline: 2px solid #046b71; /* Estilo de borde al enfocar */
@@ -845,7 +858,7 @@ ul.horizontal li:last-child {
   /* Posicionamiento específico del botón de pausa en carrusel de proyectos */
   .sliderProjects .slick-autoplay-toggle-button {
     position: absolute !important;
-    bottom: 2.8rem !important; /* Ajustado para quedar en la esquina de la imagen en móviles */
+    bottom: 2rem !important; /* Ajustado para quedar en la esquina de la imagen en móviles */
     left: 0 !important;
     margin: 0 !important;
     background-color: rgba(255, 255, 255, 0.8) !important;
@@ -1127,7 +1140,7 @@ ul.horizontal li:last-child {
 
 /* Posición específica para el de Proyectos (subirlo para que quede sobre el borde inferior de la imagen) */
 .sliderProjects .slick-autoplay-toggle-button {
-  bottom: 85px !important; /* Ajuste para desktop: salta el enlace y el padding */
+  bottom: 60px !important; /* Ajuste para desktop: salta el enlace y el padding */
 }
 
 /* Posición específica para el de Eventos */

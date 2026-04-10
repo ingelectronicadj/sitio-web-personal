@@ -21,6 +21,7 @@ var i18n = {
       "nav-projects": "Proyectos",
 
       // Sidebar nav
+      "opens-new-tab": "(Se abre en una nueva pestaña)",
       "nav-about": "Acerca de mí",
       "nav-experience-side": "Experiencia",
       "nav-education": "Educación",
@@ -324,6 +325,7 @@ var i18n = {
       "nav-projects": "Projects",
 
       // Sidebar nav
+      "opens-new-tab": "(Opens in a new tab)",
       "nav-about": "About Me",
       "nav-experience-side": "Experience",
       "nav-education": "Education",
