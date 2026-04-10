@@ -385,9 +385,9 @@ section.resume-section .resume-item .resume-date {
 .resume-item {
   border: 2px solid transparent; /* Base de 2px para todos los lados */
   border-left: 5px solid transparent; /* Grosor apreciable en el acento lateral */
-  padding: 1.5rem !important;
+  padding: 1rem !important;
   border-radius: 8px; /* Reducido ligeramente para balancear */
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   transition:
     border-left-color 0.3s ease,
     transform 0.2s ease,

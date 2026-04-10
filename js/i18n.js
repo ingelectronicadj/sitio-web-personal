@@ -68,14 +68,11 @@ var i18n = {
       "exp2-title": "Experto en Accesibilidad Web",
       "exp2-company": "Superintendencia de Industria y Comercio",
       "exp2-description":
-        "<b>Funciones:</b> Realizar revisiones de accesibilidad en distintos productos digitales y secciones de la sede electrónica de la entidad, aplicando las directrices de la <b>WCAG 2.2</b> y el Anexo 01 de la <b>Resolución 1519</b> de 2020 del MinTIC. Contribuir en la identificación e implementación de mejoras de usabilidad y accesibilidad desde la fase de diseño de interfaces, incluyendo la capacitación a desarrolladores y creadores de contenido. Realizar pruebas de accesibilidad y calidad (QA) para diligenciar instrumentos como el FURAG e ITA, participar en la documentación y seguimiento de las actualizaciones necesarias para mantener y ampliar las mejoras de accesibilidad digital implementadas.",
+        "<b>Funciones:</b> Realizar revisiones de accesibilidad en distintos productos digitales y secciones de la sede electrónica de la entidad, aplicando las directrices de la <b>WCAG 2.2</b> y el Anexo 01 de la <b>Resolución 1519</b> de 2020 del MinTIC. Lideré la refactorización de todos los componentes del software principal para el registro de patentes en Colombia (SIPI) y la sede electrónica de la SIC, sentando las bases en un sistema de diseño y desarrollo robusto y accesible para futuros desarrollos. Contribuir en la identificación e implementación de mejoras de usabilidad y accesibilidad desde la fase de diseño de interfaces, incluyendo la capacitación a desarrolladores y creadores de contenido. Realizar pruebas de accesibilidad y calidad (QA) para diligenciar instrumentos como el FURAG e ITA.",
       "exp2-date": "Dic 2024 - Dic 2025",
 
-      "exp3-title": "Gestor Tecnopedagógico",
-      "exp3-company":
-        "Equipo de Tecnologías de Inclusión y Accesibilidad Web - UNAD",
       "exp3-description":
-        "Certificación laboral por 5 años y 4 meses.<br><b>Funciones:</b> Aportar en el desarrollo de ambientes virtuales de aprendizaje, auditar recursos educativos digitales en accesibilidad web y desarrollar software para la automatización de procesos.<br><b>Algunos proyectos de gran impacto:</b> Lideré el proceso de actualización tecnológica de la Universidad Nacional Abierta y a Distancia en el año 2020, desarrollé todas las vistas de aulas modelo para la oferta de cursos de las distintas facultades y logré automatizar varios procesos para que los docentes pudieran crear cursos con estándares de calidad aportando a la <b>NTC6576</b> - Norma Técnica Colombiana para el Diseño y Oferta de Cursos en Ambientes Virtuales de Aprendizaje.",
+        'Certificación laboral por 5 años y 4 meses.<br><b>Funciones:</b> Aportar en el desarrollo de ambientes virtuales de aprendizaje, auditar recursos educativos digitales en accesibilidad web y desarrollar software para la automatización de procesos.<br><b>Algunos proyectos de gran impacto:</b> Lideré el proceso de actualización tecnológica de la Universidad Nacional Abierta y a Distancia en el año 2020, desarrollé todas las vistas de aulas modelo para la oferta de cursos de las distintas facultades y logré automatizar varios procesos para que los docentes pudieran crear cursos con estándares de calidad aportando a la <b>NTC6576</b>. En 2023, gané un <a href="https://sig.unad.edu.co/documentos/sig/buenas_practicas/2023_implementacion_rpa.pdf" target="_blank" rel="noopener noreferrer" aria-label="Ver reconocimiento por la implementación de un RPA (Abre en una nueva pestaña)">reconocimiento institucional</a> por la implementación de un RPA para el apoyo de la gestión tecnopedagógica.',
       "exp3-date": "Sept 2019 - Dic 2024",
 
       "exp4-title": "Experto en accesibilidad web",
@@ -190,10 +187,11 @@ var i18n = {
       "project11-title": "Cursos MOOC - Cursos Masivos Abiertos y en Línea",
       "project11-aria":
         "Ver catálogo de Cursos MOOC - Cursos Masivos Abiertos y en Línea",
-      "project12-title": "RPA para configuración rápida de recursos en Moodle",
+      "project12-title":
+        "Implementación de un RPA para la gestión tecnopedagógica",
       "project12-link": "Ver reconocimiento",
       "project12-aria":
-        "Ver Reconocimiento Buena Práctica Organizacional por el proyecto RPA para Moodle",
+        "Ver Reconocimiento por el proyecto de Implementación de un RPA para el apoyo de la gestión tecnopedagógica (PDF)",
       "project13-title": "Sistema de Webconferencia Educativa y Organizacional",
       "project13-link": "Ver sitio del proyecto",
       "project13-aria":
@@ -375,14 +373,11 @@ var i18n = {
       "exp2-title": "Web Accessibility Expert",
       "exp2-company": "Superintendence of Industry and Commerce",
       "exp2-description":
-        "<b>Responsibilities:</b> Perform accessibility reviews on various digital products and sections of the entity's electronic headquarters, applying the <b>WCAG 2.2</b> guidelines and Annex 01 of <b>Resolution 1519</b> of 2020 from MinTIC. Contribute to the identification and implementation of usability and accessibility improvements from the interface design phase, including training developers and content creators. Perform accessibility and quality assurance (QA) tests for instruments such as FURAG and ITA, participate in the documentation and tracking of updates needed to maintain and expand the implemented digital accessibility improvements.",
+        "<b>Responsibilities:</b> Perform accessibility reviews on various digital products and sections of the entity's electronic headquarters, applying the <b>WCAG 2.2</b> guidelines and Annex 01 of <b>Resolution 1519</b> of 2020 from MinTIC. Led the refactoring of all components for the main patent registration software in Colombia (SIPI) and the SIC electronic headquarters, establishing the foundation for a robust and accessible design and development system for future developments. Contribute to the identification and implementation of usability and accessibility improvements from the interface design phase, including training developers and content creators. Perform accessibility and quality assurance (QA) tests for instruments such as FURAG and ITA.",
       "exp2-date": "Dec 2024 - Dec 2025",
 
-      "exp3-title": "Techno-pedagogical Manager",
-      "exp3-company":
-        "Inclusion Technologies and Web Accessibility Team - UNAD",
       "exp3-description":
-        "Work certification for 5 years and 4 months.<br><b>Responsibilities:</b> Contribute to the development of virtual learning environments, audit digital educational resources for web accessibility and develop software for process automation.<br><b>High-impact projects:</b> Led the National Open and Distance University's technological upgrade process in 2020, developed all model classroom views for course offerings across different faculties and automated several processes so that teachers could create courses meeting quality standards contributing to <b>NTC6576</b> - Colombian Technical Standard for the Design and Offer of Courses in Virtual Learning Environments.",
+        'Work certification for 5 years and 4 months.<br><b>Responsibilities:</b> Contribute to the development of virtual learning environments, audit digital educational resources for web accessibility and develop software for process automation.<br><b>High-impact projects:</b> Led the National Open and Distance University\'s technological upgrade process in 2020, developed all model classroom views for course offerings across different faculties and automated several processes so that teachers could create courses meeting quality standards contributing to <b>NTC6576</b>. In 2023, I won an <a href="https://sig.unad.edu.co/documentos/sig/buenas_practicas/2023_implementacion_rpa.pdf" target="_blank" rel="noopener noreferrer" aria-label="View institutional recognition for RPA implementation (Opens in a new tab)">institutional recognition</a> for the implementation of an RPA to support techno-pedagogical management.',
       "exp3-date": "Sep 2019 - Dec 2024",
 
       "exp4-title": "Web Accessibility Expert",
@@ -492,10 +487,10 @@ var i18n = {
         "View Github repository for the interface for molecular structure visualization",
       "project11-title": "MOOC - Massive Open Online Courses",
       "project11-aria": "View MOOC catalogue - Massive Open Online Courses",
-      "project12-title": "RPA for quick Moodle resource configuration",
+      "project12-title": "RPA Implementation for Techno-pedagogical Management",
       "project12-link": "View recognition",
       "project12-aria":
-        "View Organizational Best Practice Award for the RPA for Moodle project",
+        "View Recognition for the RPA Implementation project for techno-pedagogical management support (PDF)",
       "project13-title": "Educational and Organizational Web Conference System",
       "project13-link": "View project site",
       "project13-aria":
