@@ -16,8 +16,12 @@
       var target = $(this.hash);
       target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
       if (target.length) {
+        var navOffset = 0;
+        if ($(window).width() < 992) {
+          navOffset = $("#sideNav").outerHeight();
+        }
         $("html, body").animate(
-          { scrollTop: target.offset().top },
+          { scrollTop: target.offset().top - navOffset },
           1000,
           "easeInOutExpo",
         );
