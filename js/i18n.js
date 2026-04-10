@@ -235,6 +235,16 @@ var i18n = {
       "interests-p3":
         "Mi evolución técnica, desde la automatización siempre ha está guiada por los ODS. Me interesa aportar activamente a comunidades de software libre y a una educación de calidad que no deje a nadie atrás. Cada línea de código que escribo tiene un propósito claro: construir una red más humana, accesible y ética.",
 
+      // Research section
+      "research-header": "Enfoque de Investigación y Propuesta Doctoral",
+      "research-p1":
+        "Mi propuesta de investigación se centra en la aplicación de Inteligencia Artificial para la auditoría y mejora automatizada de la accesibilidad web en sitios gubernamentales.",
+      "research-doctoral-link": "Propuesta Doctoral (Google Docs)",
+      "research-bibliometry-link": "Tabla de Bibliometría (Google Sheets)",
+      "research-act-p":
+        "Validación de accesibilidad desde la automatización para romper el umbral del conocimiento mediante la consistencia de casos de prueba.",
+      "research-act-link": "Implementaciones ACT (W3C)",
+
       // Awards section
       "section-awards": "Reconocimientos",
 
@@ -522,6 +532,16 @@ var i18n = {
         "This is where Artificial Intelligence becomes the axis of my vision: more than the academic core of my future PhD, AI is for me the engine that will allow automating equity and closing the digital divide in our region. My main project seeks to transform the relationship between citizens and the State, using advanced models to ensure that government websites in Colombia comply with universal accessibility standards. I start from a non-negotiable premise: technology must be a right, not a privilege.",
       "interests-p3":
         "My technical evolution, starting from automation, has always been guided by the SDGs. I am interested in actively contributing to free software communities and to a quality education that leaves no one behind. Every line of code I write has a clear purpose: to build a more human, accessible, and ethical network.",
+
+      // Research section
+      "research-header": "Research Focus and Doctoral Proposal",
+      "research-p1":
+        "My research focus centers on the application of Artificial Intelligence for automated web accessibility auditing and improvement of government websites.",
+      "research-doctoral-link": "Doctoral Proposal (Google Docs)",
+      "research-bibliometry-link": "Bibliometry Table (Google Sheets)",
+      "research-act-p":
+        "Accessibility validation through automation to break the knowledge threshold through test case consistency.",
+      "research-act-link": "ACT Implementations (W3C)",
 
       // Awards section
       "section-awards": "Awards",

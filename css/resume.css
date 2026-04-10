@@ -1136,3 +1136,82 @@ ul.horizontal li:last-child {
     bottom: 4.5rem !important; /* Ajuste para móvil: salta el enlace y padding */
   }
 }
+
+/* --- Research Focus Section (Interests) --- */
+.research-box {
+  background-color: #f7fefc;
+  border: 1px solid #d1f2f0;
+  border-left: 5px solid #046b71;
+  padding: 2rem;
+  margin-top: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.research-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.research-box h3 {
+  color: #046b71;
+  font-family:
+    "Saira Extra Condensed",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.research-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.research-link-chip {
+  display: inline-flex;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #046b71;
+  color: #046b71;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.research-link-chip i {
+  margin-right: 0.5rem;
+}
+
+.research-link-chip:hover,
+.research-link-chip:focus {
+  background-color: #046b71;
+  color: #ffffff;
+  text-decoration: none;
+  transform: scale(1.05);
+  outline: none;
+  box-shadow: 0 2px 8px rgba(4, 107, 113, 0.3);
+}
+
+.research-link-chip:focus {
+  outline: 3px solid rgba(4, 107, 113, 0.4);
+}
