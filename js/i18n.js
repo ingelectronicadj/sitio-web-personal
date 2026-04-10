@@ -38,7 +38,7 @@ var i18n = {
       "flag-en-title": "Traducir sitio al Inglés",
 
       // About section
-      "about-profession": "<b>ESPECIALISTA EN ACCESIBILIDAD WEB</b>",
+      "about-profession": "<b>EXPERTO EN ACCESIBILIDAD DIGITAL</b>",
       "about-passion": "Apasionado por la ciencia y las tecnologías libres.",
       "about-email-label": "E-mail:",
       "about-contact-label": "Contacto:",
@@ -343,7 +343,7 @@ var i18n = {
       "flag-en-title": "Site in English",
 
       // About section
-      "about-profession": "<b>WEB ACCESSIBILITY SPECIALIST</b>",
+      "about-profession": "<b>DIGITAL ACCESSIBILITY EXPERT</b>",
       "about-passion": "Passionate about science and open technologies.",
       "about-email-label": "E-mail:",
       "about-contact-label": "Contact:",
