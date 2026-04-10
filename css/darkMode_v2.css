@@ -107,19 +107,26 @@ body.dark hr {
 /* Flechas del slider en modo oscuro: solo contorno */
 body.dark .slick-prev,
 body.dark .slick-next {
-  border-color: #00bcd4 !important;
-  background-color: transparent !important;
-  color: #00bcd4 !important; /* Icono del mismo color que el borde */
+  border: 1px solid #00bcd4 !important;
+  background-color: #1a1e24 !important; /* Fondo oscuro sólido */
+  color: #00bcd4 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
 }
 
 body.dark .slick-prev:before,
 body.dark .slick-next:before {
-  color: #00bcd4 !important; /* Asegurar color del pseudo-elemento */
+  color: #00bcd4 !important;
 }
 
 body.dark .slick-prev:hover,
 body.dark .slick-next:hover {
-  background-color: rgba(0, 188, 212, 0.1) !important;
+  background-color: #00bcd4 !important;
+  color: #13161c !important;
+}
+
+body.dark .slick-prev:hover:before,
+body.dark .slick-next:hover:before {
+  color: #13161c !important;
 }
 
 body.dark #sideNav {
@@ -128,6 +135,8 @@ body.dark #sideNav {
 
 body.dark ul.horizontal {
   border-color: rgba(255, 255, 255, 0.1) !important;
+  background-color: #010101 !important; /* Asegurar fondo sólido */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4) !important; /* Sombra más profunda para modo oscuro */
 }
 
 body.dark ul.horizontal li {
@@ -138,12 +147,7 @@ body.dark ul.horizontal li {
 
 body.dark ul.horizontal li:hover,
 body.dark ul.horizontal li:has(a.active) {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.03
-  ) !important; /* Variación de fondo muy leve */
+  background-color: #1a1e24 !important; /* Color sólido para evitar transparencia al scroll */
 }
 
 body.dark ul.horizontal li a:hover,
@@ -186,6 +190,19 @@ body.dark .sliderContrast {
 
 body.dark .sliderContrast:before {
   background-color: #00bcd4 !important;
+}
+
+/* Pausa carrusel en modo oscuro */
+body.dark .slick-autoplay-toggle-button {
+  color: #00bcd4 !important;
+  background-color: #1e2229 !important;
+  border: 1px solid rgba(0, 188, 212, 0.3) !important;
+  border-radius: 8px;
+}
+
+body.dark .slick-autoplay-toggle-button:hover {
+  background-color: #00bcd4 !important;
+  color: #13161c !important;
 }
 
 /* Asegurar que los enlaces en el sideNav se vean bien */

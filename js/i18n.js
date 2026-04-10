@@ -208,20 +208,18 @@ var i18n = {
       "project16-link": "Ver sitio web de canchas",
       "project16-aria":
         "Ver sitio web de Canchas y Estructuras Deportivas Arysdia",
-      "project17-title":
-        "Ajustes de Accesibilidad Web para la Sede electrónica de la SIC",
+      "project17-title": "Accesibilidad Web para la Sede electrónica de la SIC",
       "project17-link": "Ver sede electrónica",
       "project17-aria":
         "Ver Sede electrónica de la Superintendencia de Industria y Comercio - SIC",
       "project18-title":
-        "Ajustes de Accesibilidad Web para la Oficina virtual de propiedad intelectual Colombia - SIPI",
+        "Accesibilidad Web para la Oficina virtual de propiedad intelectual Colombia - SIPI",
       "project18-link": "Ver oficina virtual",
       "project18-aria": "Ver SIPI - Oficina virtual de propiedad intelectual",
       "project19-title":
-        "Ajustes de Accesibilidad Web para Aplicación hibrida de criptomonedas - Openbank España y Alemania",
+        "Accesibilidad Web para Aplicación de criptomonedas - Openbank",
       "project19-link": "Ver aplicación web",
-      "project19-aria":
-        "Ver Aplicación web para criptomonedas - Openbank España y Alemania",
+      "project19-aria": "Ver Aplicación web para criptomonedas - Openbank",
       "project20-title":
         "Panorama de la accesibilidad web en Colombia para sitios web gov.co",
       "project20-link": "Ver observatorio",
@@ -497,16 +495,16 @@ var i18n = {
       "project16-link": "View sports site",
       "project16-aria": "View website for Arysdia Sports Courts and Structures",
       "project17-title":
-        "Web Accessibility Adjustments for the SIC Electronic Headquarters",
+        "Web Accessibility for the SIC Electronic Headquarters",
       "project17-link": "View electronic headquarters",
       "project17-aria":
         "View Electronic Headquarters of the Superintendence of Industry and Commerce - SIC",
       "project18-title":
-        "Web Accessibility Adjustments for the Colombian Virtual Intellectual Property Office - SIPI",
+        "Web Accessibility for the Colombian Virtual Intellectual Property Office - SIPI",
       "project18-link": "View virtual office",
       "project18-aria": "View SIPI - Virtual Intellectual Property Office",
       "project19-title":
-        "Web Accessibility Adjustments for Hybrid Cryptocurrency Application - Openbank Spain and Germany",
+        "Web Accessibility for Cryptocurrency Application - Openbank",
       "project19-link": "View web application",
       "project19-aria":
         "View web application for cryptocurrencies - Openbank Spain and Germany",

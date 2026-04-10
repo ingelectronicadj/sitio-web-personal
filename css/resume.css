@@ -56,6 +56,16 @@ body {
   width: 100%;
   border-radius: 5px;
   background-color: #f8f9fa;
+  margin-bottom: 1rem;
+}
+
+.slider-for > div {
+  padding-bottom: 2.5rem;
+  position: relative; /* Para que el botón de pausa se posicione relativo a la diapositiva en móviles si es necesario */
+}
+
+.slider-for {
+  position: relative;
 }
 
 @media (max-width: 768px) {
@@ -67,6 +77,7 @@ body {
 .sliderProjects {
   width: 90%;
   margin: auto;
+  position: relative; /* Base para posicionamiento absoluto de controles */
 }
 
 .slider-nav {
@@ -281,14 +292,39 @@ a[data-i18n="about-resume-link"] {
   color: #046b71;
 }
 
-.slick-next:focus .slick-next-icon,
-.slick-next:focus .slick-prev-icon,
-.slick-prev:focus .slick-next-icon,
-.slick-prev:focus .slick-prev-icon,
-.slick-dots li button:focus .slick-dot-icon:before,
+.slick-autoplay-toggle-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #00262b;
+  font-size: 1.2rem;
+  display: block;
+  margin: 1rem auto;
+  padding: 10px;
+  transition:
+    color 0.3s ease,
+    transform 0.2s ease;
+  line-height: 1;
+  position: relative;
+  z-index: 5;
+}
+
+.slick-autoplay-toggle-button:focus,
+.slick-autoplay-toggle-button:hover,
+.slick-next:focus .slick-next-icon:before,
+.slick-prev:focus .slick-prev-icon:before,
+.slick-next:active .slick-next-icon:before,
+.slick-prev:active .slick-prev-icon:before,
+.slick-next:focus:before,
+.slick-prev:focus:before,
+.slick-next:active:before,
+.slick-prev:active:before {
+  color: #046b71 !important;
+}
+
 .slick-autoplay-toggle-button:focus,
 .slick-autoplay-toggle-button:hover {
-  color: #046b71 !important;
+  transform: scale(1.1);
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
@@ -509,6 +545,8 @@ ul.horizontal {
   border: 1px solid #abc;
   border-radius: 0 0 15px 15px; /* Solo curvas inferiores */
   overflow: hidden;
+  background-color: #fff; /* Asegurar fondo sólido para todo el contenedor */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Sutil sombra para mejor separación al scroll */
 }
 
 ul.horizontal li {
@@ -519,7 +557,7 @@ ul.horizontal li {
 
 ul.horizontal li:hover,
 ul.horizontal li:has(a.active) {
-  background-color: rgba(4, 107, 113, 0.03); /* Cambio de tono muy leve */
+  background-color: #f0fbfc; /* Color sólido y opaco para evitar solapamiento */
 }
 
 ul.horizontal li a:hover,
@@ -752,24 +790,63 @@ ul.horizontal li:last-child {
 
   .slick-prev,
   .slick-next {
-    top: 50% !important;
+    top: 45% !important; /* Ajuste para centrar mejor con la imagen */
     transform: translateY(-50%) !important;
-    width: 32px !important;
-    height: 32px !important;
+    width: 44px !important; /* Tamaño mínimo de toque WCAG */
+    height: 44px !important;
     z-index: 10;
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    border-radius: 50% !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
   }
 
   .slick-prev {
-    left: -15px !important;
+    left: -10px !important; /* Un poco más hacia adentro para evitar recortes */
   }
 
   .slick-next {
-    right: -15px !important;
+    right: -10px !important;
   }
 
   .slick-prev .slick-prev-icon:before,
   .slick-next .slick-next-icon:before {
-    font-size: 18px !important;
+    font-size: 20px !important;
+    color: #046b71 !important;
+    transition: color 0.2s ease;
+  }
+
+  .slick-prev:focus,
+  .slick-next:focus,
+  .slick-prev:active,
+  .slick-next:active {
+    background-color: #046b71 !important;
+    outline: none !important;
+  }
+
+  .slick-prev:focus .slick-prev-icon:before,
+  .slick-next:focus .slick-next-icon:before,
+  .slick-prev:active .slick-prev-icon:before,
+  .slick-next:active .slick-next-icon:before {
+    color: #fff !important;
+  }
+
+  .slick-autoplay-toggle-button {
+    margin-top: 1.5rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  /* Posicionamiento específico del botón de pausa en carrusel de proyectos */
+  .sliderProjects .slick-autoplay-toggle-button {
+    position: absolute !important;
+    bottom: 2.8rem !important; /* Ajustado para quedar en la esquina de la imagen en móviles */
+    left: 0 !important;
+    margin: 0 !important;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    border-radius: 4px;
+    padding: 5px;
   }
 
   /* Reducción de espaciados para mejor primer renderizado */
@@ -994,6 +1071,7 @@ ul.horizontal li:last-child {
   width: 100%;
   max-width: 480px;
   flex-shrink: 0;
+  position: relative; /* Base para posicionamiento absoluto de controles */
 }
 
 @media (min-width: 992px) {
@@ -1024,7 +1102,37 @@ ul.horizontal li:last-child {
 }
 
 .events-carousel .slick-dots li.slick-active button:before,
-.events-carousel .slick-dots li.slick-active button .slick-dot-icon:before {
+.events-carousel .slick-active button .slick-dot-icon:before {
   color: #046b71 !important;
   opacity: 1;
+}
+
+/* Estandarización de botones de pausa para ambos carruseles */
+.sliderProjects .slick-autoplay-toggle-button,
+.events-carousel-wrapper .slick-autoplay-toggle-button {
+  position: absolute !important;
+  left: 5px !important;
+  margin: 0 !important;
+  z-index: 100 !important;
+  padding: 5px !important;
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  border-radius: 4px !important;
+  line-height: 1 !important;
+  border: none !important;
+}
+
+/* Posición específica para el de Proyectos (subirlo para que quede sobre el borde inferior de la imagen) */
+.sliderProjects .slick-autoplay-toggle-button {
+  bottom: 85px !important; /* Ajuste para desktop: salta el enlace y el padding */
+}
+
+/* Posición específica para el de Eventos */
+.events-carousel-wrapper .slick-autoplay-toggle-button {
+  bottom: 0px !important;
+}
+
+@media (max-width: 991px) {
+  .sliderProjects .slick-autoplay-toggle-button {
+    bottom: 4.5rem !important; /* Ajuste para móvil: salta el enlace y padding */
+  }
 }
