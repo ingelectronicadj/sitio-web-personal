@@ -1239,3 +1239,28 @@ ul.horizontal li:last-child {
 .research-link-chip:focus {
   outline: 3px solid rgba(4, 107, 113, 0.4);
 }
+
+/* --- Animación fade-up nativa (reemplaza a AOS) --- */
+/* Estado inicial: invisible y desplazado hacia abajo */
+.animate-fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+/* Estado visible: activado via JS con IntersectionObserver */
+.animate-fade-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Respetar la preferencia del usuario de reducir movimiento (WCAG 2.1 - 2.3.3) */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

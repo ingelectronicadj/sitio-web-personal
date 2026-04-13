@@ -25,7 +25,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <!-- Widget de accesibilidad activo (Accesify) -->
+    <link
+      rel="preconnect"
+      href="https://accesify.edudigital.tech"
+      crossorigin
+    />
 
     <title>CV Diego Mena</title>
     <!-- Bootstrap core CSS (local) -->
@@ -71,8 +76,6 @@
       content="Ingeniero con experiencia en desarrollo de productos digitales accesibles"
     />
     <meta property="og:image" content="./img/profile-pic.webp" />
-
-    <!-- Animate On Scroll Library -->
   </head>
 
   <body id="page-top">
@@ -1593,7 +1596,8 @@
             ser consecuente con mis intereses.
           </p>
 
-          <div class="research-box" data-aos="fade-up">
+          <!-- Animación de entrada reemplaza AOS con CSS puro (fade-up nativo) -->
+          <div class="research-box animate-fade-up">
             <h3 data-i18n="research-header">
               Enfoque de Investigación y Propuesta Doctoral
             </h3>
@@ -1953,9 +1957,7 @@
     <script type="text/javascript" src="./js/slick.min.js" defer></script>
     <script src="./js/slick-init.js" defer></script>
 
-    <!-- Manejo de alertas -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
-    <script src="./js/alerts.js" defer></script>
+    <!-- SweetAlert2 y alerts.js eliminados: no se usan en el sitio -->
 
     <!-- Internacionalización (i18n) -->
     <script src="./js/i18n.js" defer></script>
@@ -2023,6 +2025,31 @@
           .addEventListener("change", function () {
             toggleContrast("dark");
           });
+
+        // Animación fade-up nativa con IntersectionObserver (reemplaza AOS)
+        if ("IntersectionObserver" in window) {
+          const fadeObserver = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("is-visible");
+                  // Dejar de observar una vez animado para liberar recursos
+                  fadeObserver.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.15 },
+          );
+
+          document.querySelectorAll(".animate-fade-up").forEach(function (el) {
+            fadeObserver.observe(el);
+          });
+        } else {
+          // Navegadores sin soporte: mostrar directamente sin animación
+          document.querySelectorAll(".animate-fade-up").forEach(function (el) {
+            el.classList.add("is-visible");
+          });
+        }
       });
     </script>
 
