@@ -478,6 +478,13 @@ a:hover {
   color: #046b71;
 }
 
+/* Estilos para asegurar distinción de enlaces en bloques de texto sin depender solo del color */
+.resume-content p a,
+.research-box p a {
+  text-decoration: underline !important;
+  text-underline-offset: 2px;
+}
+
 .movil img {
   display: none;
 }
