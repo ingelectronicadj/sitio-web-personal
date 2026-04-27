@@ -35,7 +35,9 @@
           1000,
           "easeInOutExpo",
           function () {
-            isAnimatingScroll = false;
+            setTimeout(function () {
+              isAnimatingScroll = false;
+            }, 100);
           }
         );
         return false;
