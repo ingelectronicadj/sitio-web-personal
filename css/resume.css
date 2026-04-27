@@ -835,11 +835,11 @@ ul.horizontal li:last-child {
   }
 
   .slick-prev {
-    left: -10px !important; /* Un poco más hacia adentro para evitar recortes */
+    left: -18px !important; /* Mayor separación para evitar solapamiento */
   }
 
   .slick-next {
-    right: -10px !important;
+    right: -18px !important;
   }
 
   .slick-prev .slick-prev-icon:before,
@@ -849,6 +849,7 @@ ul.horizontal li:last-child {
     transition: color 0.2s ease;
   }
 
+  /* Fondo teal al pulsar, con flecha siempre blanca para no perder visibilidad */
   .slick-prev:focus,
   .slick-next:focus,
   .slick-prev:active,
@@ -857,6 +858,10 @@ ul.horizontal li:last-child {
     outline: none !important;
   }
 
+  .slick-prev:focus:before,
+  .slick-next:focus:before,
+  .slick-prev:active:before,
+  .slick-next:active:before,
   .slick-prev:focus .slick-prev-icon:before,
   .slick-next:focus .slick-next-icon:before,
   .slick-prev:active .slick-prev-icon:before,
