@@ -6,6 +6,8 @@
 (function ($) {
   "use strict";
 
+  let isAnimatingScroll = false;
+
   // Scroll suave al hacer click en enlaces con ancla
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
     if (
@@ -27,10 +29,14 @@
           }
           navOffset = $("#sideNav").outerHeight();
         }
+        isAnimatingScroll = true;
         $("html, body").animate(
           { scrollTop: target.offset().top - navOffset },
           1000,
           "easeInOutExpo",
+          function () {
+            isAnimatingScroll = false;
+          }
         );
         return false;
       }
@@ -122,6 +128,11 @@
 
     if (!isMobileLandscape) {
       $sideNav.removeClass("nav-up");
+      return;
+    }
+
+    if (isAnimatingScroll) {
+      lastScrollTop = st;
       return;
     }
 
