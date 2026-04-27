@@ -1134,6 +1134,9 @@ ul.horizontal li:last-child {
 .events-carousel:not(.slick-initialized) > div {
   display: none;
 }
+.events-carousel:not(.slick-initialized) > div:first-child {
+  display: block;
+}
 
 @keyframes skeleton-loading {
   0% { background-position: 200% 0; }
