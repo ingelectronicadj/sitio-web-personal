@@ -800,7 +800,7 @@ ul.horizontal li:last-child {
     text-align: center;
   }
   .ir-arriba {
-    bottom: 80px;
+    bottom: 115px;
     right: 25px;
   }
   .toogleContainer {
@@ -879,9 +879,9 @@ ul.horizontal li:last-child {
     padding: 5px;
   }
 
-  /* Reducción de espaciados para mejor primer renderizado */
+  /* Reducción de espaciados para mejor encuadre de sección en navegación móvil */
   section.resume-section {
-    padding-top: 3.5rem !important;
+    padding-top: 1.5rem !important;
     padding-bottom: 2rem !important;
   }
 
