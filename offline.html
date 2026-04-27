@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sin conexión - CV Diego Mena</title>
+  <meta name="theme-color" content="#00262b">
+  <style>
+    /* Estilos inline para garantizar renderizado sin red */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #00262b;
+      color: #e0f2f1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .offline-container {
+      max-width: 480px;
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    /* Ícono SVG de señal cortada */
+    .offline-icon {
+      width: 96px;
+      height: 96px;
+      margin: 0 auto 2rem;
+      opacity: 0.7;
+    }
+
+    h1 {
+      font-family: 'Saira Extra Condensed', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .retry-button {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      background-color: #046b71;
+      color: #ffffff;
+      border: 2px solid #046b71;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+      min-width: 44px;
+      min-height: 44px;
+    }
+
+    .retry-button:hover,
+    .retry-button:focus {
+      background-color: transparent;
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(4, 107, 113, 0.4);
+      outline: 2px solid #046b71;
+      outline-offset: 2px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .offline-container {
+        animation: none;
+      }
+      .retry-button {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="offline-container" role="alert">
+    <!-- Ícono SVG inline para no depender de red -->
+    <svg class="offline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="1" y1="1" x2="23" y2="23"></line>
+      <path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"></path>
+      <path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"></path>
+      <path d="M10.71 5.05A16 16 0 0 1 22.56 9"></path>
+      <path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"></path>
+      <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+      <line x1="12" y1="20" x2="12.01" y2="20"></line>
+    </svg>
+
+    <h1>Sin conexión</h1>
+    <p>
+      Parece que no tienes conexión a Internet en este momento.
+      Verifica tu conexión e intenta de nuevo para acceder al CV de Diego Mena.
+    </p>
+    <button class="retry-button" type="button" aria-label="Reintentar conexión">
+      Reintentar
+    </button>
+  </main>
+
+  <script>
+    // Reintentar navegación al hacer clic
+    document.querySelector('.retry-button').addEventListener('click', function () {
+      window.location.reload();
+    });
+  </script>
+</body>
+</html>

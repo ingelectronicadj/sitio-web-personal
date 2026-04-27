@@ -1,6 +1,15 @@
-const CACHE_NAME = "v4_cache_CV_Diego";
+/**
+ * Service Worker para la PWA de CV Diego Mena
+ * Estrategia: Stale-While-Revalidate con fallback offline
+ * Versión del caché se actualiza con cada despliegue
+ */
+
+const CACHE_NAME = "v5_cache_CV_Diego";
+const OFFLINE_URL = "./offline.html";
+
 const urlsToCache = [
   "./",
+  OFFLINE_URL,
   "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",
   "https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700&display=swap",
   "https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i&display=swap",
@@ -27,6 +36,7 @@ const urlsToCache = [
   "./img/pwa/icon_384.webp"
 ];
 
+// Evento de instalación: precachear recursos esenciales
 self.addEventListener("install", (e) => {
   e.waitUntil(
     caches
@@ -38,6 +48,7 @@ self.addEventListener("install", (e) => {
   );
 });
 
+// Evento de activación: limpiar cachés antiguos
 self.addEventListener("activate", (e) => {
   const cacheWhitelist = [CACHE_NAME];
 
@@ -57,22 +68,35 @@ self.addEventListener("activate", (e) => {
   );
 });
 
+// Evento fetch: Stale-While-Revalidate con fallback offline
 self.addEventListener("fetch", (e) => {
   // Ignorar peticiones de esquemas no soportados (ej. chrome-extension://)
   if (!(e.request.url.startsWith('http:') || e.request.url.startsWith('https:'))) {
       return;
   }
 
+  // Solo interceptar peticiones GET
+  if (e.request.method !== 'GET') {
+    return;
+  }
+
   e.respondWith(
     caches.open(CACHE_NAME).then((cache) => {
       return cache.match(e.request).then((cachedResponse) => {
         const fetchPromise = fetch(e.request).then((networkResponse) => {
-          if (networkResponse && networkResponse.status === 200 && networkResponse.type === 'basic') {
-            cache.put(e.request, networkResponse.clone());
+          if (networkResponse && networkResponse.status === 200) {
+            // Solo cachear respuestas basic y cors (no opaque)
+            if (networkResponse.type === 'basic' || networkResponse.type === 'cors') {
+              cache.put(e.request, networkResponse.clone());
+            }
           }
           return networkResponse;
         }).catch(() => {
-          console.log("Modo offline: Error recuperando red para", e.request.url);
+          // Si es una navegación (página), servir página offline
+          if (e.request.mode === 'navigate') {
+            return cache.match(OFFLINE_URL);
+          }
+          return undefined;
         });
 
         return cachedResponse || fetchPromise;
