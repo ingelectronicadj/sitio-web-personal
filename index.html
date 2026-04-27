@@ -2011,6 +2011,31 @@
             el.classList.add("is-visible");
           });
         }
+
+        // Efecto hover simulado por scroll en dispositivos táctiles (sin hover nativo)
+        // Replica la experiencia de desktop activando .is-in-view al entrar al viewport
+        const isTouchDevice = window.matchMedia("(hover: none)").matches;
+        if (isTouchDevice && "IntersectionObserver" in window) {
+          const hoverObserver = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("is-in-view");
+                } else {
+                  // Remover al salir para que el efecto se repita al volver a pasar
+                  entry.target.classList.remove("is-in-view");
+                }
+              });
+            },
+            { threshold: 0.3, rootMargin: "0px 0px -10% 0px" },
+          );
+
+          document
+            .querySelectorAll(".resume-item, .research-box")
+            .forEach(function (el) {
+              hoverObserver.observe(el);
+            });
+        }
       });
     </script>
 

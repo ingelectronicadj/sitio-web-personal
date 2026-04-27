@@ -404,7 +404,8 @@ section.resume-section .resume-item .resume-date {
   margin-bottom: 0.5rem;
 }
 
-.resume-item:hover {
+.resume-item:hover,
+.resume-item.is-in-view {
   border-left-color: #046b71; /* Accent recto y grueso */
   transform: translateX(5px);
   background-color: rgba(4, 107, 113, 0.03); /* Fondo más suave (3%) */
@@ -1204,7 +1205,8 @@ ul.horizontal li:last-child {
     box-shadow 0.3s ease;
 }
 
-.research-box:hover {
+.research-box:hover,
+.research-box.is-in-view {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
@@ -1291,5 +1293,14 @@ ul.horizontal li:last-child {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+
+  /* Desactivar la animación de scroll-hover en dispositivos con movimiento reducido */
+  .resume-item.is-in-view {
+    transform: none;
+  }
+
+  .research-box.is-in-view {
+    transform: none;
   }
 }
