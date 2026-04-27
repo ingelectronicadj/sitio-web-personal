@@ -18,6 +18,13 @@
       if (target.length) {
         let navOffset = 0;
         if ($(window).width() < 992) {
+          // Cerrar menú móvil ANTES de calcular el offset para obtener la altura real de la barra contraída
+          const navCollapse = document.getElementById("navbarSupportedContent");
+          if (navCollapse && navCollapse.classList.contains("show")) {
+            navCollapse.classList.remove("show");
+            const toggler = document.querySelector(".navbar-toggler");
+            if (toggler) toggler.setAttribute("aria-expanded", "false");
+          }
           navOffset = $("#sideNav").outerHeight();
         }
         $("html, body").animate(
