@@ -1,4 +1,10 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 body {
+  overflow-x: hidden;
   font-family:
     Muli,
     -apple-system,
@@ -1112,6 +1118,26 @@ ul.horizontal li:last-child {
   width: 100%;
   border-radius: 10px;
   background-color: #f8f9fa;
+}
+
+.events-carousel:not(.slick-initialized) {
+  height: 280px;
+  border-radius: 10px;
+  background: #e2e8f0;
+  background: linear-gradient(90deg, #f0fbfc 25%, #e0f2f1 50%, #f0fbfc 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  overflow: hidden;
+  margin-bottom: 25px; /* space for dots later */
+}
+
+.events-carousel:not(.slick-initialized) > div {
+  display: none;
+}
+
+@keyframes skeleton-loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }
 
 /* Dots del carrusel de eventos */

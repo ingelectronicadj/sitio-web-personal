@@ -13,10 +13,10 @@
         this.pathname.replace(/^\//, "") &&
       location.hostname === this.hostname
     ) {
-      var target = $(this.hash);
+      let target = $(this.hash);
       target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
       if (target.length) {
-        var navOffset = 0;
+        let navOffset = 0;
         if ($(window).width() < 992) {
           navOffset = $("#sideNav").outerHeight();
         }
@@ -32,8 +32,8 @@
 
   // Cerrar menú móvil al hacer click en un enlace (reemplaza Bootstrap collapse("hide"))
   $(".js-scroll-trigger").click(function () {
-    var navCollapse = document.getElementById("navbarSupportedContent");
-    var toggler = document.querySelector(".navbar-toggler");
+    const navCollapse = document.getElementById("navbarSupportedContent");
+    const toggler = document.querySelector(".navbar-toggler");
     if (navCollapse && navCollapse.classList.contains("show")) {
       navCollapse.classList.remove("show");
       if (toggler) {
@@ -43,16 +43,16 @@
   });
 
   // Scrollspy vanilla (reemplaza Bootstrap scrollspy)
-  var sections = [];
-  var navLinks = document.querySelectorAll(
+  const sections = [];
+  const navLinks = document.querySelectorAll(
     "#sideNav .nav-link.js-scroll-trigger",
   );
 
   // Recopilar secciones objetivo
   navLinks.forEach(function (link) {
-    var href = link.getAttribute("href");
+    const href = link.getAttribute("href");
     if (href && href.startsWith("#")) {
-      var section = document.querySelector(href);
+      const section = document.querySelector(href);
       if (section) {
         sections.push({ element: section, link: link });
       }
@@ -61,11 +61,11 @@
 
   // Función para actualizar el estado activo
   function updateActiveLink() {
-    var scrollPos = window.pageYOffset || document.documentElement.scrollTop;
-    var offset = 100; // Margen para activar la sección
+    const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+    const offset = 100; // Margen para activar la sección
 
-    var activeSection = null;
-    for (var i = sections.length - 1; i >= 0; i--) {
+    let activeSection = null;
+    for (let i = sections.length - 1; i >= 0; i--) {
       if (sections[i].element.offsetTop <= scrollPos + offset) {
         activeSection = sections[i];
         break;
@@ -84,9 +84,9 @@
   }
 
   // Escuchar scroll con throttle para rendimiento
-  var scrollTimeout;
-  var lastScrollTop = 0;
-  var delta = 10; // Margen de scroll aumentado para mayor estabilidad
+  let scrollTimeout;
+  let lastScrollTop = 0;
+  const delta = 10; // Margen de scroll aumentado para mayor estabilidad
 
   window.addEventListener("scroll", function () {
     if (scrollTimeout) {
@@ -104,14 +104,14 @@
   });
 
   function handleNavbarVisibility() {
-    var $sideNav = $("#sideNav");
-    var st = $(window).scrollTop();
-    var winWidth = $(window).width();
-    var winHeight = $(window).height();
+    const $sideNav = $("#sideNav");
+    const st = $(window).scrollTop();
+    const winWidth = $(window).width();
+    const winHeight = $(window).height();
 
     // Solo actuar en mobile landscape (ancho < 992 y ancho > alto)
     // Usamos $(window).width() para mayor consistencia con el simulador
-    var isMobileLandscape = winWidth < 992 && winWidth > winHeight;
+    const isMobileLandscape = winWidth < 992 && winWidth > winHeight;
 
     if (!isMobileLandscape) {
       $sideNav.removeClass("nav-up");

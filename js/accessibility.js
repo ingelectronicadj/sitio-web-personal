@@ -1,7 +1,12 @@
 /* Funcionalidad Modo Oscuro */
 function toggleContrast(classContrast) {
-  // Refactor: Aplicar clase únicamente al body para herencia de estilos
-  document.body.classList.toggle(classContrast);
+  // Refactor: Aplicar clase basándose en el estado explícito del checkbox para consistencia
+  const isDark = document.getElementById("checkSwitch").checked;
+  if (isDark) {
+    document.body.classList.add(classContrast);
+  } else {
+    document.body.classList.remove(classContrast);
+  }
 }
 
 function setContrast() {
@@ -11,9 +16,12 @@ function setContrast() {
 
 function getContrast() {
   let status_contrast_localStorage = localStorage.getItem("status_contrast");
-  if (status_contrast_localStorage == "true") {
+  if (status_contrast_localStorage === "true") {
     document.getElementById("checkSwitch").checked = true;
-    toggleContrast("dark");
+    document.body.classList.add("dark");
+  } else if (status_contrast_localStorage === "false") {
+    document.getElementById("checkSwitch").checked = false;
+    document.body.classList.remove("dark");
   } else {
     setContrast();
   }
@@ -58,11 +66,31 @@ function agregarSpanEnlacesExternos() {
   });
 }
 
+function syncToggleWithBodyClass() {
+  const checkSwitch = document.getElementById("checkSwitch");
+  if (!checkSwitch) return;
+
+  const observer = new MutationObserver(function (mutations) {
+    mutations.forEach(function (mutation) {
+      if (mutation.attributeName === "class") {
+        const isDark = document.body.classList.contains("dark");
+        if (checkSwitch.checked !== isDark) {
+          checkSwitch.checked = isDark;
+          localStorage.setItem("status_contrast", isDark);
+        }
+      }
+    });
+  });
+
+  observer.observe(document.body, { attributes: true });
+}
+
 // DOM Listo
 document.addEventListener("DOMContentLoaded", () => {
   const status_btn_contrast = document.getElementById("checkSwitch");
   status_btn_contrast.addEventListener("click", setContrast);
   getContrast();
+  syncToggleWithBodyClass();
   ocultarIconosInaccesibles();
   agregarSpanEnlacesExternos();
 

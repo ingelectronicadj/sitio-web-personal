@@ -277,6 +277,11 @@ body.dark .events-carousel .img-responsive {
   background-color: #1e2229;
 }
 
+body.dark .events-carousel:not(.slick-initialized) {
+  background: linear-gradient(90deg, #1a1e24 25%, #2c323a 50%, #1a1e24 75%);
+  background-size: 200% 100%;
+}
+
 body.dark .events-carousel .slick-dots li button:before,
 body.dark .events-carousel .slick-dots li button .slick-dot-icon:before {
   color: #00bcd4 !important;

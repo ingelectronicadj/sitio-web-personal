@@ -2,7 +2,7 @@
  * Sistema de internacionalización (i18n)
  * Soporte para Español (es) e Inglés (en)
  */
-var i18n = {
+const i18n = {
   currentLang: "es",
 
   translations: {
@@ -625,7 +625,7 @@ var i18n = {
     document.title = this.translations[lang]["page-title"];
 
     // Actualizar meta description
-    var metaDesc = document.querySelector('meta[name="description"]');
+    const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
       metaDesc.setAttribute(
         "content",
@@ -634,11 +634,11 @@ var i18n = {
     }
 
     // Actualizar todos los elementos con data-i18n (textContent/innerHTML)
-    var elements = document.querySelectorAll("[data-i18n]");
-    for (var idx = 0; idx < elements.length; idx++) {
-      var el = elements[idx];
-      var key = el.getAttribute("data-i18n");
-      var translation = this.translations[lang][key];
+    const elements = document.querySelectorAll("[data-i18n]");
+    for (let idx = 0; idx < elements.length; idx++) {
+      const el = elements[idx];
+      const key = el.getAttribute("data-i18n");
+      const translation = this.translations[lang][key];
       if (translation !== undefined) {
         // Si la traducción contiene HTML, usar innerHTML
         if (translation.indexOf("<") !== -1) {
@@ -650,40 +650,40 @@ var i18n = {
     }
 
     // Actualizar elementos con data-i18n-title (atributo title)
-    var titleElements = document.querySelectorAll("[data-i18n-title]");
-    for (var t = 0; t < titleElements.length; t++) {
-      var tel = titleElements[t];
-      var tkey = tel.getAttribute("data-i18n-title");
-      var ttranslation = this.translations[lang][tkey];
+    const titleElements = document.querySelectorAll("[data-i18n-title]");
+    for (let t = 0; t < titleElements.length; t++) {
+      const tel = titleElements[t];
+      const tkey = tel.getAttribute("data-i18n-title");
+      const ttranslation = this.translations[lang][tkey];
       if (ttranslation !== undefined) {
         tel.setAttribute("title", ttranslation);
       }
     }
     // Actualizar elementos con data-i18n-href (atributo href)
-    var hrefElements = document.querySelectorAll("[data-i18n-href]");
-    for (var h = 0; h < hrefElements.length; h++) {
-      var hel = hrefElements[h];
-      var hkey = hel.getAttribute("data-i18n-href");
-      var htranslation = this.translations[lang][hkey];
+    const hrefElements = document.querySelectorAll("[data-i18n-href]");
+    for (let h = 0; h < hrefElements.length; h++) {
+      const hel = hrefElements[h];
+      const hkey = hel.getAttribute("data-i18n-href");
+      const htranslation = this.translations[lang][hkey];
       if (htranslation !== undefined) {
         hel.setAttribute("href", htranslation);
       }
     }
 
     // Actualizar elementos con data-i18n-aria (atributo aria-label)
-    var ariaElements = document.querySelectorAll("[data-i18n-aria]");
-    for (var a = 0; a < ariaElements.length; a++) {
-      var ael = ariaElements[a];
-      var akey = ael.getAttribute("data-i18n-aria");
-      var atranslation = this.translations[lang][akey];
+    const ariaElements = document.querySelectorAll("[data-i18n-aria]");
+    for (let a = 0; a < ariaElements.length; a++) {
+      const ael = ariaElements[a];
+      const akey = ael.getAttribute("data-i18n-aria");
+      const atranslation = this.translations[lang][akey];
       if (atranslation !== undefined) {
         ael.setAttribute("aria-label", atranslation);
       }
     }
 
     // Actualizar banderas activas
-    var flagEs = document.getElementById("flag-es");
-    var flagEn = document.getElementById("flag-en");
+    const flagEs = document.getElementById("flag-es");
+    const flagEn = document.getElementById("flag-en");
     if (flagEs && flagEn) {
       if (lang === "es") {
         flagEs.classList.add("flag-active");
@@ -705,13 +705,13 @@ var i18n = {
    * Actualizar las etiquetas del slider de Slick
    */
   updateSliderLabels: function (lang) {
-    var mainSlider = document.querySelector(".slider-for");
-    var navSlider = document.querySelector(".slider-nav");
+    const mainSlider = document.querySelector(".slider-for");
+    const navSlider = document.querySelector(".slider-nav");
     if (mainSlider) {
-      var mainRegion =
+      const mainRegion =
         mainSlider.closest("[aria-roledescription]") ||
         mainSlider.parentElement;
-      var mainLabel = mainRegion
+      const mainLabel = mainRegion
         ? mainRegion.querySelector("[aria-label]")
         : null;
     }
@@ -721,8 +721,8 @@ var i18n = {
    * Inicializar el sistema i18n
    */
   init: function () {
-    var savedLang = localStorage.getItem("preferred_lang");
-    var lang = savedLang || document.documentElement.lang || "es";
+    const savedLang = localStorage.getItem("preferred_lang");
+    let lang = savedLang || document.documentElement.lang || "es";
 
     // Validar idioma
     if (!this.translations[lang]) {
