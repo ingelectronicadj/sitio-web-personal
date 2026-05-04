@@ -21,11 +21,17 @@
       href="./img/favicon-diego.webp"
     />
     <link rel="canonical" href="https://diegomena.rocks/" />
+    <link rel="alternate" hreflang="es" href="https://diegomena.rocks/" />
+    <link rel="alternate" hreflang="en" href="https://diegomena.rocks/" />
+    <link rel="alternate" hreflang="x-default" href="https://diegomena.rocks/" />
 
     <!-- Preconexiones a orígenes CDN externos -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
     <!-- Widget de accesibilidad activo (Accesify) -->
     <link
       rel="preconnect"
@@ -78,9 +84,9 @@
       property="og:description"
       content="Auditorías WCAG 2.2 · EN 301 549 · Shift Left · Fintech · Gobierno · E-learning. De la conformidad al impacto real."
     />
-    <meta property="og:image" content="https://diegomena.rocks/img/diego-mena-accesibilidad-ia-og.png" />
-    <meta property="og:image:width" content="1424" />
-    <meta property="og:image:height" content="752" />
+    <meta property="og:image" content="https://diegomena.rocks/img/diego-mena-accesibilidad-ia-og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="es_CO" />
     <meta property="og:locale:alternate" content="en_US" />
     <meta property="og:site_name" content="Diego Mena — Accesibilidad Digital" />
@@ -89,7 +95,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Diego Mena · Experto en Accesibilidad Digital" />
     <meta name="twitter:description" content="Auditorías WCAG 2.2, EN 301 549, Shift Left. De la conformidad al impacto real." />
-    <meta name="twitter:image" content="https://diegomena.rocks/img/diego-mena-accesibilidad-ia-og.png" />
+    <meta name="twitter:image" content="https://diegomena.rocks/img/diego-mena-accesibilidad-ia-og.jpg" />
 
     <!-- Datos estructurados JSON-LD (SEO Entity Authority) -->
     <script type="application/ld+json">
@@ -349,6 +355,46 @@
             "name": "Universidad Distrital Francisco José de Caldas"
           },
           "about": ["IoT", "Precision Agriculture", "Embedded Systems"]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://diegomena.rocks/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Inicio",
+              "item": "https://diegomena.rocks/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Experiencia Profesional",
+              "item": "https://diegomena.rocks/#experience"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Competencias Técnicas",
+              "item": "https://diegomena.rocks/#skills"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Investigación en Accesibilidad",
+              "item": "https://diegomena.rocks/#interests"
+            },
+            {
+              "@type": "ListItem",
+              "position": 5,
+              "name": "Eventos y Ponencias",
+              "item": "https://diegomena.rocks/#awards"
+            }
+          ]
+        },
+        {
+          "@type": "SpeakableSpecification",
+          "cssSelector": ["#aboutTitle", "#experienceTitle", "#interestsTitle", ".lead"]
         }
       ]
     }
