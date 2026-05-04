@@ -8,9 +8,9 @@ const i18n = {
   translations: {
     es: {
       // Meta & Title
-      "page-title": "CV Diego Mena",
+      "page-title": "Diego Mena · Experto en Accesibilidad Digital — WCAG 2.2, Auditorías y Shift Left",
       "meta-description":
-        "CV Diego Mena. Ingeniero electrónico, especialista en accesibilidad web, con más de 7 años de experiencia en el desarrollo de productos digitales (Software y Hardware).",
+        "Perfil profesional de Diego Mena. Experto en accesibilidad digital con +5 años en auditorías WCAG 2.2, EN 301 549 y Sección 508. Especializado en fintech, gobierno y e-learning. De la conformidad al impacto real.",
 
       // Skip link
       "skip-link": "Saltar al contenido principal",
@@ -313,9 +313,9 @@ const i18n = {
 
     en: {
       // Meta & Title
-      "page-title": "CV Diego Mena",
+      "page-title": "Diego Mena · Digital Accessibility Expert — WCAG 2.2, Audits & Shift Left",
       "meta-description":
-        "CV Diego Mena. Electronic engineer, web accessibility specialist, with more than 7 years of experience in the development of digital products (Software and Hardware).",
+        "Diego Mena's professional profile. Digital accessibility expert with 5+ years in WCAG 2.2, EN 301 549, and Section 508 audits. Specialized in fintech, government, and e-learning. From compliance to real impact.",
 
       // Skip link
       "skip-link": "Skip to main content",
