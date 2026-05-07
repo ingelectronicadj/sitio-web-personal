@@ -198,46 +198,21 @@ const i18n = {
       "project6-link": "Ver publicación del curso",
       "project6-aria":
         "Ver post de la clase final del Curso de Accesibilidad Web - Clase 20",
-      "project7-title": "Solución IoT para temeletría usando redes LPWAN",
-      "project7-link": "Ver repositorio del proyecto",
-      "project7-aria":
-        "Ver repositorio en Github del proyecto Solución IoT para temeletría usando redes LPWAN",
-      "project8-title": "Tarjeta Shield para control de motores por Bluetooth",
-      "project8-link": "Ver diseño de PCB",
-      "project8-aria":
-        "Ver diseño de PCB y esquemáticos de la Tarjeta Shield para control de motores por Bluetooth",
+
       "project9-title": "Reproductor de videos con interprete de señas",
       "project9-link": "Ver demo del reproductor",
       "project9-aria":
         "Ver demo del Reproductor de videos accesible con interprete de señas",
-      "project10-title":
-        "Interfaz para visualización de estructuras moleculares",
-      "project10-link": "Ver repositorio del proyecto",
-      "project10-aria":
-        "Ver repositorio en Github de la Interfaz para visualización de estructuras moleculares",
+
       "project11-title": "Cursos MOOC - Cursos Masivos Abiertos y en Línea",
       "project11-aria":
         "Ver catálogo de Cursos MOOC - Cursos Masivos Abiertos y en Línea",
-      "project12-title":
-        "Implementación de un RPA para la gestión tecnopedagógica",
-      "project12-link": "Ver reconocimiento",
-      "project12-aria":
-        "Ver Reconocimiento por el proyecto de Implementación de un RPA para el apoyo de la gestión tecnopedagógica (PDF)",
+
       "project13-title": "Sistema de Webconferencia Educativa y Organizacional",
       "project13-link": "Ver sitio del proyecto",
       "project13-aria":
         "Ver sitio web del Sistema de Webconferencia Educativa y Organizacional",
-      "project14-title": "Sitio web de atención dental profesional",
-      "project14-link": "Ver sitio web dental",
-      "project14-aria":
-        "Ver sitio web de atención dental profesional Dentalwhite",
-      "project15-title": "Sitio web de Servicios de Ingeniería Catastral",
-      "project15-link": "Ver sitio de ingeniería",
-      "project15-aria": "Ver sitio web de Servicios de Ingeniería Catastral",
-      "project16-title": "Sitio web de Canchas y Estructuras Deportivas",
-      "project16-link": "Ver sitio web de canchas",
-      "project16-aria":
-        "Ver sitio web de Canchas y Estructuras Deportivas Arysdia",
+
       "project17-title": "Accesibilidad Web para la Sede electrónica de la SIC",
       "project17-link": "Ver sede electrónica",
       "project17-aria":
@@ -531,41 +506,20 @@ const i18n = {
       "project6-title": "Web Accessibility Course for Government Entities",
       "project6-link": "View course post",
       "project6-aria": "View post of the final class - Class 20",
-      "project7-title": "IoT solution for telemetry using LPWAN networks",
-      "project7-link": "View project repository",
-      "project7-aria":
-        "View Github repository for the IoT solution for telemetry using LPWAN networks",
-      "project8-title": "Shield board for motor control via Bluetooth",
-      "project8-link": "View PCB design",
-      "project8-aria":
-        "View PCB design and schematics for the Shield board for motor control via Bluetooth",
+
       "project9-title": "Video player with sign language interpreter",
       "project9-link": "View player demo",
       "project9-aria":
         "View demo of the accessible multimedia player with sign language interpreter",
-      "project10-title": "Interface for molecular structure visualization",
-      "project10-link": "View project repository",
-      "project10-aria":
-        "View Github repository for the interface for molecular structure visualization",
+
       "project11-title": "MOOC - Massive Open Online Courses",
       "project11-aria": "View MOOC catalogue - Massive Open Online Courses",
-      "project12-title": "RPA Implementation for Techno-pedagogical Management",
-      "project12-link": "View recognition",
-      "project12-aria":
-        "View Recognition for the RPA Implementation project for techno-pedagogical management support (PDF)",
+
       "project13-title": "Educational and Organizational Web Conference System",
       "project13-link": "View project site",
       "project13-aria":
         "View website for the Educational and Organizational Web Conference System",
-      "project14-title": "Professional dental care website",
-      "project14-link": "View dental site",
-      "project14-aria": "View website for Dentalwhite professional dental care",
-      "project15-title": "Cadastral Engineering Services website",
-      "project15-link": "View engineering site",
-      "project15-aria": "View website for Cadastral Engineering Services",
-      "project16-title": "Sports Courts and Structures website",
-      "project16-link": "View sports site",
-      "project16-aria": "View website for Arysdia Sports Courts and Structures",
+
       "project17-title":
         "Web Accessibility for the SIC Electronic Headquarters",
       "project17-link": "View electronic headquarters",
