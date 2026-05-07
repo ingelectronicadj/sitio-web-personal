@@ -327,3 +327,26 @@ body.dark .research-link-chip:focus {
   color: #13161c !important;
   box-shadow: 0 4px 12px rgba(0, 188, 212, 0.3) !important;
 }
+
+/* --- Miniaturas de diplomas en modo oscuro --- */
+body.dark .diploma-thumbnail-link {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark .diploma-thumbnail-link:hover,
+body.dark .diploma-thumbnail-link:focus {
+  box-shadow: 0 6px 20px rgba(0, 188, 212, 0.3);
+  border-color: #00bcd4;
+}
+
+body.dark .diploma-label {
+  background-color: #1e2229 !important;
+  color: #00bcd4 !important;
+}
+
+body.dark .diploma-thumbnail-link:hover .diploma-label,
+body.dark .diploma-thumbnail-link:focus .diploma-label {
+  background-color: #00bcd4 !important;
+  color: #13161c !important;
+}

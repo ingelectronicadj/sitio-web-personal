@@ -387,6 +387,97 @@ section.resume-section .resume-item .resume-date {
   font-size: large;
 }
 
+/* Miniatura de diploma en sección educación */
+.diploma-thumbnail-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  position: relative;
+  margin-top: 0.75rem;
+  max-width: 120px;
+  transition: transform 0.3s ease;
+  text-decoration: none !important;
+}
+
+.diploma-thumbnail-link:hover,
+.diploma-thumbnail-link:focus {
+  transform: scale(1.05);
+}
+
+.diploma-thumbnail {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.3s ease;
+}
+
+.diploma-thumbnail-link:hover .diploma-thumbnail,
+.diploma-thumbnail-link:focus .diploma-thumbnail {
+  box-shadow: 0 6px 20px rgba(4, 107, 113, 0.3);
+}
+
+.diploma-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  padding: 0.35rem 0;
+  background-color: #00262b;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.diploma-thumbnail-link:hover .diploma-label,
+.diploma-thumbnail-link:focus .diploma-label {
+  background-color: #046b71;
+}
+
+/* Responsive: miniatura centrada en móvil/tablet, alineada a la derecha en desktop */
+@media screen and (max-width: 1024px) {
+  .resume-date.text-md-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .diploma-thumbnail-link {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .diploma-thumbnail-link {
+    margin-left: auto;
+  }
+}
+
+/* Miniaturas de hitos en experiencia: más grandes y sin contorno de tarjeta */
+#experience .diploma-thumbnail-link {
+  max-width: 150px;
+}
+
+#experience .diploma-thumbnail {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+#experience .diploma-thumbnail-link:hover .diploma-thumbnail,
+#experience .diploma-thumbnail-link:focus .diploma-thumbnail {
+  box-shadow: none;
+}
+
+#experience .diploma-label {
+  width: 100%;
+}
+
 /* Micro-animación: hover en items de experiencia/educación */
 .resume-item {
   border: 2px solid transparent; /* Base de 2px para todos los lados */

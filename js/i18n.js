@@ -87,6 +87,28 @@ const i18n = {
         "Coordinador de la Formación Técnico-Laboral en Programación: Como Coordinador de la ruta de formación técnico laboral en habilidades de programación, orientadas a aplicaciones móviles y web. Supervisar y coordinar todos los aspectos relacionados con la formación, incluyendo la selección de instructores, la planificación de lecciones y la evaluación del desempeño de los estudiantes. Trabajé en estrecha colaboración con el Fondo Único de Tecnologías de la Formación y las Comunicaciones y la Universidad Autónoma de Bucaramanga en virtud del Convenio de Asociación Nro. 743 de 2022.",
       "exp5-date": "Noviembre 2022 - Julio 2023",
 
+      // Miniaturas de hitos en experiencia
+      "exp1-milestone-label":
+        "<i class=\"fas fa-file-pdf\" aria-hidden=\"true\"></i> Ver certificado",
+      "exp1-milestone-aria":
+        "Ver certificado laboral de Hiberus (PDF, se abre en nueva pestaña)",
+      "exp2-milestone-label":
+        "<i class=\"fas fa-file-pdf\" aria-hidden=\"true\"></i> Ver certificado",
+      "exp2-milestone-aria":
+        "Ver certificado laboral de la SIC (PDF, se abre en nueva pestaña)",
+      "exp3-milestone-label":
+        "<i class=\"fas fa-file-pdf\" aria-hidden=\"true\"></i> Ver certificado",
+      "exp3-milestone-aria":
+        "Ver certificado laboral de la UNAD (PDF, se abre en nueva pestaña)",
+      "exp4-milestone-label":
+        "<i class=\"fas fa-file-pdf\" aria-hidden=\"true\"></i> Ver certificado",
+      "exp4-milestone-aria":
+        "Ver certificado laboral de Cognos Online (PDF, se abre en nueva pestaña)",
+      "exp5-milestone-label":
+        "<i class=\"fas fa-file-pdf\" aria-hidden=\"true\"></i> Ver certificado",
+      "exp5-milestone-aria":
+        "Ver certificado laboral de la UNAB (PDF, se abre en nueva pestaña)",
+
       // Education section
       "section-education": "Educación",
 
@@ -107,6 +129,15 @@ const i18n = {
       "edu3-description":
         'Actividades y asociaciones: Investigación y desarrollo (I+D). Exmiembro de los grupos de investigación: GLUD - Grupo Linux Universidad Distrital, GITUD - Grupo de Telecomunicaciones de la Universidad Distrital, LASER - Laboratorio de automatizacion, sistemas embebidos y robótica, TECLIBRE - Semillero de investigación en tecnologías libres. <br><b>Tesis:</b> <a href="https://repository.udistrital.edu.co/items/bd06700a-7131-470b-815f-52061c029aa2" target="_blank" rel="noopener noreferrer">Sistema Iot para el monitoreo y control de fuentes de luz artificial aplicado a la agricultura de precisión</a>.',
       "edu3-date": "Marzo 2018",
+
+      // Miniaturas de diplomas en educación
+      "edu-diploma-label": "\u003ci class=\"fas fa-file-pdf\" aria-hidden=\"true\"\u003e\u003c/i\u003e Ver diploma",
+      "edu1-diploma-aria":
+        "Ver diploma de Maestría en Gerencia de Proyectos (PDF, se abre en nueva pestaña)",
+      "edu2-diploma-aria":
+        "Ver diploma de Especialización en Gestión de Proyectos (PDF, se abre en nueva pestaña)",
+      "edu3-diploma-aria":
+        "Ver diploma de Ingeniero Electrónico (PDF, se abre en nueva pestaña)",
 
       // Skills section
       "section-skills": "Habilidades",
@@ -392,6 +423,28 @@ const i18n = {
         "Technical-Vocational Programming Training Coordinator: As Coordinator of the technical-vocational training path in programming skills, oriented to mobile and web applications. Supervise and coordinate all aspects related to training, including instructor selection, lesson planning and student performance evaluation. Worked closely with the Unique Fund for Training Technologies and Communications and the Autonomous University of Bucaramanga under Association Agreement No. 743 of 2022.",
       "exp5-date": "November 2022 - July 2023",
 
+      // Experience milestone thumbnails
+      "exp1-milestone-label":
+        "<i class=\"fas fa-file-pdf\" aria-hidden=\"true\"></i> View certificate",
+      "exp1-milestone-aria":
+        "View Hiberus work certificate (PDF, opens in new tab)",
+      "exp2-milestone-label":
+        "<i class=\"fas fa-file-pdf\" aria-hidden=\"true\"></i> View certificate",
+      "exp2-milestone-aria":
+        "View SIC work certificate (PDF, opens in new tab)",
+      "exp3-milestone-label":
+        "<i class=\"fas fa-file-pdf\" aria-hidden=\"true\"></i> View certificate",
+      "exp3-milestone-aria":
+        "View UNAD work certificate (PDF, opens in new tab)",
+      "exp4-milestone-label":
+        "<i class=\"fas fa-file-pdf\" aria-hidden=\"true\"></i> View certificate",
+      "exp4-milestone-aria":
+        "View Cognos Online work certificate (PDF, opens in new tab)",
+      "exp5-milestone-label":
+        "<i class=\"fas fa-file-pdf\" aria-hidden=\"true\"></i> View certificate",
+      "exp5-milestone-aria":
+        "View UNAB work certificate (PDF, opens in new tab)",
+
       // Education section
       "section-education": "Education",
 
@@ -412,6 +465,15 @@ const i18n = {
       "edu3-description":
         'Activities and associations: Research and development (R&D). Former member of research groups: GLUD - Linux Group District University, GITUD - Telecommunications Group of the District University, LASER - Laboratory of automation, embedded systems and robotics, TECLIBRE - Research seedbed in free technologies. <br><b>Thesis:</b> <a href="https://repository.udistrital.edu.co/items/bd06700a-7131-470b-815f-52061c029aa2" target="_blank" rel="noopener noreferrer">IoT system for monitoring and control of artificial light sources applied to precision agriculture</a>.',
       "edu3-date": "March 2018",
+
+      // Education diploma thumbnails
+      "edu-diploma-label": "\u003ci class=\"fas fa-file-pdf\" aria-hidden=\"true\"\u003e\u003c/i\u003e View diploma",
+      "edu1-diploma-aria":
+        "View Master in Project Management diploma (PDF, opens in new tab)",
+      "edu2-diploma-aria":
+        "View Specialist in Project Management diploma (PDF, opens in new tab)",
+      "edu3-diploma-aria":
+        "View Electronic Engineer diploma (PDF, opens in new tab)",
 
       // Skills section
       "section-skills": "Skills",
