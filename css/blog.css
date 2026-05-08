@@ -1,0 +1,115 @@
+/* Estilos específicos para la sección de Blog */
+.blog-post-header {
+  margin-bottom: 2rem;
+}
+.blog-content {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #353c42de;
+}
+body.dark .blog-content {
+  color: #cbd5e1;
+}
+.blog-content h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+.back-btn {
+  display: inline-block;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #046b71;
+  transition: color 0.3s;
+}
+body.dark .back-btn {
+  color: #00bcd4;
+}
+.back-btn:hover {
+  text-decoration: underline;
+}
+.blog-title {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #343a40;
+}
+body.dark .blog-title {
+  color: #fff;
+}
+/* Estilos Light Mode (Por defecto) */
+.blog-code-container {
+  background-color: #f8fafc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+  margin: 2.5rem 0;
+  border: 1px solid #e2e8f0;
+}
+.blog-code-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: #f1f5f9;
+  border-bottom: 1px solid #e2e8f0;
+}
+.blog-code-dots {
+  display: flex;
+  gap: 8px;
+}
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.dot.red { background-color: #ff5f56 !important; }
+.dot.yellow { background-color: #ffbd2e !important; }
+.dot.green { background-color: #27c93f !important; }
+.blog-code-title {
+  margin-left: 15px;
+  color: #64748b;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+.blog-code-snippet {
+  margin: 0;
+  padding: 1.5rem;
+  color: #334155;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  overflow-x: auto;
+  background-color: transparent;
+  border: none;
+}
+.code-key { color: #005cc5 !important; }
+.code-string { color: #032f62 !important; }
+
+/* Estilos Dark Mode */
+body.dark .blog-code-container {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.2), 0 4px 6px -2px rgba(0,0,0,0.1);
+}
+body.dark .blog-code-header {
+  background-color: #2d2d2d;
+  border-bottom: 1px solid #404040;
+}
+body.dark .blog-code-title {
+  color: #9ca3af;
+}
+body.dark .blog-code-snippet {
+  color: #d4d4d4;
+}
+body.dark .code-key { color: #569cd6 !important; }
+body.dark .code-string { color: #ce9178 !important; }
+/* Ajuste especial para que la imagen no ocupe todo el ancho si no es necesario */
+.blog-main-img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #046b71;
+}
