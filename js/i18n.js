@@ -19,6 +19,7 @@ const i18n = {
       "nav-experience": "Experiencia",
       "nav-skills": "Habilidades",
       "nav-projects": "Proyectos",
+      "nav-blog": "Artículos",
 
       // Sidebar nav
       "opens-new-tab": "(Se abre en una nueva pestaña)",
@@ -28,6 +29,7 @@ const i18n = {
       "nav-skills-side": "Habilidades",
       "nav-projects-side": "Proyectos",
       "nav-interests": "Intereses",
+      "nav-blog-side": "Artículos",
       "nav-awards": "Eventos",
 
       // Toggle & flags
@@ -253,6 +255,24 @@ const i18n = {
         "Observatorio de Accesibilidad Digital Gov.co",
       "research-registration-link": "Certificado de Registro de Software",
 
+      // Blog section
+      "section-blog": "Artículos",
+      "blog1-title": "Impacto de la Inteligencia Artificial en la automatización de auditorías WCAG",
+      "blog1-date": "Septiembre 2026 · IA & Accesibilidad",
+      "blog1-desc": "Exploramos cómo los modelos de lenguaje pueden asistir en la detección de problemas complejos de accesibilidad y las limitaciones actuales frente a la evaluación humana especializada.",
+      "blog1-link": "Leer artículo",
+      "blog1-aria": "Leer artículo sobre el Impacto de la Inteligencia Artificial en auditorías WCAG",
+      "blog2-title": "Mejores prácticas para implementar ARIA en Single Page Applications",
+      "blog2-date": "Agosto 2026 · Buenas Prácticas",
+      "blog2-desc": "Un recorrido técnico sobre el manejo del foco, regiones en vivo (aria-live) y notificaciones asíncronas para garantizar una navegación sin barreras en React y Angular.",
+      "blog2-link": "Leer artículo",
+      "blog2-aria": "Leer artículo sobre Mejores prácticas para implementar ARIA",
+      "blog3-title": "Comparativa de herramientas de testing: axe-core vs ARC Toolkit",
+      "blog3-date": "Julio 2026 · Testing y QA",
+      "blog3-desc": "Análisis detallado de las ventajas y casos de uso ideales para dos de las herramientas más potentes del mercado en la identificación automatizada de barreras digitales.",
+      "blog3-link": "Leer artículo",
+      "blog3-aria": "Leer artículo sobre Comparativa de herramientas de testing",
+
       // Awards section
       "section-awards": "Eventos",
 
@@ -330,6 +350,7 @@ const i18n = {
       "nav-experience": "Experience",
       "nav-skills": "Skills",
       "nav-projects": "Projects",
+      "nav-blog": "Articles",
 
       // Sidebar nav
       "opens-new-tab": "(Opens in a new tab)",
@@ -339,6 +360,7 @@ const i18n = {
       "nav-skills-side": "Skills",
       "nav-projects-side": "Projects",
       "nav-interests": "Interests",
+      "nav-blog-side": "Articles",
       "nav-awards": "Events",
 
       // Toggle & flags
@@ -560,6 +582,24 @@ const i18n = {
       "research-act-link": "ACT Implementations (W3C)",
       "research-observatory-link": "Gov.co Digital Accessibility Observatory",
       "research-registration-link": "Software Registration Certificate",
+
+      // Blog section
+      "section-blog": "Articles",
+      "blog1-title": "Impact of Artificial Intelligence on the automation of WCAG audits",
+      "blog1-date": "September 2026 · AI & Accessibility",
+      "blog1-desc": "We explore how language models can assist in detecting complex accessibility issues and current limitations compared to specialized human evaluation.",
+      "blog1-link": "Read article",
+      "blog1-aria": "Read article about the Impact of Artificial Intelligence on WCAG audits",
+      "blog2-title": "Best practices for implementing ARIA in Single Page Applications",
+      "blog2-date": "August 2026 · Best Practices",
+      "blog2-desc": "A technical journey on focus management, live regions (aria-live), and asynchronous notifications to ensure barrier-free navigation in React and Angular.",
+      "blog2-link": "Read article",
+      "blog2-aria": "Read article about Best practices for implementing ARIA",
+      "blog3-title": "Testing tools comparison: axe-core vs ARC Toolkit",
+      "blog3-date": "July 2026 · Testing & QA",
+      "blog3-desc": "Detailed analysis of the advantages and ideal use cases for two of the most powerful tools in the market for automated identification of digital barriers.",
+      "blog3-link": "Read article",
+      "blog3-aria": "Read article about Testing tools comparison",
 
       // Awards section
       "section-awards": "Events",

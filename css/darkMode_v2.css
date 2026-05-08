@@ -350,3 +350,42 @@ body.dark .diploma-thumbnail-link:focus .diploma-label {
   background-color: #00bcd4 !important;
   color: #13161c !important;
 }
+
+/* Blog Pagination - Dark Mode */
+body.dark .blog-pagination-container {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark .pagination-btn,
+body.dark .pagination-number-btn,
+body.dark .pagination-settings select {
+  background: #1a1e24;
+  color: #cbd5e1;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark .pagination-btn:hover:not(:disabled),
+body.dark .pagination-number-btn:hover:not(.active) {
+  background: #2a303a;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+body.dark .pagination-btn:disabled {
+  background: #13161c;
+  color: #4b5563;
+  border-color: transparent;
+}
+
+body.dark .pagination-number-btn.active {
+  background: #00bcd4;
+  color: #13161c;
+  border-color: #00bcd4;
+}
+
+body.dark .pagination-settings {
+  color: #cbd5e1;
+}
+
+body.dark .pagination-settings .select-wrapper::after {
+  color: #cbd5e1;
+}
