@@ -474,6 +474,19 @@ section.resume-section .resume-item .resume-date {
   box-shadow: none;
 }
 
+/* Logo adaptable claro/oscuro (A11Y PRO) */
+#experience .theme-logo--dark {
+  display: none;
+}
+
+body.dark #experience .theme-logo--light {
+  display: none;
+}
+
+body.dark #experience .theme-logo--dark {
+  display: block;
+}
+
 #experience .diploma-label {
   width: 100%;
 }

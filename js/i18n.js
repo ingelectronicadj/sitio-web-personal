@@ -61,6 +61,13 @@ const i18n = {
       // Experience section
       "section-experience": "Experiencia",
 
+      "exp0-title": "Founder",
+      "exp0-company":
+        '<a href="https://a11ypro.tech/" target="_blank" rel="noopener noreferrer" aria-label="Visitar el sitio web de A11Y PRO (Abre en una nueva pestaña)">A11Y PRO</a>',
+      "exp0-description":
+        '<b>Funciones:</b> Fundé A11Y PRO, una empresa especializada en accesibilidad digital. Lidero el diseño y desarrollo de soluciones SaaS que automatizan la evaluación y remediación de accesibilidad web conforme al <b>cumplimiento normativo internacional (WCAG, ADA y EN 301 549)</b>. Entre mis creaciones clave se encuentran el <a href="https://scanner.a11ypro.tech/" target="_blank" rel="noopener noreferrer" aria-label="Visitar A11Y PRO Scanner (Abre en una nueva pestaña)"><b>A11Y PRO Scanner</b></a>, una herramienta de análisis automatizado de accesibilidad, y el <a href="https://widget.a11ypro.tech/" target="_blank" rel="noopener noreferrer" aria-label="Visitar A11Y PRO Widget (Abre en una nueva pestaña)"><b>A11Y PRO Widget</b></a>, un widget de accesibilidad integrable en cualquier sitio web.',
+      "exp0-date": "Junio 2026 - Actualidad",
+
       "exp1-title": "Experto en Accesibilidad Digital",
       "exp1-company": "Hiberus",
       "exp1-description":
@@ -90,6 +97,10 @@ const i18n = {
       "exp5-date": "Noviembre 2022 - Julio 2023",
 
       // Miniaturas de hitos en experiencia
+      "exp0-milestone-label":
+        "<i class=\"fas fa-external-link-alt\" aria-hidden=\"true\"></i> Ver sitio web",
+      "exp0-milestone-aria":
+        "Visitar el sitio web de A11Y PRO (se abre en nueva pestaña)",
       "exp1-milestone-label":
         "<i class=\"fas fa-file-pdf\" aria-hidden=\"true\"></i> Ver certificado",
       "exp1-milestone-aria":
@@ -392,6 +403,13 @@ const i18n = {
       // Experience section
       "section-experience": "Experience",
 
+      "exp0-title": "Founder",
+      "exp0-company":
+        '<a href="https://a11ypro.tech/" target="_blank" rel="noopener noreferrer" aria-label="Visit the A11Y PRO website (Opens in a new tab)">A11Y PRO</a>',
+      "exp0-description":
+        '<b>Responsibilities:</b> I founded A11Y PRO, a company specialized in digital accessibility. I lead the design and development of SaaS solutions that automate web accessibility evaluation and remediation in compliance with <b>international regulations (WCAG, ADA and EN 301 549)</b>. Among my key creations are the <a href="https://scanner.a11ypro.tech/" target="_blank" rel="noopener noreferrer" aria-label="Visit A11Y PRO Scanner (Opens in a new tab)"><b>A11Y PRO Scanner</b></a>, an automated accessibility analysis tool, and the <a href="https://widget.a11ypro.tech/" target="_blank" rel="noopener noreferrer" aria-label="Visit A11Y PRO Widget (Opens in a new tab)"><b>A11Y PRO Widget</b></a>, an accessibility widget that can be embedded in any website.',
+      "exp0-date": "June 2026 - Present",
+
       "exp1-title": "Digital Accessibility Expert",
       "exp1-company": "Hiberus",
       "exp1-description":
@@ -421,6 +439,10 @@ const i18n = {
       "exp5-date": "November 2022 - July 2023",
 
       // Experience milestone thumbnails
+      "exp0-milestone-label":
+        "<i class=\"fas fa-external-link-alt\" aria-hidden=\"true\"></i> View website",
+      "exp0-milestone-aria":
+        "Visit the A11Y PRO website (opens in new tab)",
       "exp1-milestone-label":
         "<i class=\"fas fa-file-pdf\" aria-hidden=\"true\"></i> View certificate",
       "exp1-milestone-aria":
