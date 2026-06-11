@@ -81,7 +81,7 @@ const i18n = {
       "exp2-date": "Dic 2024 - Dic 2025",
 
       "exp3-description":
-        'Certificación laboral por 5 años y 4 meses.<br><b>Funciones:</b> Aportar en el desarrollo de ambientes virtuales de aprendizaje, auditar recursos educativos digitales en accesibilidad web y desarrollar software para la automatización de procesos.<br><b>Algunos proyectos de gran impacto:</b> Lideré el proceso de actualización tecnológica de la Universidad Nacional Abierta y a Distancia en el año 2020, desarrollé todas las vistas de aulas modelo para la oferta de cursos de las distintas facultades y logré automatizar varios procesos para que los docentes pudieran crear cursos con estándares de calidad aportando a la <b>NTC6576</b>. En 2023, gané un <a href="https://sig.unad.edu.co/documentos/sig/buenas_practicas/2023_implementacion_rpa.pdf" target="_blank" rel="noopener noreferrer" aria-label="Ver reconocimiento por la implementación de un RPA (Abre en una nueva pestaña)">reconocimiento institucional UNAD</a> por la implementación de un RPA para el apoyo de la gestión tecnopedagógica.',
+        'Certificación laboral por 5 años y 4 meses.<br><b>Funciones:</b> Aportar en el desarrollo de ambientes virtuales de aprendizaje, auditar recursos educativos digitales en accesibilidad web y desarrollar software para la automatización de procesos.<br><b>Algunos proyectos de gran impacto:</b> Lideré el proceso de actualización tecnológica de la Universidad Nacional Abierta y a Distancia en el año 2020, desarrollé todas las vistas de aulas modelo para la oferta de cursos de las distintas facultades y logré automatizar varios procesos para que los docentes pudieran crear cursos con estándares de calidad aportando a la <b>NTC6576</b>. En 2023, gané un <a href="https://sig.unad.edu.co/documentos/sig/buenas_practicas/2023_implementacion_rpa.pdf" target="_blank" rel="noopener noreferrer" aria-label="Ver reconocimiento por la implementación de un RPA (Abre en una nueva pestaña)"><b>reconocimiento institucional UNAD</b></a> por la implementación de un RPA para el apoyo de la gestión tecnopedagógica.',
       "exp3-date": "Sept 2019 - Dic 2024",
 
       "exp4-title": "Experto en accesibilidad web",
@@ -260,7 +260,7 @@ const i18n = {
       "research-doctoral-link": "Propuesta Doctoral (Google Docs)",
       "research-bibliometry-link": "Tabla de Bibliometría (Google Sheets)",
       "research-act-p":
-        'Romper el umbral del conocimiento mediante la validación de accesibilidad desde la automatización y la consistencia de casos de prueba; integrando el uso de <a href="https://a11y.edudigital.tech/" target="_blank" rel="noopener noreferrer">A11Y PRO SCANNER <span class="visually-hidden" data-i18n="opens-new-tab">(Se abre en una nueva pestaña)</span></a> para auditorías a gran escala bajo normativas internacionales.',
+        'Romper el umbral del conocimiento mediante la validación de accesibilidad desde la automatización y la consistencia de casos de prueba; integrando el uso de <a href="https://scanner.a11ypro.tech/" target="_blank" rel="noopener noreferrer">A11Y PRO SCANNER <span class="visually-hidden" data-i18n="opens-new-tab">(Se abre en una nueva pestaña)</span></a> para auditorías a gran escala bajo normativas internacionales.',
       "research-act-link": "Implementaciones ACT (W3C)",
       "research-observatory-link":
         "Observatorio de Accesibilidad Digital Gov.co",
@@ -423,7 +423,7 @@ const i18n = {
       "exp2-date": "Dec 2024 - Dec 2025",
 
       "exp3-description":
-        'Work certification for 5 years and 4 months.<br><b>Responsibilities:</b> Contribute to the development of virtual learning environments, audit digital educational resources for web accessibility and develop software for process automation.<br><b>High-impact projects:</b> Led the National Open and Distance University\'s technological upgrade process in 2020, developed all model classroom views for course offerings across different faculties and automated several processes so that teachers could create courses meeting quality standards contributing to <b>NTC6576</b>. In 2023, I won an <a href="https://sig.unad.edu.co/documentos/sig/buenas_practicas/2023_implementacion_rpa.pdf" target="_blank" rel="noopener noreferrer" aria-label="View institutional recognition for RPA implementation (Opens in a new tab)">UNAD institutional recognition</a> for the implementation of an RPA to support techno-pedagogical management.',
+        'Work certification for 5 years and 4 months.<br><b>Responsibilities:</b> Contribute to the development of virtual learning environments, audit digital educational resources for web accessibility and develop software for process automation.<br><b>High-impact projects:</b> Led the National Open and Distance University\'s technological upgrade process in 2020, developed all model classroom views for course offerings across different faculties and automated several processes so that teachers could create courses meeting quality standards contributing to <b>NTC6576</b>. In 2023, I won an <a href="https://sig.unad.edu.co/documentos/sig/buenas_practicas/2023_implementacion_rpa.pdf" target="_blank" rel="noopener noreferrer" aria-label="View institutional recognition for RPA implementation (Opens in a new tab)"><b>UNAD institutional recognition</b></a> for the implementation of an RPA to support techno-pedagogical management.',
       "exp3-date": "Sep 2019 - Dec 2024",
 
       "exp4-title": "Web Accessibility Expert",
@@ -600,7 +600,7 @@ const i18n = {
       "research-doctoral-link": "Doctoral Proposal (Google Docs)",
       "research-bibliometry-link": "Bibliometry Table (Google Sheets)",
       "research-act-p":
-        'Breaking the knowledge threshold through accessibility validation from automation and test case consistency; integrating the use of <a href="https://a11y.edudigital.tech/" target="_blank" rel="noopener noreferrer">A11Y PRO SCANNER <span class="visually-hidden" data-i18n="opens-new-tab">(Opens in a new tab)</span></a> for large-scale auditing under international standards.',
+        'Breaking the knowledge threshold through accessibility validation from automation and test case consistency; integrating the use of <a href="https://scanner.a11ypro.tech/" target="_blank" rel="noopener noreferrer">A11Y PRO SCANNER <span class="visually-hidden" data-i18n="opens-new-tab">(Opens in a new tab)</span></a> for large-scale auditing under international standards.',
       "research-act-link": "ACT Implementations (W3C)",
       "research-observatory-link": "Gov.co Digital Accessibility Observatory",
       "research-registration-link": "Software Registration Certificate",
