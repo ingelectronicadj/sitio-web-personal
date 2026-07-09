@@ -1,0 +1,17 @@
+.vscode/
+
+# Graphify
+graphify-out/graph.json
+graphify-out/graph.html
+graphify-out/GRAPH_TREE.html
+graphify-out/memory/
+
+# AI Editor / Agent directories
+.agents/
+.agent/
+.windsurf/
+.devin/
+.cline/
+.cursor/
+.gemini/
+.windsurfrules

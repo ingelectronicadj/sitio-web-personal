@@ -295,9 +295,13 @@ test(<span class="code-string">'Debe cumplir WCAG 2.2 AA'</span>, <span class="c
     <script src="./js/comparativa-testing-tools-i18n.js"></script>
 
     <!-- Accesibility widget - Accesify -->
-    <script
-      src="https://widget.a11ypro.tech/widget/js/launcher.js"
-      data-key="ak_live_55a9e27387d22ba7b455b4e3e5325004da70fc9747b6d189"></script>
+    <script defer
+      src="https://widget.a11ypro.tech/widget/js/launcher.min.js"
+      data-key="ak_live_55a9e27387d22ba7b455b4e3e5325004da70fc9747b6d189"
+      data-darkModeStrategy="native"
+      data-darkModeNativeClass="dark"
+      data-darkModeTrigger="#checkSwitch">
+    </script>
     
     <script>
       // Sincronizar el Dark Mode al inicio para evitar destellos (si resume.min.js no lo hace automáticamente aquí)
