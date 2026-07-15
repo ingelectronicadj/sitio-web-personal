@@ -1528,3 +1528,168 @@ ul.horizontal li:last-child {
     justify-content: space-between;
   }
 }
+
+/* Modern Experience Cards & Timeline */
+.timeline-container {
+  position: relative;
+  padding-left: 2rem;
+}
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #046b71;
+  border-radius: 4px;
+}
+.experience-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  line-height: 1.6;
+  color: #333333;
+}
+.experience-card:hover, .experience-card:focus-within {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+.experience-card::before {
+  content: '';
+  position: absolute;
+  left: -1.85rem;
+  top: 1.5rem;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border: 4px solid #046b71;
+  border-radius: 50%;
+  z-index: 1;
+}
+@media (prefers-color-scheme: dark) {
+  .experience-card {
+    background: #1a1a1a;
+    border-color: rgba(255,255,255,0.1);
+    color: #e0e0e0;
+  }
+  .experience-card::before {
+    background-color: #1a1a1a;
+  }
+}
+.company-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.company-header h3 {
+  margin-bottom: 0;
+}
+.company-header .subheading {
+  margin-bottom: 0;
+  font-weight: 600;
+  color: #555;
+}
+@media (prefers-color-scheme: dark) {
+  .company-header .subheading {
+    color: #bbb;
+  }
+}
+.company-logo {
+  max-width: 120px;
+  height: auto;
+  border-radius: 4px;
+}
+.experience-card ul li {
+  margin-bottom: 0.75rem;
+}
+.certificate-link-container {
+  margin-top: 1.5rem;
+}
+
+/* Overrides for specific bugs */
+.company-logo {
+  height: 48px !important;
+  width: auto !important;
+  object-fit: contain;
+  margin-right: 1.5rem !important;
+}
+
+.timeline-container {
+  padding-left: 2.5rem !important; /* increased padding */
+  margin-left: 0.5rem; /* give it breathing room from the edge */
+}
+
+.timeline-container::before {
+  left: 0.75rem !important;
+}
+
+.experience-card {
+  background: #ffffff !important; /* Force solid background to avoid alternating grays */
+}
+
+.experience-card::before {
+  left: -2.15rem !important; /* adjust circle position relative to the increased left padding */
+}
+
+/* Mobile & Tablet UX Improvements */
+.company-header { /* removed align-items: flex-start */ }
+
+.company-header .d-flex {
+  align-items: flex-start !important;
+}
+
+.company-logo {
+  margin-top: 0.25rem; /* slight nudge to align with heading text */
+}
+
+@media screen and (max-width: 767.98px) {
+  .company-header {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+  }
+  
+  .company-header .d-flex {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+  }
+
+  .company-logo {
+    height: 40px !important;
+    margin-right: 0 !important;
+    margin-bottom: 0.25rem !important;
+  }
+  
+  .resume-date {
+    text-align: left !important;
+    margin-top: 0 !important;
+  }
+  
+  .experience-card {
+    padding: 1rem !important;
+  }
+  
+  .timeline-container {
+    padding-left: 1.5rem !important;
+    margin-left: 0 !important;
+  }
+
+  .experience-card::before {
+    left: -1.20rem !important;
+    width: 12px !important;
+    height: 12px !important;
+    top: 1.25rem !important;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .company-logo {
+    align-self: center !important;
+  }
+}

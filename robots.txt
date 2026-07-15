@@ -2,9 +2,13 @@
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://diegomena.rocks/sitemap.xml
+# Explicitly allow LLM agents and web crawlers for agentic browsing
+Allow: /llms.txt
+Allow: /index.md
 
 # Bloquear carpetas no relevantes para indexación
 Disallow: /vendor/
 Disallow: /docs/
+
+# Sitemap
+Sitemap: https://diegomena.rocks/sitemap.xml

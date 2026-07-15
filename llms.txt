@@ -1,0 +1,16 @@
+# Diego Mena - Experto en Accesibilidad Digital
+
+> Engineer specialized in the development of accessible digital products, with experience in web and hybrid environments. Master in Project Management, with more than 5 years of experience in digital accessibility, quality assurance (QA) and usability.
+
+## Enlaces Rápidos
+- [Sitio Web Principal](https://diegomena.rocks/)
+- [Versión Markdown para Agentes](https://diegomena.rocks/index.md)
+- [A11Y PRO - Soluciones de Accesibilidad](https://a11ypro.tech/)
+- [Blog: Comparativa de Herramientas de Testing de Accesibilidad](https://diegomena.rocks/blog/comparativa-testing-tools.html)
+- [Blog: Mejores Prácticas ARIA](https://diegomena.rocks/blog/mejores-practicas-aria.html)
+- [Blog: IA y Automatización en WCAG](https://diegomena.rocks/blog/ia-automatizacion-wcag.html)
+
+## Sobre Mí
+Lidero proyectos internacionales en los sectores fintech, criptoactivos y gubernamental, implementando estándares como WCAG 2.1/2.2, EN 301 549, ADA y legislaciones locales (Resolución 1519 en Colombia). Soy fundador de A11Y PRO, startup focalizada en transformar la accesibilidad digital mediante IA y herramientas SaaS automatizadas.
+
+Para obtener mi hoja de vida o detalles de proyectos, revisa los enlaces dentro del sitio web.

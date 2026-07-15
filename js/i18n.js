@@ -61,11 +61,11 @@ const i18n = {
       // Experience section
       "section-experience": "Experiencia",
 
-      "exp0-title": "Founder",
+      "exp0-title": "Director fundador",
       "exp0-company":
         '<a href="https://a11ypro.tech/" target="_blank" rel="noopener noreferrer" aria-label="Visitar el sitio web de A11Y PRO (Abre en una nueva pestaña)">A11Y PRO</a>',
       "exp0-description":
-        '<b>Funciones:</b> Fundé A11Y PRO, una empresa especializada en accesibilidad digital. Lidero el diseño y desarrollo de soluciones SaaS que automatizan la evaluación y remediación de accesibilidad web conforme al <b>cumplimiento normativo internacional (WCAG, ADA y EN 301 549)</b>. Entre mis creaciones clave se encuentran el <a href="https://scanner.a11ypro.tech/" target="_blank" rel="noopener noreferrer" aria-label="Visitar A11Y PRO Scanner (Abre en una nueva pestaña)"><b>A11Y PRO Scanner</b></a>, una herramienta de análisis automatizado de accesibilidad, y el <a href="https://widget.a11ypro.tech/" target="_blank" rel="noopener noreferrer" aria-label="Visitar A11Y PRO Widget (Abre en una nueva pestaña)"><b>A11Y PRO Widget</b></a>, un widget de accesibilidad integrable en cualquier sitio web.',
+        '<p>Lidero la visión, arquitectura técnica y desarrollo estratégico de A11Y PRO S.A.S., una startup focalizada en transformar la accesibilidad digital global mediante soluciones SaaS impulsadas por Inteligencia Artificial y Modelos de Lenguaje (LLMs).</p><p><b>Nuestra suite de soluciones tecnológicas y cumplimiento normativo:</b></p><ul><li><b><a href="https://scanner.a11ypro.tech/" target="_blank" rel="noopener noreferrer" aria-label="Visitar A11Y PRO Scanner (Abre en una nueva pestaña)">A11Y PRO Scanner</a>:</b> Herramienta SaaS automatizada para la auditoría masiva y diagnóstico de plataformas web, garantizando el cumplimiento normativo internacional bajo estándares WCAG 2.1 y 2.2, ADA y EN 301 549.</li><li><b><a href="https://widget.a11ypro.tech/" target="_blank" rel="noopener noreferrer" aria-label="Visitar A11Y PRO Widget (Abre en una nueva pestaña)">A11Y PRO Widget</a>:</b> Menú interactivo de accesibilidad inteligente que permite a los usuarios aplicar ajustes razonables e instantáneos para adaptar la visualización y navegación de cualquier sitio web.</li><li><b><a href="https://docs.a11ypro.tech/" target="_blank" rel="noopener noreferrer" aria-label="Visitar A11Y PRO Docs (Abre en una nueva pestaña)">A11Y PRO Docs</a>:</b> Plataforma integral especializada en la automatización, remediación y accesibilidad de documentos PDF.</li><li><b><a href="https://academy.a11ypro.tech/" target="_blank" rel="noopener noreferrer" aria-label="Visitar A11Y PRO Academy (Abre en una nueva pestaña)">A11Y PRO Academy</a> (En desarrollo):</b> Espacio de formación especializada diseñado para capacitar a equipos de diseño y tecnología en metodologías y desarrollo web accesible.</li></ul>',
       "exp0-date": "Junio 2026 - Actualidad",
 
             "exp1-title": "Experto en Accesibilidad Digital",
@@ -106,6 +106,8 @@ const i18n = {
       "exp9-date": "Enero 2015 - Marzo 2019",
 
       // Miniaturas de hitos en experiencia
+      "exp9-milestone-label": "Ver certificado",
+      "exp9-milestone-aria": "Ver certificado laboral de Assersum (PDF, se abre en nueva pestaña)",
       "exp0-milestone-label":
         "<i class=\"fas fa-external-link-alt\" aria-hidden=\"true\"></i> Ver sitio web",
       "exp0-milestone-aria":
@@ -416,7 +418,7 @@ const i18n = {
       "exp0-company":
         '<a href="https://a11ypro.tech/" target="_blank" rel="noopener noreferrer" aria-label="Visit the A11Y PRO website (Opens in a new tab)">A11Y PRO</a>',
       "exp0-description":
-        '<b>Responsibilities:</b> I founded A11Y PRO, a company specialized in digital accessibility. I lead the design and development of SaaS solutions that automate web accessibility evaluation and remediation in compliance with <b>international regulations (WCAG, ADA and EN 301 549)</b>. Among my key creations are the <a href="https://scanner.a11ypro.tech/" target="_blank" rel="noopener noreferrer" aria-label="Visit A11Y PRO Scanner (Opens in a new tab)"><b>A11Y PRO Scanner</b></a>, an automated accessibility analysis tool, and the <a href="https://widget.a11ypro.tech/" target="_blank" rel="noopener noreferrer" aria-label="Visit A11Y PRO Widget (Opens in a new tab)"><b>A11Y PRO Widget</b></a>, an accessibility widget that can be embedded in any website.',
+        '<p>I lead the vision, technical architecture, and strategic development of A11Y PRO S.A.S., a startup focused on transforming global digital accessibility through SaaS solutions powered by Artificial Intelligence and Large Language Models (LLMs).</p><p><b>Our suite of technological solutions and regulatory compliance:</b></p><ul><li><b><a href="https://scanner.a11ypro.tech/" target="_blank" rel="noopener noreferrer" aria-label="Visit A11Y PRO Scanner (Opens in a new tab)">A11Y PRO Scanner</a>:</b> Automated SaaS tool for mass auditing and diagnostics of web platforms, ensuring international regulatory compliance under WCAG 2.1 and 2.2, ADA, and EN 301 549 standards.</li><li><b><a href="https://widget.a11ypro.tech/" target="_blank" rel="noopener noreferrer" aria-label="Visit A11Y PRO Widget (Opens in a new tab)">A11Y PRO Widget</a>:</b> Interactive smart accessibility menu that allows users to apply reasonable and instant adjustments to adapt the display and navigation of any website.</li><li><b><a href="https://docs.a11ypro.tech/" target="_blank" rel="noopener noreferrer" aria-label="Visit A11Y PRO Docs (Opens in a new tab)">A11Y PRO Docs</a>:</b> Comprehensive platform specialized in the automation, remediation, and accessibility of PDF documents.</li><li><b><a href="https://academy.a11ypro.tech/" target="_blank" rel="noopener noreferrer" aria-label="Visit A11Y PRO Academy (Opens in a new tab)">A11Y PRO Academy</a> (In development):</b> Specialized training space designed to train design and technology teams in accessible web methodologies and development.</li></ul>',
       "exp0-date": "June 2026 - Present",
 
             "exp1-title": "Digital Accessibility Expert",
@@ -457,6 +459,8 @@ const i18n = {
       "exp9-date": "January 2015 - March 2019",
 
       // Experience milestone thumbnails
+      "exp9-milestone-label": "View certificate",
+      "exp9-milestone-aria": "View Assersum employment certificate (PDF, opens in a new tab)",
       "exp0-milestone-label":
         "<i class=\"fas fa-external-link-alt\" aria-hidden=\"true\"></i> View website",
       "exp0-milestone-aria":
