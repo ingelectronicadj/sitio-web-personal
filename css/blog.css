@@ -1,34 +1,83 @@
-/* Estilos específicos para la sección de Blog */
+/* Estilos específicos para la sección de Blog (sistema azul/glass del sitio) */
 .blog-post-header {
   margin-bottom: 2rem;
 }
+
 .blog-content {
   font-size: 1.15rem;
   line-height: 1.8;
   color: #353c42de;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-left: 3px solid rgba(0, 85, 179, 0.45);
+  border-radius: 12px;
+  padding: 1.5rem 1.75rem;
 }
-body.dark .blog-content {
+
+html.dark .blog-content {
   color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-left: 3px solid rgba(56, 189, 248, 0.35);
 }
+
 .blog-content h2 {
   margin-top: 2.5rem;
   margin-bottom: 1rem;
   font-size: 1.8rem;
 }
+
+/* Enlaces dentro del texto: distinguibles sin depender solo del color */
+.blog-content a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* .text-info de Bootstrap (#17a2b8) no alcanza 4.5:1 en claro */
+.blog-content a.text-info {
+  color: #0055b3 !important;
+}
+
 .back-btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   margin-bottom: 2rem;
   font-weight: 600;
   text-decoration: none;
-  color: #046b71;
-  transition: color 0.3s;
+  color: #ffffff;
+  background: rgba(0, 85, 179, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  padding: 8px 18px;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
-body.dark .back-btn {
-  color: #00bcd4;
-}
+
 .back-btn:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  color: #ffffff;
+  background: #0055b3;
+  transform: translateX(-3px);
+  box-shadow: 0 6px 16px rgba(0, 85, 179, 0.35);
 }
+
+html.dark .back-btn {
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+html.dark .back-btn:hover {
+  background: #38bdf8;
+  color: #0a0a1a;
+  box-shadow: 0 6px 16px rgba(56, 189, 248, 0.3);
+}
+
 .blog-title {
   font-size: 2.5rem;
   line-height: 1.2;
@@ -36,18 +85,22 @@ body.dark .back-btn {
   text-transform: uppercase;
   color: #343a40;
 }
-body.dark .blog-title {
+
+html.dark .blog-title {
   color: #fff;
 }
-/* Estilos Light Mode (Por defecto) */
+
+/* Bloques de codigo: panel "terminal" consistente con el sistema */
 .blog-code-container {
   background-color: #f8fafc;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   margin: 2.5rem 0;
   border: 1px solid #e2e8f0;
+  border-left: 3px solid rgba(0, 85, 179, 0.45);
 }
+
 .blog-code-header {
   display: flex;
   align-items: center;
@@ -55,26 +108,31 @@ body.dark .blog-title {
   background-color: #f1f5f9;
   border-bottom: 1px solid #e2e8f0;
 }
+
 .blog-code-dots {
   display: flex;
   gap: 8px;
 }
+
 .dot {
   display: inline-block;
   width: 12px;
   height: 12px;
   border-radius: 50%;
 }
+
 .dot.red { background-color: #ff5f56 !important; }
 .dot.yellow { background-color: #ffbd2e !important; }
 .dot.green { background-color: #27c93f !important; }
+
 .blog-code-title {
   margin-left: 15px;
-  color: #64748b;
+  color: #475569;
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.85rem;
   letter-spacing: 0.5px;
 }
+
 .blog-code-snippet {
   margin: 0;
   padding: 1.5rem;
@@ -86,30 +144,44 @@ body.dark .blog-title {
   background-color: transparent;
   border: none;
 }
+
 .code-key { color: #005cc5 !important; }
 .code-string { color: #032f62 !important; }
 
 /* Estilos Dark Mode */
-body.dark .blog-code-container {
-  background-color: #1e1e1e;
-  border: 1px solid #333;
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.2), 0 4px 6px -2px rgba(0,0,0,0.1);
+html.dark .blog-code-container {
+  background-color: #12122a;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-left: 3px solid rgba(56, 189, 248, 0.35);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
 }
-body.dark .blog-code-header {
-  background-color: #2d2d2d;
-  border-bottom: 1px solid #404040;
+
+html.dark .blog-code-header {
+  background-color: #1a1a38;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-body.dark .blog-code-title {
+
+html.dark .blog-code-title {
   color: #9ca3af;
 }
-body.dark .blog-code-snippet {
+
+html.dark .blog-code-snippet {
   color: #d4d4d4;
 }
-body.dark .code-key { color: #569cd6 !important; }
-body.dark .code-string { color: #ce9178 !important; }
+
+html.dark .code-key { color: #569cd6 !important; }
+html.dark .code-string { color: #ce9178 !important; }
+
 /* Ajuste especial para que la imagen no ocupe todo el ancho si no es necesario */
 .blog-main-img {
   max-width: 100%;
   height: auto;
-  border: 2px solid #046b71;
+  border: 2px solid #0055b3;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+html.dark .blog-main-img {
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }

@@ -1,3 +1,7 @@
+html.i18n-pending {
+  visibility: hidden;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -36,17 +40,23 @@ body {
   border: 0;
 }
 
-/* Ajuste de foco */
+/* Ajuste de foco: doble anillo blanco + azul (patrón A11Y PRO).
+   El outline transparente respalda en Forced Colors. */
 *:focus-visible {
-  outline: 2px solid #046b71; /* Estilo de borde al enfocar */
-  outline-offset: 1px; /* Separacion del borde al elemento */
-  box-shadow: 0 0 0 4px #fff; /*Fondo del borde del elemento */
-  border-radius: 5px;
+  outline: 3px solid transparent !important;
+  outline-offset: 4px !important;
+  box-shadow:
+    0 0 0 4px #fff,
+    0 0 0 7px #0055b3 !important;
+  transition: box-shadow 0s !important;
+}
+
+/* El anillo curva siguiendo el radio del propio elemento (patron A11Y PRO) */
+a:focus-visible {
+  border-radius: 4px;
 }
 
 .horizontal a:focus-visible {
-  outline: 2px solid #046b71; /* Estilo de borde al enfocar */
-  outline-offset: -1px; /* Separacion del borde al elemento */
   border-radius: 6px;
 }
 
@@ -128,9 +138,9 @@ body {
 }
 
 .slick-current .thumbnail {
-  border-color: #046b71;
+  border-color: #0055b3;
   transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(4, 107, 113, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 85, 179, 0.3);
 }
 
 .thumbnail {
@@ -168,8 +178,8 @@ body {
 .skip-main:focus,
 .skip-main:active {
   border-radius: 15px;
-  border: 4px solid #046b71;
-  background-color: #00262b;
+  border: 4px solid #0055b3;
+  background-color: #0b2a4d;
   color: #fff;
   height: auto;
   font-size: 1.2em;
@@ -208,7 +218,7 @@ h6 {
     "Noto Color Emoji";
   font-weight: 700;
   text-transform: uppercase;
-  color: #00262b;
+  color: #0b2a4d;
 }
 
 h1 {
@@ -254,7 +264,7 @@ p.lead {
 
 /* Enlace de hoja de vida con estilo hover permanente */
 a[data-i18n="about-resume-link"] {
-  color: #046b71 !important;
+  color: #0055b3 !important;
   text-decoration: underline !important;
 }
 
@@ -282,7 +292,7 @@ a[data-i18n="about-resume-link"] {
   display: inline-block;
   height: 3.5rem;
   width: 3.5rem;
-  background-color: #00262b !important;
+  background-color: #0b2a4d !important;
   color: #fff !important;
   border-radius: 100%;
   text-align: center;
@@ -302,9 +312,9 @@ a[data-i18n="about-resume-link"] {
 }
 
 .social-icons a:hover {
-  background-color: #046b71 !important;
+  background-color: #0055b3 !important;
   transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(4, 107, 113, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 85, 179, 0.4);
 }
 
 .dev-icons {
@@ -312,14 +322,14 @@ a[data-i18n="about-resume-link"] {
 }
 
 .dev-icons .list-inline-item i:hover {
-  color: #046b71;
+  color: #0055b3;
 }
 
 .slick-autoplay-toggle-button {
   background: none;
   border: none;
   cursor: pointer;
-  color: #00262b;
+  color: #0b2a4d;
   font-size: 1.2rem;
   display: block;
   margin: 1rem auto;
@@ -342,7 +352,7 @@ a[data-i18n="about-resume-link"] {
 .slick-prev:focus:before,
 .slick-next:active:before,
 .slick-prev:active:before {
-  color: #046b71 !important;
+  color: #0055b3 !important;
 }
 
 .slick-autoplay-toggle-button:focus,
@@ -352,27 +362,34 @@ a[data-i18n="about-resume-link"] {
 
 #sideNav .navbar-nav .nav-item .nav-link {
   font-weight: 800;
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.08rem;
   text-transform: uppercase;
   text-align: center;
   color: rgba(255, 255, 255, 0.6) !important;
   transition:
     color 0.3s ease,
     background-color 0.3s ease,
-    border-left-color 0.3s ease;
-  padding: 0.5rem 1rem;
-  border-left: 5px solid transparent; /* Indicador lateral izquierdo */
+    border-left-color 0.3s ease,
+    transform 0.2s ease;
+  padding: 0.55rem 1rem;
+  margin: 1px 10px;
+  border-radius: 0 8px 8px 0;
+  border-left: 3px solid transparent; /* Indicador lateral izquierdo */
 }
 
 #sideNav .navbar-nav .nav-item .nav-link:hover,
 #sideNav .navbar-nav .nav-item .nav-link.active {
   color: #ffffff !important;
-  background-color: rgba(255, 255, 255, 0.05) !important; /* Resalte suave */
-  border-left-color: #046b71; /* Accent recto y grueso */
+  background: linear-gradient(
+    90deg,
+    rgba(56, 189, 248, 0.18),
+    rgba(56, 189, 248, 0.04)
+  ) !important;
+  border-left-color: #38bdf8; /* Indicador encendido */
 }
 
 #sideNav .navbar-toggler:focus {
-  outline-color: #046b71;
+  outline-color: #0055b3;
 }
 
 section.resume-section {
@@ -415,7 +432,7 @@ section.resume-section .resume-item .resume-date {
 
 .diploma-thumbnail-link:hover .diploma-thumbnail,
 .diploma-thumbnail-link:focus .diploma-thumbnail {
-  box-shadow: 0 6px 20px rgba(4, 107, 113, 0.3);
+  box-shadow: 0 6px 20px rgba(0, 85, 179, 0.3);
 }
 
 .diploma-label {
@@ -424,7 +441,7 @@ section.resume-section .resume-item .resume-date {
   justify-content: center;
   gap: 0.3rem;
   padding: 0.35rem 0;
-  background-color: #00262b;
+  background-color: #0b2a4d;
   color: #fff;
   font-size: 0.75rem;
   font-weight: 600;
@@ -436,7 +453,7 @@ section.resume-section .resume-item .resume-date {
 
 .diploma-thumbnail-link:hover .diploma-label,
 .diploma-thumbnail-link:focus .diploma-label {
-  background-color: #046b71;
+  background-color: #0055b3;
 }
 
 /* Responsive: miniatura centrada en móvil/tablet, alineada a la derecha en desktop */
@@ -479,11 +496,11 @@ section.resume-section .resume-item .resume-date {
   display: none;
 }
 
-body.dark #experience .theme-logo--light {
+html.dark #experience .theme-logo--light {
   display: none;
 }
 
-body.dark #experience .theme-logo--dark {
+html.dark #experience .theme-logo--dark {
   display: block;
 }
 
@@ -491,12 +508,26 @@ body.dark #experience .theme-logo--dark {
   width: 100%;
 }
 
+/* Bio "About me" en card translúcida: separa el texto de las partículas */
+.about-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-left: 3px solid rgba(0, 85, 179, 0.45);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+}
+
 /* Micro-animación: hover en items de experiencia/educación */
 .resume-item {
-  border: 2px solid transparent; /* Base de 2px para todos los lados */
-  border-left: 5px solid transparent; /* Grosor apreciable en el acento lateral */
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-left: 3px solid rgba(0, 85, 179, 0.45); /* Franja lateral base */
+  background: rgba(255, 255, 255, 0.7); /* Translúcido: red de partículas traspasa */
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   padding: 1rem !important;
-  border-radius: 8px; /* Reducido ligeramente para balancear */
+  border-radius: 12px;
   margin-bottom: 0.75rem;
   transition:
     border-left-color 0.3s ease,
@@ -510,9 +541,8 @@ body.dark #experience .theme-logo--dark {
 
 .resume-item:hover,
 .resume-item.is-in-view {
-  border-left-color: #046b71; /* Accent recto y grueso */
+  border-left-color: #0055b3; /* Franja encendida */
   transform: translateX(5px);
-  background-color: rgba(4, 107, 113, 0.03); /* Fondo más suave (3%) */
 }
 
 /* Etiquetas para la pila tecnológica */
@@ -521,19 +551,19 @@ body.dark #experience .theme-logo--dark {
   padding: 0.2rem 0.6rem;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
-  background-color: rgba(4, 107, 113, 0.1);
-  color: #046b71;
+  background-color: rgba(0, 85, 179, 0.1);
+  color: #0055b3;
   border-radius: 4px;
   font-size: 0.85rem;
   font-weight: 700;
-  border: 1px solid rgba(4, 107, 113, 0.2);
+  border: 1px solid rgba(0, 85, 179, 0.2);
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
 }
 
 .skill-tag:hover {
-  background-color: #046b71;
+  background-color: #0055b3;
   color: #fff;
 }
 
@@ -567,26 +597,51 @@ ul.horizontal li a {
 }
 
 ul.horizontal li a:hover {
-  color: #046b71 !important;
+  color: #0055b3 !important;
 }
 
 .bg-primary {
-  background-color: #00262b !important;
+  background-color: #0b2a4d !important;
+}
+
+/* Sidebar con gradiente profundo (más novedoso que azul plano) */
+#sideNav {
+  background: linear-gradient(
+    170deg,
+    #10345f 0%,
+    #0b2a4d 45%,
+    #071d38 100%
+  ) !important;
+}
+
+/* Red de partículas blancas dentro del sidebar (misma animación global) */
+#sideNav .side-nav-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+#sideNav > *:not(.side-nav-canvas) {
+  position: relative;
+  z-index: 1;
 }
 
 .text-primary {
-  color: #046b71 !important;
+  color: #0055b3 !important;
   font-weight: bold;
 }
 
 a {
-  color: #00262b;
+  color: #0b2a4d;
 }
 
 a:active,
 a:focus,
 a:hover {
-  color: #046b71;
+  color: #0055b3;
 }
 
 /* Estilos para asegurar distinción de enlaces en bloques de texto sin depender solo del color */
@@ -604,7 +659,7 @@ a:hover {
   display: none;
   background-repeat: no-repeat;
   font-size: 20px; /* Tamaño del círculo de 40px (fa-stack-2x) */
-  color: #00262b;
+  color: #0b2a4d;
   cursor: pointer;
   position: fixed;
   bottom: 13%;
@@ -655,11 +710,11 @@ a:hover {
 }
 
 ::-webkit-scrollbar-track {
-  background: #00262b;
+  background: #0b2a4d;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #046b71;
+  background: #0055b3;
 }
 
 #navbar {
@@ -677,22 +732,31 @@ ul.horizontal {
   margin: 0;
   padding: 0;
   display: inline-flex;
-  border: 1px solid #abc;
+  border: 1px solid #b8c4d4;
   border-radius: 0 0 15px 15px; /* Solo curvas inferiores */
-  overflow: hidden;
   background-color: #fff; /* Asegurar fondo sólido para todo el contenedor */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Sutil sombra para mejor separación al scroll */
 }
 
 ul.horizontal li {
   background-color: #fff;
-  border-right: 1px solid #abc;
+  border-right: 1px solid #b8c4d4;
   transition: background-color 0.3s ease;
+}
+
+/* Sin overflow:hidden (el anillo de foco debe salir del contenedor):
+   se redondean las esquinas inferiores de las celdas extremas a mano */
+ul.horizontal li:first-child {
+  border-bottom-left-radius: 14px;
+}
+
+ul.horizontal li:last-child {
+  border-bottom-right-radius: 14px;
 }
 
 ul.horizontal li:hover,
 ul.horizontal li:has(a.active) {
-  background-color: #f0fbfc; /* Color sólido y opaco para evitar solapamiento */
+  background-color: #eff6ff; /* Color sólido y opaco para evitar solapamiento */
 }
 
 ul.horizontal li a:hover,
@@ -709,6 +773,8 @@ ul.horizontal li:last-child {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 8px;
+  padding: 0.4rem 0;
 }
 
 .switch {
@@ -734,7 +800,7 @@ ul.horizontal li:last-child {
     0 0 4px #777;
   box-shadow:
     0 0 0 2px rgba(255, 255, 255, 0.1),
-    0 0 4px #abc;
+    0 0 4px #b8c4d4;
   cursor: pointer;
   border: 0 solid transparent;
   overflow: hidden;
@@ -778,7 +844,7 @@ ul.horizontal li:last-child {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #046b71;
+  background-color: #0055b3;
   border-radius: 30px;
   -webkit-transform: translateX(-30px);
   transform: translateX(-30px);
@@ -791,7 +857,7 @@ ul.horizontal li:last-child {
 .switch input:checked + .sliderContrast:before {
   -webkit-transform: translateX(30px);
   transform: translateX(30px);
-  background-color: #046b71;
+  background-color: #0055b3;
 }
 
 .btn-contrast {
@@ -817,7 +883,7 @@ ul.horizontal li:last-child {
     flex-direction: column;
     width: 17rem;
     height: 100vh;
-    border-right: 1px solid #f9fafb;
+    border-right: 1px solid rgba(56, 189, 248, 0.15);
   }
   #sideNav .navbar-brand {
     display: -webkit-box;
@@ -829,7 +895,10 @@ ul.horizontal li:last-child {
   #sideNav .navbar-brand .img-profile {
     max-width: 13rem;
     max-height: 13rem;
-    border: 0.5rem solid rgba(255, 255, 255, 0.2);
+    border: 0.4rem solid rgba(56, 189, 248, 0.35);
+    box-shadow:
+      0 0 0 3px rgba(56, 189, 248, 0.12),
+      0 12px 32px rgba(0, 0, 0, 0.35);
   }
   #sideNav .navbar-collapse {
     display: -webkit-box;
@@ -949,7 +1018,7 @@ ul.horizontal li:last-child {
   .slick-prev .slick-prev-icon:before,
   .slick-next .slick-next-icon:before {
     font-size: 20px !important;
-    color: #046b71 !important;
+    color: #0055b3 !important;
     transition: color 0.2s ease;
   }
 
@@ -958,7 +1027,7 @@ ul.horizontal li:last-child {
   .slick-next:focus,
   .slick-prev:active,
   .slick-next:active {
-    background-color: #046b71 !important;
+    background-color: #0055b3 !important;
     outline: none !important;
   }
 
@@ -1053,7 +1122,7 @@ ul.horizontal li:last-child {
   font-family: "Font Awesome 5 Free" !important;
   font-weight: 900 !important;
   font-size: 20px !important;
-  color: #046b71 !important;
+  color: #0055b3 !important;
   opacity: 1 !important;
   display: block !important;
 }
@@ -1082,7 +1151,7 @@ ul.horizontal li:last-child {
     width: 40px !important;
     height: 40px !important;
     background-color: transparent !important;
-    border: 2px solid #046b71 !important;
+    border: 2px solid #0055b3 !important;
     border-radius: 50% !important;
     display: flex !important;
     align-items: center !important;
@@ -1104,7 +1173,7 @@ ul.horizontal li:last-child {
 
   .slick-prev:hover,
   .slick-next:hover {
-    background-color: #046b71 !important;
+    background-color: #0055b3 !important;
   }
 }
 
@@ -1113,18 +1182,18 @@ ul.horizontal li:last-child {
 .dark .slick-prev,
 .dark .slick-next {
   background-color: #1e2229 !important;
-  border: 2px solid #046b71 !important; /* Mantenido en 2px para evitar saltos */
+  border: 2px solid #0055b3 !important; /* Mantenido en 2px para evitar saltos */
 }
 
 .dark .slick-prev:hover,
 .dark .slick-next:hover {
-  background-color: #046b71 !important;
+  background-color: #0055b3 !important;
 }
 
 /* Mejoras visuales menú móvil */
 @media screen and (max-width: 991px) {
   #navbarSupportedContent {
-    background-color: #023d42;
+    background-color: #0b3d78;
     border-radius: 10px;
     padding: 10px 0 !important;
     margin-top: 10px;
@@ -1176,7 +1245,7 @@ ul.horizontal li:last-child {
     transition:
       transform 0.3s ease,
       background-color 0.3s ease;
-    border: 2px solid #046b71; /* Borde visible en modo claro */
+    border: 2px solid #0055b3; /* Borde visible en modo claro */
     outline: none;
     margin-right: 15px;
     border-radius: 8px;
@@ -1234,7 +1303,7 @@ ul.horizontal li:last-child {
   height: 280px;
   border-radius: 10px;
   background: #e2e8f0;
-  background: linear-gradient(90deg, #f0fbfc 25%, #e0f2f1 50%, #f0fbfc 75%);
+  background: linear-gradient(90deg, #eff6ff 25%, #e0f2f1 50%, #eff6ff 75%);
   background-size: 200% 100%;
   animation: skeleton-loading 1.5s infinite;
   overflow: hidden;
@@ -1260,13 +1329,13 @@ ul.horizontal li:last-child {
 
 .events-carousel .slick-dots li button:before,
 .events-carousel .slick-dots li button .slick-dot-icon:before {
-  color: #046b71 !important;
+  color: #0055b3 !important;
   opacity: 0.4;
 }
 
 .events-carousel .slick-dots li.slick-active button:before,
 .events-carousel .slick-active button .slick-dot-icon:before {
-  color: #046b71 !important;
+  color: #0055b3 !important;
   opacity: 1;
 }
 
@@ -1302,9 +1371,9 @@ ul.horizontal li:last-child {
 
 /* --- Research Focus Section (Interests) --- */
 .research-box {
-  background-color: #f7fefc;
-  border: 1px solid #d1f2f0;
-  border-left: 5px solid #046b71;
+  background-color: #f0f7ff;
+  border: 1px solid #d7e6fb;
+  border-left: 3px solid #0055b3;
   padding: 2rem;
   margin-top: 2rem;
   border-radius: 8px;
@@ -1321,7 +1390,7 @@ ul.horizontal li:last-child {
 }
 
 .research-box h3 {
-  color: #046b71;
+  color: #0055b3;
   font-family:
     "Saira Extra Condensed",
     -apple-system,
@@ -1352,8 +1421,8 @@ ul.horizontal li:last-child {
   display: inline-flex;
   align-items: center;
   background-color: #ffffff;
-  border: 1px solid #046b71;
-  color: #046b71;
+  border: 1px solid #0055b3;
+  color: #0055b3;
   padding: 0.6rem 1.2rem;
   border-radius: 50px;
   text-decoration: none;
@@ -1368,16 +1437,16 @@ ul.horizontal li:last-child {
 
 .research-link-chip:hover,
 .research-link-chip:focus {
-  background-color: #046b71;
+  background-color: #0055b3;
   color: #ffffff;
   text-decoration: none;
   transform: scale(1.05);
   outline: none;
-  box-shadow: 0 2px 8px rgba(4, 107, 113, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 85, 179, 0.3);
 }
 
 .research-link-chip:focus {
-  outline: 3px solid rgba(4, 107, 113, 0.4);
+  outline: 3px solid rgba(0, 85, 179, 0.4);
 }
 
 /* --- Animación fade-up nativa (reemplaza a AOS) --- */
@@ -1466,8 +1535,7 @@ ul.horizontal li:last-child {
 .pagination-btn:focus-visible,
 .pagination-number-btn:focus-visible,
 .pagination-settings select:focus-visible {
-  outline: 2px solid #00bcd4;
-  outline-offset: 2px;
+  border-radius: 6px;
 }
 
 .pagination-btn:disabled {
@@ -1477,9 +1545,9 @@ ul.horizontal li:last-child {
 }
 
 .pagination-number-btn.active {
-  background: #046b71;
+  background: #0055b3;
   color: #ffffff;
-  border-color: #046b71;
+  border-color: #0055b3;
   font-weight: 600;
 }
 
@@ -1532,17 +1600,6 @@ ul.horizontal li:last-child {
 /* Modern Experience Cards & Timeline */
 .timeline-container {
   position: relative;
-  padding-left: 2rem;
-}
-.timeline-container::before {
-  content: '';
-  position: absolute;
-  left: 0.5rem;
-  top: 0;
-  bottom: 0;
-  width: 4px;
-  background-color: #046b71;
-  border-radius: 4px;
 }
 .experience-card {
   position: relative;
@@ -1556,31 +1613,37 @@ ul.horizontal li:last-child {
   line-height: 1.6;
   color: #333333;
 }
-.experience-card:hover, .experience-card:focus-within {
+/* Franja lateral siempre visible; se ilumina al hover/foco/scroll */
+.experience-card {
+  border-left-width: 3px !important;
+  border-left-color: rgba(0, 85, 179, 0.4) !important;
+}
+
+.experience-card:hover,
+.experience-card:focus-within {
   transform: translateY(-3px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  border-left-color: #0055b3 !important;
+  box-shadow:
+    -4px 0 16px rgba(0, 85, 179, 0.25),
+    0 8px 15px rgba(0, 0, 0, 0.1);
 }
-.experience-card::before {
-  content: '';
-  position: absolute;
-  left: -1.85rem;
-  top: 1.5rem;
-  width: 16px;
-  height: 16px;
-  background-color: #fff;
-  border: 4px solid #046b71;
-  border-radius: 50%;
-  z-index: 1;
+
+html.dark .resume-item.experience-card {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #e0e0e0;
+  border-left-width: 3px !important;
+  border-left-color: rgba(56, 189, 248, 0.35) !important;
 }
-@media (prefers-color-scheme: dark) {
-  .experience-card {
-    background: #1a1a1a;
-    border-color: rgba(255,255,255,0.1);
-    color: #e0e0e0;
-  }
-  .experience-card::before {
-    background-color: #1a1a1a;
-  }
+
+html.dark .resume-item.experience-card:hover,
+html.dark .resume-item.experience-card:focus-within {
+  border-left-color: #38bdf8 !important;
+  box-shadow:
+    -4px 0 16px rgba(56, 189, 248, 0.2),
+    0 8px 15px rgba(0, 0, 0, 0.4);
 }
 .company-header {
   display: flex;
@@ -1596,10 +1659,8 @@ ul.horizontal li:last-child {
   font-weight: 600;
   color: #555;
 }
-@media (prefers-color-scheme: dark) {
-  .company-header .subheading {
-    color: #bbb;
-  }
+html.dark .company-header .subheading {
+  color: #bbb;
 }
 .company-logo {
   max-width: 120px;
@@ -1621,21 +1682,11 @@ ul.horizontal li:last-child {
   margin-right: 1.5rem !important;
 }
 
-.timeline-container {
-  padding-left: 2.5rem !important; /* increased padding */
-  margin-left: 0.5rem; /* give it breathing room from the edge */
-}
-
-.timeline-container::before {
-  left: 0.75rem !important;
-}
-
 .experience-card {
-  background: #ffffff !important; /* Force solid background to avoid alternating grays */
-}
-
-.experience-card::before {
-  left: -2.15rem !important; /* adjust circle position relative to the increased left padding */
+  /* Semitransparente como en modo oscuro: la red de partículas se ve a través */
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 /* Mobile & Tablet UX Improvements */
@@ -1674,22 +1725,119 @@ ul.horizontal li:last-child {
   .experience-card {
     padding: 1rem !important;
   }
-  
-  .timeline-container {
-    padding-left: 1.5rem !important;
-    margin-left: 0 !important;
-  }
-
-  .experience-card::before {
-    left: -1.20rem !important;
-    width: 12px !important;
-    height: 12px !important;
-    top: 1.25rem !important;
-  }
 }
 
 @media screen and (max-width: 767.98px) {
   .company-logo {
     align-self: center !important;
   }
+}
+
+/* ---------- Fondo ambiente animado (partículas) ---------- */
+.ambient-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Contenido por encima del canvas ambiente (z-index:-1 quedaba bajo el
+   fondo propagado de body y las particulas eran invisibles) */
+main,
+#navbar,
+.ir-arriba {
+  position: relative;
+  z-index: 1;
+}
+
+#sideNav {
+  z-index: 1030;
+}
+
+/* ---------- Barra de progreso de scroll ---------- */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 1500;
+  transform-origin: left;
+  transform: scaleX(0);
+  background: linear-gradient(90deg, #0055b3, #38bdf8);
+  pointer-events: none;
+}
+
+/* ---------- Botones de control (tema / idioma / microinteracciones) ---------- */
+.ctrl-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  padding: 0 10px;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.85rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  transition:
+    border-color 0.2s ease,
+    color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.ctrl-btn:hover,
+.ctrl-btn:focus {
+  color: #38bdf8;
+  border-color: rgba(56, 189, 248, 0.6);
+  background: rgba(56, 189, 248, 0.1);
+  transform: translateY(-1px);
+}
+
+.ctrl-btn[aria-pressed="true"] {
+  color: #38bdf8;
+  border-color: #38bdf8;
+}
+
+.ctrl-btn-text {
+  margin-left: 6px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 991px) {
+  .ctrl-btn {
+    margin-top: 6px;
+  }
+}
+
+/* ---------- Forced colors ---------- */
+@media (forced-colors: active) {
+  .ambient-canvas,
+  .side-nav-canvas {
+    display: none !important;
+  }
+
+  .scroll-progress {
+    background: Highlight;
+  }
+}
+
+/* Doble anillo de foco al final del archivo: debe ganar sobre box-shadow !important de componentes */
+*:focus-visible {
+  outline: 3px solid transparent !important;
+  outline-offset: 4px !important;
+  box-shadow:
+    0 0 0 4px #ffffff,
+    0 0 0 7px #0055b3 !important;
+  transition: box-shadow 0s !important;
 }

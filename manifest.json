@@ -2,15 +2,18 @@
   "name": "Diego Mena — Experto en Accesibilidad Digital",
   "short_name": "Diego Mena A11y",
   "description": "Perfil profesional de Diego Mena. Experto en accesibilidad digital, auditorías WCAG 2.2 y desarrollo inclusivo.",
-  "background_color": "#00262b",
-  "theme_color": "#00262b",
+  "background_color": "#0a0a1a",
+  "theme_color": "#0a0a1a",
   "orientation": "portrait",
   "display": "standalone",
   "start_url": "./?utm_source=web_app_manifest",
   "id": "/",
   "scope": "./",
   "lang": "es",
-  "categories": ["education", "personalization"],
+  "categories": [
+    "education",
+    "personalization"
+  ],
   "icons": [
     {
       "src": "./img/pwa/icon_384.webp",
@@ -82,5 +85,6 @@
       "form_factor": "wide",
       "label": "Vista de escritorio - Sección de experiencia"
     }
-  ]
+  ],
+  "version": "2.0.0"
 }

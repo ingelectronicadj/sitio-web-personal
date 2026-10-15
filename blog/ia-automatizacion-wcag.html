@@ -11,6 +11,24 @@
       content="Análisis del impacto de la Inteligencia Artificial en la automatización de auditorías WCAG y la transición hacia el Shift Left testing en accesibilidad."
     />
     <meta name="author" content="Diego Perafán" />
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem("status_contrast") === "true") {
+            document.documentElement.classList.add("dark");
+          }
+          var l = localStorage.getItem("preferred_lang");
+          if (l && l !== "es") {
+            document.documentElement.lang = l;
+            document.documentElement.classList.add("i18n-pending");
+            setTimeout(function () {
+              document.documentElement.classList.remove("i18n-pending");
+            }, 2000);
+          }
+        } catch (e) {}
+      })();
+    </script>
+
 
     <title data-i18n="blog1-page-title">
       Impacto de la Inteligencia Artificial en auditorías WCAG - Diego Perafán
@@ -31,14 +49,49 @@
     <!-- Core theme CSS (includes Bootstrap) -->
     <link href="../css/bootstrap.min.css" rel="stylesheet" />
     <!-- Custom styles for this template -->
-    <link href="../css/resume.min.css" rel="stylesheet" />
+    <link href="../css/resume.css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/darkMode_v2.css" />
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
     
     <link rel="stylesheet" href="../css/blog.css" />
+
+    <!-- Canonical + Open Graph + Twitter Card (articulo) -->
+    <link rel="canonical" href="https://diegomena.rocks/blog/ia-automatizacion-wcag.html" />
+    <meta property="og:url" content="https://diegomena.rocks/blog/ia-automatizacion-wcag.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Impacto de la Inteligencia Artificial en auditorías WCAG" />
+    <meta property="og:description" content="Análisis del impacto de la Inteligencia Artificial en la automatización de auditorías WCAG y la transición hacia el Shift Left testing en accesibilidad." />
+    <meta property="og:image" content="https://diegomena.rocks/img/blog/blog_ia_wcag.png" />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:site_name" content="Diego Mena — Accesibilidad Digital" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Impacto de la Inteligencia Artificial en auditorías WCAG" />
+    <meta name="twitter:description" content="Análisis del impacto de la Inteligencia Artificial en la automatización de auditorías WCAG y la transición hacia el Shift Left testing en accesibilidad." />
+    <meta name="twitter:image" content="https://diegomena.rocks/img/blog/blog_ia_wcag.png" />
+
+    <!-- Datos estructurados BlogPosting -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "@id": "https://diegomena.rocks/blog/ia-automatizacion-wcag.html#post",
+        "headline": "Impacto de la Inteligencia Artificial en auditorías WCAG",
+        "description": "Análisis del impacto de la Inteligencia Artificial en la automatización de auditorías WCAG y la transición hacia el Shift Left testing en accesibilidad.",
+        "url": "https://diegomena.rocks/blog/ia-automatizacion-wcag.html",
+        "image": "https://diegomena.rocks/img/blog/blog_ia_wcag.png",
+        "inLanguage": ["es", "en"],
+        "datePublished": "2026-05",
+        "dateModified": "2026-10-15",
+        "isPartOf": { "@id": "https://diegomena.rocks/#website" },
+        "author": { "@id": "https://diegomena.rocks/#person" },
+        "publisher": { "@id": "https://diegomena.rocks/#person" }
+      }
+    </script>
   </head>
 
   <body id="page-top">
+    <canvas id="ambient-canvas" class="ambient-canvas" aria-hidden="true"></canvas>
     <!-- Navbar horizontal (móvil) -->
     <nav id="navbar" aria-label="Destacados">
       <ul class="horizontal">
@@ -95,51 +148,40 @@
         </a>
       </header>
       <div class="toogleContainer">
-        <label
-          id="switchTheme"
-          class="switch"
-          data-i18n-aria="contrast-label"
-          aria-label="Modo oscuro">
-          <input id="checkSwitch" type="checkbox" class="btn-contrast" />
-          <div class="sliderContrast">
-            <i
-              data-i18n-title="sun-title"
-              title="Sin contraste"
-              class="fas fa-sun icon-sun"></i>
-            <i
-              data-i18n-title="moon-title"
-              title="Alto contraste"
-              class="fas fa-moon icon-moon"></i>
-          </div>
-        </label>
-        <a
-          class="flags-lang flag-active"
-          id="flag-es"
-          data-i18n-title="flag-es-title"
-          title="Sitio en Español"
-          href="#"
-          onclick="changeLanguage('es')">
-          <img
-            class="flags"
-            src="../img/colombia.webp"
-            alt="Español"
-            width="28"
-            height="28" />
-        </a>
-        <a
-          class="flags-lang"
-          id="flag-en"
-          data-i18n-title="flag-en-title"
-          title="Traducir sitio al Inglés"
-          href="#"
-          onclick="changeLanguage('en')">
-          <img
-            class="flags"
-            src="../img/usa.webp"
-            alt="Inglés"
-            width="28"
-            height="28" />
-        </a>
+        <input
+          id="checkSwitch"
+          type="checkbox"
+          class="btn-contrast sr-only"
+          tabindex="-1"
+          aria-hidden="true" />
+        <button
+          type="button"
+          id="themeToggle"
+          class="ctrl-btn"
+          data-i18n-aria="theme-toggle-label"
+          data-i18n-title="theme-toggle-label"
+          aria-label="Cambiar a modo oscuro"
+          aria-pressed="false">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </button>
+        <button
+          type="button"
+          id="langToggle"
+          class="ctrl-btn"
+          data-i18n-title="lang-toggle-label"
+          aria-label="Cambiar idioma del sitio: ES">
+          <span id="langCode" class="ctrl-btn-text">ES</span>
+        </button>
+        <button
+          type="button"
+          id="fxToggle"
+          class="ctrl-btn"
+          data-i18n-aria="fx-toggle-label"
+          data-i18n-title="fx-toggle-label"
+          aria-label="Pausar microinteracciones"
+          aria-pressed="true">
+          <i class="fas fa-magic" aria-hidden="true"></i>
+        </button>
       </div>
       <button
         class="navbar-toggler"
@@ -285,10 +327,13 @@
     </main>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="../vendor/jquery/jquery.min.js"></script>
-    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- Custom scripts para el menú lateral y UI general -->
     <script src="../js/resume.min.js"></script>
+    <script src="../js/accessibility.min.js"></script>
+    <script src="../js/cuelume.js"></script>
+    <script src="../js/cuelume-init.js"></script>
+    <script src="../js/ambient.js"></script>
     <!-- Script principal de i18n y luego nuestro script específico del blog -->
     <script src="../js/i18n.js"></script>
     <script src="./js/ia-automatizacion-wcag-i18n.js"></script>
@@ -303,26 +348,59 @@
     </script>
     
     <script>
-      // Sincronizar el Dark Mode al inicio para evitar destellos (si resume.min.js no lo hace automáticamente aquí)
-      const toggleSwitch = document.getElementById('checkSwitch');
-      const currentTheme = localStorage.getItem('theme');
-      if (currentTheme) {
-        document.body.classList.add(currentTheme);
-        if (currentTheme === 'dark' && toggleSwitch) {
-          toggleSwitch.checked = true;
+      document.addEventListener("DOMContentLoaded", function () {
+        // Navbar collapse toggle (reemplaza Bootstrap JS)
+        var toggler = document.querySelector(".navbar-toggler");
+        var collapse = document.getElementById("navbarSupportedContent");
+        if (toggler && collapse) {
+          toggler.addEventListener("click", function () {
+            var isExpanded = collapse.classList.contains("show");
+            collapse.classList.toggle("show");
+            toggler.setAttribute("aria-expanded", String(!isExpanded));
+          });
+          document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && collapse.classList.contains("show")) {
+              collapse.classList.remove("show");
+              toggler.setAttribute("aria-expanded", "false");
+              toggler.focus();
+            }
+          });
         }
-      }
-      if(toggleSwitch) {
-        toggleSwitch.addEventListener('change', function (e) {
-          if (e.target.checked) {
-            document.body.classList.add('dark');
-            localStorage.setItem('theme', 'dark');
-          } else {
-            document.body.classList.remove('dark');
-            localStorage.setItem('theme', 'light');
-          }
-        });
-      }
+        var checkSwitch = document.getElementById("checkSwitch");
+        var themeToggle = document.getElementById("themeToggle");
+        if (checkSwitch && themeToggle) {
+          var syncThemeBtn = function () {
+            var dark = document.documentElement.classList.contains("dark");
+            themeToggle.setAttribute("aria-pressed", String(dark));
+            var icon = themeToggle.querySelector("i");
+            if (icon) {
+              icon.classList.toggle("fa-moon", !dark);
+              icon.classList.toggle("fa-sun", dark);
+            }
+          };
+          themeToggle.addEventListener("click", function () {
+            checkSwitch.click();
+          });
+          new MutationObserver(syncThemeBtn).observe(
+            document.documentElement,
+            { attributes: true, attributeFilter: ["class"] },
+          );
+          syncThemeBtn();
+        }
+
+        var langToggle = document.getElementById("langToggle");
+        if (langToggle) {
+          langToggle.addEventListener("click", function () {
+            i18n.changeLang(i18n.currentLang === "es" ? "en" : "es");
+          });
+        }
+
+        if (checkSwitch) {
+          checkSwitch.addEventListener("change", function () {
+            toggleContrast("dark");
+          });
+        }
+      });
     </script>
   </body>
 </html>

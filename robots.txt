@@ -10,5 +10,31 @@ Allow: /index.md
 Disallow: /vendor/
 Disallow: /docs/
 
+# Bots de CITA en busquedas de IA (no confundir con bots de entrenamiento)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Bots de ENTRENAMIENTO permitidos por defecto (opt-out solo por escrito)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 # Sitemap
 Sitemap: https://diegomena.rocks/sitemap.xml

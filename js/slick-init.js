@@ -59,4 +59,8 @@ document.addEventListener("DOMContentLoaded", function () {
     instructionsText:
       "Carrusel de fotografías de eventos en los que Diego ha participado.",
   });
+
+  // Puntos de paginación: indicadores decorativos — fuera del orden de
+  // tabulación (la navegación del carrusel se hace con las flechas)
+  $(".slick-dots button").attr("tabindex", "-1");
 });

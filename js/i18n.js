@@ -32,12 +32,10 @@ const i18n = {
       "nav-blog-side": "Artículos",
       "nav-awards": "Eventos",
 
-      // Toggle & flags
-      "contrast-label": "Modo oscuro",
-      "sun-title": "Sin contraste",
-      "moon-title": "Alto contraste",
-      "flag-es-title": "Sitio en Español",
-      "flag-en-title": "Traducir sitio al Inglés",
+      // Botones de control
+      "theme-toggle-label": "Cambiar entre modo claro y oscuro",
+      "lang-toggle-label": "Cambiar idioma del sitio",
+      "fx-toggle-label": "Activar o pausar microinteracciones",
 
       // About section
       "about-profession": "<b>EXPERTO EN ACCESIBILIDAD DIGITAL</b>",
@@ -111,7 +109,7 @@ const i18n = {
       "exp0-milestone-label":
         "<i class=\"fas fa-external-link-alt\" aria-hidden=\"true\"></i> Ver sitio web",
       "exp0-milestone-aria":
-        "Visitar el sitio web de A11Y PRO (se abre en nueva pestaña)",
+        "Ver sitio web de A11Y PRO (se abre en nueva pestaña)",
       "exp1-milestone-label":
         "<i class=\"fas fa-file-pdf\" aria-hidden=\"true\"></i> Ver certificado",
       "exp1-milestone-aria":
@@ -386,11 +384,9 @@ const i18n = {
       "nav-awards": "Events",
 
       // Toggle & flags
-      "contrast-label": "Dark mode",
-      "sun-title": "No contrast",
-      "moon-title": "High contrast",
-      "flag-es-title": "Translate site to Spanish",
-      "flag-en-title": "Site in English",
+      "theme-toggle-label": "Switch between light and dark mode",
+      "lang-toggle-label": "Change site language",
+      "fx-toggle-label": "Toggle microinteractions on or off",
 
       // About section
       "about-profession": "<b>DIGITAL ACCESSIBILITY EXPERT</b>",
@@ -464,7 +460,7 @@ const i18n = {
       "exp0-milestone-label":
         "<i class=\"fas fa-external-link-alt\" aria-hidden=\"true\"></i> View website",
       "exp0-milestone-aria":
-        "Visit the A11Y PRO website (opens in new tab)",
+        "View website: A11Y PRO (opens in new tab)",
       "exp1-milestone-label":
         "<i class=\"fas fa-file-pdf\" aria-hidden=\"true\"></i> View certificate",
       "exp1-milestone-aria":
@@ -781,17 +777,21 @@ const i18n = {
       }
     }
 
-    // Actualizar banderas activas
-    const flagEs = document.getElementById("flag-es");
-    const flagEn = document.getElementById("flag-en");
-    if (flagEs && flagEn) {
-      if (lang === "es") {
-        flagEs.classList.add("flag-active");
-        flagEn.classList.remove("flag-active");
-      } else {
-        flagEn.classList.add("flag-active");
-        flagEs.classList.remove("flag-active");
-      }
+    // Actualizar indicador de idioma del botón (nombre accesible
+    // incluye el texto visible del código: WCAG 2.5.3)
+    const langCode = document.getElementById("langCode");
+    const langToggle = document.getElementById("langToggle");
+    if (langCode) {
+      langCode.textContent = lang.toUpperCase();
+    }
+    if (langToggle) {
+      const base =
+        this.translations[lang]["lang-toggle-label"] || "Cambiar idioma";
+      langToggle.setAttribute(
+        "aria-label",
+        base + ": " + lang.toUpperCase(),
+      );
+      langToggle.setAttribute("title", base + ": " + lang.toUpperCase());
     }
 
     // Guardar preferencia
@@ -833,7 +833,12 @@ const i18n = {
   },
 };
 
+function revealAfterI18n() {
+  document.documentElement.classList.remove("i18n-pending");
+}
+
 // Inicializar cuando el DOM esté listo
 document.addEventListener("DOMContentLoaded", function () {
   i18n.init();
+  requestAnimationFrame(revealAfterI18n);
 });

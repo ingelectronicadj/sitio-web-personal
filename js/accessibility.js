@@ -3,9 +3,9 @@ function toggleContrast(classContrast) {
   // Refactor: Aplicar clase basándose en el estado explícito del checkbox para consistencia
   const isDark = document.getElementById("checkSwitch").checked;
   if (isDark) {
-    document.body.classList.add(classContrast);
+    document.documentElement.classList.add(classContrast);
   } else {
-    document.body.classList.remove(classContrast);
+    document.documentElement.classList.remove(classContrast);
   }
 }
 
@@ -18,10 +18,10 @@ function getContrast() {
   let status_contrast_localStorage = localStorage.getItem("status_contrast");
   if (status_contrast_localStorage === "true") {
     document.getElementById("checkSwitch").checked = true;
-    document.body.classList.add("dark");
+    document.documentElement.classList.add("dark");
   } else if (status_contrast_localStorage === "false") {
     document.getElementById("checkSwitch").checked = false;
-    document.body.classList.remove("dark");
+    document.documentElement.classList.remove("dark");
   } else {
     setContrast();
   }
@@ -73,7 +73,7 @@ function syncToggleWithBodyClass() {
   const observer = new MutationObserver(function (mutations) {
     mutations.forEach(function (mutation) {
       if (mutation.attributeName === "class") {
-        const isDark = document.body.classList.contains("dark");
+        const isDark = document.documentElement.classList.contains("dark");
         if (checkSwitch.checked !== isDark) {
           checkSwitch.checked = isDark;
           localStorage.setItem("status_contrast", isDark);
@@ -82,7 +82,7 @@ function syncToggleWithBodyClass() {
     });
   });
 
-  observer.observe(document.body, { attributes: true });
+  observer.observe(document.documentElement, { attributes: true });
 }
 
 // DOM Listo

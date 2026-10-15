@@ -4,23 +4,24 @@
  * Versión del caché se actualiza con cada despliegue
  */
 
-const CACHE_NAME = "v5_cache_CV_Diego";
+const CACHE_NAME = "v24_cache_CV_Diego";
 const OFFLINE_URL = "./offline.html";
 
 const urlsToCache = [
   "./",
   OFFLINE_URL,
-  "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",
+  "./css/bootstrap.min.css",
   "https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700&display=swap",
   "https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i&display=swap",
   "./vendor/fontawesome-free/css/all.min.css",
-  "./css/resume-min.css",
-  "./css/darkMode_v2.min.css",
+  "./css/resume.css",
+  "./css/darkMode_v2.css",
   "./css/slick.min.css",
   "./css/accessible-slick-theme.min.css",
   "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js",
-  "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js",
   "https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js",
+  "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
+  "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js",
   "./js/resume.min.js",
   "./js/openLink.js",
   "./js/slick.min.js",
@@ -28,6 +29,15 @@ const urlsToCache = [
   "./js/i18n.js",
   "./js/accessibility.min.js",
   "./js/navbar-focus.js",
+  "./js/pagination.js",
+  "./js/ambient.js",
+  "./js/cuelume.js",
+  "./js/cuelume-init.js",
+  "./js/scrolly.js",
+  "./css/blog.css",
+  "./blog/ia-automatizacion-wcag.html",
+  "./blog/mejores-practicas-aria.html",
+  "./blog/comparativa-testing-tools.html",
   "./img/favicon-diego.webp",
   "./img/profile-pic.webp",
   "./img/colombia.webp",
