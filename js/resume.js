@@ -27,7 +27,7 @@
             const toggler = document.querySelector(".navbar-toggler");
             if (toggler) toggler.setAttribute("aria-expanded", "false");
           }
-          navOffset = $("#sideNav").outerHeight();
+          navOffset = $("#sideNav").outerHeight() + 16;
         }
         isAnimatingScroll = true;
         $("html, body").animate(

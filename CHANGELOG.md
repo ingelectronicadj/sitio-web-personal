@@ -65,6 +65,15 @@
 - Cards moviles pegadas al borde: padding lateral de seccion a `1.5rem`,
   padding interno a `1.35rem` y `translateX` de `.is-in-view`/`:hover`
   desactivado en `<= 991.98px`.
+- Logos de experiencia desiguales en tamano aparente: padding transparente
+  interno de los `.webp` (hasta 477px verticales en `logo-unad`) recortado
+  con Pillow en los 16 assets; los logos cuadrados/verticales (SIC, UNAD,
+  Alcaldia, Fundacion Neumologica) suben a `92px` movil/`80px` desktop.
+- Navegacion por ancla aterrizaba la seccion pegada al nav movil (offset =
+  60px exactos); ahora `navOffset + 16px` de aire y `scroll-margin-top:
+  84px` en `section.resume-section` para el `scrollIntoView` de desktop.
+- Gap movil nav->hero de `36px` a `20px` (`#welcome-section` con
+  `padding-top: 0.5rem` en `<= 767.98px`).
 
 ## [2.1.0] - 2026-10-15
 

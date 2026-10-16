@@ -393,6 +393,7 @@ a[data-i18n="about-resume-link"] {
 }
 
 section.resume-section {
+  scroll-margin-top: 84px;
   padding-top: 5rem !important;
   padding-bottom: 5rem !important;
   max-width: 75rem;
@@ -1130,6 +1131,10 @@ ul.horizontal li a.active {
     padding-bottom: 2rem !important;
   }
 
+  #welcome-section {
+    padding-top: 0.5rem !important;
+  }
+
   #welcome-section h1 {
     margin-bottom: 0.5rem;
   }
@@ -1776,6 +1781,14 @@ html.dark .company-header .subheading {
   margin-top: 0.25rem; /* slight nudge to align with heading text */
 }
 
+/* Logos cuadrados/verticales: +altura para compensar menor peso visual */
+.company-logo[src*="logo-sic"],
+.company-logo[src*="logo-unad"],
+.company-logo[src*="logo-alcaldia-medellin"],
+.company-logo[src*="logo-fun-neumologica"] {
+  height: 80px !important;
+}
+
 @media screen and (max-width: 767.98px) {
   .company-header {
     flex-direction: column !important;
@@ -1802,6 +1815,14 @@ html.dark .company-header .subheading {
     margin-right: 0 !important;
     margin-bottom: 0.35rem !important;
     align-self: center !important;
+  }
+
+  /* Logos cuadrados/verticales: +altura para compensar menor peso visual */
+  .company-logo[src*="logo-sic"],
+  .company-logo[src*="logo-unad"],
+  .company-logo[src*="logo-alcaldia-medellin"],
+  .company-logo[src*="logo-fun-neumologica"] {
+    height: 92px !important;
   }
 
   .diploma-thumbnail-link {
