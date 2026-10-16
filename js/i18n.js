@@ -260,7 +260,7 @@ const i18n = {
       "interests-p2":
         "Es aquí donde la Inteligencia Artificial se convierte en el eje de mi visión: más que el núcleo académico de mi futuro Doctorado, la IA es para mí el motor que permitirá automatizar soluciones accesibles y cerrar la brecha digital en el ecosistema global.",
       "interests-p3":
-        'Mi evolución técnica, desde la automatización siempre ha está guiada por los ODS y la "Ciencia para la paz", la cual busca comprender las causas de violencia y construir soluciones tecnológicas y sociales que fomenten la convivencia pacífica, la equidad y la justicia social. Me interesa aportar activamente a comunidades de software libre y a una educación de calidad que no deje a nadie atrás. Cada línea de código que escribo tiene un propósito claro: construir una red más humana, accesible y ética.',
+        'Mi evolución técnica, desde la automatización, siempre ha estado guiada por los ODS y la "Ciencia para la paz", la cual busca comprender las causas de violencia y construir soluciones tecnológicas y sociales que fomenten la convivencia pacífica, la equidad y la justicia social. Me interesa aportar activamente a comunidades de software libre y a una educación de calidad que no deje a nadie atrás. Cada línea de código que escribo tiene un propósito claro: construir una red más humana, accesible y ética.',
 
       // Research section
       "research-header": "Enfoque de Investigación y Propuesta Doctoral",

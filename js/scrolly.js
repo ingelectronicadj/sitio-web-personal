@@ -50,10 +50,9 @@
       "-=0.4",
     );
 
-  /* Parallax suave del contenido del hero al salir */
+  /* Parallax suave del contenido del hero al salir (sin alterar opacidad para mantener contraste WCAG) */
   gsap.to(".welcome-header-text", {
     yPercent: -6,
-    opacity: 0.4,
     ease: "none",
     scrollTrigger: {
       trigger: "#welcome-section",

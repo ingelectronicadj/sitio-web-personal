@@ -411,7 +411,8 @@ section.resume-section .resume-item .resume-date {
   gap: 0.4rem;
   position: relative;
   margin-top: 0.75rem;
-  max-width: 120px;
+  width: 165px;
+  max-width: 165px;
   transition: transform 0.3s ease;
   text-decoration: none !important;
 }
@@ -662,8 +663,8 @@ a:hover {
   color: #0b2a4d;
   cursor: pointer;
   position: fixed;
-  bottom: 13%;
-  right: 20px;
+  bottom: 92px;
+  right: 22px;
   z-index: 2;
   transition: transform 0.3s ease;
 }
@@ -934,7 +935,15 @@ ul.horizontal li:last-child {
   .movil img {
     display: block;
     width: 45%;
+    max-width: 180px;
     margin: 0 auto 20px auto;
+    border: 0.35rem solid rgba(56, 189, 248, 0.45);
+    box-shadow: 0 0 0 3px rgba(0, 85, 179, 0.14), 0 10px 28px rgba(11, 42, 77, 0.22);
+  }
+
+  /* Dots decorativos del carrusel hero: ocultar (flechas ya son accesibles) */
+  .events-carousel .slick-dots {
+    display: none !important;
   }
 
   h1 {
@@ -1263,10 +1272,10 @@ ul.horizontal li:last-child {
   .welcome-header-row {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 4rem;
-    max-width: 1080px; /* Ancho máximo controlado para evitar desbordes */
-    margin: 0 auto 2.5rem; /* Centrado dentro de la sección */
+    justify-content: space-between;
+    gap: 3rem;
+    width: 100%;
+    margin: 0 0 2rem; /* Alineado con el ancho completo de .about-card */
     overflow: visible;
   }
 
@@ -1676,8 +1685,9 @@ html.dark .company-header .subheading {
 
 /* Overrides for specific bugs */
 .company-logo {
-  height: 48px !important;
+  height: 68px !important;
   width: auto !important;
+  max-width: 210px !important;
   object-fit: contain;
   margin-right: 1.5rem !important;
 }
@@ -1690,7 +1700,7 @@ html.dark .company-header .subheading {
 }
 
 /* Mobile & Tablet UX Improvements */
-.company-header { /* removed align-items: flex-start */ }
+/* .company-header sin align-items: flex-start; aplicado en .d-flex */
 
 .company-header .d-flex {
   align-items: flex-start !important;
@@ -1712,9 +1722,20 @@ html.dark .company-header .subheading {
   }
 
   .company-logo {
-    height: 40px !important;
+    height: 76px !important;
+    max-width: 220px !important;
     margin-right: 0 !important;
-    margin-bottom: 0.25rem !important;
+    margin-bottom: 0.35rem !important;
+  }
+
+  .diploma-thumbnail-link {
+    width: 185px;
+    max-width: 185px;
+  }
+
+  #experience .diploma-thumbnail-link {
+    width: 210px;
+    max-width: 210px;
   }
   
   .resume-date {
@@ -1746,14 +1767,22 @@ html.dark .company-header .subheading {
 /* Contenido por encima del canvas ambiente (z-index:-1 quedaba bajo el
    fondo propagado de body y las particulas eran invisibles) */
 main,
-#navbar,
-.ir-arriba {
+#navbar {
   position: relative;
+  z-index: 1;
+}
+
+.ir-arriba {
   z-index: 1;
 }
 
 #sideNav {
   z-index: 1030;
+}
+
+/* Dots decorativos del carrusel de eventos: ocultar en todos los tamaños */
+.events-carousel .slick-dots {
+  display: none !important;
 }
 
 /* ---------- Barra de progreso de scroll ---------- */
@@ -1771,52 +1800,351 @@ main,
 }
 
 /* ---------- Botones de control (tema / idioma / microinteracciones) ---------- */
-.ctrl-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 40px;
-  height: 40px;
-  padding: 0 10px;
-  background: rgba(255, 255, 255, 0.14);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 999px;
-  color: #ffffff;
-  font-size: 0.85rem;
+.ctrl-btn-text {
+  margin-left: 0;
+  font-weight: 800;
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  line-height: 1;
+}
+
+/* ============================================================
+   SISTEMA UNIFICADO DE BOTONES — Glass Pill
+   Una sola familia visual en todo el sitio (alineada con las cards glass):
+   - Superficie translucida con blur + borde de marca + sombra suave
+   - Hover / activo: relleno solido de marca + elevacion 2px + glow
+   - Geometrias: circulo 44x44 (icono), circulo 36x36 (pausa overlay),
+     pill 999px (texto + icono)
+   ============================================================ */
+:root {
+  --btn-bg: rgba(255, 255, 255, 0.88);
+  --btn-border: rgba(0, 85, 179, 0.32);
+  --btn-fg: #0055b3;
+  --btn-shadow: 0 2px 10px rgba(11, 42, 77, 0.1);
+  --btn-hover-bg: #0055b3;
+  --btn-hover-fg: #ffffff;
+  --btn-hover-shadow: 0 6px 18px rgba(0, 85, 179, 0.32);
+}
+
+/* 1. Botones circulares de icono (44x44): controles sidebar, hamburguesa,
+      redes sociales, flechas carrusel, volver arriba, paginacion */
+.ctrl-btn,
+#sideNav .navbar-toggler,
+.social-icons a,
+.slick-prev,
+.slick-next,
+.pagination-btn,
+.pagination-number-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  min-height: 44px !important;
+  padding: 0 !important;
+  background: var(--btn-bg) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1.5px solid var(--btn-border) !important;
+  border-radius: 999px !important;
+  color: var(--btn-fg) !important;
+  box-shadow: var(--btn-shadow) !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
   transition:
-    border-color 0.2s ease,
-    color 0.2s ease,
-    background-color 0.2s ease,
-    transform 0.2s ease;
+    background-color 0.22s ease,
+    border-color 0.22s ease,
+    color 0.22s ease,
+    transform 0.22s ease,
+    box-shadow 0.22s ease !important;
+}
+
+#sideNav .navbar-toggler {
+  display: inline-flex !important;
+}
+
+@media (min-width: 992px) {
+  #sideNav .navbar-toggler {
+    display: none !important;
+  }
+}
+
+/* Cuando las microinteracciones estan pausadas, indicar estado sin romper el sistema */
+#fxToggle[aria-pressed="false"] {
+  opacity: 0.6;
+}
+
+/* Icono hamburguesa dentro del circulo 44x44: usar barras del color --btn-fg */
+#sideNav .navbar-toggler-icon {
+  width: 18px !important;
+  height: 14px !important;
+  background-image: none !important;
+  position: relative;
+  display: inline-block;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+#sideNav .navbar-toggler-icon::before,
+#sideNav .navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  border-radius: 2px;
+  background-color: currentColor;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#sideNav .navbar-toggler-icon::before {
+  top: 0;
+  box-shadow: 0 6px 0 currentColor;
+}
+
+#sideNav .navbar-toggler-icon::after {
+  bottom: 0;
+}
+
+.social-icons a {
+  font-size: 1.2rem !important;
+  margin-right: 0.75rem;
 }
 
 .ctrl-btn:hover,
-.ctrl-btn:focus {
-  color: #38bdf8;
-  border-color: rgba(56, 189, 248, 0.6);
-  background: rgba(56, 189, 248, 0.1);
-  transform: translateY(-1px);
+#sideNav .navbar-toggler:hover,
+.social-icons a:hover,
+.slick-prev:hover,
+.slick-next:hover,
+.pagination-btn:hover:not(:disabled),
+.pagination-number-btn:hover:not(.active),
+.pagination-number-btn.active {
+  background: var(--btn-hover-bg) !important;
+  border-color: var(--btn-hover-bg) !important;
+  color: var(--btn-hover-fg) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--btn-hover-shadow) !important;
 }
 
-.ctrl-btn[aria-pressed="true"] {
-  color: #38bdf8;
-  border-color: #38bdf8;
+/* Flechas Slick: mantener translateY(-50%) de centrado vertical en hover */
+.slick-prev:hover,
+.slick-next:hover {
+  transform: translateY(-50%) scale(1.06) !important;
 }
 
-.ctrl-btn-text {
-  margin-left: 6px;
-  font-weight: 700;
-  font-size: 0.75rem;
+.slick-prev:before,
+.slick-next:before,
+.slick-prev:focus:before,
+.slick-next:focus:before,
+.slick-prev:active:before,
+.slick-next:active:before {
+  font-size: 16px !important;
+  color: var(--btn-fg) !important;
+}
+
+.slick-prev:hover:before,
+.slick-next:hover:before {
+  color: var(--btn-hover-fg) !important;
+}
+
+/* 2. Boton pausa de carrusel (36x36 circulo glass sobre esquina inferior) */
+.sliderProjects .slick-autoplay-toggle-button,
+.events-carousel-wrapper .slick-autoplay-toggle-button {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 36px !important;
+  height: 36px !important;
+  padding: 0 !important;
+  left: 10px !important;
+  background: var(--btn-bg) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1.5px solid var(--btn-border) !important;
+  border-radius: 999px !important;
+  color: var(--btn-fg) !important;
+  box-shadow: var(--btn-shadow) !important;
+  font-size: 0.9rem !important;
+  transition:
+    background-color 0.22s ease,
+    border-color 0.22s ease,
+    color 0.22s ease,
+    transform 0.22s ease,
+    box-shadow 0.22s ease !important;
+}
+
+.events-carousel-wrapper .slick-autoplay-toggle-button {
+  bottom: 10px !important;
+}
+
+.sliderProjects .slick-autoplay-toggle-button:hover,
+.events-carousel-wrapper .slick-autoplay-toggle-button:hover {
+  background: var(--btn-hover-bg) !important;
+  border-color: var(--btn-hover-bg) !important;
+  color: var(--btn-hover-fg) !important;
+  transform: scale(1.06);
+  box-shadow: var(--btn-hover-shadow) !important;
+}
+
+/* 3. Boton volver arriba: mismo circulo 44x44 glass que el resto (JS controla display) */
+.ir-arriba {
+  width: 44px;
+  height: 44px;
+  background: var(--btn-bg) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1.5px solid var(--btn-border) !important;
+  border-radius: 999px !important;
+  box-shadow: var(--btn-shadow) !important;
+  color: var(--btn-fg) !important;
+  text-align: center;
+  line-height: 41px;
+  font-size: 16px;
+}
+
+.ir-arriba .fa-stack {
+  width: 100%;
+  height: 100%;
+  line-height: 41px;
+}
+
+.ir-arriba .fa-circle {
+  display: none;
+}
+
+.ir-arriba .fa-arrow-up,
+.ir-arriba .fa-arrow-up:before {
+  color: currentColor !important;
+  font-size: 16px;
+}
+
+.ir-arriba:hover {
+  background: var(--btn-hover-bg) !important;
+  border-color: var(--btn-hover-bg) !important;
+  color: var(--btn-hover-fg) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--btn-hover-shadow) !important;
+}
+
+/* 4. Botones pill con texto: CV hero, chips de investigacion y etiquetas de diploma/hito */
+.hero-cv-btn,
+.research-link-chip,
+.diploma-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  background: var(--btn-bg) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1.5px solid var(--btn-border) !important;
+  border-radius: 999px !important;
+  color: var(--btn-fg) !important;
+  box-shadow: var(--btn-shadow);
+  font-weight: 600;
+  text-decoration: none !important;
+  transition:
+    background-color 0.22s ease,
+    border-color 0.22s ease,
+    color 0.22s ease,
+    transform 0.22s ease,
+    box-shadow 0.22s ease !important;
+}
+
+.hero-cv-btn {
+  height: 44px;
+  padding: 0 1.15rem;
+  font-size: 0.92rem;
+}
+
+.hero-cv-btn [data-i18n="about-resume-link"] {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.diploma-label {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.78rem;
+}
+
+.hero-cv-btn:hover,
+.hero-cv-btn:focus,
+.research-link-chip:hover,
+.research-link-chip:focus,
+.diploma-thumbnail-link:hover .diploma-label,
+.diploma-thumbnail-link:focus .diploma-label {
+  background: var(--btn-hover-bg) !important;
+  border-color: var(--btn-hover-bg) !important;
+  color: var(--btn-hover-fg) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--btn-hover-shadow) !important;
+}
+
+/* ---------- Layout del bloque de identidad en el Hero ---------- */
+.hero-role {
+  font-size: 1.05rem;
   letter-spacing: 0.04em;
+  color: #0b2a4d;
+}
+
+.hero-tagline {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.hero-contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin-bottom: 1.15rem;
+}
+
+.hero-contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0b2a4d;
+  text-decoration: none;
+  padding: 0.2rem 0;
+}
+
+.hero-contact-item i {
+  color: var(--btn-fg);
+  font-size: 0.9rem;
+}
+
+.hero-contact-item:hover {
+  color: var(--btn-fg);
+  text-decoration: underline;
+}
+
+.hero-actions-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+#welcome-section .social-icons {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 0;
+}
+
+#welcome-section .social-icons a {
+  margin-right: 0;
 }
 
 @media (max-width: 991px) {
-  .ctrl-btn {
-    margin-top: 6px;
+  .hero-contact-row,
+  .hero-actions-row {
+    justify-content: center;
   }
 }
 

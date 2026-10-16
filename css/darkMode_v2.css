@@ -271,19 +271,7 @@ html.dark #sideNav .nav-link.active {
   border-left-color: #38bdf8 !important; /* Indicador encendido */
 }
 
-/* --- Mejoras Menú Hamburguesa en Modo Oscuro --- */
-
-/* Borde visible para el botón del menú */
-html.dark .navbar-toggler {
-  border: 2px solid #38bdf8 !important;
-  border-radius: 8px !important;
-}
-
-/* Color del icono de hamburguesa */
-html.dark .navbar-toggler-icon {
-  filter: brightness(0) invert(1) !important; /* Hacer las líneas blancas */
-  opacity: 0.8;
-}
+/* --- Mejoras Menú Hamburguesa en Modo Oscuro (hereda el circulo 44x44 de --btn-*) --- */
 
 /* Fondo para el menú desplegado (evitar que sea todo plano) */
 @media screen and (max-width: 991px) {
@@ -433,6 +421,36 @@ html.dark .pagination-settings {
 
 html.dark .pagination-settings .select-wrapper::after {
   color: #cbd5e1;
+}
+
+/* ============================================================
+   SISTEMA UNIFICADO DE BOTONES — Glass Pill (Modo Oscuro)
+   Solo redefine los tokens: todos los botones heredan automaticamente
+   ============================================================ */
+html.dark {
+  --btn-bg: rgba(15, 23, 42, 0.82);
+  --btn-border: rgba(56, 189, 248, 0.42);
+  --btn-fg: #38bdf8;
+  --btn-shadow: 0 4px 12px rgba(0, 0, 0, 0.38);
+  --btn-hover-bg: #38bdf8;
+  --btn-hover-fg: #0a0a1a;
+  --btn-hover-shadow: 0 6px 20px rgba(56, 189, 248, 0.35);
+}
+
+/* Neutralizar overrides antiguos con !important sobre botones especificos en dark */
+html.dark .ir-arriba {
+  background: var(--btn-bg) !important;
+  color: var(--btn-fg) !important;
+}
+
+html.dark .ir-arriba:hover,
+html.dark .hero-cv-btn:hover,
+html.dark .hero-cv-btn:focus,
+html.dark .hero-cv-btn:hover span,
+html.dark .hero-cv-btn:focus span {
+  background: var(--btn-hover-bg) !important;
+  color: var(--btn-hover-fg) !important;
+  text-decoration: none !important;
 }
 
 /* Triple anillo de foco al final del archivo: debe ganar sobre box-shadow !important de componentes */

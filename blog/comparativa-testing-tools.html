@@ -8,9 +8,9 @@
     />
     <meta
       name="description"
-      content="Análisis comparativo de herramientas para testing de accesibilidad web: axe-core vs ARC Toolkit."
+      content="Análisis detallado de las ventajas y casos de uso ideales para dos de las herramientas más potentes del mercado en la identificación automatizada de barreras digitales."
     />
-    <meta name="author" content="Diego Perafán" />
+    <meta name="author" content="Diego Mena" />
     <script>
       (function () {
         try {
@@ -29,14 +29,13 @@
       })();
     </script>
 
-
     <title data-i18n="blog3-page-title">
-      Comparativa de herramientas de testing: axe-core vs ARC Toolkit - Diego Perafán
+      Comparativa de herramientas de testing: axe-core vs ARC Toolkit - Diego Mena
     </title>
 
     <link rel="icon" type="image/x-icon" href="../img/favicon-diego.webp" />
 
-    <!-- Custom fonts for this template -->
+    <!-- Tipografia -->
     <link
       href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700"
       rel="stylesheet"
@@ -45,29 +44,24 @@
       href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i"
       rel="stylesheet"
       type="text/css" />
-    
-    <!-- Core theme CSS (includes Bootstrap) -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Custom styles for this template -->
-    <link href="../css/resume.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/darkMode_v2.css" />
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
-    
-    <link rel="stylesheet" href="../css/blog.css" />
+
+    <!-- Bundle unificado de estilos (bootstrap + resume + darkMode + blog + slick) -->
+    <link rel="stylesheet" href="../css/bundle.min.css" />
 
     <!-- Canonical + Open Graph + Twitter Card (articulo) -->
     <link rel="canonical" href="https://diegomena.rocks/blog/comparativa-testing-tools.html" />
     <meta property="og:url" content="https://diegomena.rocks/blog/comparativa-testing-tools.html" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Comparativa de herramientas de testing: axe-core vs ARC Toolkit" />
-    <meta property="og:description" content="Análisis comparativo de herramientas para testing de accesibilidad web: axe-core vs ARC Toolkit." />
+    <meta property="og:description" content="Análisis detallado de las ventajas y casos de uso ideales para dos de las herramientas más potentes del mercado en la identificación automatizada de barreras digitales." />
     <meta property="og:image" content="https://diegomena.rocks/img/blog/blog_testing_tools.png" />
     <meta property="og:locale" content="es_CO" />
     <meta property="og:locale:alternate" content="en_US" />
     <meta property="og:site_name" content="Diego Mena — Accesibilidad Digital" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Comparativa de herramientas de testing: axe-core vs ARC Toolkit" />
-    <meta name="twitter:description" content="Análisis comparativo de herramientas para testing de accesibilidad web: axe-core vs ARC Toolkit." />
+    <meta name="twitter:description" content="Análisis detallado de las ventajas y casos de uso ideales para dos de las herramientas más potentes del mercado en la identificación automatizada de barreras digitales." />
     <meta name="twitter:image" content="https://diegomena.rocks/img/blog/blog_testing_tools.png" />
 
     <!-- Datos estructurados BlogPosting -->
@@ -77,7 +71,7 @@
         "@type": "BlogPosting",
         "@id": "https://diegomena.rocks/blog/comparativa-testing-tools.html#post",
         "headline": "Comparativa de herramientas de testing: axe-core vs ARC Toolkit",
-        "description": "Análisis comparativo de herramientas para testing de accesibilidad web: axe-core vs ARC Toolkit.",
+        "description": "Análisis detallado de las ventajas y casos de uso ideales para dos de las herramientas más potentes del mercado en la identificación automatizada de barreras digitales.",
         "url": "https://diegomena.rocks/blog/comparativa-testing-tools.html",
         "image": "https://diegomena.rocks/img/blog/blog_testing_tools.png",
         "inLanguage": ["es", "en"],
@@ -92,7 +86,7 @@
 
   <body id="page-top">
     <canvas id="ambient-canvas" class="ambient-canvas" aria-hidden="true"></canvas>
-    <!-- Navbar horizontal (móvil) -->
+    <!-- Navbar superior destacado -->
     <nav id="navbar" aria-label="Destacados">
       <ul class="horizontal">
         <li class="first-nav">
@@ -130,7 +124,7 @@
       </ul>
     </nav>
 
-    <!-- Sidebar idéntico a index.html pero con rutas ../ -->
+    <!-- Sidebar compartida (controles de tema / idioma / microinteracciones + navegacion) -->
     <aside
       class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
       id="sideNav"
@@ -264,6 +258,7 @@
       </nav>
     </aside>
 
+
     <main>
       <section class="resume-section p-3 p-lg-5 d-flex flex-column">
         <div class="my-auto">
@@ -287,10 +282,10 @@
             <!-- Contenido principal -->
             <div class="blog-content mb-5">
               <p data-i18n="article3-p1">Las herramientas automatizadas son el primer nivel de defensa en cualquier estrategia "Shift Left", capaces de capturar entre el 30% y el 50% de los errores totales de accesibilidad (WCAG). En este artículo, ponemos frente a frente a dos gigantes de la industria: axe-core de Deque Systems y ARC Toolkit de TPGi.</p>
-              
+
               <h2 data-i18n="article3-h2-1">Axe-Core: El Rey de la Integración (CI/CD)</h2>
               <p data-i18n="article3-p2">El mayor superpoder de axe-core es su API extremadamente amigable para desarrolladores. Al estar construido puramente en JavaScript, puede inyectarse en Cypress, Selenium, Jest, Pa11y y, mi favorito personal, Playwright. Esto permite romper los despliegues si la interfaz de usuario introduce regresiones de accesibilidad.</p>
-              
+
               <div class="blog-code-container my-4" tabindex="0" aria-label="Ejemplo de código para integración de axe-core con Playwright">
                 <div class="blog-code-header" aria-hidden="true">
                   <div class="blog-code-dots">
@@ -318,7 +313,7 @@ test(<span class="code-string">'Debe cumplir WCAG 2.2 AA'</span>, <span class="c
 
               <h2 data-i18n="article3-h2-2">ARC Toolkit: Auditoría Visual Profunda</h2>
               <p data-i18n="article3-p4">Mientras que axe-core brilla en la terminal, ARC Toolkit (una extensión del navegador) brilla en la pantalla. Esta herramienta destaca por su capacidad de inyectar estilos visuales en el DOM para mostrar el orden lógico de lectura, destacar contenedores sin regiones ARIA y verificar el espaciado y el flujo estructural visualmente.</p>
-              
+
               <h2 data-i18n="article3-h2-3">El Veredicto</h2>
               <p data-i18n="article3-p5">No tienes que elegir una sola. La mejor estrategia es usar axe-core en los pipelines automatizados para evitar que código inaccesible llegue a producción, y utilizar ARC Toolkit de manera exploratoria por los QA de accesibilidad para identificar problemas estructurales que la automatización pura pasaría por alto.</p>
             </div>
@@ -327,81 +322,19 @@ test(<span class="code-string">'Debe cumplir WCAG 2.2 AA'</span>, <span class="c
       </section>
     </main>
 
-    <!-- Bootstrap core JavaScript -->
+    <!-- jQuery + Bundle JS unificado -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- Custom scripts para el menú lateral y UI general -->
-    <script src="../js/resume.min.js"></script>
-    <script src="../js/accessibility.min.js"></script>
-    <script src="../js/cuelume.js"></script>
-    <script src="../js/cuelume-init.js"></script>
-    <script src="../js/ambient.js"></script>
-    <!-- Script principal de i18n y luego nuestro script específico del blog -->
-    <script src="../js/i18n.js"></script>
+    <script src="../js/bundle.min.js"></script>
     <script src="./js/comparativa-testing-tools-i18n.js"></script>
 
-    <!-- Accesibility widget - Accesify -->
-    <script defer
+    <!-- Widget de accesibilidad A11Y PRO -->
+    <script
+      defer
       src="https://widget.a11ypro.tech/widget/js/launcher.min.js"
       data-key="ak_live_55a9e27387d22ba7b455b4e3e5325004da70fc9747b6d189"
       data-darkModeStrategy="native"
       data-darkModeNativeClass="dark"
-      data-darkModeTrigger="#checkSwitch">
-    </script>
-    
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Navbar collapse toggle (reemplaza Bootstrap JS)
-        var toggler = document.querySelector(".navbar-toggler");
-        var collapse = document.getElementById("navbarSupportedContent");
-        if (toggler && collapse) {
-          toggler.addEventListener("click", function () {
-            var isExpanded = collapse.classList.contains("show");
-            collapse.classList.toggle("show");
-            toggler.setAttribute("aria-expanded", String(!isExpanded));
-          });
-          document.addEventListener("keydown", function (e) {
-            if (e.key === "Escape" && collapse.classList.contains("show")) {
-              collapse.classList.remove("show");
-              toggler.setAttribute("aria-expanded", "false");
-              toggler.focus();
-            }
-          });
-        }
-        var checkSwitch = document.getElementById("checkSwitch");
-        var themeToggle = document.getElementById("themeToggle");
-        if (checkSwitch && themeToggle) {
-          var syncThemeBtn = function () {
-            var dark = document.documentElement.classList.contains("dark");
-            themeToggle.setAttribute("aria-pressed", String(dark));
-            var icon = themeToggle.querySelector("i");
-            if (icon) {
-              icon.classList.toggle("fa-moon", !dark);
-              icon.classList.toggle("fa-sun", dark);
-            }
-          };
-          themeToggle.addEventListener("click", function () {
-            checkSwitch.click();
-          });
-          new MutationObserver(syncThemeBtn).observe(
-            document.documentElement,
-            { attributes: true, attributeFilter: ["class"] },
-          );
-          syncThemeBtn();
-        }
-
-        var langToggle = document.getElementById("langToggle");
-        if (langToggle) {
-          langToggle.addEventListener("click", function () {
-            i18n.changeLang(i18n.currentLang === "es" ? "en" : "es");
-          });
-        }
-
-        if (checkSwitch) {
-          checkSwitch.addEventListener("change", function () {
-            toggleContrast("dark");
-          });
-        }
-      });
-    </script>
+      data-darkModeTrigger="#checkSwitch"></script>
   </body>
 </html>
+

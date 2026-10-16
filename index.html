@@ -58,9 +58,6 @@
       Diego Mena · Experto en Accesibilidad Digital — WCAG 2.2, Auditorías y
       Shift Left
     </title>
-    <!-- Bootstrap core CSS (local) -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-
     <!-- Custom fonts for this template -->
     <link
       href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700"
@@ -73,12 +70,8 @@
       as="style"
       onload="this.rel = 'stylesheet'" />
     <link href="./vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
-    <!-- Custom styles for this template -->
-    <link href="./css/resume.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/darkMode_v2.css" />
-    <!-- Slick Slider CSS (movido al head para evitar render-blocking en body) -->
-    <link rel="stylesheet" href="./css/slick.min.css" />
-    <link rel="stylesheet" href="./css/accessible-slick-theme.min.css" />
+    <!-- Bundle unificado de estilos (bootstrap + slick + resume + darkMode_v2 + blog) -->
+    <link rel="stylesheet" href="./css/bundle.min.css" />
 
     <!-- Progressive Web Application -->
     <meta name="MobileOptimized" content="width" />
@@ -655,39 +648,86 @@
                   loading="lazy" />
               </div>
               <div class="textMovil mb-3">
-                <!-- Usar estilo subheading -->
-                <p>
+                <p class="hero-role mb-1">
                   <span data-i18n="about-profession">
                     <b>EXPERTO EN ACCESIBILIDAD DIGITAL</b>
                   </span>
-                  <br />
+                </p>
+                <p class="hero-tagline mb-3">
                   <span data-i18n="about-passion">
                     Apasionado por la ciencia y las tecnologías libres.
                   </span>
-                  <br />
-                  <span data-i18n="about-email-label">E-mail:</span>
+                </p>
+                <div class="hero-contact-row">
+                  <span class="sr-only" data-i18n="about-email-label">E-mail:</span>
                   <a
                     href="mailto:ingelectronicadj@gmail.com"
+                    class="hero-contact-item"
                     aria-label="Correo personal: ingelectronicadj@gmail.com">
-                    ingelectronicadj@gmail.com
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                    <span>ingelectronicadj@gmail.com</span>
                   </a>
-                  <br />
-                  <span data-i18n="about-contact-label">Contacto:</span>
+                  <span class="sr-only" data-i18n="about-contact-label">Contacto:</span>
                   <a
                     href="tel:+573059395154"
+                    class="hero-contact-item"
                     aria-label="(+0571) 305 9395154 Teléfono con código de país Colombia">
-                    (+0571) 305 9395154
+                    <i class="fas fa-phone" aria-hidden="true"></i>
+                    <span>(+0571) 305 9395154</span>
                   </a>
-                  <br />
-                  <i class="fas fa-download"></i>
+                </div>
+                <div class="hero-actions-row">
                   <a
                     href="./docs/Hoja_de_Vida_Diego_Mena-ES.pdf"
-                    class="link-new-window"
-                    data-i18n="about-resume-link"
+                    class="hero-cv-btn link-new-window"
                     data-i18n-href="about-resume-pdf">
-                    Hoja de vida en PDF
+                    <i class="fas fa-download" aria-hidden="true"></i>
+                    <span data-i18n="about-resume-link">Hoja de vida en PDF</span>
                   </a>
-                </p>
+                  <div class="social social-icons">
+                    <a
+                      href="https://www.linkedin.com/in/ingelectronicadj/"
+                      aria-label="Linkedin"
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                      <span class="visually-hidden" data-i18n="opens-new-tab">
+                        (Se abre en una nueva pestaña)
+                      </span>
+                    </a>
+                    <a
+                      href="https://github.com/ingelectronicadj"
+                      aria-label="Github"
+                      id="profile-link"
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      <i class="fab fa-github" aria-hidden="true"></i>
+                      <span class="visually-hidden" data-i18n="opens-new-tab">
+                        (Se abre en una nueva pestaña)
+                      </span>
+                    </a>
+                    <a
+                      href="https://gitlab.com/ingelectronicadj"
+                      aria-label="Gitlab"
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      <i class="fab fa-gitlab" aria-hidden="true"></i>
+                      <span class="visually-hidden" data-i18n="opens-new-tab">
+                        (Se abre en una nueva pestaña)
+                      </span>
+                    </a>
+                    <a
+                      href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000067902"
+                      aria-label="CvLac"
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      <i class="fas fa-book-reader" aria-hidden="true"></i>
+                      <span class="visually-hidden" data-i18n="opens-new-tab">
+                        (Se abre en una nueva pestaña)
+                      </span>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
             <!-- Carrusel de eventos - visible solo en desktop -->
@@ -806,49 +846,6 @@
             calidad e inclusión digital en sectores como e-learning, fintech,
             comercio electrónico y gobierno.
           </p>
-          <div class="social social-icons">
-            <a
-              href="https://www.linkedin.com/in/ingelectronicadj/"
-              aria-label="Linkedin"
-              target="_blank"
-              rel="noopener noreferrer">
-              <i class="fab fa-linkedin-in"></i>
-              <span class="visually-hidden" data-i18n="opens-new-tab">
-                (Se abre en una nueva pestaña)
-              </span>
-            </a>
-            <a
-              href="https://github.com/ingelectronicadj"
-              aria-label="Github"
-              id="profile-link"
-              target="_blank"
-              rel="noopener noreferrer">
-              <i class="fab fa-github"></i>
-              <span class="visually-hidden" data-i18n="opens-new-tab">
-                (Se abre en una nueva pestaña)
-              </span>
-            </a>
-            <a
-              href="https://gitlab.com/ingelectronicadj"
-              aria-label="Gitlab"
-              target="_blank"
-              rel="noopener noreferrer">
-              <i class="fab fa-gitlab"></i>
-              <span class="visually-hidden" data-i18n="opens-new-tab">
-                (Se abre en una nueva pestaña)
-              </span>
-            </a>
-            <a
-              href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000067902"
-              aria-label="CvLac"
-              target="_blank"
-              rel="noopener noreferrer">
-              <i class="fas fa-book-reader"></i>
-              <span class="visually-hidden" data-i18n="opens-new-tab">
-                (Se abre en una nueva pestaña)
-              </span>
-            </a>
-          </div>
         </div>
       </section>
       <hr class="m-0" />
@@ -1527,14 +1524,16 @@
           <h2 id="skillsTitle" class="mb-2" data-i18n="section-skills">
             Habilidades
           </h2>
-          <p class="lead mb-2" data-i18n="skills-intro">
-            Capacidad para la investigación, el autoaprendizaje, la resolución
-            de problemas con creatividad e innovación, capacidad para escuchar a
-            las personas y capacidad de recuperación. Facilidad de expresión
-            oral, liderazgo de equipos, adaptabilidad a entornos laborales bajo
-            presión, habilidades sociales y habilidades ejecutivas para
-            administrar tareas por objetivos.
-          </p>
+          <div class="about-card mb-3">
+            <p class="lead mb-0" data-i18n="skills-intro">
+              Capacidad para la investigación, el autoaprendizaje, la resolución
+              de problemas con creatividad e innovación, capacidad para escuchar a
+              las personas y capacidad de recuperación. Facilidad de expresión
+              oral, liderazgo de equipos, adaptabilidad a entornos laborales bajo
+              presión, habilidades sociales y habilidades ejecutivas para
+              administrar tareas por objetivos.
+            </p>
+          </div>
           <div class="subheading mb-3" data-i18n="skills-tech-stack">
             Pila Tecnológica y Competencias
           </div>
@@ -1796,9 +1795,7 @@
               Github
               <span class="visually-hidden" data-i18n="opens-new-tab">
                 (Se abre en una nueva pestaña)
-              </span>
-            </a>
-            .
+              </span></a>.
             <span data-i18n="projects-featured">
               Entre los proyectos más destacados se encuentran:
             </span>
@@ -2255,33 +2252,35 @@
           <h2 id="interestsTitle" class="mb-2" data-i18n="section-interests">
             Intereses
           </h2>
-          <p class="lead" data-i18n="interests-p1">
-            Entre mis intereses profesionales destaco el hecho de poder innovar
-            siempre que sea posible, claramente, sin perder de vista el ciclo de
-            vida de los productos o servicios que se encuentren en producción.
-            Como entusiasta de la informática desde niño, he sido dado a la
-            investigación y el autoaprendizaje, esta fortaleza me ha llevado con
-            el paso del tiempo a formular mejores preguntas y dar con hallazgos
-            interesantes en tecnologías para el internet de cosas, el analisis
-            masivo de datos, la inteligencia artificial y la automatización de
-            procesos.
-          </p>
-          <p class="lead" data-i18n="interests-p2">
-            Me interesa en gran medida aportar en temas de educación y a su vez
-            disminuir la brecha digital. Considero que la educación es un pilar
-            fundamental de la sociedad, y por ello, desde mis capacidades y
-            experiencias aporto en la formación de formadores sobre nuevas
-            herramientas de uso educativo digital.
-          </p>
-          <p class="lead" data-i18n="interests-p3">
-            Desde el análisis de los objetivos de desarrollo sostenible me
-            interesa poder contribuir a la soberanía alimentaria(hambre cero),
-            la educación de calidad, la energía asequible y no contaminante como
-            acción por el clima, así como la conectividad a internet como
-            derecho fundamental. Me interesa mucho aportar significativamente a
-            esa gran red que llamamos internet y me capacito diariamente para
-            ser consecuente con mis intereses.
-          </p>
+          <div class="about-card mb-4">
+            <p class="lead" data-i18n="interests-p1">
+              Entre mis intereses profesionales destaco el hecho de poder innovar
+              siempre que sea posible, claramente, sin perder de vista el ciclo de
+              vida de los productos o servicios que se encuentren en producción.
+              Como entusiasta de la informática desde niño, he sido dado a la
+              investigación y el autoaprendizaje, esta fortaleza me ha llevado con
+              el paso del tiempo a formular mejores preguntas y dar con hallazgos
+              interesantes en tecnologías para el internet de cosas, el analisis
+              masivo de datos, la inteligencia artificial y la automatización de
+              procesos.
+            </p>
+            <p class="lead" data-i18n="interests-p2">
+              Me interesa en gran medida aportar en temas de educación y a su vez
+              disminuir la brecha digital. Considero que la educación es un pilar
+              fundamental de la sociedad, y por ello, desde mis capacidades y
+              experiencias aporto en la formación de formadores sobre nuevas
+              herramientas de uso educativo digital.
+            </p>
+            <p class="lead mb-0" data-i18n="interests-p3">
+              Desde el análisis de los objetivos de desarrollo sostenible me
+              interesa poder contribuir a la soberanía alimentaria(hambre cero),
+              la educación de calidad, la energía asequible y no contaminante como
+              acción por el clima, así como la conectividad a internet como
+              derecho fundamental. Me interesa mucho aportar significativamente a
+              esa gran red que llamamos internet y me capacito diariamente para
+              ser consecuente con mis intereses.
+            </p>
+          </div>
 
           <!-- Animación de entrada reemplaza AOS con CSS puro (fade-up nativo) -->
           <div class="research-box animate-fade-up">
@@ -2334,20 +2333,17 @@
           <h2 id="blogTitle" class="mb-5" data-i18n="section-blog">
             Artículos
           </h2>
+          <!-- BLOG_CARDS_START -->
           <article class="resume-item d-flex flex-column flex-md-row mb-3 align-items-center">
             <div class="resume-content mr-auto">
               <h3 class="mb-0" data-i18n="blog1-title">
-                Impacto de la Inteligencia Artificial en la automatización de
-                auditorías WCAG
+                Impacto de la Inteligencia Artificial en la automatización de auditorías WCAG
               </h3>
               <div class="subheading mb-3" data-i18n="blog1-date">
                 Mayo 2026 · IA & Accesibilidad
               </div>
               <p data-i18n="blog1-desc" class="mb-1">
-                Exploramos cómo los modelos de lenguaje pueden asistir en la
-                detección de problemas complejos de accesibilidad y las
-                limitaciones actuales frente a la evaluación humana
-                especializada.
+                Exploramos cómo los modelos de lenguaje pueden asistir en la detección de problemas complejos de accesibilidad y las limitaciones actuales frente a la evaluación humana especializada.
               </p>
               <a
                 href="./blog/ia-automatizacion-wcag.html"
@@ -2367,16 +2363,13 @@
           <article class="resume-item d-flex flex-column flex-md-row mb-3 align-items-center">
             <div class="resume-content mr-auto">
               <h3 class="mb-0" data-i18n="blog2-title">
-                Mejores prácticas para implementar ARIA en Single Page
-                Applications
+                Mejores prácticas para implementar ARIA en Single Page Applications
               </h3>
               <div class="subheading mb-3" data-i18n="blog2-date">
                 Mayo 2026 · Buenas Prácticas
               </div>
               <p data-i18n="blog2-desc" class="mb-1">
-                Un recorrido técnico sobre el manejo del foco, regiones en vivo
-                (aria-live) y notificaciones asíncronas para garantizar una
-                navegación sin barreras en React y Angular.
+                Un recorrido técnico sobre el manejo del foco, regiones en vivo (aria-live) y notificaciones asíncronas para garantizar una navegación sin barreras en React y Angular.
               </p>
               <a
                 href="./blog/mejores-practicas-aria.html"
@@ -2402,9 +2395,7 @@
                 Mayo 2026 · Testing y QA
               </div>
               <p data-i18n="blog3-desc" class="mb-1">
-                Análisis detallado de las ventajas y casos de uso ideales para
-                dos de las herramientas más potentes del mercado en la
-                identificación automatizada de barreras digitales.
+                Análisis detallado de las ventajas y casos de uso ideales para dos de las herramientas más potentes del mercado en la identificación automatizada de barreras digitales.
               </p>
               <a
                 href="./blog/comparativa-testing-tools.html"
@@ -2421,6 +2412,7 @@
               </a>
             </div>
           </article>
+          <!-- BLOG_CARDS_END -->
           <!-- Paginación -->
           <nav
             aria-label="Paginación de artículos"
@@ -2467,7 +2459,7 @@
           </h2>
           <div class="resume-item d-flex flex-column flex-md-row mb-2">
             <div class="resume-content mr-auto">
-              <i class="fas fa-user-circle"></i>
+              <i class="fas fa-user-circle" aria-hidden="true"></i>
               <a
                 href="https://datateca.unad.edu.co/cdn-para-cursos-moodle/seminario-accesibilidad-web/2024/"
                 class="link-new-window">
@@ -2493,7 +2485,7 @@
           </div>
           <div class="resume-item d-flex flex-column flex-md-row mb-2">
             <div class="resume-content mr-auto">
-              <i class="fas fa-user-circle"></i>
+              <i class="fas fa-user-circle" aria-hidden="true"></i>
               <a
                 href="https://datateca.unad.edu.co/cdn-para-cursos-moodle/seminario-accesibilidad-web/2023/"
                 class="link-new-window">
@@ -2519,7 +2511,7 @@
           </div>
           <div class="resume-item d-flex flex-column flex-md-row mb-2">
             <div class="resume-content mr-auto">
-              <i class="fas fa-user-circle"></i>
+              <i class="fas fa-user-circle" aria-hidden="true"></i>
               <a
                 href="https://datateca.unad.edu.co/cdn-para-cursos-moodle/seminario-accesibilidad-web/2022/"
                 class="link-new-window">
@@ -2545,7 +2537,7 @@
           </div>
           <div class="resume-item d-flex flex-column flex-md-row mb-2">
             <div class="resume-content mr-auto">
-              <i class="fas fa-user-circle"></i>
+              <i class="fas fa-user-circle" aria-hidden="true"></i>
               <a
                 href="https://datateca.unad.edu.co/cdn-para-cursos-moodle/seminario-accesibilidad-web/2021/"
                 class="link-new-window">
@@ -2570,7 +2562,7 @@
           </div>
           <div class="resume-item d-flex flex-column flex-md-row mb-2">
             <div class="resume-content mr-auto">
-              <i class="fas fa-user-circle"></i>
+              <i class="fas fa-user-circle" aria-hidden="true"></i>
               <a
                 href="https://www.credly.com/badges/f515f9a1-ad2f-4bb2-9f1b-63e46fd6c261/public_url"
                 class="link-new-window">
@@ -2595,7 +2587,7 @@
           </div>
           <div class="resume-item d-flex flex-column flex-md-row mb-2">
             <div class="resume-content mr-auto">
-              <i class="fas fa-user-circle"></i>
+              <i class="fas fa-user-circle" aria-hidden="true"></i>
               <a
                 href="https://datateca.unad.edu.co/contenidos/publicaciones/Comunicaciones_VIMEP/2021/certificados/1016025188_PONENTE_2020.pdf"
                 class="link-new-window">
@@ -2621,7 +2613,7 @@
           </div>
           <div class="resume-item d-flex flex-column flex-md-row mb-2">
             <div class="resume-content mr-auto">
-              <i class="fas fa-user-circle"></i>
+              <i class="fas fa-user-circle" aria-hidden="true"></i>
               <a
                 href="https://drive.google.com/file/d/1RMghXX6oeaEzbUoDMj0MSmpJJLFhiY_o/view?usp=sharing"
                 class="link-new-window">
@@ -2647,7 +2639,7 @@
           </div>
           <div class="resume-item d-flex flex-column flex-md-row mb-2">
             <div class="resume-content mr-auto">
-              <i class="fas fa-user-circle"></i>
+              <i class="fas fa-user-circle" aria-hidden="true"></i>
               <a
                 href="https://drive.google.com/file/d/1BtXH0BCtjy2C60dIG5S7b7dlOsiIU6wM/view?usp=sharing"
                 class="link-new-window">
@@ -2678,170 +2670,27 @@
         class="ir-arriba"
         href="#"
         title="Volver arriba"
-        data-i18n-title="back-to-top">
+        aria-label="Volver arriba"
+        data-i18n-title="back-to-top"
+        data-i18n-aria="back-to-top">
         <span class="fa-stack">
           <i class="fas fa-circle fa-stack-2x"></i>
           <i class="fas fa-arrow-up fa-stack-1x fa-inverse"></i>
         </span>
       </a>
     </main>
-    <!-- jQuery (requerido por Slick Slider) -->
+    <!-- jQuery + GSAP (CDN) + Bundle JS unificado -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-    <!-- Plugin JavaScript -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"
       defer></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="./js/resume.min.js" defer></script>
-
-    <!-- Para apertura de certificados-->
-    <script src="./js/openLink.js" defer></script>
-
-    <!-- Slick Slider -->
-    <script type="text/javascript" src="./js/slick.min.js" defer></script>
-    <script src="./js/slick-init.js" defer></script>
-
-    <!-- SweetAlert2 y alerts.js eliminados: no se usan en el sitio -->
-
-    <!-- Internacionalización (i18n) -->
-    <script src="./js/i18n.js" defer></script>
-
-    <!--Accessibility-->
-    <script src="./js/accessibility.min.js" defer></script>
-    <!-- focus title section from navbar -->
-    <script src="./js/navbar-focus.js" defer></script>
-    <!-- Pagination Script -->
-    <script src="./js/pagination.js" defer></script>
-
-    <!-- GSAP + ScrollTrigger (scrollytelling) -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
       defer></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
       defer></script>
-    <!-- Fondo ambiente animado + animaciones de scroll -->
-    <script src="./js/ambient.js" defer></script>
-    <script src="./js/cuelume.js" defer></script>
-    <script src="./js/cuelume-init.js" defer></script>
-    <script src="./js/scrolly.js" defer></script>
-
-    <!-- Service Worker 
-    <script src="./script.js"></script>-->
-
-    <!-- Inicialización de eventos y toggle del navbar (reemplaza Bootstrap JS) -->
-    <script defer>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Navbar collapse toggle (reemplaza Bootstrap JS)
-        const toggler = document.querySelector(".navbar-toggler");
-        const collapse = document.getElementById("navbarSupportedContent");
-        if (toggler && collapse) {
-          toggler.addEventListener("click", function () {
-            const isExpanded = collapse.classList.contains("show");
-            collapse.classList.toggle("show");
-            toggler.setAttribute("aria-expanded", String(!isExpanded));
-          });
-
-          // Cerrar menú con ESC (accesibilidad para teclado)
-          document.addEventListener("keydown", function (e) {
-            if (e.key === "Escape" && collapse.classList.contains("show")) {
-              collapse.classList.remove("show");
-              toggler.setAttribute("aria-expanded", "false");
-              toggler.focus();
-            }
-          });
-        }
-
-        // Controles: tema claro/oscuro
-        var checkSwitch = document.getElementById("checkSwitch");
-        var themeToggle = document.getElementById("themeToggle");
-        if (checkSwitch && themeToggle) {
-          var syncThemeBtn = function () {
-            var dark = document.documentElement.classList.contains("dark");
-            themeToggle.setAttribute("aria-pressed", String(dark));
-            var icon = themeToggle.querySelector("i");
-            if (icon) {
-              icon.classList.toggle("fa-moon", !dark);
-              icon.classList.toggle("fa-sun", dark);
-            }
-          };
-          themeToggle.addEventListener("click", function () {
-            checkSwitch.click();
-          });
-          new MutationObserver(syncThemeBtn).observe(document.documentElement, {
-            attributes: true,
-            attributeFilter: ["class"],
-          });
-          syncThemeBtn();
-        }
-
-        // Controles: idioma (alterna ES/EN)
-        var langToggle = document.getElementById("langToggle");
-        if (langToggle) {
-          langToggle.addEventListener("click", function () {
-            i18n.changeLang(i18n.currentLang === "es" ? "en" : "es");
-          });
-        }
-
-        // Toggle de contraste / modo oscuro
-        if (checkSwitch) {
-          checkSwitch.addEventListener("change", function () {
-            toggleContrast("dark");
-          });
-        }
-
-        // Animación fade-up nativa con IntersectionObserver (reemplaza AOS)
-        if ("IntersectionObserver" in window) {
-          const fadeObserver = new IntersectionObserver(
-            function (entries) {
-              entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                  entry.target.classList.add("is-visible");
-                  // Dejar de observar una vez animado para liberar recursos
-                  fadeObserver.unobserve(entry.target);
-                }
-              });
-            },
-            { threshold: 0.15 },
-          );
-
-          document.querySelectorAll(".animate-fade-up").forEach(function (el) {
-            fadeObserver.observe(el);
-          });
-        } else {
-          // Navegadores sin soporte: mostrar directamente sin animación
-          document.querySelectorAll(".animate-fade-up").forEach(function (el) {
-            el.classList.add("is-visible");
-          });
-        }
-
-        // Enciende la franja lateral de las cards al entrar al viewport
-        // (en táctil simula el hover; en desktop refuerza el feedback de scroll)
-        if ("IntersectionObserver" in window) {
-          const hoverObserver = new IntersectionObserver(
-            function (entries) {
-              entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                  entry.target.classList.add("is-in-view");
-                } else {
-                  // Remover al salir para que el efecto se repita al volver a pasar
-                  entry.target.classList.remove("is-in-view");
-                }
-              });
-            },
-            { threshold: 0.3, rootMargin: "0px 0px -10% 0px" },
-          );
-
-          document
-            .querySelectorAll(".resume-item, .research-box")
-            .forEach(function (el) {
-              hoverObserver.observe(el);
-            });
-        }
-      });
-    </script>
+    <script src="./js/bundle.min.js" defer></script>
 
     <!-- Accesibility widget - Accesify -->
     <script defer

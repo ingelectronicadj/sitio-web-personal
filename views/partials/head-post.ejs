@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="<%= post.metaDescription %>"
+    />
+    <meta name="author" content="Diego Mena" />
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem("status_contrast") === "true") {
+            document.documentElement.classList.add("dark");
+          }
+          var l = localStorage.getItem("preferred_lang");
+          if (l && l !== "es") {
+            document.documentElement.lang = l;
+            document.documentElement.classList.add("i18n-pending");
+            setTimeout(function () {
+              document.documentElement.classList.remove("i18n-pending");
+            }, 2000);
+          }
+        } catch (e) {}
+      })();
+    </script>
+
+    <title data-i18n="<%= post.i18nPrefix %>-page-title">
+      <%= post.pageTitle %>
+    </title>
+
+    <link rel="icon" type="image/x-icon" href="../img/favicon-diego.webp" />
+
+    <!-- Tipografia -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700"
+      rel="stylesheet"
+      type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i"
+      rel="stylesheet"
+      type="text/css" />
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+
+    <!-- Bundle unificado de estilos (bootstrap + resume + darkMode + blog + slick) -->
+    <link rel="stylesheet" href="../css/bundle.min.css" />
+
+    <!-- Canonical + Open Graph + Twitter Card (articulo) -->
+    <link rel="canonical" href="https://diegomena.rocks/blog/<%= post.slug %>.html" />
+    <meta property="og:url" content="https://diegomena.rocks/blog/<%= post.slug %>.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="<%= post.ogTitle %>" />
+    <meta property="og:description" content="<%= post.metaDescription %>" />
+    <meta property="og:image" content="https://diegomena.rocks/<%= post.image %>" />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:site_name" content="Diego Mena — Accesibilidad Digital" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="<%= post.ogTitle %>" />
+    <meta name="twitter:description" content="<%= post.metaDescription %>" />
+    <meta name="twitter:image" content="https://diegomena.rocks/<%= post.image %>" />
+
+    <!-- Datos estructurados BlogPosting -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "@id": "https://diegomena.rocks/blog/<%= post.slug %>.html#post",
+        "headline": "<%- post.ogTitle.replace(/"/g, '\\"') %>",
+        "description": "<%- post.metaDescription.replace(/"/g, '\\"') %>",
+        "url": "https://diegomena.rocks/blog/<%= post.slug %>.html",
+        "image": "https://diegomena.rocks/<%= post.image %>",
+        "inLanguage": ["es", "en"],
+        "datePublished": "<%= post.datePublished %>",
+        "dateModified": "<%= post.dateModified %>",
+        "isPartOf": { "@id": "https://diegomena.rocks/#website" },
+        "author": { "@id": "https://diegomena.rocks/#person" },
+        "publisher": { "@id": "https://diegomena.rocks/#person" }
+      }
+    </script>
+  </head>

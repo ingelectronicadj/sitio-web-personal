@@ -8,9 +8,9 @@
     />
     <meta
       name="description"
-      content="Guía sobre el uso de ARIA en aplicaciones de una sola página (SPA) para mejorar la accesibilidad y la gestión del enfoque."
+      content="Un recorrido técnico sobre el manejo del foco, regiones en vivo (aria-live) y notificaciones asíncronas para garantizar una navegación sin barreras en React y Angular."
     />
-    <meta name="author" content="Diego Perafán" />
+    <meta name="author" content="Diego Mena" />
     <script>
       (function () {
         try {
@@ -29,14 +29,13 @@
       })();
     </script>
 
-
     <title data-i18n="blog2-page-title">
-      Mejores prácticas para implementar ARIA en SPA - Diego Perafán
+      Mejores prácticas para implementar ARIA en SPA - Diego Mena
     </title>
 
     <link rel="icon" type="image/x-icon" href="../img/favicon-diego.webp" />
 
-    <!-- Custom fonts for this template -->
+    <!-- Tipografia -->
     <link
       href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700"
       rel="stylesheet"
@@ -45,29 +44,24 @@
       href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i"
       rel="stylesheet"
       type="text/css" />
-    
-    <!-- Core theme CSS (includes Bootstrap) -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Custom styles for this template -->
-    <link href="../css/resume.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/darkMode_v2.css" />
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
-    
-    <link rel="stylesheet" href="../css/blog.css" />
+
+    <!-- Bundle unificado de estilos (bootstrap + resume + darkMode + blog + slick) -->
+    <link rel="stylesheet" href="../css/bundle.min.css" />
 
     <!-- Canonical + Open Graph + Twitter Card (articulo) -->
     <link rel="canonical" href="https://diegomena.rocks/blog/mejores-practicas-aria.html" />
     <meta property="og:url" content="https://diegomena.rocks/blog/mejores-practicas-aria.html" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Mejores prácticas para implementar ARIA en Single Page Applications" />
-    <meta property="og:description" content="Guía sobre el uso de ARIA en aplicaciones de una sola página (SPA) para mejorar la accesibilidad y la gestión del enfoque." />
+    <meta property="og:description" content="Un recorrido técnico sobre el manejo del foco, regiones en vivo (aria-live) y notificaciones asíncronas para garantizar una navegación sin barreras en React y Angular." />
     <meta property="og:image" content="https://diegomena.rocks/img/blog/blog_aria_spa.png" />
     <meta property="og:locale" content="es_CO" />
     <meta property="og:locale:alternate" content="en_US" />
     <meta property="og:site_name" content="Diego Mena — Accesibilidad Digital" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Mejores prácticas para implementar ARIA en Single Page Applications" />
-    <meta name="twitter:description" content="Guía sobre el uso de ARIA en aplicaciones de una sola página (SPA) para mejorar la accesibilidad y la gestión del enfoque." />
+    <meta name="twitter:description" content="Un recorrido técnico sobre el manejo del foco, regiones en vivo (aria-live) y notificaciones asíncronas para garantizar una navegación sin barreras en React y Angular." />
     <meta name="twitter:image" content="https://diegomena.rocks/img/blog/blog_aria_spa.png" />
 
     <!-- Datos estructurados BlogPosting -->
@@ -77,7 +71,7 @@
         "@type": "BlogPosting",
         "@id": "https://diegomena.rocks/blog/mejores-practicas-aria.html#post",
         "headline": "Mejores prácticas para implementar ARIA en Single Page Applications",
-        "description": "Guía sobre el uso de ARIA en aplicaciones de una sola página (SPA) para mejorar la accesibilidad y la gestión del enfoque.",
+        "description": "Un recorrido técnico sobre el manejo del foco, regiones en vivo (aria-live) y notificaciones asíncronas para garantizar una navegación sin barreras en React y Angular.",
         "url": "https://diegomena.rocks/blog/mejores-practicas-aria.html",
         "image": "https://diegomena.rocks/img/blog/blog_aria_spa.png",
         "inLanguage": ["es", "en"],
@@ -92,7 +86,7 @@
 
   <body id="page-top">
     <canvas id="ambient-canvas" class="ambient-canvas" aria-hidden="true"></canvas>
-    <!-- Navbar horizontal (móvil) -->
+    <!-- Navbar superior destacado -->
     <nav id="navbar" aria-label="Destacados">
       <ul class="horizontal">
         <li class="first-nav">
@@ -130,7 +124,7 @@
       </ul>
     </nav>
 
-    <!-- Sidebar idéntico a index.html pero con rutas ../ -->
+    <!-- Sidebar compartida (controles de tema / idioma / microinteracciones + navegacion) -->
     <aside
       class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
       id="sideNav"
@@ -264,6 +258,7 @@
       </nav>
     </aside>
 
+
     <main>
       <section class="resume-section p-3 p-lg-5 d-flex flex-column">
         <div class="my-auto">
@@ -287,10 +282,10 @@
             <!-- Contenido principal -->
             <div class="blog-content mb-5">
               <p data-i18n="article2-p1">Las Single Page Applications (SPA) ofrecen experiencias fluidas, pero destruyen la semántica nativa del navegador al cambiar de ruta. Al no recargar la página, los lectores de pantalla se quedan en silencio tras hacer clic en un enlace, desorientando completamente al usuario.</p>
-              
+
               <h2 data-i18n="article2-h2-1">Gestión del Foco Programático</h2>
               <p data-i18n="article2-p2">El primer paso es asegurar que el foco del teclado se mueva lógicamente cuando la vista cambia. Una técnica recomendada es enfocar el contenedor principal o el <code>&lt;h1&gt;</code> de la nueva vista montada.</p>
-              
+
               <div class="blog-code-container my-4" tabindex="0" aria-label="Ejemplo de código de un hook en React para mover el foco">
                 <div class="blog-code-header" aria-hidden="true">
                   <div class="blog-code-dots">
@@ -321,7 +316,7 @@
 
               <h2 data-i18n="article2-h2-2">Regiones en Vivo (aria-live)</h2>
               <p data-i18n="article2-p4">Las notificaciones asíncronas como "Guardado con éxito" o alertas de error no son leídas automáticamente a menos que las marques como regiones en vivo. Usar <code>aria-live="polite"</code> es ideal para notificaciones informativas, mientras que <code>aria-live="assertive"</code> o <code>role="alert"</code> debe reservarse para errores críticos que exigen la atención inmediata del usuario.</p>
-              
+
               <h2 data-i18n="article2-h2-3">Modales y Trampas de Foco (Focus Trap)</h2>
               <p data-i18n="article2-p5">Abrir un componente modal en una SPA requiere, por norma, crear una "trampa de foco". Esto significa que la tabulación debe ciclar internamente dentro del modal y no permitir que el usuario interactúe con el fondo oscurecido por error. Además, la tecla <code>Escape</code> siempre debe cerrar la ventana emergente.</p>
             </div>
@@ -330,81 +325,19 @@
       </section>
     </main>
 
-    <!-- Bootstrap core JavaScript -->
+    <!-- jQuery + Bundle JS unificado -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- Custom scripts para el menú lateral y UI general -->
-    <script src="../js/resume.min.js"></script>
-    <script src="../js/accessibility.min.js"></script>
-    <script src="../js/cuelume.js"></script>
-    <script src="../js/cuelume-init.js"></script>
-    <script src="../js/ambient.js"></script>
-    <!-- Script principal de i18n y luego nuestro script específico del blog -->
-    <script src="../js/i18n.js"></script>
+    <script src="../js/bundle.min.js"></script>
     <script src="./js/mejores-practicas-aria-i18n.js"></script>
-    
-    <!-- Accesibility widget - Accesify -->
-    <script defer
+
+    <!-- Widget de accesibilidad A11Y PRO -->
+    <script
+      defer
       src="https://widget.a11ypro.tech/widget/js/launcher.min.js"
       data-key="ak_live_55a9e27387d22ba7b455b4e3e5325004da70fc9747b6d189"
       data-darkModeStrategy="native"
       data-darkModeNativeClass="dark"
-      data-darkModeTrigger="#checkSwitch">
-    </script>
-    
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Navbar collapse toggle (reemplaza Bootstrap JS)
-        var toggler = document.querySelector(".navbar-toggler");
-        var collapse = document.getElementById("navbarSupportedContent");
-        if (toggler && collapse) {
-          toggler.addEventListener("click", function () {
-            var isExpanded = collapse.classList.contains("show");
-            collapse.classList.toggle("show");
-            toggler.setAttribute("aria-expanded", String(!isExpanded));
-          });
-          document.addEventListener("keydown", function (e) {
-            if (e.key === "Escape" && collapse.classList.contains("show")) {
-              collapse.classList.remove("show");
-              toggler.setAttribute("aria-expanded", "false");
-              toggler.focus();
-            }
-          });
-        }
-        var checkSwitch = document.getElementById("checkSwitch");
-        var themeToggle = document.getElementById("themeToggle");
-        if (checkSwitch && themeToggle) {
-          var syncThemeBtn = function () {
-            var dark = document.documentElement.classList.contains("dark");
-            themeToggle.setAttribute("aria-pressed", String(dark));
-            var icon = themeToggle.querySelector("i");
-            if (icon) {
-              icon.classList.toggle("fa-moon", !dark);
-              icon.classList.toggle("fa-sun", dark);
-            }
-          };
-          themeToggle.addEventListener("click", function () {
-            checkSwitch.click();
-          });
-          new MutationObserver(syncThemeBtn).observe(
-            document.documentElement,
-            { attributes: true, attributeFilter: ["class"] },
-          );
-          syncThemeBtn();
-        }
-
-        var langToggle = document.getElementById("langToggle");
-        if (langToggle) {
-          langToggle.addEventListener("click", function () {
-            i18n.changeLang(i18n.currentLang === "es" ? "en" : "es");
-          });
-        }
-
-        if (checkSwitch) {
-          checkSwitch.addEventListener("change", function () {
-            toggleContrast("dark");
-          });
-        }
-      });
-    </script>
+      data-darkModeTrigger="#checkSwitch"></script>
   </body>
 </html>
+

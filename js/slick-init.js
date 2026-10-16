@@ -63,4 +63,24 @@ document.addEventListener("DOMContentLoaded", function () {
   // Puntos de paginación: indicadores decorativos — fuera del orden de
   // tabulación (la navegación del carrusel se hace con las flechas)
   $(".slick-dots button").attr("tabindex", "-1");
+
+  // Evitar aria-hidden-focus cuando Slick rota slides: sincronizar tabindex
+  // de enlaces internos con el estado aria-hidden de cada slide
+  function syncSlideFocus($slider) {
+    $slider.find(".slick-slide[aria-hidden='true'] a").attr("tabindex", "-1");
+    $slider.find(".slick-slide[aria-hidden='false'] a").removeAttr("tabindex");
+  }
+  var $for = $(".slider-for");
+  syncSlideFocus($for);
+  $for.on("init reInit afterChange setPosition", function () {
+    syncSlideFocus($for);
+  });
+  $for.on("beforeChange", function (_e, _slick, currentSlide, nextSlide) {
+    if (currentSlide === nextSlide) return;
+    $for
+      .find('.slick-slide[data-slick-index="' + currentSlide + '"]')
+      .attr("aria-hidden", "true")
+      .find("a")
+      .attr("tabindex", "-1");
+  });
 });

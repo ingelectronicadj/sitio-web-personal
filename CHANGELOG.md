@@ -1,5 +1,62 @@
 # Changelog
 
+## [2.1.0] - 2026-10-15
+
+### Added
+
+- Pipeline de compilacion con Node.js, EJS y esbuild (`scripts/build.js`,
+  `package.json`):
+  - Plantillas compartidas en `views/post.ejs` y
+    `views/partials/{head-post,sidebar,scripts-post}.ejs`.
+  - Fuente declarativa por articulo en `content/blog/*.json` que genera
+    `blog/<slug>.html`, las tarjetas de `#blog` en `index.html` y
+    `sitemap.xml`.
+  - Bundles minificados `css/bundle.min.css` y `js/bundle.min.js`.
+- Script compartido `js/controls-init.js` para controles de tema, idioma,
+  menu movil y observadores de viewport.
+- Sistema unificado de botones **Glass Pill** (`--btn-*`): misma geometria
+  circular `44x44px` (`border-radius: 999px`) para `.ctrl-btn`,
+  `.navbar-toggler`, `.social-icons a`, `.slick-prev/.slick-next`,
+  `.ir-arriba` y paginacion, mas variante pill para `.hero-cv-btn`,
+  `.research-link-chip`, `.diploma-label` y `.back-btn`.
+- `README.md` con documentacion de arquitectura, comandos y flujo para
+  publicar nuevos articulos.
+
+### Changed
+
+- `js/ambient.js` reescrito con la fisica de `hero-anim.js` de la landing de
+  A11Y PRO: friccion `0.992` (en reposo la red solo respira ~3px alrededor de
+  cada ancla), alpha de lineas graduado por distancia, hilos nodo->cursor,
+  halo progresivo, ondas al hacer clic y micro-glifos de accesibilidad en
+  los margenes laterales; soporte `devicePixelRatio` y bloqueo de re-seed en
+  cambios de barra de URL movil.
+- Reubicacion UI/UX del Hero: redes sociales y boton pill "Hoja de vida en
+  PDF" integrados dentro del bloque de identidad junto a email y telefono con
+  iconos; ancho de `.welcome-header-row` alineado al 100% con `.about-card`.
+- Introduccion de Habilidades y parrafos de Intereses envueltos en
+  `.about-card` translucida.
+- Tamano de logos de empresas (`.company-logo`) ampliado a `68px` alto /
+  `210px` ancho max en desktop y tablet (`76px / 220px` en movil) y
+  miniaturas de diplomas a `165px` (`185px` en movil).
+- Foto de perfil en tablet/movil limitada a `max-width: 180px` con anillo
+  cyan.
+
+### Fixed
+
+- Boton `.ir-arriba` habia perdido `position: fixed` por la regla de
+  stacking `position: relative`; restaurado a flotante (`bottom: 92px`) con
+  `aria-label` e i18n.
+- Flecha `.slick-prev/.slick-next` desaparecia al salir de `:hover` tras
+  hacer clic (retenia `:focus` con icono blanco sobre fondo blanco).
+- `aria-hidden-focus` en slides inactivos de Slick durante transiciones
+  `fade` (`beforeChange` sincroniza `aria-hidden` y `tabindex="-1"`).
+- Contraste del titular `h1` al hacer scroll: removida la reduccion de
+  opacidad del parallax en `js/scrolly.js`.
+- Contraste de `code` inline y enlaces `.text-info` en articulos de blog en
+  ambos temas.
+- Typo en Intereses (`"siempre ha estado guiada"`) y espacio antes de punto
+  en Proyectos (`GitHub.`).
+
 ## [2.0.0] - 2026-10-15
 
 ### Added

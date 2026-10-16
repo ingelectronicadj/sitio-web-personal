@@ -10,7 +10,7 @@
       name="description"
       content="Análisis del impacto de la Inteligencia Artificial en la automatización de auditorías WCAG y la transición hacia el Shift Left testing en accesibilidad."
     />
-    <meta name="author" content="Diego Perafán" />
+    <meta name="author" content="Diego Mena" />
     <script>
       (function () {
         try {
@@ -29,14 +29,13 @@
       })();
     </script>
 
-
     <title data-i18n="blog1-page-title">
-      Impacto de la Inteligencia Artificial en auditorías WCAG - Diego Perafán
+      Impacto de la Inteligencia Artificial en auditorías WCAG - Diego Mena
     </title>
 
     <link rel="icon" type="image/x-icon" href="../img/favicon-diego.webp" />
 
-    <!-- Custom fonts for this template -->
+    <!-- Tipografia -->
     <link
       href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700"
       rel="stylesheet"
@@ -45,15 +44,10 @@
       href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i"
       rel="stylesheet"
       type="text/css" />
-    
-    <!-- Core theme CSS (includes Bootstrap) -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Custom styles for this template -->
-    <link href="../css/resume.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/darkMode_v2.css" />
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
-    
-    <link rel="stylesheet" href="../css/blog.css" />
+
+    <!-- Bundle unificado de estilos (bootstrap + resume + darkMode + blog + slick) -->
+    <link rel="stylesheet" href="../css/bundle.min.css" />
 
     <!-- Canonical + Open Graph + Twitter Card (articulo) -->
     <link rel="canonical" href="https://diegomena.rocks/blog/ia-automatizacion-wcag.html" />
@@ -92,7 +86,7 @@
 
   <body id="page-top">
     <canvas id="ambient-canvas" class="ambient-canvas" aria-hidden="true"></canvas>
-    <!-- Navbar horizontal (móvil) -->
+    <!-- Navbar superior destacado -->
     <nav id="navbar" aria-label="Destacados">
       <ul class="horizontal">
         <li class="first-nav">
@@ -130,7 +124,7 @@
       </ul>
     </nav>
 
-    <!-- Sidebar idéntico a index.html pero con rutas ../ -->
+    <!-- Sidebar compartida (controles de tema / idioma / microinteracciones + navegacion) -->
     <aside
       class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
       id="sideNav"
@@ -264,6 +258,7 @@
       </nav>
     </aside>
 
+
     <main>
       <section class="resume-section p-3 p-lg-5 d-flex flex-column">
         <div class="my-auto">
@@ -276,7 +271,7 @@
             <header class="blog-post-header d-flex flex-column flex-md-row align-items-center mb-5">
               <div class="mr-md-4 flex-grow-1">
                 <h1 class="blog-title mb-3" data-i18n="blog1-title">Impacto de la Inteligencia Artificial en la automatización de auditorías <span class="text-primary">WCAG</span></h1>
-                <div class="subheading mb-4" data-i18n="blog1-date">Mayo 2026 · IA & Accesibilidad</div>
+                <div class="subheading mb-4" data-i18n="blog1-date">Mayo 2026 · IA &amp; Accesibilidad</div>
                 <p class="lead" data-i18n="blog1-desc">Exploramos cómo los modelos de lenguaje pueden asistir en la detección de problemas complejos de accesibilidad y las limitaciones actuales frente a la evaluación humana especializada.</p>
               </div>
               <div class="flex-shrink-0 mt-4 mt-md-0 text-center text-md-right">
@@ -287,14 +282,14 @@
             <!-- Contenido principal -->
             <div class="blog-content mb-5">
               <p data-i18n="article1-p1">El enfoque "Shift Left" (desplazar las pruebas hacia las etapas tempranas del ciclo de desarrollo) se ha posicionado como el camino correcto para garantizar productos digitales robustos. Es una visión técnica muy potente que, bien refinada, nos permitirá escalar significativamente la calidad de nuestras entregas. Al adoptar este enfoque en la accesibilidad, dejamos de tratar las auditorías WCAG como un cuello de botella al final del proceso, para convertirlas en un pilar del diseño y desarrollo.</p>
-              
+
               <h2 data-i18n="article1-h2-1">La Brecha entre la IA y la Accesibilidad Dinámica</h2>
               <p data-i18n="article1-p2">Sin embargo, desde la perspectiva estricta de QA y accesibilidad, todavía enfrentamos una brecha importante en la automatización. La Inteligencia Artificial y los Modelos de Lenguaje Grande (LLMs) son excelentes analizando la semántica estática del HTML, pero en proyectos reales modernos construidos con React, Angular o Vue, la accesibilidad es principalmente dinámica.</p>
               <p data-i18n="article1-p3">La reactividad del DOM y la gestión compleja de estados hacen que los nodos aparezcan y desaparezcan constantemente, que el foco del teclado deba ser reasignado programáticamente, y que las regiones en vivo (aria-live) emitan anuncios asíncronos. Es precisamente en este escenario de interacción fluida donde la IA generalista aún tiene dificultades para entender la intención real del usuario y validar la lógica de navegación compleja sin intervención humana.</p>
 
               <h2 data-i18n="article1-h2-2">Refinando los Steering Files para la IA</h2>
               <p data-i18n="article1-p4">Para intentar cerrar esa brecha, propongo la revisión exhaustiva y la inyección de criterios de accesibilidad en los "Steering Files" o archivos de dirección (.agents / .md) utilizados para contextualizar a los asistentes de IA, como GitHub Copilot. Mi objetivo es aportar criterios específicos basados en las incidencias recurrentes y las barreras de accesibilidad críticas que detectamos a diario en las auditorías.</p>
-              
+
               <div class="blog-code-container my-4" tabindex="0" aria-label="Ejemplo de código de un Steering File para accesibilidad">
                 <div class="blog-code-header" aria-hidden="true">
                   <div class="blog-code-dots">
@@ -317,7 +312,7 @@
               <h2 data-i18n="article1-h2-3">Delegación de Tareas: Agentes Especializados</h2>
               <p data-i18n="article1-p6">He estado siguiendo de cerca el proyecto de código abierto <a href="https://github.com/Community-Access/accessibility-agents" target="_blank" rel="noopener noreferrer" class="text-info">Community-Access/accessibility-agents <span class="visually-hidden">(Se abre en una nueva pestaña)</span></a>, el cual está ganando mucha tracción por su alta compatibilidad con herramientas de asistencia de código. Este proyecto propone un enfoque fascinante: la delegación de tareas a distintos agentes de IA especializados.</p>
               <p data-i18n="article1-p7">En lugar de un solo agente intentando auditar todo, existen sub-agentes enfocados exclusivamente en contraste de color, otros en semántica ARIA, y otros en navegación por teclado. Estos hallazgos luego son filtrados y consolidados por un "Accessibility Lead" algorítmico. Considero que extraer aprendizajes de esta arquitectura modular para nuestras propias convenciones de creación de Documentos de Diseño de Software (SDD) podría ser un salto cualitativo en la forma en que auditamos y diseñamos la accesibilidad.</p>
-              
+
               <h2 data-i18n="article1-h2-4">Próximos Pasos</h2>
               <p data-i18n="article1-p8">Avanzar hacia una automatización inteligente requiere que alimentemos a las herramientas con las directrices correctas. Coordinar esta revisión de los steering files es fundamental para asegurar que nuestro "contexto compartido" con la IA cubra realmente los escenarios de interacción más críticos para los usuarios con discapacidad, logrando que el "Shift Left" sea una realidad tangible y no solo un concepto teórico.</p>
             </div>
@@ -326,81 +321,19 @@
       </section>
     </main>
 
-    <!-- Bootstrap core JavaScript -->
+    <!-- jQuery + Bundle JS unificado -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- Custom scripts para el menú lateral y UI general -->
-    <script src="../js/resume.min.js"></script>
-    <script src="../js/accessibility.min.js"></script>
-    <script src="../js/cuelume.js"></script>
-    <script src="../js/cuelume-init.js"></script>
-    <script src="../js/ambient.js"></script>
-    <!-- Script principal de i18n y luego nuestro script específico del blog -->
-    <script src="../js/i18n.js"></script>
+    <script src="../js/bundle.min.js"></script>
     <script src="./js/ia-automatizacion-wcag-i18n.js"></script>
-    
-    <!-- Accesibility widget - Accesify -->
-    <script defer
+
+    <!-- Widget de accesibilidad A11Y PRO -->
+    <script
+      defer
       src="https://widget.a11ypro.tech/widget/js/launcher.min.js"
       data-key="ak_live_55a9e27387d22ba7b455b4e3e5325004da70fc9747b6d189"
       data-darkModeStrategy="native"
       data-darkModeNativeClass="dark"
-      data-darkModeTrigger="#checkSwitch">
-    </script>
-    
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Navbar collapse toggle (reemplaza Bootstrap JS)
-        var toggler = document.querySelector(".navbar-toggler");
-        var collapse = document.getElementById("navbarSupportedContent");
-        if (toggler && collapse) {
-          toggler.addEventListener("click", function () {
-            var isExpanded = collapse.classList.contains("show");
-            collapse.classList.toggle("show");
-            toggler.setAttribute("aria-expanded", String(!isExpanded));
-          });
-          document.addEventListener("keydown", function (e) {
-            if (e.key === "Escape" && collapse.classList.contains("show")) {
-              collapse.classList.remove("show");
-              toggler.setAttribute("aria-expanded", "false");
-              toggler.focus();
-            }
-          });
-        }
-        var checkSwitch = document.getElementById("checkSwitch");
-        var themeToggle = document.getElementById("themeToggle");
-        if (checkSwitch && themeToggle) {
-          var syncThemeBtn = function () {
-            var dark = document.documentElement.classList.contains("dark");
-            themeToggle.setAttribute("aria-pressed", String(dark));
-            var icon = themeToggle.querySelector("i");
-            if (icon) {
-              icon.classList.toggle("fa-moon", !dark);
-              icon.classList.toggle("fa-sun", dark);
-            }
-          };
-          themeToggle.addEventListener("click", function () {
-            checkSwitch.click();
-          });
-          new MutationObserver(syncThemeBtn).observe(
-            document.documentElement,
-            { attributes: true, attributeFilter: ["class"] },
-          );
-          syncThemeBtn();
-        }
-
-        var langToggle = document.getElementById("langToggle");
-        if (langToggle) {
-          langToggle.addEventListener("click", function () {
-            i18n.changeLang(i18n.currentLang === "es" ? "en" : "es");
-          });
-        }
-
-        if (checkSwitch) {
-          checkSwitch.addEventListener("change", function () {
-            toggleContrast("dark");
-          });
-        }
-      });
-    </script>
+      data-darkModeTrigger="#checkSwitch"></script>
   </body>
 </html>
+
