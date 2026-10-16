@@ -1,11 +1,26 @@
-.vscode/
+# Dependencies
 node_modules/
 
-# Graphify
-graphify-out/graph.json
-graphify-out/graph.html
-graphify-out/GRAPH_TREE.html
-graphify-out/memory/
+# Environment
+.env
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Build artifacts
+*.tgz
 
 # AI Editor / Agent directories
 .agents/
@@ -16,3 +31,8 @@ graphify-out/memory/
 .cursor/
 .gemini/
 .windsurfrules
+
+# Gobernanza IA, Topology & Graph Outputs
+.dependency-cruiser*.cjs
+scripts/hub/
+graphify-out/

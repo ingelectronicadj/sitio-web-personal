@@ -122,24 +122,6 @@ function buildCssBundle() {
   const outPath = path.join(CSS_DIR, "bundle.min.css");
   fs.writeFileSync(outPath, result.code, "utf8");
 
-  // Mantener resume.min.css y darkMode_v2.min.css actualizados por compatibilidad
-  fs.writeFileSync(
-    path.join(CSS_DIR, "resume.min.css"),
-    esbuild.transformSync(fs.readFileSync(path.join(CSS_DIR, "resume.css"), "utf8"), {
-      loader: "css",
-      minify: true,
-    }).code,
-    "utf8",
-  );
-  fs.writeFileSync(
-    path.join(CSS_DIR, "darkMode_v2.min.css"),
-    esbuild.transformSync(
-      fs.readFileSync(path.join(CSS_DIR, "darkMode_v2.css"), "utf8"),
-      { loader: "css", minify: true },
-    ).code,
-    "utf8",
-  );
-
   console.log(
     `[OK] CSS Bundle: css/bundle.min.css (${(result.code.length / 1024).toFixed(1)} KB)`,
   );

@@ -7,13 +7,15 @@
   "scripts": {
     "build": "node scripts/build.js",
     "dev": "python3 -m http.server 8901",
-    "deps:check": "bash scripts/hub/deps-check.sh .",
-    "deps:graph": "bash scripts/hub/deps-graph.sh . graphify-out"
+    "deps:check": "depcruise js --no-config --output-type err-long && madge --circular js",
+    "deps:graph": "graphify update . && madge --image graphify-out/dep-graph.svg js && madge --circular --image graphify-out/dep-circular.svg js && madge --json js > graphify-out/madge-report.json && depcruise js --no-config --output-type dot | dot -T svg > graphify-out/dep-cruiser-graph.svg && depcruise js --no-config --output-type json > graphify-out/depcruise-report.json"
   },
   "dependencies": {
     "ejs": "^3.1.10"
   },
   "devDependencies": {
-    "esbuild": "^0.23.0"
+    "dependency-cruiser": "^18.1.0",
+    "esbuild": "^0.23.0",
+    "madge": "^8.0.0"
   }
 }
