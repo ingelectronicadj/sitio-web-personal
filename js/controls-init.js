@@ -94,4 +94,20 @@ document.addEventListener("DOMContentLoaded", function () {
       el.classList.add("is-visible");
     });
   }
+
+  // Limpiar cualquier Service Worker / cache de la PWA anterior en clientes existentes
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.getRegistrations().then(function (regs) {
+      regs.forEach(function (reg) {
+        reg.unregister();
+      });
+    });
+  }
+  if ("caches" in window) {
+    caches.keys().then(function (keys) {
+      keys.forEach(function (k) {
+        caches.delete(k);
+      });
+    });
+  }
 });

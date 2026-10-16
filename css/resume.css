@@ -779,6 +779,7 @@ ul.horizontal li a {
 }
 
 ul.horizontal li a:hover,
+ul.horizontal li a:focus-visible,
 ul.horizontal li a.active {
   background: var(--btn-hover-bg) !important;
   color: var(--btn-hover-fg) !important;
@@ -1006,9 +1007,45 @@ ul.horizontal li a.active {
     bottom: 90px;
     right: 25px;
   }
+  /* Aire lateral e interno de cards en movil/tablet y sin desplazamiento X al scroll */
+  section.resume-section {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+
+  .about-card,
+  .resume-item,
+  .experience-card {
+    padding: 1.35rem 1.35rem !important;
+  }
+
+  .resume-item:hover,
+  .resume-item.is-in-view {
+    transform: none !important;
+  }
+
   .toogleContainer {
-    align-items: flex-start;
-    margin: auto;
+    align-items: center;
+    padding: 0 !important;
+    margin: 0 auto !important;
+  }
+
+  /* En movil/tablet: ocultar el canvas de particulas del sidebar (evita que se
+     estire verticalmente al desplegar el menu) y posicionar la hamburguesa a la
+     derecha para que los 3 botones .ctrl-btn queden centrados con el H1 */
+  #sideNav .side-nav-canvas {
+    display: none !important;
+  }
+
+  #sideNav {
+    min-height: 60px;
+    padding: 0.5rem 1rem !important;
+  }
+
+  #sideNav .navbar-toggler {
+    position: absolute !important;
+    right: 1rem !important;
+    top: 8px !important;
   }
   .switch {
     top: -14px;
@@ -1289,6 +1326,14 @@ ul.horizontal li a.active {
 
 /* --- Carrusel de Eventos (solo desktop, lado a lado) --- */
 @media (min-width: 992px) {
+  section#welcome-section.resume-section {
+    padding-top: 5rem !important;
+  }
+
+  #welcome-section > .my-auto {
+    margin-top: 0 !important;
+  }
+
   .welcome-header-row {
     display: flex;
     align-items: center;
@@ -1916,7 +1961,20 @@ main {
   opacity: 0.6;
 }
 
-/* Icono hamburguesa dentro del circulo 44x44: usar barras del color --btn-fg */
+/* Icono hamburguesa y texto ES dentro del circulo 44x44: usar --btn-fg en reposo
+   y --btn-hover-fg en hover/focus-visible (vence html.dark span { color:#f9fafb !important }) */
+#sideNav .navbar-toggler-icon,
+.ctrl-btn .ctrl-btn-text {
+  color: var(--btn-fg) !important;
+}
+
+#sideNav .navbar-toggler:hover .navbar-toggler-icon,
+#sideNav .navbar-toggler:focus-visible .navbar-toggler-icon,
+.ctrl-btn:hover .ctrl-btn-text,
+.ctrl-btn:focus-visible .ctrl-btn-text {
+  color: var(--btn-hover-fg) !important;
+}
+
 #sideNav .navbar-toggler-icon {
   width: 18px !important;
   height: 14px !important;
@@ -1953,31 +2011,43 @@ main {
   margin-right: 0.75rem;
 }
 
+/* En :hover y :focus-visible los botones se rellenan con el color de marca
+   (patron landing/design-system/components.css:224) para que el anillo blanco
+   intermedio contraste siempre contra el boton y contra el anillo exterior */
 .ctrl-btn:hover,
+.ctrl-btn:focus-visible,
 #sideNav .navbar-toggler:hover,
+#sideNav .navbar-toggler:focus-visible,
 .social-icons a:hover,
+.social-icons a:focus-visible,
 .slick-prev:hover,
+.slick-prev:focus-visible,
 .slick-next:hover,
+.slick-next:focus-visible,
 .pagination-btn:hover:not(:disabled),
+.pagination-btn:focus-visible:not(:disabled),
 .pagination-number-btn:hover:not(.active),
+.pagination-number-btn:focus-visible:not(.active),
 .pagination-number-btn.active {
   background: var(--btn-hover-bg) !important;
   border-color: var(--btn-hover-bg) !important;
   color: var(--btn-hover-fg) !important;
   transform: translateY(-2px);
-  box-shadow: var(--btn-hover-shadow) !important;
+  box-shadow: var(--btn-hover-shadow);
 }
 
-/* Flechas Slick: mantener translateY(-50%) de centrado vertical en hover */
+/* Flechas Slick: mantener translateY(-50%) de centrado vertical en hover/focus */
 .slick-prev:hover,
-.slick-next:hover {
+.slick-next:hover,
+.slick-prev:focus-visible,
+.slick-next:focus-visible {
   transform: translateY(-50%) scale(1.06) !important;
 }
 
 .slick-prev:before,
 .slick-next:before,
-.slick-prev:focus:before,
-.slick-next:focus:before,
+.slick-prev:focus:not(:focus-visible):before,
+.slick-next:focus:not(:focus-visible):before,
 .slick-prev:active:before,
 .slick-next:active:before {
   font-size: 16px !important;
@@ -1985,7 +2055,9 @@ main {
 }
 
 .slick-prev:hover:before,
-.slick-next:hover:before {
+.slick-next:hover:before,
+.slick-prev:focus-visible:before,
+.slick-next:focus-visible:before {
   color: var(--btn-hover-fg) !important;
 }
 
@@ -2036,12 +2108,15 @@ main {
   font-weight: 900 !important;
   font-size: 13px !important;
   line-height: 1 !important;
+  width: auto !important;
+  height: auto !important;
   color: var(--btn-fg) !important;
   opacity: 1 !important;
   position: absolute !important;
   top: 50% !important;
   left: 50% !important;
   margin: 0 !important;
+  padding: 0 !important;
 }
 
 .slick-autoplay-toggle-button .slick-pause-icon:before {
@@ -2055,17 +2130,21 @@ main {
 }
 
 .slick-autoplay-toggle-button:hover .slick-pause-icon:before,
-.slick-autoplay-toggle-button:hover .slick-play-icon:before {
+.slick-autoplay-toggle-button:hover .slick-play-icon:before,
+.slick-autoplay-toggle-button:focus-visible .slick-pause-icon:before,
+.slick-autoplay-toggle-button:focus-visible .slick-play-icon:before {
   color: var(--btn-hover-fg) !important;
 }
 
 .sliderProjects .slick-autoplay-toggle-button:hover,
-.events-carousel-wrapper .slick-autoplay-toggle-button:hover {
+.events-carousel-wrapper .slick-autoplay-toggle-button:hover,
+.sliderProjects .slick-autoplay-toggle-button:focus-visible,
+.events-carousel-wrapper .slick-autoplay-toggle-button:focus-visible {
   background: var(--btn-hover-bg) !important;
   border-color: var(--btn-hover-bg) !important;
   color: var(--btn-hover-fg) !important;
   transform: translateY(-2px);
-  box-shadow: var(--btn-hover-shadow) !important;
+  box-shadow: var(--btn-hover-shadow);
 }
 
 /* 3. Boton volver arriba: mismo circulo 44x44 glass que el resto (JS controla display) */
@@ -2100,12 +2179,13 @@ main {
   font-size: 16px;
 }
 
-.ir-arriba:hover {
+.ir-arriba:hover,
+.ir-arriba:focus-visible {
   background: var(--btn-hover-bg) !important;
   border-color: var(--btn-hover-bg) !important;
   color: var(--btn-hover-fg) !important;
   transform: translateY(-2px);
-  box-shadow: var(--btn-hover-shadow) !important;
+  box-shadow: var(--btn-hover-shadow);
 }
 
 /* 4. Botones pill con texto: CV hero, chips de investigacion y etiquetas de diploma/hito */
@@ -2150,16 +2230,16 @@ main {
 }
 
 .hero-cv-btn:hover,
-.hero-cv-btn:focus,
+.hero-cv-btn:focus-visible,
 .research-link-chip:hover,
-.research-link-chip:focus,
+.research-link-chip:focus-visible,
 .diploma-thumbnail-link:hover .diploma-label,
-.diploma-thumbnail-link:focus .diploma-label {
+.diploma-thumbnail-link:focus-visible .diploma-label {
   background: var(--btn-hover-bg) !important;
   border-color: var(--btn-hover-bg) !important;
   color: var(--btn-hover-fg) !important;
   transform: translateY(-2px);
-  box-shadow: var(--btn-hover-shadow) !important;
+  box-shadow: var(--btn-hover-shadow);
 }
 
 /* ---------- Layout del bloque de identidad en el Hero ---------- */
@@ -2240,8 +2320,25 @@ main {
   }
 }
 
-/* Doble anillo de foco al final del archivo: debe ganar sobre box-shadow !important de componentes */
-*:focus-visible {
+/* Doble anillo de foco al final del archivo: debe ganar sobre cualquier box-shadow de componentes */
+*:focus-visible,
+a:focus-visible,
+button:focus-visible,
+.ctrl-btn:focus-visible,
+.hero-cv-btn:focus-visible,
+.social-icons a:focus-visible,
+.slick-prev:focus-visible,
+.slick-next:focus-visible,
+.slick-autoplay-toggle-button:focus-visible,
+.ir-arriba:focus-visible,
+.pagination-btn:focus-visible,
+.pagination-number-btn:focus-visible,
+.research-link-chip:focus-visible,
+.diploma-thumbnail-link:focus-visible,
+#sideNav *:focus-visible,
+#navbar ul.horizontal li a:focus-visible,
+.sliderProjects *:focus-visible,
+.events-carousel-wrapper *:focus-visible {
   outline: 3px solid transparent !important;
   outline-offset: 4px !important;
   box-shadow:

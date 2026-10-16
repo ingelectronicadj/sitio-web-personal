@@ -2,12 +2,30 @@
 
 ## [2.2.0] - 2026-10-15
 
+### Removed
+
+- Artefactos de la PWA heredada eliminados (`manifest.json`,
+  `offline.html`, `img/pwa/` y metadatos `apple-touch-*`/registro del SW en
+  `index.html`). `sw.js` se reemplaza por un worker de auto-desregistro que
+  borra todos los `caches`, llama `registration.unregister()` y recarga las
+  pestanas abiertas; `js/controls-init.js` desregistra cualquier SW residual
+  al cargar.
+
+### Added
+
+- Variantes `*-dark.webp` generadas con Pillow para los cinco logos que
+  perdian contraste en modo oscuro (Dokuma, UNAB, Fundacion Neumologica,
+  Alcaldia de Medellin y Assersum): isotipos a color intactos, texto oscuro
+  convertido a claro y fondos blancos opacos recortados. Cableadas con el
+  patron `theme-logo--light` / `theme-logo--dark`.
+
 ### Changed
 
 - Menu superior `#navbar ul.horizontal` integrado al sistema **Glass Pill**
   (`--btn-*`): capsula flotante con items pill internos (`border-radius:
-  999px`) y alineacion exacta en columna sobre `.events-carousel-wrapper`
-  (mismo ancho y bordes izquierdo/derecho).
+  999px`), alineacion exacta en columna sobre `.events-carousel-wrapper` y
+  `20px` de separacion vertical limpia (`section#welcome-section.resume-section
+  { padding-top: 5rem }` + `#welcome-section > .my-auto { margin-top: 0 }`).
 - Alineacion al centro de logos, cargos (`h3`), empresa (`.subheading`),
   fechas (`.resume-date`) y enlaces de certificados en las cards de
   experiencia en vista movil (`<= 767.98px`).
@@ -30,6 +48,23 @@
 - `#navbar` perdia `position: fixed` por la regla posterior `main, #navbar {
   position: relative }` y provocaba scroll horizontal; `<nav>` interno del
   sidebar en modo oscuro recibia fondo `#070714`.
+- Anillo de foco `:focus-visible` aplastado por `box-shadow !important` de
+  componentes con mayor especificidad; regla final elevada a selectores con
+  ID y `:focus` retirado de las reglas `:hover` (patron doble-anillo A11Y
+  PRO: separacion + blanco + azul/cyan en ambos temas).
+- Menu movil: `.navbar-toggler` quedaba `22px` descentrado y `6.4px` mas
+  alto que los `.ctrl-btn`; ahora posicionado absoluto con `top: 8px` y
+  `.toogleContainer { margin: 0 auto }` centrado con "DIEGO MENA".
+- Contraste del icono hamburguesa y del texto `ES` en modo oscuro: `html.dark
+  span` los forzaba a `#f9fafb` sobre hover cyan; ahora usan
+  `var(--btn-fg)`/`var(--btn-hover-fg)` (10.4:1 sobre `#38bdf8`).
+- `.side-nav-canvas` se estiraba 6.8x al abrir el menu movil; oculto en
+  `<= 991.98px` y fondo opaco restaurado en `#navbarSupportedContent`.
+- Glifo de pause/play descentrado por caja `:before` fija de `20x20px`;
+  ahora `width/height: auto` + `translate(-50%, -50%)`.
+- Cards moviles pegadas al borde: padding lateral de seccion a `1.5rem`,
+  padding interno a `1.35rem` y `translateX` de `.is-in-view`/`:hover`
+  desactivado en `<= 991.98px`.
 
 ## [2.1.0] - 2026-10-15
 

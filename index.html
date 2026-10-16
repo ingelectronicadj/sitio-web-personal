@@ -71,21 +71,28 @@
       onload="this.rel = 'stylesheet'" />
     <link href="./vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
     <!-- Bundle unificado de estilos (bootstrap + slick + resume + darkMode_v2 + blog) -->
-    <link rel="stylesheet" href="./css/bundle.min.css" />
-
-    <!-- Progressive Web Application -->
-    <meta name="MobileOptimized" content="width" />
-    <meta name="HandheldFriendly" content="true" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta
-      name="apple-mobile-web-app-status-bar-style"
-      content="black-translucent" />
+    <link rel="stylesheet" href="./css/bundle.min.css?v=2.2.0" />
     <meta name="theme-color" content="#0a0a1a" />
-    <link rel="apple-touch-icon" href="./img/pwa/icon_192.webp" />
-    <link rel="apple-touch-startup-image" href="./img/pwa/icon_384.webp" />
-    <link rel="manifest" href="./manifest.json" />
     <link rel="preload" as="image" href="./img/carrusel/Team-Hiberus.webp" />
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function (regs) {
+          if (regs.length) {
+            Promise.all(regs.map(function (r) { return r.unregister(); }))
+              .then(function () {
+                return "caches" in window
+                  ? caches.keys().then(function (ks) {
+                      return Promise.all(ks.map(function (k) { return caches.delete(k); }));
+                    })
+                  : null;
+              })
+              .then(function () {
+                location.reload();
+              });
+          }
+        });
+      }
+    </script>
 
     <!-- Metaetiquetas Open Graph -->
     <meta property="og:url" content="https://diegomena.rocks/" />
@@ -1085,7 +1092,13 @@
                 <img
                   src="./img/experience/logo-dokuma.webp"
                   alt=""
-                  class="company-logo align-self-center mr-md-3 mb-2 mb-md-0"
+                  class="company-logo theme-logo theme-logo--light align-self-center mr-md-3 mb-2 mb-md-0"
+                  style="max-width: 150px;"
+                  loading="lazy" />
+                <img
+                  src="./img/experience/logo-dokuma-dark.webp"
+                  alt=""
+                  class="company-logo theme-logo theme-logo--dark align-self-center mr-md-3 mb-2 mb-md-0"
                   style="max-width: 150px;"
                   loading="lazy" />
                 <div class="text-center text-md-left mt-2 mt-md-0">
@@ -1182,7 +1195,7 @@
                   style="max-width: 150px;"
                   loading="lazy" />
                 <img
-                  src="./img/experience/logo-unab.webp"
+                  src="./img/experience/logo-unab-dark.webp"
                   alt="Universidad Autónoma de Bucaramanga logo"
                   class="company-logo theme-logo theme-logo--dark align-self-center mr-md-3 mb-2 mb-md-0"
                   style="max-width: 150px;"
@@ -1233,7 +1246,13 @@
                 <img
                   src="./img/experience/logo-fun-neumologica.webp"
                   alt=""
-                  class="company-logo align-self-center mr-md-3 mb-2 mb-md-0"
+                  class="company-logo theme-logo theme-logo--light align-self-center mr-md-3 mb-2 mb-md-0"
+                  style="max-width: 150px;"
+                  loading="lazy" />
+                <img
+                  src="./img/experience/logo-fun-neumologica-dark.webp"
+                  alt=""
+                  class="company-logo theme-logo theme-logo--dark align-self-center mr-md-3 mb-2 mb-md-0"
                   style="max-width: 150px;"
                   loading="lazy" />
                 <div class="text-center text-md-left mt-2 mt-md-0">
@@ -1271,7 +1290,13 @@
                 <img
                   src="./img/experience/logo-alcaldia-medellin.webp"
                   alt=""
-                  class="company-logo align-self-center mr-md-3 mb-2 mb-md-0"
+                  class="company-logo theme-logo theme-logo--light align-self-center mr-md-3 mb-2 mb-md-0"
+                  style="max-width: 150px;"
+                  loading="lazy" />
+                <img
+                  src="./img/experience/logo-alcaldia-medellin-dark.webp"
+                  alt=""
+                  class="company-logo theme-logo theme-logo--dark align-self-center mr-md-3 mb-2 mb-md-0"
                   style="max-width: 150px;"
                   loading="lazy" />
                 <div class="text-center text-md-left mt-2 mt-md-0">
@@ -1309,7 +1334,13 @@
                 <img
                   src="./img/experience/logo-assersum.webp"
                   alt=""
-                  class="company-logo align-self-center mr-md-3 mb-2 mb-md-0"
+                  class="company-logo theme-logo theme-logo--light align-self-center mr-md-3 mb-2 mb-md-0"
+                  style="max-width: 150px;"
+                  loading="lazy" />
+                <img
+                  src="./img/experience/logo-assersum-dark.webp"
+                  alt=""
+                  class="company-logo theme-logo theme-logo--dark align-self-center mr-md-3 mb-2 mb-md-0"
                   style="max-width: 150px;"
                   loading="lazy" />
                 <div class="text-center text-md-left mt-2 mt-md-0">
@@ -2690,7 +2721,7 @@
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
       defer></script>
-    <script src="./js/bundle.min.js" defer></script>
+    <script src="./js/bundle.min.js?v=2.2.0" defer></script>
 
     <!-- Accesibility widget - Accesify -->
     <script defer
@@ -2699,24 +2730,6 @@
       data-darkModeStrategy="native"
       data-darkModeNativeClass="dark"
       data-darkModeTrigger="#checkSwitch">
-    </script>
-
-    <script>
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", function () {
-          navigator.serviceWorker.register("./sw.js").then(
-            function (registration) {
-              console.log(
-                "ServiceWorker registration successful with scope: ",
-                registration.scope,
-              );
-            },
-            function (err) {
-              console.log("ServiceWorker registration failed: ", err);
-            },
-          );
-        });
-      }
     </script>
   </body>
 </html>

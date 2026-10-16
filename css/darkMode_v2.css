@@ -115,13 +115,18 @@ html.dark span {
   box-shadow: none !important;
 }
 
-/* Dentro del sidebar y del nav superior flotante los contenedores son transparentes */
+/* Dentro del sidebar desktop y del nav superior flotante los contenedores son transparentes */
 html.dark #sideNav .navbar-brand,
 html.dark #sideNav .navbar-nav,
-html.dark #sideNav .navbar-collapse,
-html.dark #sideNav nav,
 html.dark #navbar {
   background-color: transparent !important;
+}
+
+@media (min-width: 992px) {
+  html.dark #sideNav .navbar-collapse,
+  html.dark #sideNav nav {
+    background-color: transparent !important;
+  }
 }
 
 /* Sidebar: gradiente navy profundo acorde al resto del modo oscuro */
@@ -186,6 +191,7 @@ html.dark ul.horizontal li a {
 }
 
 html.dark ul.horizontal li a:hover,
+html.dark ul.horizontal li a:focus-visible,
 html.dark ul.horizontal li a.active {
   background: var(--btn-hover-bg) !important;
   color: var(--btn-hover-fg) !important;
@@ -210,7 +216,9 @@ html.dark .ir-arriba .fa-arrow-up:before {
 }
 
 html.dark .ir-arriba:hover .fa-arrow-up,
-html.dark .ir-arriba:hover .fa-arrow-up:before {
+html.dark .ir-arriba:hover .fa-arrow-up:before,
+html.dark .ir-arriba:focus-visible .fa-arrow-up,
+html.dark .ir-arriba:focus-visible .fa-arrow-up:before {
   color: var(--btn-hover-fg) !important;
 }
 
@@ -420,21 +428,41 @@ html.dark .ir-arriba {
 }
 
 html.dark .ir-arriba:hover,
+html.dark .ir-arriba:focus-visible,
 html.dark .hero-cv-btn:hover,
-html.dark .hero-cv-btn:focus,
+html.dark .hero-cv-btn:focus-visible,
 html.dark .hero-cv-btn:hover span,
-html.dark .hero-cv-btn:focus span {
+html.dark .hero-cv-btn:focus-visible span {
   background: var(--btn-hover-bg) !important;
   color: var(--btn-hover-fg) !important;
   text-decoration: none !important;
 }
 
-/* Triple anillo de foco al final del archivo: debe ganar sobre box-shadow !important de componentes */
-html.dark *:focus-visible {
+/* Triple anillo de foco al final del archivo (patron exacto de landing/design-system/base.css
+   con --white: #0a0a1a en dark: 2px separacion oscura + 2px anillo blanco + 3px anillo cyan) */
+html.dark *:focus-visible,
+html.dark a:focus-visible,
+html.dark button:focus-visible,
+html.dark .ctrl-btn:focus-visible,
+html.dark .hero-cv-btn:focus-visible,
+html.dark .social-icons a:focus-visible,
+html.dark .slick-prev:focus-visible,
+html.dark .slick-next:focus-visible,
+html.dark .slick-autoplay-toggle-button:focus-visible,
+html.dark .ir-arriba:focus-visible,
+html.dark .pagination-btn:focus-visible,
+html.dark .pagination-number-btn:focus-visible,
+html.dark .research-link-chip:focus-visible,
+html.dark .diploma-thumbnail-link:focus-visible,
+html.dark #sideNav *:focus-visible,
+html.dark #navbar ul.horizontal li a:focus-visible,
+html.dark .sliderProjects *:focus-visible,
+html.dark .events-carousel-wrapper *:focus-visible {
   outline: 3px solid transparent !important;
   outline-offset: 4px !important;
   box-shadow:
-    0 0 0 2px #ffffff,
+    0 0 0 2px #0a0a1a,
     0 0 0 4px #ffffff,
     0 0 0 7px #38bdf8 !important;
+  transition: box-shadow 0s !important;
 }

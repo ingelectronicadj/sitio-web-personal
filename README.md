@@ -35,8 +35,6 @@ Sitio web personal, portafolio profesional y blog técnico de **Diego Mena** (Ex
 ├── scripts/
 │   └── build.js               # Pipeline: EJS -> HTML + esbuild CSS/JS + sitemap.xml
 ├── index.html                 # Página principal del portafolio
-├── sw.js                      # Service Worker (PWA Stale-While-Revalidate)
-├── manifest.json              # Web App Manifest (v2.2.0)
 ├── robots.txt                 # Directivas para buscadores y bots de citación IA
 ├── sitemap.xml                # [Generado] Mapa XML del sitio
 └── llms.txt                   # Mapa estructurado para agentes y motores generativos
@@ -71,7 +69,6 @@ pnpm run dev
    pnpm run build
    ```
    Esto genera automáticamente `blog/<slug>.html`, inserta la tarjeta en `#blog` dentro de `index.html`, empaqueta CSS/JS y actualiza `sitemap.xml`.
-4. Si se despliega con Service Worker activo, incrementar `CACHE_NAME` en `sw.js` y añadir `./blog/<slug>.html` a `urlsToCache`.
 
 ---
 

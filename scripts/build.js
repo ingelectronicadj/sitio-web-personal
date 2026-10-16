@@ -11,7 +11,7 @@
  *    (resume + openLink + slick + slick-init + i18n + accessibility +
  *     navbar-focus + pagination + ambient + cuelume + cuelume-init +
  *     scrolly + controls-init).
- * 5) Sincroniza sitemap.xml y sw.js (incrementa version de cache si se pasa --bump-sw).
+ * 5) Sincroniza sitemap.xml.
  */
 const fs = require("fs");
 const path = require("path");
