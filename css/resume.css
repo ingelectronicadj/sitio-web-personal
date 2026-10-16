@@ -470,6 +470,11 @@ section.resume-section .resume-item .resume-date {
   .diploma-thumbnail-link {
     margin-top: 0;
   }
+
+  #education .diploma-thumbnail-link {
+    width: min(260px, 100%) !important;
+    max-width: none !important;
+  }
 }
 
 @media screen and (min-width: 1025px) {
@@ -548,25 +553,101 @@ html.dark #experience .theme-logo--dark {
 }
 
 /* Etiquetas para la pila tecnológica */
-.skill-tag {
-  display: inline-block;
-  padding: 0.2rem 0.6rem;
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
-  background-color: rgba(0, 85, 179, 0.1);
-  color: #0055b3;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  border: 1px solid rgba(0, 85, 179, 0.2);
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
+/* Contenedor de chips: flex-wrap con gap uniforme */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
 }
 
-.skill-tag:hover {
-  background-color: #0055b3;
-  color: #fff;
+/* Chips de habilidad: Glass Pill informativo (no interactivo, sin hover) */
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
+  padding: 0 0.75rem;
+  background: var(--btn-bg);
+  color: var(--btn-fg) !important;
+  border: 1.5px solid var(--btn-border);
+  border-radius: 999px;
+  box-shadow: var(--btn-shadow);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Grid de cards de habilidades: 3 columnas en desktop ancho */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+}
+
+@media (min-width: 1280px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .skills-grid .resume-item {
+    margin-bottom: 0 !important;
+    height: 100%;
+  }
+}
+
+/* Certificaciones: lista de pill-links */
+.cert-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.cert-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.95rem;
+  background: var(--btn-bg);
+  border: 1.5px solid var(--btn-border) !important;
+  border-radius: 999px;
+  color: var(--btn-fg) !important;
+  box-shadow: var(--btn-shadow);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition:
+    background-color 0.22s ease,
+    border-color 0.22s ease,
+    color 0.22s ease,
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.cert-pill > span,
+.cert-pill:hover > span,
+.cert-pill:focus-visible > span {
+  color: inherit !important;
+}
+
+.cert-pill .fa-certificate {
+  color: var(--btn-fg);
+  font-size: 0.95rem;
+}
+
+.cert-pill:hover,
+.cert-pill:focus-visible {
+  background: var(--btn-hover-bg) !important;
+  border-color: var(--btn-hover-bg) !important;
+  color: var(--btn-hover-fg) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--btn-hover-shadow);
+}
+
+.cert-pill:hover .fa-certificate,
+.cert-pill:focus-visible .fa-certificate {
+  color: var(--btn-hover-fg);
 }
 
 /* Reducir espacio vertical en descripciones cortas (Eventos) */
@@ -1370,6 +1451,35 @@ ul.horizontal li a.active {
   }
 }
 
+/* Tablets/laptops pequenas (992-1279px): el sidebar ya lista las 7
+   secciones, la capsula superior se oculta y el hero se apila */
+@media (min-width: 992px) and (max-width: 1279px) {
+  #navbar {
+    display: none;
+  }
+
+  section#welcome-section.resume-section {
+    padding-top: 3rem !important;
+  }
+
+  .welcome-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .events-carousel-wrapper {
+    width: min(100%, 480px);
+    max-width: none;
+    margin: 0 auto;
+  }
+
+  #welcome-section .my-auto {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+}
+
 .events-carousel .img-responsive {
   height: 280px;
   object-fit: cover;
@@ -1823,6 +1933,11 @@ html.dark .company-header .subheading {
   .company-logo[src*="logo-alcaldia-medellin"],
   .company-logo[src*="logo-fun-neumologica"] {
     height: 92px !important;
+  }
+
+  .skill-tags,
+  .cert-list {
+    justify-content: center;
   }
 
   .diploma-thumbnail-link {

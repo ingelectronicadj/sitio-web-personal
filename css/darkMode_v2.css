@@ -46,6 +46,17 @@ html.dark a:focus {
   text-decoration: underline;
 }
 
+/* Los pills Glass ya traen su propio color de hover (texto oscuro sobre cyan) */
+html.dark .cert-pill:hover,
+html.dark .cert-pill:focus-visible,
+html.dark .research-link-chip:hover,
+html.dark .research-link-chip:focus-visible,
+html.dark .hero-cv-btn:hover,
+html.dark .hero-cv-btn:focus-visible {
+  color: var(--btn-hover-fg) !important;
+  text-decoration: none !important;
+}
+
 /* Triple anillo de foco en oscuro: doble separador blanco + anillo cyan (patron landing) */
 html.dark *:focus-visible {
   outline: 3px solid transparent !important;
@@ -345,14 +356,14 @@ html.dark .research-link-chip:focus {
   box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3) !important;
 }
 
-/* --- Miniaturas de diplomas en modo oscuro --- */
-html.dark .diploma-thumbnail-link {
+/* --- Miniaturas de diplomas en modo oscuro (solo educacion, donde hay imagen) --- */
+html.dark #education .diploma-thumbnail-link {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-html.dark .diploma-thumbnail-link:hover,
-html.dark .diploma-thumbnail-link:focus {
+html.dark #education .diploma-thumbnail-link:hover,
+html.dark #education .diploma-thumbnail-link:focus {
   box-shadow: 0 6px 20px rgba(56, 189, 248, 0.3);
   border-color: #38bdf8;
 }

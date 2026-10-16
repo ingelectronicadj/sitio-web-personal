@@ -1,5 +1,34 @@
 # Changelog
 
+## [2.3.0] - 2026-10-16
+
+### Changed
+
+- Seccion Habilidades: chips `.skill-tag` migrados al sistema Glass Pill
+  (`--btn-*`, `radius:999px`, contenedor `.skill-tags` flex con `gap`
+  uniforme y altura 30px); parrafos descriptivos resumidos (ES/EN) y las 3
+  cards pasan a `.skills-grid` de 3 columnas en `>=1280px`.
+- Certificaciones reescritas como pill-links `.cert-pill` (icono
+  `fa-certificate` + nombre + texto sr-only de nueva pestana); la lista
+  `fa-ul` y el texto "Certificado" visible se retiraron.
+- Iconos `fa-external-link-alt` eliminados de todos los botones y enlaces
+  (`link-new-window` queda solo como clase de marcado).
+- Espaciado normalizado: h2 de seccion a `mb-3` (16px) en todas las
+  secciones, cards de Eventos a `mb-3`, `.skills-grid` con `mb-4`.
+- Tablets 992-1279px: `#navbar` superior oculto (el sidebar ya lista las 7
+  secciones), hero apilado con carrusel centrado; fin del desborde
+  horizontal (`docW` 1128 -> 1024).
+- Miniaturas de diploma en Educacion a `min(260px,100%)` en `<=1024px`.
+- Telefono del hero corregido a `(+57) 305 939 5154`.
+
+### Fixed
+
+- Hover de `.cert-pill`, `.hero-cv-btn` y `.research-link-chip` en modo
+  oscuro: `html.dark a:hover` (#93c5fd + underline) aplastaba el texto sobre
+  fondo cyan; override dedicado a `var(--btn-hover-fg)`.
+- Borde/box-shadow rectangular de `.diploma-thumbnail-link` en modo oscuro
+  se limita a `#education` (en Experiencia los hitos solo llevan label pill).
+
 ## [2.2.0] - 2026-10-15
 
 ### Removed
