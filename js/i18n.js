@@ -833,6 +833,8 @@ const i18n = {
   },
 };
 
+window.i18n = i18n;
+
 function revealAfterI18n() {
   document.documentElement.classList.remove("i18n-pending");
 }

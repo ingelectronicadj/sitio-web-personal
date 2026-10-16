@@ -106,28 +106,21 @@ html.dark .subheading {
   background-color: transparent !important;
 }
 
-/* No aplicar fondos individuales a textos para evitar el efecto de "resaltado" */
+/* No aplicar fondos individuales a textos generales */
 html.dark p,
 html.dark h3,
 html.dark b,
-html.dark span,
-html.dark a {
+html.dark span {
   background-color: transparent !important;
   box-shadow: none !important;
-  /* Eliminado padding: 0 para mantener sincronización con el modo claro */
 }
 
-/* Ajustes específicos de contenedores (fuera del sidebar, que conserva su gradiente) */
-html.dark nav:not(#sideNav),
-html.dark .navbar-brand,
-html.dark .navbar:not(#sideNav) {
-  background-color: #070714 !important;
-}
-
-/* Dentro del sidebar los contenedores heredan el gradiente */
+/* Dentro del sidebar y del nav superior flotante los contenedores son transparentes */
 html.dark #sideNav .navbar-brand,
 html.dark #sideNav .navbar-nav,
-html.dark #sideNav .navbar-collapse {
+html.dark #sideNav .navbar-collapse,
+html.dark #sideNav nav,
+html.dark #navbar {
   background-color: transparent !important;
 }
 
@@ -174,33 +167,29 @@ html.dark #sideNav {
   border-right: 1px solid rgba(255, 255, 255, 0.05) !important;
 }
 
-/* Menú superior dark: pill glass flotante, no barra plana */
+/* Menú superior dark: hereda --btn-* (cápsula glass flotante + pills internos) */
 html.dark ul.horizontal {
-  border: 1px solid rgba(56, 189, 248, 0.2) !important;
-  background: rgba(13, 25, 48, 0.72) !important;
+  border: 1.5px solid var(--btn-border) !important;
+  background: var(--btn-bg) !important;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+  box-shadow: var(--btn-shadow) !important;
 }
 
 html.dark ul.horizontal li {
   background-color: transparent !important;
-  border-right-color: rgba(56, 189, 248, 0.15) !important;
-  transition: background-color 0.3s ease;
+  border: none !important;
 }
 
-html.dark ul.horizontal li:hover,
-html.dark ul.horizontal li:has(a.active) {
-  background-color: rgba(56, 189, 248, 0.12) !important;
+html.dark ul.horizontal li a {
+  color: var(--btn-fg) !important;
 }
 
 html.dark ul.horizontal li a:hover,
 html.dark ul.horizontal li a.active {
-  text-shadow: 0.5px 0 0 currentColor !important; /* Simula negrita sin desplazamiento */
-}
-
-html.dark ul.horizontal li a {
-  color: #f9fafb !important;
+  background: var(--btn-hover-bg) !important;
+  color: var(--btn-hover-fg) !important;
+  text-decoration: none !important;
 }
 
 html.dark .text-primary {
@@ -209,22 +198,20 @@ html.dark .text-primary {
 }
 
 /* Correcciones de iconos y elementos interactivos */
-html.dark .navbar-toggler-icon,
-html.dark .ir-arriba,
 html.dark .toogleContainer,
 html.dark .flags-lang,
 html.dark .flags {
   background-color: transparent !important;
 }
 
-/* Fix específico para el botón "Volver arriba": Sólido y del tamaño de los botones del carrusel */
-html.dark .ir-arriba .fa-circle {
-  color: #38bdf8 !important; /* Círculo cyan sólido */
-}
-
 html.dark .ir-arriba .fa-arrow-up,
 html.dark .ir-arriba .fa-arrow-up:before {
-  color: #0a0a1a !important; /* Flecha oscura sobre fondo cyan */
+  color: var(--btn-fg) !important;
+}
+
+html.dark .ir-arriba:hover .fa-arrow-up,
+html.dark .ir-arriba:hover .fa-arrow-up:before {
+  color: var(--btn-hover-fg) !important;
 }
 
 /* Estilo para el interruptor (switch) de modo oscuro */
@@ -236,18 +223,7 @@ html.dark .sliderContrast:before {
   background-color: #38bdf8 !important;
 }
 
-/* Pausa carrusel en modo oscuro */
-html.dark .slick-autoplay-toggle-button {
-  color: #38bdf8 !important;
-  background-color: #151a33 !important;
-  border: 1px solid rgba(56, 189, 248, 0.3) !important;
-  border-radius: 8px;
-}
-
-html.dark .slick-autoplay-toggle-button:hover {
-  background-color: #38bdf8 !important;
-  color: #0a0a1a !important;
-}
+/* Pausa carrusel en modo oscuro (hereda --btn-* del sistema unificado) */
 
 /* Asegurar que los enlaces en el sideNav se vean bien */
 html.dark #sideNav .nav-link {

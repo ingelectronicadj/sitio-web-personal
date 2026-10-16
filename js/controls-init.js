@@ -44,9 +44,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   var langToggle = document.getElementById("langToggle");
-  if (langToggle && typeof window.i18n !== "undefined") {
+  if (langToggle && typeof i18n !== "undefined") {
     langToggle.addEventListener("click", function () {
-      window.i18n.changeLang(window.i18n.currentLang === "es" ? "en" : "es");
+      i18n.changeLang(i18n.currentLang === "es" ? "en" : "es");
     });
   }
 

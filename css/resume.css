@@ -721,53 +721,73 @@ a:hover {
 #navbar {
   background-color: transparent !important;
   display: flex;
-  justify-content: center;
-  width: 100%;
+  justify-content: flex-end;
   position: fixed;
-  top: 0;
+  top: 12px;
+  left: 17rem;
+  right: 0;
+  max-width: 75rem;
+  padding: 0 3rem;
+  width: auto;
   z-index: 10;
+  pointer-events: none;
 }
 
 ul.horizontal {
+  pointer-events: auto;
   list-style-type: none;
   margin: 0;
-  padding: 0;
-  display: inline-flex;
-  border: 1px solid #b8c4d4;
-  border-radius: 0 0 15px 15px; /* Solo curvas inferiores */
-  background-color: #fff; /* Asegurar fondo sólido para todo el contenedor */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Sutil sombra para mejor separación al scroll */
+  padding: 5px;
+  gap: 4px;
+  width: 44%;
+  max-width: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--btn-bg) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1.5px solid var(--btn-border) !important;
+  border-radius: 999px;
+  box-shadow: var(--btn-shadow);
 }
 
 ul.horizontal li {
-  background-color: #fff;
-  border-right: 1px solid #b8c4d4;
-  transition: background-color 0.3s ease;
+  flex: 1;
+  display: flex;
+  background-color: transparent !important;
+  border: none !important;
 }
 
-/* Sin overflow:hidden (el anillo de foco debe salir del contenedor):
-   se redondean las esquinas inferiores de las celdas extremas a mano */
-ul.horizontal li:first-child {
-  border-bottom-left-radius: 14px;
-}
-
-ul.horizontal li:last-child {
-  border-bottom-right-radius: 14px;
-}
-
-ul.horizontal li:hover,
-ul.horizontal li:has(a.active) {
-  background-color: #eff6ff; /* Color sólido y opaco para evitar solapamiento */
+ul.horizontal li a {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 0 0.75rem !important;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--btn-fg) !important;
+  text-decoration: none !important;
+  transition:
+    background-color 0.22s ease,
+    color 0.22s ease,
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
 }
 
 ul.horizontal li a:hover,
 ul.horizontal li a.active {
-  text-shadow: 0.5px 0 0 currentColor; /* Simula negrita sin desplazamiento */
-  text-decoration: none;
+  background: var(--btn-hover-bg) !important;
+  color: var(--btn-hover-fg) !important;
+  text-decoration: none !important;
+  box-shadow: var(--btn-hover-shadow);
 }
 
-ul.horizontal li:last-child {
-  border-right: none;
+.horizontal a:focus-visible {
+  border-radius: 999px;
 }
 
 .toogleContainer {
@@ -1294,7 +1314,8 @@ ul.horizontal li:last-child {
 
 @media (min-width: 992px) {
   .events-carousel-wrapper {
-    width: 40%;
+    width: 44%;
+    max-width: 480px;
     margin: 0;
   }
 }
@@ -1713,12 +1734,21 @@ html.dark .company-header .subheading {
 @media screen and (max-width: 767.98px) {
   .company-header {
     flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
     gap: 0.5rem !important;
   }
   
   .company-header .d-flex {
     flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
     gap: 0.5rem !important;
+  }
+
+  .company-header .d-flex > div {
+    width: 100%;
+    text-align: center !important;
   }
 
   .company-logo {
@@ -1726,31 +1756,38 @@ html.dark .company-header .subheading {
     max-width: 220px !important;
     margin-right: 0 !important;
     margin-bottom: 0.35rem !important;
+    align-self: center !important;
   }
 
   .diploma-thumbnail-link {
     width: 185px;
     max-width: 185px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   #experience .diploma-thumbnail-link {
     width: 210px;
     max-width: 210px;
+    margin-left: auto;
+    margin-right: auto;
   }
   
+  .company-header .resume-date,
   .resume-date {
-    text-align: left !important;
+    width: 100%;
+    text-align: center !important;
+    align-items: center !important;
     margin-top: 0 !important;
+  }
+
+  .certificate-link-container {
+    display: flex;
+    justify-content: center;
   }
   
   .experience-card {
     padding: 1rem !important;
-  }
-}
-
-@media screen and (max-width: 767.98px) {
-  .company-logo {
-    align-self: center !important;
   }
 }
 
@@ -1766,14 +1803,17 @@ html.dark .company-header .subheading {
 
 /* Contenido por encima del canvas ambiente (z-index:-1 quedaba bajo el
    fondo propagado de body y las particulas eran invisibles) */
-main,
-#navbar {
+main {
   position: relative;
   z-index: 1;
 }
 
+#navbar {
+  z-index: 10;
+}
+
 .ir-arriba {
-  z-index: 1;
+  z-index: 2;
 }
 
 #sideNav {
@@ -1949,16 +1989,18 @@ main,
   color: var(--btn-hover-fg) !important;
 }
 
-/* 2. Boton pausa de carrusel (36x36 circulo glass sobre esquina inferior) */
+/* 2. Boton pausa/play de carrusel (38x38 circulo glass con icono FontAwesome centrado) */
 .sliderProjects .slick-autoplay-toggle-button,
 .events-carousel-wrapper .slick-autoplay-toggle-button {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  width: 36px !important;
-  height: 36px !important;
+  width: 38px !important;
+  height: 38px !important;
+  min-width: 38px !important;
+  min-height: 38px !important;
   padding: 0 !important;
-  left: 10px !important;
+  left: 12px !important;
   background: var(--btn-bg) !important;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
@@ -1966,7 +2008,7 @@ main,
   border-radius: 999px !important;
   color: var(--btn-fg) !important;
   box-shadow: var(--btn-shadow) !important;
-  font-size: 0.9rem !important;
+  line-height: 1 !important;
   transition:
     background-color 0.22s ease,
     border-color 0.22s ease,
@@ -1976,7 +2018,45 @@ main,
 }
 
 .events-carousel-wrapper .slick-autoplay-toggle-button {
-  bottom: 10px !important;
+  bottom: 12px !important;
+}
+
+/* Reemplazar glifos emoji de accessible-slick ("⏸"/"▶") por FontAwesome 5 nítido y centrado.
+   Nota: jQuery alterna inline style="display: none / inline" en .slick-pause-icon / .slick-play-icon,
+   así que centramos el pseudo-elemento :before con posición absoluta respecto al botón. */
+.slick-autoplay-toggle-button .slick-pause-icon,
+.slick-autoplay-toggle-button .slick-play-icon {
+  position: static !important;
+  line-height: 1 !important;
+}
+
+.slick-autoplay-toggle-button .slick-pause-icon:before,
+.slick-autoplay-toggle-button .slick-play-icon:before {
+  font-family: "Font Awesome 5 Free" !important;
+  font-weight: 900 !important;
+  font-size: 13px !important;
+  line-height: 1 !important;
+  color: var(--btn-fg) !important;
+  opacity: 1 !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  margin: 0 !important;
+}
+
+.slick-autoplay-toggle-button .slick-pause-icon:before {
+  content: "\f04c" !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+.slick-autoplay-toggle-button .slick-play-icon:before {
+  content: "\f04b" !important;
+  transform: translate(calc(-50% + 1px), -50%) !important;
+}
+
+.slick-autoplay-toggle-button:hover .slick-pause-icon:before,
+.slick-autoplay-toggle-button:hover .slick-play-icon:before {
+  color: var(--btn-hover-fg) !important;
 }
 
 .sliderProjects .slick-autoplay-toggle-button:hover,
@@ -1984,7 +2064,7 @@ main,
   background: var(--btn-hover-bg) !important;
   border-color: var(--btn-hover-bg) !important;
   color: var(--btn-hover-fg) !important;
-  transform: scale(1.06);
+  transform: translateY(-2px);
   box-shadow: var(--btn-hover-shadow) !important;
 }
 

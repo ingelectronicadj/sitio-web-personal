@@ -4,7 +4,7 @@
  * Versión del caché se actualiza con cada despliegue
  */
 
-const CACHE_NAME = "v35_cache_CV_Diego";
+const CACHE_NAME = "v43_cache_CV_Diego";
 const OFFLINE_URL = "./offline.html";
 
 const urlsToCache = [

@@ -1,5 +1,36 @@
 # Changelog
 
+## [2.2.0] - 2026-10-15
+
+### Changed
+
+- Menu superior `#navbar ul.horizontal` integrado al sistema **Glass Pill**
+  (`--btn-*`): capsula flotante con items pill internos (`border-radius:
+  999px`) y alineacion exacta en columna sobre `.events-carousel-wrapper`
+  (mismo ancho y bordes izquierdo/derecho).
+- Alineacion al centro de logos, cargos (`h3`), empresa (`.subheading`),
+  fechas (`.resume-date`) y enlaces de certificados en las cards de
+  experiencia en vista movil (`<= 767.98px`).
+- Boton pause/play de carrusel (`.slick-autoplay-toggle-button`): glifos
+  emoji del sistema reemplazados por iconos vectoriales Font Awesome 5
+  (`\f04c` / `\f04b`) centrados con posicion absoluta respecto al circulo
+  `38x38px`.
+
+### Fixed
+
+- Boton de cambio de idioma (`#langToggle`) no disparaba `i18n.changeLang`
+  porque `const i18n` no exponia `window.i18n` al empaquetarse con
+  `controls-init.js`.
+- Desfase vertical de `16px` entre `.hero-cv-btn` y `.social-icons a`
+  causado por tween redundante `y: 16` en `js/scrolly.js` en conflicto con
+  `transition: transform !important`.
+- Flecha de `.ir-arriba` en modo oscuro usaba `#0a0a1a` heredado sobre fondo
+  glass oscuro; actualizada a `var(--btn-fg)` (`#38bdf8`) en reposo y
+  `var(--btn-hover-fg)` en `:hover`.
+- `#navbar` perdia `position: fixed` por la regla posterior `main, #navbar {
+  position: relative }` y provocaba scroll horizontal; `<nav>` interno del
+  sidebar en modo oscuro recibia fondo `#070714`.
+
 ## [2.1.0] - 2026-10-15
 
 ### Added

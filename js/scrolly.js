@@ -43,11 +43,6 @@
       "#welcome-section .lead",
       { y: 30, opacity: 0, duration: 0.7 },
       "-=0.5",
-    )
-    .from(
-      "#welcome-section .social-icons a",
-      { y: 16, opacity: 0, stagger: 0.06, duration: 0.4 },
-      "-=0.4",
     );
 
   /* Parallax suave del contenido del hero al salir (sin alterar opacidad para mantener contraste WCAG) */
