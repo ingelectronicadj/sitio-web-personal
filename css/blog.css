@@ -92,11 +92,27 @@ html.dark .blog-content li code {
 }
 
 .blog-title {
-  font-size: 2.5rem;
+  font-size: clamp(1.65rem, 4vw, 2.5rem);
   line-height: 1.2;
   font-weight: 700;
   text-transform: uppercase;
   color: #343a40;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 767.98px) {
+  .blog-content {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    padding: 1.15rem 1.1rem;
+  }
+  .blog-content h2 {
+    font-size: 1.4rem;
+    margin-top: 1.75rem;
+  }
+  .back-btn {
+    margin-bottom: 1.25rem;
+  }
 }
 
 html.dark .blog-title {
@@ -148,14 +164,23 @@ html.dark .blog-title {
 
 .blog-code-snippet {
   margin: 0;
-  padding: 1.5rem;
+  padding: 1.25rem 1.4rem;
   color: #334155;
   font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   line-height: 1.6;
-  overflow-x: auto;
+  overflow-x: hidden;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
   background-color: transparent;
   border: none;
+}
+
+.blog-code-snippet code {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .code-key { color: #005cc5 !important; }

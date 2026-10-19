@@ -19,6 +19,8 @@ const ejs = require("ejs");
 const esbuild = require("esbuild");
 
 const ROOT = path.resolve(__dirname, "..");
+const PKG = JSON.parse(fs.readFileSync(path.join(ROOT, "package.json"), "utf8"));
+const VERSION = PKG.version || "2.4.0";
 const VIEWS_DIR = path.join(ROOT, "views");
 const CONTENT_DIR = path.join(ROOT, "content", "blog");
 const BLOG_OUT_DIR = path.join(ROOT, "blog");
@@ -42,7 +44,7 @@ function buildBlogPages(posts) {
   for (const post of posts) {
     const html = ejs.render(
       template,
-      { post },
+      { post, version: VERSION },
       { filename: templatePath, views: [VIEWS_DIR] },
     );
     const outPath = path.join(BLOG_OUT_DIR, `${post.slug}.html`);
@@ -74,7 +76,7 @@ function renderCardHtml(post) {
             </div>
             <div class="resume-image ml-md-4 mt-3 mt-md-0 flex-shrink-0" style="width: 150px; height: 150px;">
               <a href="./blog/${post.slug}.html" class="diploma-thumbnail-link m-0 h-100" style="max-width: 150px !important;" aria-hidden="true" tabindex="-1">
-                <img src="./${post.image}" alt="" class="diploma-thumbnail img-fluid h-100 w-100" style="object-fit: cover;" aria-hidden="true" />
+                <img src="./${post.image}" alt="" width="150" height="150" loading="lazy" class="diploma-thumbnail img-fluid h-100 w-100" style="object-fit: cover;" aria-hidden="true" />
               </a>
             </div>
           </article>`;
@@ -83,6 +85,9 @@ function renderCardHtml(post) {
 function syncIndexBlogCards(posts) {
   const indexPath = path.join(ROOT, "index.html");
   let indexHtml = fs.readFileSync(indexPath, "utf8");
+  indexHtml = indexHtml
+    .replace(/bundle\.min\.css\?v=[0-9.]+/g, `bundle.min.css?v=${VERSION}`)
+    .replace(/bundle\.min\.js\?v=[0-9.]+/g, `bundle.min.js?v=${VERSION}`);
   const startTag = "<!-- BLOG_CARDS_START -->";
   const endTag = "<!-- BLOG_CARDS_END -->";
   const sIdx = indexHtml.indexOf(startTag);

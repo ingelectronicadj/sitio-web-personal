@@ -24,24 +24,24 @@
     scrollTrigger: { start: 0, end: "max", scrub: 0.3 },
   });
 
-  /* Entrada del hero al cargar */
+  /* Entrada del hero al cargar (sin alterar opacidad para mantener contraste WCAG desde ms 0) */
   var intro = gsap.timeline({ defaults: { ease: "power3.out" } });
   intro
-    .from("#sideNav", { x: -40, opacity: 0, duration: 0.6 })
-    .from("#welcome-section h1", { y: 60, opacity: 0, duration: 0.9 }, "-=0.2")
+    .from("#sideNav", { x: -40, duration: 0.6 })
+    .from("#welcome-section h1", { y: 40, duration: 0.8 }, "-=0.3")
     .from(
       "#welcome-section .textMovil",
-      { y: 30, opacity: 0, duration: 0.7 },
+      { y: 24, duration: 0.6 },
       "-=0.5",
     )
     .from(
       ".events-carousel-wrapper",
-      { x: 60, opacity: 0, duration: 0.8 },
+      { x: 40, duration: 0.7 },
       "-=0.5",
     )
     .from(
       "#welcome-section .lead",
-      { y: 30, opacity: 0, duration: 0.7 },
+      { y: 24, duration: 0.6 },
       "-=0.5",
     );
 
@@ -57,40 +57,53 @@
     },
   });
 
-  /* Encabezados de sección: barrido ascendente */
+  /* Encabezados de sección: barrido ascendente (se re-ejecuta al subir y volver a bajar) */
   gsap.utils
     .toArray("section.resume-section:not(#welcome-section) h2")
     .forEach(function (h2) {
       gsap.from(h2, {
-        y: 50,
-        duration: 0.8,
+        y: 36,
+        duration: 0.65,
         ease: "power3.out",
-        scrollTrigger: { trigger: h2, start: "top 85%", once: true },
+        scrollTrigger: {
+          trigger: h2,
+          start: "top 88%",
+          toggleActions: "play none play reset",
+        },
       });
     });
 
-  /* Items de contenido: desplazamiento al entrar en viewport.
+  /* Items de contenido: desplazamiento al entrar en viewport y re-animación al volver a bajar.
      Sin opacidad: el texto nunca queda ilegible por una animación. */
   var itemSelector =
-    "section.resume-section:not(#welcome-section) .resume-item, section.resume-section:not(#welcome-section) .subheading, section.resume-section:not(#welcome-section) > .my-auto > .lead";
+    "section.resume-section:not(#welcome-section) .resume-item, section.resume-section:not(#welcome-section) .subheading, section.resume-section:not(#welcome-section) .about-card, section.resume-section:not(#welcome-section) .research-box, section.resume-section:not(#welcome-section) > .my-auto > .lead";
 
   gsap.utils.toArray(itemSelector).forEach(function (el) {
     gsap.from(el, {
       y: 28,
-      duration: 0.6,
+      duration: 0.55,
       ease: "power3.out",
-      scrollTrigger: { trigger: el, start: "top 90%", once: true },
+      scrollTrigger: {
+        trigger: el,
+        start: "top 91%",
+        toggleActions: "play none play reset",
+      },
     });
   });
 
-  /* Chips de habilidades: cascada */
-  gsap.utils.toArray("#skills .skill-tag").forEach(function (tag, i) {
+  /* Chips de habilidades y certificaciones: cascada reactiva al scroll */
+  gsap.utils.toArray("#skills .skill-tag, #skills .cert-pill").forEach(function (tag, i) {
     gsap.from(tag, {
-      y: 12,
+      y: 14,
+      scale: 0.96,
       duration: 0.35,
-      delay: (i % 12) * 0.04,
+      delay: (i % 8) * 0.035,
       ease: "power2.out",
-      scrollTrigger: { trigger: tag, start: "top 92%", once: true },
+      scrollTrigger: {
+        trigger: tag,
+        start: "top 93%",
+        toggleActions: "play none play reset",
+      },
     });
   });
 
@@ -98,10 +111,14 @@
   var slider = document.querySelector(".sliderProjects");
   if (slider) {
     gsap.from(slider, {
-      y: 60,
-      duration: 0.9,
+      y: 44,
+      duration: 0.75,
       ease: "power3.out",
-      scrollTrigger: { trigger: slider, start: "top 85%", once: true },
+      scrollTrigger: {
+        trigger: slider,
+        start: "top 88%",
+        toggleActions: "play none play reset",
+      },
     });
   }
 

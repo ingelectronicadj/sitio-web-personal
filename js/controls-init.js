@@ -62,11 +62,12 @@ document.addEventListener("DOMContentLoaded", function () {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
             entry.target.classList.add("is-visible");
-            fadeObserver.unobserve(entry.target);
+          } else {
+            entry.target.classList.remove("is-visible");
           }
         });
       },
-      { threshold: 0.15 },
+      { threshold: 0.12 },
     );
     document.querySelectorAll(".animate-fade-up").forEach(function (el) {
       fadeObserver.observe(el);
@@ -92,22 +93,6 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     document.querySelectorAll(".animate-fade-up").forEach(function (el) {
       el.classList.add("is-visible");
-    });
-  }
-
-  // Limpiar cualquier Service Worker / cache de la PWA anterior en clientes existentes
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.getRegistrations().then(function (regs) {
-      regs.forEach(function (reg) {
-        reg.unregister();
-      });
-    });
-  }
-  if ("caches" in window) {
-    caches.keys().then(function (keys) {
-      keys.forEach(function (k) {
-        caches.delete(k);
-      });
     });
   }
 });

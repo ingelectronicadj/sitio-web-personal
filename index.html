@@ -71,28 +71,9 @@
       onload="this.rel = 'stylesheet'" />
     <link href="./vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
     <!-- Bundle unificado de estilos (bootstrap + slick + resume + darkMode_v2 + blog) -->
-    <link rel="stylesheet" href="./css/bundle.min.css?v=2.2.0" />
+    <link rel="stylesheet" href="./css/bundle.min.css?v=2.4.0" />
     <meta name="theme-color" content="#0a0a1a" />
     <link rel="preload" as="image" href="./img/carrusel/Team-Hiberus.webp" />
-    <script>
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.getRegistrations().then(function (regs) {
-          if (regs.length) {
-            Promise.all(regs.map(function (r) { return r.unregister(); }))
-              .then(function () {
-                return "caches" in window
-                  ? caches.keys().then(function (ks) {
-                      return Promise.all(ks.map(function (k) { return caches.delete(k); }));
-                    })
-                  : null;
-              })
-              .then(function () {
-                location.reload();
-              });
-          }
-        });
-      }
-    </script>
 
     <!-- Metaetiquetas Open Graph -->
     <meta property="og:url" content="https://diegomena.rocks/" />
@@ -2214,6 +2195,95 @@
               </div>
             </div>
           </div>
+
+          <div class="research-box mt-4 animate-fade-up">
+            <h3 data-i18n="oss-ecosystem-header">
+              Ecosistema Open Source de Accesibilidad (GitHub)
+            </h3>
+            <p class="lead" data-i18n="oss-ecosystem-desc">
+              Herramientas, librerías y repositorios abiertos mantenidos para la comunidad global de ingeniería de accesibilidad, automatización QA e inclusión educativa:
+            </p>
+            <div class="research-links">
+              <a
+                href="https://github.com/ingelectronicadj/pa11y_batch"
+                class="research-link-chip"
+                target="_blank"
+                rel="noopener noreferrer">
+                <i class="fas fa-terminal" aria-hidden="true"></i>
+                <span data-i18n="oss-pa11y-batch">
+                  Pa11y Batch (Auditoría WCAG ES + CI/CD)
+                </span>
+                <span class="visually-hidden" data-i18n="opens-new-tab">
+                  (Se abre en una nueva pestaña)
+                </span>
+              </a>
+              <a
+                href="https://github.com/ingelectronicadj/freespeech"
+                class="research-link-chip"
+                target="_blank"
+                rel="noopener noreferrer">
+                <i class="fas fa-comments" aria-hidden="true"></i>
+                <span data-i18n="oss-freespeech">
+                  FreeSpeech SAAC (Vue 3 + Custom Trigger LMS)
+                </span>
+                <span class="visually-hidden" data-i18n="opens-new-tab">
+                  (Se abre en una nueva pestaña)
+                </span>
+              </a>
+              <a
+                href="https://github.com/ingelectronicadj/react-aria-live"
+                class="research-link-chip"
+                target="_blank"
+                rel="noopener noreferrer">
+                <i class="fas fa-broadcast-tower" aria-hidden="true"></i>
+                <span data-i18n="oss-react-aria-live">
+                  react-aria-live (VoiceOver + useAnnouncer)
+                </span>
+                <span class="visually-hidden" data-i18n="opens-new-tab">
+                  (Se abre en una nueva pestaña)
+                </span>
+              </a>
+              <a
+                href="https://github.com/ingelectronicadj/test-cases-a11y"
+                class="research-link-chip"
+                target="_blank"
+                rel="noopener noreferrer">
+                <i class="fas fa-vial" aria-hidden="true"></i>
+                <span data-i18n="oss-test-cases">
+                  Test Cases A11Y (87 Criterios WCAG 2.2)
+                </span>
+                <span class="visually-hidden" data-i18n="opens-new-tab">
+                  (Se abre en una nueva pestaña)
+                </span>
+              </a>
+              <a
+                href="https://github.com/ingelectronicadj/ReproductorLSC"
+                class="research-link-chip"
+                target="_blank"
+                rel="noopener noreferrer">
+                <i class="fas fa-sign-language" aria-hidden="true"></i>
+                <span data-i18n="oss-reproductor-lsc">
+                  Reproductor LSC (HTML5 + Glosario Señas)
+                </span>
+                <span class="visually-hidden" data-i18n="opens-new-tab">
+                  (Se abre en una nueva pestaña)
+                </span>
+              </a>
+              <a
+                href="https://github.com/ingelectronicadj/a11y-help-VBAexcel"
+                class="research-link-chip"
+                target="_blank"
+                rel="noopener noreferrer">
+                <i class="fas fa-file-excel" aria-hidden="true"></i>
+                <span data-i18n="oss-vba-excel">
+                  A11Y Help VBA Excel (Catálogo axe-core ES)
+                </span>
+                <span class="visually-hidden" data-i18n="opens-new-tab">
+                  (Se abre en una nueva pestaña)
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
       <hr class="m-0" />
@@ -2329,7 +2399,7 @@
             </div>
             <div class="resume-image ml-md-4 mt-3 mt-md-0 flex-shrink-0" style="width: 150px; height: 150px;">
               <a href="./blog/ia-automatizacion-wcag.html" class="diploma-thumbnail-link m-0 h-100" style="max-width: 150px !important;" aria-hidden="true" tabindex="-1">
-                <img src="./img/blog/blog_ia_wcag.png" alt="" class="diploma-thumbnail img-fluid h-100 w-100" style="object-fit: cover;" aria-hidden="true" />
+                <img src="./img/blog/blog_ia_wcag.webp" alt="" width="150" height="150" loading="lazy" class="diploma-thumbnail img-fluid h-100 w-100" style="object-fit: cover;" aria-hidden="true" />
               </a>
             </div>
           </article>
@@ -2355,7 +2425,7 @@
             </div>
             <div class="resume-image ml-md-4 mt-3 mt-md-0 flex-shrink-0" style="width: 150px; height: 150px;">
               <a href="./blog/mejores-practicas-aria.html" class="diploma-thumbnail-link m-0 h-100" style="max-width: 150px !important;" aria-hidden="true" tabindex="-1">
-                <img src="./img/blog/blog_aria_spa.png" alt="" class="diploma-thumbnail img-fluid h-100 w-100" style="object-fit: cover;" aria-hidden="true" />
+                <img src="./img/blog/blog_aria_spa.webp" alt="" width="150" height="150" loading="lazy" class="diploma-thumbnail img-fluid h-100 w-100" style="object-fit: cover;" aria-hidden="true" />
               </a>
             </div>
           </article>
@@ -2381,7 +2451,7 @@
             </div>
             <div class="resume-image ml-md-4 mt-3 mt-md-0 flex-shrink-0" style="width: 150px; height: 150px;">
               <a href="./blog/comparativa-testing-tools.html" class="diploma-thumbnail-link m-0 h-100" style="max-width: 150px !important;" aria-hidden="true" tabindex="-1">
-                <img src="./img/blog/blog_testing_tools.png" alt="" class="diploma-thumbnail img-fluid h-100 w-100" style="object-fit: cover;" aria-hidden="true" />
+                <img src="./img/blog/blog_testing_tools.webp" alt="" width="150" height="150" loading="lazy" class="diploma-thumbnail img-fluid h-100 w-100" style="object-fit: cover;" aria-hidden="true" />
               </a>
             </div>
           </article>
@@ -2663,7 +2733,7 @@
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
       defer></script>
-    <script src="./js/bundle.min.js?v=2.2.0" defer></script>
+    <script src="./js/bundle.min.js?v=2.4.0" defer></script>
 
     <!-- Accesibility widget - Accesify -->
     <script defer

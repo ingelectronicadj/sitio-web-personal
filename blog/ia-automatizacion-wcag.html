@@ -47,7 +47,7 @@
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
 
     <!-- Bundle unificado de estilos (bootstrap + resume + darkMode + blog + slick) -->
-    <link rel="stylesheet" href="../css/bundle.min.css?v=2.2.0" />
+    <link rel="stylesheet" href="../css/bundle.min.css?v=2.4.0" />
 
     <!-- Canonical + Open Graph + Twitter Card (articulo) -->
     <link rel="canonical" href="https://diegomena.rocks/blog/ia-automatizacion-wcag.html" />
@@ -55,14 +55,14 @@
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Impacto de la Inteligencia Artificial en auditorías WCAG" />
     <meta property="og:description" content="Análisis del impacto de la Inteligencia Artificial en la automatización de auditorías WCAG y la transición hacia el Shift Left testing en accesibilidad." />
-    <meta property="og:image" content="https://diegomena.rocks/img/blog/blog_ia_wcag.png" />
+    <meta property="og:image" content="https://diegomena.rocks/img/blog/blog_ia_wcag.webp" />
     <meta property="og:locale" content="es_CO" />
     <meta property="og:locale:alternate" content="en_US" />
     <meta property="og:site_name" content="Diego Mena — Accesibilidad Digital" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Impacto de la Inteligencia Artificial en auditorías WCAG" />
     <meta name="twitter:description" content="Análisis del impacto de la Inteligencia Artificial en la automatización de auditorías WCAG y la transición hacia el Shift Left testing en accesibilidad." />
-    <meta name="twitter:image" content="https://diegomena.rocks/img/blog/blog_ia_wcag.png" />
+    <meta name="twitter:image" content="https://diegomena.rocks/img/blog/blog_ia_wcag.webp" />
 
     <!-- Datos estructurados BlogPosting -->
     <script type="application/ld+json">
@@ -73,10 +73,10 @@
         "headline": "Impacto de la Inteligencia Artificial en auditorías WCAG",
         "description": "Análisis del impacto de la Inteligencia Artificial en la automatización de auditorías WCAG y la transición hacia el Shift Left testing en accesibilidad.",
         "url": "https://diegomena.rocks/blog/ia-automatizacion-wcag.html",
-        "image": "https://diegomena.rocks/img/blog/blog_ia_wcag.png",
+        "image": "https://diegomena.rocks/img/blog/blog_ia_wcag.webp",
         "inLanguage": ["es", "en"],
         "datePublished": "2026-05",
-        "dateModified": "2026-10-15",
+        "dateModified": "2026-10-19",
         "isPartOf": { "@id": "https://diegomena.rocks/#website" },
         "author": { "@id": "https://diegomena.rocks/#person" },
         "publisher": { "@id": "https://diegomena.rocks/#person" }
@@ -275,7 +275,7 @@
                 <p class="lead" data-i18n="blog1-desc">Exploramos cómo los modelos de lenguaje pueden asistir en la detección de problemas complejos de accesibilidad y las limitaciones actuales frente a la evaluación humana especializada.</p>
               </div>
               <div class="flex-shrink-0 mt-4 mt-md-0 text-center text-md-right">
-                <img src="../img/blog/blog_ia_wcag.png" alt="" class="img-fluid rounded shadow-sm blog-main-img" aria-hidden="true" style="max-width: 250px;" />
+                <img src="../img/blog/blog_ia_wcag.webp" alt="" class="img-fluid rounded shadow-sm blog-main-img" aria-hidden="true" style="max-width: 250px;" />
               </div>
             </header>
 
@@ -290,7 +290,7 @@
               <h2 data-i18n="article1-h2-2">Refinando los Steering Files para la IA</h2>
               <p data-i18n="article1-p4">Para intentar cerrar esa brecha, propongo la revisión exhaustiva y la inyección de criterios de accesibilidad en los "Steering Files" o archivos de dirección (.agents / .md) utilizados para contextualizar a los asistentes de IA, como GitHub Copilot. Mi objetivo es aportar criterios específicos basados en las incidencias recurrentes y las barreras de accesibilidad críticas que detectamos a diario en las auditorías.</p>
 
-              <div class="blog-code-container my-4" tabindex="0" aria-label="Ejemplo de código de un Steering File para accesibilidad">
+              <div class="blog-code-container my-4" role="region" aria-label="Ejemplo de código de un Steering File para accesibilidad">
                 <div class="blog-code-header" aria-hidden="true">
                   <div class="blog-code-dots">
                     <span class="dot red"></span>
@@ -299,7 +299,7 @@
                   </div>
                   <div class="blog-code-title">.agents/accessibility.yml</div>
                 </div>
-                <pre class="blog-code-snippet"><code><span class="code-key">name</span>: Accessibility QA Agent
+                <pre class="blog-code-snippet" tabindex="0"><code><span class="code-key">name</span>: Accessibility QA Agent
 <span class="code-key">description</span>: <span class="code-string">"Audits DOM output for WCAG 2.2 compliance in dynamic states"</span>
 <span class="code-key">rules</span>:
   - Ensure all actionable elements have sufficient color contrast (min 4.5:1).
@@ -323,7 +323,7 @@
 
     <!-- jQuery + Bundle JS unificado -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="../js/bundle.min.js?v=2.2.0"></script>
+    <script src="../js/bundle.min.js?v=2.4.0"></script>
     <script src="./js/ia-automatizacion-wcag-i18n.js"></script>
 
     <!-- Widget de accesibilidad A11Y PRO -->

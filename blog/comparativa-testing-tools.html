@@ -47,7 +47,7 @@
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
 
     <!-- Bundle unificado de estilos (bootstrap + resume + darkMode + blog + slick) -->
-    <link rel="stylesheet" href="../css/bundle.min.css?v=2.2.0" />
+    <link rel="stylesheet" href="../css/bundle.min.css?v=2.4.0" />
 
     <!-- Canonical + Open Graph + Twitter Card (articulo) -->
     <link rel="canonical" href="https://diegomena.rocks/blog/comparativa-testing-tools.html" />
@@ -55,14 +55,14 @@
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Comparativa de herramientas de testing: axe-core vs ARC Toolkit" />
     <meta property="og:description" content="Análisis detallado de las ventajas y casos de uso ideales para dos de las herramientas más potentes del mercado en la identificación automatizada de barreras digitales." />
-    <meta property="og:image" content="https://diegomena.rocks/img/blog/blog_testing_tools.png" />
+    <meta property="og:image" content="https://diegomena.rocks/img/blog/blog_testing_tools.webp" />
     <meta property="og:locale" content="es_CO" />
     <meta property="og:locale:alternate" content="en_US" />
     <meta property="og:site_name" content="Diego Mena — Accesibilidad Digital" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Comparativa de herramientas de testing: axe-core vs ARC Toolkit" />
     <meta name="twitter:description" content="Análisis detallado de las ventajas y casos de uso ideales para dos de las herramientas más potentes del mercado en la identificación automatizada de barreras digitales." />
-    <meta name="twitter:image" content="https://diegomena.rocks/img/blog/blog_testing_tools.png" />
+    <meta name="twitter:image" content="https://diegomena.rocks/img/blog/blog_testing_tools.webp" />
 
     <!-- Datos estructurados BlogPosting -->
     <script type="application/ld+json">
@@ -73,10 +73,10 @@
         "headline": "Comparativa de herramientas de testing: axe-core vs ARC Toolkit",
         "description": "Análisis detallado de las ventajas y casos de uso ideales para dos de las herramientas más potentes del mercado en la identificación automatizada de barreras digitales.",
         "url": "https://diegomena.rocks/blog/comparativa-testing-tools.html",
-        "image": "https://diegomena.rocks/img/blog/blog_testing_tools.png",
+        "image": "https://diegomena.rocks/img/blog/blog_testing_tools.webp",
         "inLanguage": ["es", "en"],
         "datePublished": "2026-05",
-        "dateModified": "2026-10-15",
+        "dateModified": "2026-10-19",
         "isPartOf": { "@id": "https://diegomena.rocks/#website" },
         "author": { "@id": "https://diegomena.rocks/#person" },
         "publisher": { "@id": "https://diegomena.rocks/#person" }
@@ -275,7 +275,7 @@
                 <p class="lead" data-i18n="blog3-desc">Análisis detallado de las ventajas y casos de uso ideales para dos de las herramientas más potentes del mercado en la identificación automatizada de barreras digitales.</p>
               </div>
               <div class="flex-shrink-0 mt-4 mt-md-0 text-center text-md-right">
-                <img src="../img/blog/blog_testing_tools.png" alt="" class="img-fluid rounded shadow-sm blog-main-img" aria-hidden="true" style="max-width: 250px;" />
+                <img src="../img/blog/blog_testing_tools.webp" alt="" class="img-fluid rounded shadow-sm blog-main-img" aria-hidden="true" style="max-width: 250px;" />
               </div>
             </header>
 
@@ -286,7 +286,7 @@
               <h2 data-i18n="article3-h2-1">Axe-Core: El Rey de la Integración (CI/CD)</h2>
               <p data-i18n="article3-p2">El mayor superpoder de axe-core es su API extremadamente amigable para desarrolladores. Al estar construido puramente en JavaScript, puede inyectarse en Cypress, Selenium, Jest, Pa11y y, mi favorito personal, Playwright. Esto permite romper los despliegues si la interfaz de usuario introduce regresiones de accesibilidad.</p>
 
-              <div class="blog-code-container my-4" tabindex="0" aria-label="Ejemplo de código para integración de axe-core con Playwright">
+              <div class="blog-code-container my-4" role="region" aria-label="Ejemplo de código para integración de axe-core con Playwright">
                 <div class="blog-code-header" aria-hidden="true">
                   <div class="blog-code-dots">
                     <span class="dot red"></span>
@@ -295,7 +295,7 @@
                   </div>
                   <div class="blog-code-title">a11y.spec.js</div>
                 </div>
-                <pre class="blog-code-snippet"><code><span class="code-key">const</span> { test, expect } = <span class="code-key">require</span>(<span class="code-string">'@playwright/test'</span>);
+                <pre class="blog-code-snippet" tabindex="0"><code><span class="code-key">const</span> { test, expect } = <span class="code-key">require</span>(<span class="code-string">'@playwright/test'</span>);
 <span class="code-key">const</span> AxeBuilder = <span class="code-key">require</span>(<span class="code-string">'@axe-core/playwright'</span>).default;
 
 test(<span class="code-string">'Debe cumplir WCAG 2.2 AA'</span>, <span class="code-key">async</span> ({ page }) => {
@@ -324,7 +324,7 @@ test(<span class="code-string">'Debe cumplir WCAG 2.2 AA'</span>, <span class="c
 
     <!-- jQuery + Bundle JS unificado -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="../js/bundle.min.js?v=2.2.0"></script>
+    <script src="../js/bundle.min.js?v=2.4.0"></script>
     <script src="./js/comparativa-testing-tools-i18n.js"></script>
 
     <!-- Widget de accesibilidad A11Y PRO -->

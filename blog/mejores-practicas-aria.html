@@ -47,7 +47,7 @@
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
 
     <!-- Bundle unificado de estilos (bootstrap + resume + darkMode + blog + slick) -->
-    <link rel="stylesheet" href="../css/bundle.min.css?v=2.2.0" />
+    <link rel="stylesheet" href="../css/bundle.min.css?v=2.4.0" />
 
     <!-- Canonical + Open Graph + Twitter Card (articulo) -->
     <link rel="canonical" href="https://diegomena.rocks/blog/mejores-practicas-aria.html" />
@@ -55,14 +55,14 @@
     <meta property="og:type" content="article" />
     <meta property="og:title" content="Mejores prácticas para implementar ARIA en Single Page Applications" />
     <meta property="og:description" content="Un recorrido técnico sobre el manejo del foco, regiones en vivo (aria-live) y notificaciones asíncronas para garantizar una navegación sin barreras en React y Angular." />
-    <meta property="og:image" content="https://diegomena.rocks/img/blog/blog_aria_spa.png" />
+    <meta property="og:image" content="https://diegomena.rocks/img/blog/blog_aria_spa.webp" />
     <meta property="og:locale" content="es_CO" />
     <meta property="og:locale:alternate" content="en_US" />
     <meta property="og:site_name" content="Diego Mena — Accesibilidad Digital" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Mejores prácticas para implementar ARIA en Single Page Applications" />
     <meta name="twitter:description" content="Un recorrido técnico sobre el manejo del foco, regiones en vivo (aria-live) y notificaciones asíncronas para garantizar una navegación sin barreras en React y Angular." />
-    <meta name="twitter:image" content="https://diegomena.rocks/img/blog/blog_aria_spa.png" />
+    <meta name="twitter:image" content="https://diegomena.rocks/img/blog/blog_aria_spa.webp" />
 
     <!-- Datos estructurados BlogPosting -->
     <script type="application/ld+json">
@@ -73,10 +73,10 @@
         "headline": "Mejores prácticas para implementar ARIA en Single Page Applications",
         "description": "Un recorrido técnico sobre el manejo del foco, regiones en vivo (aria-live) y notificaciones asíncronas para garantizar una navegación sin barreras en React y Angular.",
         "url": "https://diegomena.rocks/blog/mejores-practicas-aria.html",
-        "image": "https://diegomena.rocks/img/blog/blog_aria_spa.png",
+        "image": "https://diegomena.rocks/img/blog/blog_aria_spa.webp",
         "inLanguage": ["es", "en"],
         "datePublished": "2026-05",
-        "dateModified": "2026-10-15",
+        "dateModified": "2026-10-19",
         "isPartOf": { "@id": "https://diegomena.rocks/#website" },
         "author": { "@id": "https://diegomena.rocks/#person" },
         "publisher": { "@id": "https://diegomena.rocks/#person" }
@@ -275,7 +275,7 @@
                 <p class="lead" data-i18n="blog2-desc">Un recorrido técnico sobre el manejo del foco, regiones en vivo (aria-live) y notificaciones asíncronas para garantizar una navegación sin barreras en React y Angular.</p>
               </div>
               <div class="flex-shrink-0 mt-4 mt-md-0 text-center text-md-right">
-                <img src="../img/blog/blog_aria_spa.png" alt="" class="img-fluid rounded shadow-sm blog-main-img" aria-hidden="true" style="max-width: 250px;" />
+                <img src="../img/blog/blog_aria_spa.webp" alt="" class="img-fluid rounded shadow-sm blog-main-img" aria-hidden="true" style="max-width: 250px;" />
               </div>
             </header>
 
@@ -286,7 +286,7 @@
               <h2 data-i18n="article2-h2-1">Gestión del Foco Programático</h2>
               <p data-i18n="article2-p2">El primer paso es asegurar que el foco del teclado se mueva lógicamente cuando la vista cambia. Una técnica recomendada es enfocar el contenedor principal o el <code>&lt;h1&gt;</code> de la nueva vista montada.</p>
 
-              <div class="blog-code-container my-4" tabindex="0" aria-label="Ejemplo de código de un hook en React para mover el foco">
+              <div class="blog-code-container my-4" role="region" aria-label="Ejemplo de código de un hook en React para mover el foco">
                 <div class="blog-code-header" aria-hidden="true">
                   <div class="blog-code-dots">
                     <span class="dot red"></span>
@@ -295,7 +295,7 @@
                   </div>
                   <div class="blog-code-title">useRouteChangeFocus.js</div>
                 </div>
-                <pre class="blog-code-snippet"><code><span class="code-key">import</span> { useEffect, useRef } <span class="code-key">from</span> <span class="code-string">'react'</span>;
+                <pre class="blog-code-snippet" tabindex="0"><code><span class="code-key">import</span> { useEffect, useRef } <span class="code-key">from</span> <span class="code-string">'react'</span>;
 <span class="code-key">import</span> { useLocation } <span class="code-key">from</span> <span class="code-string">'react-router-dom'</span>;
 
 <span class="code-key">export function</span> useRouteChangeFocus() {
@@ -327,7 +327,7 @@
 
     <!-- jQuery + Bundle JS unificado -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="../js/bundle.min.js?v=2.2.0"></script>
+    <script src="../js/bundle.min.js?v=2.4.0"></script>
     <script src="./js/mejores-practicas-aria-i18n.js"></script>
 
     <!-- Widget de accesibilidad A11Y PRO -->

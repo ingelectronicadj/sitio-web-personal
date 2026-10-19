@@ -1,5 +1,31 @@
 # Changelog
 
+## [2.4.0] - 2026-10-19
+
+### Removed
+
+- Retirados definitivamente el archivo `sw.js` y los scripts residuales de desregistro de Service Worker / limpieza de `caches` de la antigua PWA en `index.html` y `js/controls-init.js`.
+- Retiradas las 3 imágenes `.png` pesadas de `img/blog/` tras migrar a `.webp`.
+
+### Added
+
+- Bloque **Ecosistema Open Source de Accesibilidad (GitHub)** en `#projects` (`index.html`), `js/i18n.js` (ES/EN), `index.md` y `llms.txt` integrando las 6 herramientas mantenidas para la comunidad (`pa11y_batch`, `freespeech`, `react-aria-live`, `test-cases-a11y`, `ReproductorLSC` y `a11y-help-VBAexcel`).
+- Sincronización automática de `?v=<version>` en `scripts/build.js` tomando la versión desde `package.json`.
+
+### Changed
+
+- Imágenes de portada de artículos en `img/blog/` convertidas de PNG (`2.37 MB` en total) a formato `.webp` (`291 KB` en total, reducción del `88 %`) con atributos `width="150" height="150" loading="lazy"` en las tarjetas de `#blog`.
+- Espaciado y jerarquía visual (Ley de Proximidad) en `#skills` y `.research-box` (`css/resume.css`): separación clara entre `h3`, `.skill-tags` y párrafos descriptivos, alineación a la izquierda de `.skill-tags` y mayor aire superior en subtítulos de grupo.
+- Animaciones reactivas al scroll (`js/scrolly.js` y `js/controls-init.js`): reemplazado `once: true` por `toggleActions: "play none play reset"` y alternancia de `.is-visible` en `IntersectionObserver` para que las animaciones de aparición se reproduzcan también al regresar arriba y volver a bajar.
+- Tarjetas de `#blog` en fila horizontal desde `768px` (tablets) y portada de ancho completo en móviles (`< 768px`).
+
+### Fixed
+
+- Bloques de código en artículos (`content/blog/*.json` -> `blog/*.html`, `css/blog.css`): añadido `role="region"` en `.blog-code-container`, `tabindex="0"` en `<pre class="blog-code-snippet">` y ajuste de línea `pre-wrap` sin scroll horizontal para resolver las reglas `aria-prohibited-attr` (`4.1.2`) y `scrollable-region-focusable` (`2.1.1`) de `axe-core`.
+- Posicionamiento de las flechas `.slick-prev` y `.slick-next` dentro de `.events-carousel` y `.sliderProjects` (`left: 12px` / `right: 12px`) y tipografía fluida en `320px`, eliminando el desborde horizontal en los 7 breakpoints (`320px`, `375px`, `414px`, `768px`, `992px`, `1024px` y `1440px`).
+- Animación de entrada del hero en `js/scrolly.js`: retirada la interpolación `opacity: 0` para que el contraste WCAG sea `100 %` conforme desde el milisegundo `0`.
+- Corrección de universidades (`UNAD` y `Universidad Distrital Francisco José de Caldas`) y URL de LinkedIn (`linkedin.com/in/ingelectronicadj/`) en `index.md` y `llms.txt`.
+
 ## [2.3.0] - 2026-10-16
 
 ### Changed

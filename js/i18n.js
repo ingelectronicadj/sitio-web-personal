@@ -263,6 +263,15 @@ const i18n = {
         'Mi evolución técnica, desde la automatización, siempre ha estado guiada por los ODS y la "Ciencia para la paz", la cual busca comprender las causas de violencia y construir soluciones tecnológicas y sociales que fomenten la convivencia pacífica, la equidad y la justicia social. Me interesa aportar activamente a comunidades de software libre y a una educación de calidad que no deje a nadie atrás. Cada línea de código que escribo tiene un propósito claro: construir una red más humana, accesible y ética.',
 
       // Research section
+      "oss-ecosystem-header": "Ecosistema Open Source de Accesibilidad (GitHub)",
+      "oss-ecosystem-desc":
+        "Herramientas, librerías y repositorios abiertos mantenidos para la comunidad global de ingeniería de accesibilidad, automatización QA e inclusión educativa:",
+      "oss-pa11y-batch": "Pa11y Batch (Auditoría WCAG ES + CI/CD)",
+      "oss-freespeech": "FreeSpeech SAAC (Vue 3 + Custom Trigger LMS)",
+      "oss-react-aria-live": "react-aria-live (VoiceOver + useAnnouncer)",
+      "oss-test-cases": "Test Cases A11Y (87 Criterios WCAG 2.2)",
+      "oss-reproductor-lsc": "Reproductor LSC (HTML5 + Glosario Señas)",
+      "oss-vba-excel": "A11Y Help VBA Excel (Catálogo axe-core ES)",
       "research-header": "Enfoque de Investigación y Propuesta Doctoral",
       "research-p1":
         "Mi propuesta de investigación se centra en la aplicación de Inteligencia Artificial para la auditoría y mejora automatizada de la accesibilidad web en sitios gubernamentales.",
@@ -612,6 +621,15 @@ const i18n = {
         'My technical evolution, starting from automation, has always been guided by the SDGs and "Science for Peace", which seeks to understand the causes of violence and build technological and social solutions that promote peaceful coexistence, equity and social justice. I am interested in actively contributing to free software communities and to a quality education that leaves no one behind. Every line of code I write has a clear purpose: to build a more human, accessible, and ethical network.',
 
       // Research section
+      "oss-ecosystem-header": "Open Source Accessibility Ecosystem (GitHub)",
+      "oss-ecosystem-desc":
+        "Open-source tools, libraries, and repositories maintained for the global accessibility engineering, QA automation, and inclusive education community:",
+      "oss-pa11y-batch": "Pa11y Batch (Spanish WCAG Audits + CI/CD)",
+      "oss-freespeech": "FreeSpeech SAAC (Vue 3 + LMS Custom Trigger)",
+      "oss-react-aria-live": "react-aria-live (VoiceOver + useAnnouncer)",
+      "oss-test-cases": "Test Cases A11Y (87 WCAG 2.2 Criteria)",
+      "oss-reproductor-lsc": "Reproductor LSC (HTML5 + Sign Language)",
+      "oss-vba-excel": "A11Y Help VBA Excel (axe-core Catalog)",
       "research-header": "Research Focus and Doctoral Proposal",
       "research-p1":
         "My research focus centers on the application of Artificial Intelligence for automated web accessibility auditing and improvement of government websites.",
