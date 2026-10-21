@@ -4,7 +4,7 @@
 (function() {
   const blog2Translations = {
     es: {
-      "blog2-page-title": "Mejores prácticas para implementar ARIA en SPA - Diego Perafán",
+      "blog2-page-title": "Mejores prácticas para implementar ARIA en SPA - Diego Mena",
       "article2-p1": "Las Single Page Applications (SPA) ofrecen experiencias fluidas, pero destruyen la semántica nativa del navegador al cambiar de ruta. Al no recargar la página, los lectores de pantalla se quedan en silencio tras hacer clic en un enlace, desorientando completamente al usuario con discapacidad visual.",
       "article2-h2-1": "Gestión del Foco Programático",
       "article2-p2": "El primer paso es asegurar que el foco del teclado se mueva lógicamente cuando la vista cambia. Una técnica recomendada es enfocar el contenedor principal o el encabezado principal de la nueva vista montada tan pronto como la transición de la ruta finalice.",
@@ -15,7 +15,7 @@
       "article2-p5": "Abrir un componente modal en una SPA requiere, por norma, crear una 'trampa de foco'. Esto significa que la tabulación debe ciclar internamente dentro del modal y no permitir que el usuario interactúe con el fondo oscurecido por error. Además, la tecla <code>Escape</code> siempre debe cerrar la ventana emergente para mantener los atajos nativos esperados."
     },
     en: {
-      "blog2-page-title": "Best practices for implementing ARIA in SPA - Diego Perafán",
+      "blog2-page-title": "Best practices for implementing ARIA in SPA - Diego Mena",
       "article2-p1": "Single Page Applications (SPAs) offer fluid experiences but destroy the browser's native semantics when changing routes. Without page reloads, screen readers remain silent after a link click, completely disorienting visually impaired users.",
       "article2-h2-1": "Programmatic Focus Management",
       "article2-p2": "The first step is ensuring keyboard focus moves logically when the view changes. A recommended technique is to focus the main container or the primary heading of the newly mounted view as soon as the route transition finishes.",

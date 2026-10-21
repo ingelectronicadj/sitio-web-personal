@@ -4,7 +4,7 @@
 (function() {
   const blog3Translations = {
     es: {
-      "blog3-page-title": "Comparativa de herramientas de testing: axe-core vs ARC Toolkit - Diego Perafán",
+      "blog3-page-title": "Comparativa de herramientas de testing: axe-core vs ARC Toolkit - Diego Mena",
       "article3-p1": "Las herramientas automatizadas son el primer nivel de defensa en cualquier estrategia \"Shift Left\", capaces de capturar entre el 30% y el 50% de los errores totales de accesibilidad (WCAG). En este artículo, ponemos frente a frente a dos gigantes de la industria: axe-core de Deque Systems y ARC Toolkit de TPGi.",
       "article3-h2-1": "Axe-Core: El Rey de la Integración (CI/CD)",
       "article3-p2": "El mayor superpoder de axe-core es su API extremadamente amigable para desarrolladores. Al estar construido puramente en JavaScript, puede inyectarse en Cypress, Selenium, Jest, Pa11y y, mi favorito personal, Playwright. Esto permite romper los despliegues si la interfaz de usuario introduce regresiones de accesibilidad.",
@@ -15,7 +15,7 @@
       "article3-p5": "No tienes que elegir una sola. La mejor estrategia es usar axe-core en los pipelines automatizados para evitar que código inaccesible llegue a producción, y utilizar ARC Toolkit de manera exploratoria por los QA de accesibilidad para identificar problemas estructurales que la automatización pura pasaría por alto."
     },
     en: {
-      "blog3-page-title": "Testing tools comparison: axe-core vs ARC Toolkit - Diego Perafán",
+      "blog3-page-title": "Testing tools comparison: axe-core vs ARC Toolkit - Diego Mena",
       "article3-p1": "Automated tools are the first line of defense in any \"Shift Left\" strategy, capable of catching between 30% and 50% of total accessibility errors (WCAG). In this article, we compare two industry giants: axe-core by Deque Systems and ARC Toolkit by TPGi.",
       "article3-h2-1": "Axe-Core: The King of Integration (CI/CD)",
       "article3-p2": "The biggest superpower of axe-core is its extremely developer-friendly API. Being built purely in JavaScript, it can be injected into Cypress, Selenium, Jest, Pa11y and, my personal favorite, Playwright. This allows you to break deployments if the UI introduces accessibility regressions.",

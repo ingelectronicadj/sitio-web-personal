@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.5.1] - 2026-10-21
+
+### Changed
+
+- **Tipografías auto-alojadas (`css/fonts/*.woff2`) y precarga en `<head>`**:
+  - `Saira Extra Condensed` (500, 700) y `Muli` (400, 400i, 800, 800i) alojadas localmente e integradas en `css/bundle.min.css` con `font-display: block` y `<link rel="preload" as="font" type="font/woff2" crossorigin>`, eliminando el salto tipográfico (FOUT / CLS) al cargar el sitio sin caché y suprimiendo las peticiones externas a `fonts.googleapis.com`.
+- Capturas de los 4 nuevos proyectos en `#projects` (`pa11y-batch.webp`, `freespeech-saac.webp`, `react-aria-live.webp` y `reproductor-lsc-v2.webp`) regeneradas con fondo transparente alrededor del marco MacBook Air (`omitBackground: true`).
+
+### Fixed
+
+- **Navegación del menú principal desde vistas de artículos del blog (`js/accessibility.js` y `js/navbar-focus.js`)**:
+  - `handleClickFocus` ejecutaba `event.preventDefault()` y `document.querySelector()` sobre rutas externas como `../index.html#experience`, bloqueando la navegación desde `blog/*.html`. Ahora solo intercepta anclas locales (`href.startsWith("#")`).
+  - Corregido el nombre del autor en las traducciones de `<title>` de `blog/js/*-i18n.js` (`Diego Mena`).
+- **Ajustes de responsive móvil (`390×844`)**:
+  - Retirado el desplazamiento horizontal `x` en la animación de entrada (`js/scrolly.js`) y silenciada la sombra lateral `-4px 0 12px` del panel `#acfy-root` cerrado (`js/controls-init.js`) que generaba una franja vertical sombreada en el borde derecho de teléfonos móviles.
+  - Miniaturas de `#blog` adaptadas al `100 %` del ancho de tarjeta en móviles mediante clases `.blog-card-image-wrap` y `.blog-card-thumb-link`.
+
 ## [2.5.0] - 2026-10-21
 
 ### Added

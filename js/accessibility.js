@@ -28,15 +28,18 @@ function getContrast() {
 }
 
 /* Funcionalidad para dar foco a encabezados de sección 
-    de acuerdo a elementos de navegación */
+    de acuerdo a elementos de navegación (solo cuando el enlace es un ancla # en la misma página) */
 function handleClickFocus(event) {
-  event.preventDefault(); // Evitar la acción predeterminada del enlace
-  const targetId = this.getAttribute("href"); // Obtener el ID del destino
-  const targetElement = document.querySelector(targetId); // Seleccionar el elemento destino
+  const targetId = this.getAttribute("href");
+  if (!targetId || !targetId.startsWith("#")) {
+    return;
+  }
+  const targetElement = document.querySelector(targetId);
   if (targetElement) {
-    targetElement.tabIndex = -1; // Establecer el índice de tabulación para permitir el enfoque
-    targetElement.focus(); // Enfocar el elemento destino
-    targetElement.removeAttribute("tabindex"); // Eliminar el índice de tabulación después del enfoque
+    event.preventDefault();
+    targetElement.tabIndex = -1;
+    targetElement.focus();
+    targetElement.removeAttribute("tabindex");
   }
 }
 

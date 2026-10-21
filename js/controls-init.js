@@ -95,4 +95,26 @@ document.addEventListener("DOMContentLoaded", function () {
       el.classList.add("is-visible");
     });
   }
+
+  // Ocultar la sombra lateral (-4px 0 12px) del panel #acfy-root cuando está cerrado en móvil/desktop
+  function patchAcfyClosedShadow() {
+    var host = document.getElementById("acfy-shadow-host");
+    if (!host || !host.shadowRoot) return false;
+    if (host.shadowRoot.getElementById("acfy-closed-shadow-fix")) return true;
+    var st = document.createElement("style");
+    st.id = "acfy-closed-shadow-fix";
+    st.textContent =
+      "#acfy-root:not(.acfy-root-open) { box-shadow: none !important; visibility: hidden !important; pointer-events: none !important; }";
+    host.shadowRoot.appendChild(st);
+    return true;
+  }
+  if (!patchAcfyClosedShadow()) {
+    var acfyTries = 0;
+    var acfyTimer = setInterval(function () {
+      acfyTries += 1;
+      if (patchAcfyClosedShadow() || acfyTries > 25) {
+        clearInterval(acfyTimer);
+      }
+    }, 200);
+  }
 });

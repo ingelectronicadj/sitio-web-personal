@@ -52,11 +52,7 @@
       title="Diego Mena — Dossier Técnico Completo para LLMs y Motores de Respuesta" />
 
     <!-- Preconexiones a orígenes CDN externos -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
     <!-- Widget de accesibilidad activo (Accesify) -->
     <link
@@ -68,20 +64,34 @@
       Diego Mena · Experto en Accesibilidad Digital — WCAG 2.2, Auditorías y
       Shift Left
     </title>
-    <!-- Custom fonts for this template -->
+    <!-- Precarga local de tipografías críticas para eliminar FOUT / CLS al recargar sin caché -->
     <link
-      href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700"
       rel="preload"
-      as="style"
-      onload="this.rel = 'stylesheet'" />
+      as="font"
+      type="font/woff2"
+      href="./css/fonts/saira-700-normal-latin.woff2"
+      crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i"
       rel="preload"
-      as="style"
-      onload="this.rel = 'stylesheet'" />
+      as="font"
+      type="font/woff2"
+      href="./css/fonts/saira-500-normal-latin.woff2"
+      crossorigin />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="./css/fonts/muli-400-normal-latin.woff2"
+      crossorigin />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="./css/fonts/muli-800-normal-latin.woff2"
+      crossorigin />
     <link href="./vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
     <!-- Bundle unificado de estilos (bootstrap + slick + resume + darkMode_v2 + blog) -->
-    <link rel="stylesheet" href="./css/bundle.min.css?v=2.5.0" />
+    <link rel="stylesheet" href="./css/bundle.min.css?v=2.5.1" />
     <meta name="theme-color" content="#0a0a1a" />
     <link rel="preload" as="image" href="./img/carrusel/Team-Hiberus.webp" />
 
@@ -2584,8 +2594,8 @@
                 Leer artículo
               </a>
             </div>
-            <div class="resume-image ml-md-4 mt-3 mt-md-0 flex-shrink-0" style="width: 248px; height: 152px;">
-              <a href="./blog/ia-automatizacion-wcag.html" class="diploma-thumbnail-link m-0 h-100" style="width: 248px !important; max-width: 100% !important;" aria-hidden="true" tabindex="-1">
+            <div class="resume-image blog-card-image-wrap ml-md-4 mt-3 mt-md-0 flex-shrink-0">
+              <a href="./blog/ia-automatizacion-wcag.html" class="diploma-thumbnail-link blog-card-thumb-link m-0 h-100" aria-hidden="true" tabindex="-1">
                 <img src="./img/blog/thumb_ia_wcag.webp" alt="" width="248" height="152" loading="lazy" class="diploma-thumbnail img-fluid h-100 w-100" style="object-fit: cover; border-radius: 10px;" aria-hidden="true" />
               </a>
             </div>
@@ -2610,8 +2620,8 @@
                 Leer artículo
               </a>
             </div>
-            <div class="resume-image ml-md-4 mt-3 mt-md-0 flex-shrink-0" style="width: 248px; height: 152px;">
-              <a href="./blog/mejores-practicas-aria.html" class="diploma-thumbnail-link m-0 h-100" style="width: 248px !important; max-width: 100% !important;" aria-hidden="true" tabindex="-1">
+            <div class="resume-image blog-card-image-wrap ml-md-4 mt-3 mt-md-0 flex-shrink-0">
+              <a href="./blog/mejores-practicas-aria.html" class="diploma-thumbnail-link blog-card-thumb-link m-0 h-100" aria-hidden="true" tabindex="-1">
                 <img src="./img/blog/thumb_aria_spa.webp" alt="" width="248" height="152" loading="lazy" class="diploma-thumbnail img-fluid h-100 w-100" style="object-fit: cover; border-radius: 10px;" aria-hidden="true" />
               </a>
             </div>
@@ -2636,8 +2646,8 @@
                 Leer artículo
               </a>
             </div>
-            <div class="resume-image ml-md-4 mt-3 mt-md-0 flex-shrink-0" style="width: 248px; height: 152px;">
-              <a href="./blog/comparativa-testing-tools.html" class="diploma-thumbnail-link m-0 h-100" style="width: 248px !important; max-width: 100% !important;" aria-hidden="true" tabindex="-1">
+            <div class="resume-image blog-card-image-wrap ml-md-4 mt-3 mt-md-0 flex-shrink-0">
+              <a href="./blog/comparativa-testing-tools.html" class="diploma-thumbnail-link blog-card-thumb-link m-0 h-100" aria-hidden="true" tabindex="-1">
                 <img src="./img/blog/thumb_testing_tools.webp" alt="" width="248" height="152" loading="lazy" class="diploma-thumbnail img-fluid h-100 w-100" style="object-fit: cover; border-radius: 10px;" aria-hidden="true" />
               </a>
             </div>
@@ -2920,7 +2930,7 @@
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
       defer></script>
-    <script src="./js/bundle.min.js?v=2.5.0" defer></script>
+    <script src="./js/bundle.min.js?v=2.5.1" defer></script>
 
     <!-- Accesibility widget - Accesify -->
     <script defer

@@ -1,11 +1,13 @@
 document.querySelectorAll('#navbar .js-scroll-trigger').forEach(link => {
   const handleNavigation = (event) => {
+    const href = link.getAttribute('href') || '';
+    if (!href.startsWith('#')) return;
     const isKeyboard = event.type === 'keydown' && (event.key === 'Enter' || event.key === ' ');
 
     if (event.type === 'click' || isKeyboard) {
       event.preventDefault();
 
-      const targetSectionId = link.getAttribute('href').substring(1);
+      const targetSectionId = href.substring(1);
       const section = document.getElementById(targetSectionId);
 
       // ID del título asumido como: sectionId + 'Title'

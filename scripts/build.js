@@ -74,8 +74,8 @@ function renderCardHtml(post) {
                 Leer artículo
               </a>
             </div>
-            <div class="resume-image ml-md-4 mt-3 mt-md-0 flex-shrink-0" style="width: 248px; height: 152px;">
-              <a href="./blog/${post.slug}.html" class="diploma-thumbnail-link m-0 h-100" style="width: 248px !important; max-width: 100% !important;" aria-hidden="true" tabindex="-1">
+            <div class="resume-image blog-card-image-wrap ml-md-4 mt-3 mt-md-0 flex-shrink-0">
+              <a href="./blog/${post.slug}.html" class="diploma-thumbnail-link blog-card-thumb-link m-0 h-100" aria-hidden="true" tabindex="-1">
                 <img src="./${post.thumbImage || post.image}" alt="" width="248" height="152" loading="lazy" class="diploma-thumbnail img-fluid h-100 w-100" style="object-fit: cover; border-radius: 10px;" aria-hidden="true" />
               </a>
             </div>

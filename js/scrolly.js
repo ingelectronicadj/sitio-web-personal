@@ -24,25 +24,24 @@
     scrollTrigger: { start: 0, end: "max", scrub: 0.3 },
   });
 
-  /* Entrada del hero al cargar (sin alterar opacidad para mantener contraste WCAG desde ms 0) */
+  /* Entrada del hero al cargar (solo eje vertical Y para no alterar el ancho del viewport móvil ni #sideNav) */
   var intro = gsap.timeline({ defaults: { ease: "power3.out" } });
   intro
-    .from("#sideNav", { x: -40, duration: 0.6 })
-    .from("#welcome-section h1", { y: 40, duration: 0.8 }, "-=0.3")
+    .from("#welcome-section h1", { y: 32, duration: 0.7 })
     .from(
       "#welcome-section .textMovil",
-      { y: 24, duration: 0.6 },
-      "-=0.5",
+      { y: 20, duration: 0.55 },
+      "-=0.45",
     )
     .from(
       ".events-carousel-wrapper",
-      { x: 40, duration: 0.7 },
-      "-=0.5",
+      { y: 24, duration: 0.65 },
+      "-=0.45",
     )
     .from(
       "#welcome-section .lead",
-      { y: 24, duration: 0.6 },
-      "-=0.5",
+      { y: 20, duration: 0.55 },
+      "-=0.45",
     );
 
   /* Parallax suave del contenido del hero al salir (sin alterar opacidad para mantener contraste WCAG) */
@@ -57,18 +56,18 @@
     },
   });
 
-  /* Encabezados de sección: barrido ascendente (se re-ejecuta al subir y volver a bajar) */
+  /* Encabezados de sección: barrido suave sin invadir el margen de la primera tarjeta */
   gsap.utils
     .toArray("section.resume-section:not(#welcome-section) h2")
     .forEach(function (h2) {
       gsap.from(h2, {
-        y: 36,
-        duration: 0.65,
-        ease: "power3.out",
+        y: 12,
+        duration: 0.5,
+        ease: "power2.out",
         scrollTrigger: {
           trigger: h2,
-          start: "top 88%",
-          toggleActions: "play none play reset",
+          start: "top 95%",
+          toggleActions: "play none none reset",
         },
       });
     });
@@ -80,13 +79,13 @@
 
   gsap.utils.toArray(itemSelector).forEach(function (el) {
     gsap.from(el, {
-      y: 28,
-      duration: 0.55,
-      ease: "power3.out",
+      y: 20,
+      duration: 0.5,
+      ease: "power2.out",
       scrollTrigger: {
         trigger: el,
-        start: "top 91%",
-        toggleActions: "play none play reset",
+        start: "top 94%",
+        toggleActions: "play none none reset",
       },
     });
   });

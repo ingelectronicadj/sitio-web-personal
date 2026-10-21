@@ -5,7 +5,7 @@
 (function() {
   const blog1Translations = {
     es: {
-      "blog1-page-title": "Impacto de la Inteligencia Artificial en auditorías WCAG - Diego Perafán",
+      "blog1-page-title": "Impacto de la Inteligencia Artificial en auditorías WCAG - Diego Mena",
       "blog-back-btn": "<i class=\"fas fa-arrow-left\" aria-hidden=\"true\"></i> Volver al Portafolio",
       "article1-p1": "El enfoque \"Shift Left\" (desplazar las pruebas hacia las etapas tempranas del ciclo de desarrollo) se ha posicionado como el camino correcto para garantizar productos digitales robustos. Es una visión técnica muy potente que, bien refinada, nos permitirá escalar significativamente la calidad de nuestras entregas. Al adoptar este enfoque en la accesibilidad, dejamos de tratar las auditorías WCAG como un cuello de botella al final del proceso, para convertirlas en un pilar del diseño y desarrollo.",
       "article1-h2-1": "La Brecha entre la IA y la Accesibilidad Dinámica",
@@ -21,7 +21,7 @@
       "article1-p8": "Avanzar hacia una automatización inteligente requiere que alimentemos a las herramientas con las directrices correctas. Coordinar esta revisión de los steering files es fundamental para asegurar que nuestro \"contexto compartido\" con la IA cubra realmente los escenarios de interacción más críticos para los usuarios con discapacidad, logrando que el \"Shift Left\" sea una realidad tangible y no solo un concepto teórico."
     },
     en: {
-      "blog1-page-title": "Impact of Artificial Intelligence on WCAG Audits - Diego Perafán",
+      "blog1-page-title": "Impact of Artificial Intelligence on WCAG Audits - Diego Mena",
       "blog-back-btn": "<i class=\"fas fa-arrow-left\" aria-hidden=\"true\"></i> Back to Portfolio",
       "article1-p1": "The \"Shift Left\" approach (moving testing to the early stages of the development cycle) has positioned itself as the right path to guarantee robust digital products. It is a very powerful technical vision that, properly refined, will allow us to significantly scale the quality of our deliveries. By adopting this approach in accessibility, we stop treating WCAG audits as a bottleneck at the end of the process, turning them into a pillar of design and development.",
       "article1-h2-1": "The Gap Between AI and Dynamic Accessibility",
