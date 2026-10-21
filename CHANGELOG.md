@@ -1,5 +1,26 @@
 # Changelog
 
+## [2.5.0] - 2026-10-21
+
+### Added
+
+- **4 nuevos proyectos en el carrusel principal `#projects`** (`index.html`, `js/i18n.js` ES/EN) con capturas reales en marco MacBook Air (`img/projects/*.webp`):
+  - `Pa11y Batch: Suite de Auditoría WCAG 2.2 en Español y CI/CD` (`img/projects/pa11y-batch.webp`).
+  - `FreeSpeech SAAC: Comunicador CAA con Widget Universal para Web y Moodle` (`img/projects/freespeech-saac.webp`).
+  - `react-aria-live v3.0: Regiones Vivas para VoiceOver (macOS/iOS) y NVDA` (`img/projects/react-aria-live.webp`).
+  - `Reproductor Educativo LSC v2.0 y Glosario Matemático en Lengua de Señas` (`img/projects/reproductor-lsc-v2.webp`).
+- **3 nuevas ilustraciones técnicas de arquitectura (`1200×630` WebP) y 3 miniaturas icónicas previas (`img/blog/thumb_*.webp`)** para los artículos del blog (`content/blog/*.json`, `scripts/build.js`).
+- **Mejoras de SEO, AEO (Answer Engine Optimization) y GEO (Generative Engine Optimization)**:
+  - Nuevo dossier técnico completo `llms-full.txt` para motores generativos y agentes IA (`OAI-SearchBot`, `PerplexityBot`, `Claude-SearchBot`, `Google-Extended`), referenciado en `<head>`, `llms.txt` y `robots.txt`.
+  - Esquema estructurado `FAQPage` y nodos `SoftwareSourceCode` en el `@graph` JSON-LD de `index.html`.
+  - `@graph` JSON-LD autónomo en `views/partials/head-post.ejs` (`BlogPosting` con `ImageObject` 1200×630 y fechas ISO 8601 completas + `Person` + `BreadcrumbList`).
+  - Tarjeta de Autoría Técnica E-E-A-T y enlaces de artículos relacionados al cierre de cada post en `views/post.ejs`.
+
+### Fixed
+
+- Contraste de los iconos de flecha `.slick-prev:before` y `.slick-next:before` en `:hover`: corregida la especificidad frente a `:focus:not(:focus-visible)` para que la flecha permanezca siempre blanca (`var(--btn-hover-fg)`) al pasar el cursor.
+- Alineación en fila horizontal (`topDiff = 0px`) entre el botón de Pausa (`.slick-autoplay-toggle-button`) y el botón Glass Pill de *Ver proyecto* (`a.link-new-window`) en `.sliderProjects`, eliminando además el recorte de sombras y las franjas grises laterales en `.slider-for`.
+
 ## [2.4.0] - 2026-10-19
 
 ### Removed

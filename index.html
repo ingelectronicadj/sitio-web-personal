@@ -40,6 +40,16 @@
       rel="alternate"
       hreflang="x-default"
       href="https://diegomena.rocks/" />
+    <link
+      rel="alternate"
+      type="text/markdown"
+      href="https://diegomena.rocks/index.md"
+      title="Diego Mena — Perfil Profesional en Markdown" />
+    <link
+      rel="alternate"
+      type="text/markdown"
+      href="https://diegomena.rocks/llms-full.txt"
+      title="Diego Mena — Dossier Técnico Completo para LLMs y Motores de Respuesta" />
 
     <!-- Preconexiones a orígenes CDN externos -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -71,7 +81,7 @@
       onload="this.rel = 'stylesheet'" />
     <link href="./vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
     <!-- Bundle unificado de estilos (bootstrap + slick + resume + darkMode_v2 + blog) -->
-    <link rel="stylesheet" href="./css/bundle.min.css?v=2.4.0" />
+    <link rel="stylesheet" href="./css/bundle.min.css?v=2.5.0" />
     <meta name="theme-color" content="#0a0a1a" />
     <link rel="preload" as="image" href="./img/carrusel/Team-Hiberus.webp" />
 
@@ -430,6 +440,83 @@
               "#experienceTitle",
               "#interestsTitle",
               ".lead"
+            ]
+          },
+          {
+            "@type": "SoftwareSourceCode",
+            "@id": "https://diegomena.rocks/#oss-pa11y-batch",
+            "name": "Pa11y Batch — Suite de Auditoría WCAG 2.2 en Español y CI/CD",
+            "description": "Herramienta CLI y CI/CD (GitHub Actions, GitLab CI, Azure DevOps) para auditorías automatizadas de accesibilidad web con axe-core y HTML_CodeSniffer en español, inspección visual y reportes ejecutivos para Stakeholders.",
+            "codeRepository": "https://github.com/ingelectronicadj/pa11y_batch",
+            "programmingLanguage": ["Bash", "JavaScript"],
+            "author": { "@id": "https://diegomena.rocks/#person" },
+            "license": "https://www.gnu.org/licenses/gpl-3.0.html"
+          },
+          {
+            "@type": "SoftwareSourceCode",
+            "@id": "https://diegomena.rocks/#oss-freespeech",
+            "name": "FreeSpeech SAAC — Comunicador Aumentativo y Alternativo (Vue 3 + Custom Trigger LMS)",
+            "description": "Sistema Aumentativo y Alternativo de Comunicación (SAAC) de código abierto en Vue 3.5 + Vite 8 con conformidad WCAG 2.2 AA, integración ARASAAC y widget flotante universal para cualquier web o LMS (Moodle).",
+            "codeRepository": "https://github.com/ingelectronicadj/freespeech",
+            "programmingLanguage": ["Vue", "JavaScript"],
+            "author": { "@id": "https://diegomena.rocks/#person" },
+            "license": "https://opensource.org/licenses/MIT"
+          },
+          {
+            "@type": "SoftwareSourceCode",
+            "@id": "https://diegomena.rocks/#oss-react-aria-live",
+            "name": "react-aria-live — Regiones aria-live en React compatibles con VoiceOver y NVDA",
+            "description": "Librería React para anuncios dinámicos WAI-ARIA (aria-live polite/assertive) compatible con VoiceOver (macOS/iOS), NVDA, JAWS y TalkBack, con hook useAnnouncer() y soporte TypeScript.",
+            "codeRepository": "https://github.com/ingelectronicadj/react-aria-live",
+            "programmingLanguage": ["JavaScript", "TypeScript"],
+            "author": { "@id": "https://diegomena.rocks/#person" },
+            "license": "https://opensource.org/licenses/MIT"
+          },
+          {
+            "@type": "SoftwareSourceCode",
+            "@id": "https://diegomena.rocks/#oss-test-cases-a11y",
+            "name": "Test Cases A11Y — Repositorio Bilingüe de 87 Casos de Prueba WCAG 2.2",
+            "description": "Catálogo estructurado en español e inglés con los 87 criterios de conformidad WCAG 2.2 (Niveles A, AA y AAA), pasos Gherkin, reglas axe-core y exportador hacia Jira/Xray.",
+            "codeRepository": "https://github.com/ingelectronicadj/test-cases-a11y",
+            "programmingLanguage": ["Python", "JSON"],
+            "author": { "@id": "https://diegomena.rocks/#person" }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://diegomena.rocks/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "¿Quién es Diego Mena y cuál es su especialidad en accesibilidad digital?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Diego Javier Mena Amado es Ingeniero Electrónico, Magíster en Gerencia de Proyectos y Experto en Accesibilidad Digital con más de 5 años de experiencia liderando auditorías WCAG 2.2, EN 301 549, Sección 508 y Resolución 1519 MinTIC en los sectores fintech, banca internacional (España, Alemania, Argentina), educación superior y gobierno digital. Es fundador de A11Y PRO."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Qué normativas y estándares cubre una auditoría profesional de accesibilidad web?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Una auditoría integral evalúa el cumplimiento de las pautas W3C WCAG 2.1 y WCAG 2.2 (Niveles A, AA y AAA), la norma europea EN 301 549 (European Accessibility Act), la Sección 508 / ADA de Estados Unidos y normativas latinoamericanas como la Resolución 1519 de 2020 de MinTIC y la norma técnica NTC 5854 en Colombia, combinando pruebas automatizadas (axe-core, Pa11y, ARC Toolkit) con evaluación manual experta y lectores de pantalla (NVDA, VoiceOver, JAWS, TalkBack)."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Cómo se implementa Shift Left Accessibility en pipelines de integración continua (CI/CD)?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "El enfoque Shift Left Accessibility integra validaciones de accesibilidad desde el diseño y el desarrollo mediante reglas WAI-ARIA en asistentes de IA (Steering Files), pruebas E2E automatizadas con Playwright + axe-core y ejecución por lotes en GitHub Actions, GitLab CI y Azure DevOps con herramientas como Pa11y Batch, detectando regresiones antes de llegar a producción."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Por qué las pruebas automatizadas de accesibilidad deben complementarse con evaluación humana y tecnologías de apoyo?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Los motores automáticos (como axe-core o HTML_CodeSniffer) detectan de forma determinista entre el 30% y el 45% de las barreras WCAG, pero las aplicaciones modernas en React, Vue o Angular presentan estados dinámicos, gestión de foco programático, trampas de teclado y anuncios en regiones aria-live que requieren validación experta con tecnologías de asistencia reales como VoiceOver en macOS/iOS, NVDA y JAWS en Windows y TalkBack en Android."
+                }
+              }
             ]
           }
         ]
@@ -1807,6 +1894,74 @@
                   </a>
               </div>
               <div>
+                <h3 data-i18n="project24-title">
+                  Pa11y Batch: Suite de Auditoría WCAG 2.2 en Español y CI/CD
+                </h3>
+                <img
+                  width="1920"
+                  height="1080"
+                  class="img-responsive"
+                  data-lazy="./img/projects/pa11y-batch.webp"
+                  alt="Pa11y Batch - Reporte Ejecutivo WCAG 2.2 para Stakeholders" />
+                <a
+                  href="https://github.com/ingelectronicadj/pa11y_batch"
+                  class="link-new-window"
+                  data-i18n-aria="project24-aria">
+                  <span data-i18n="project24-link">Ver repositorio</span>
+                </a>
+              </div>
+              <div>
+                <h3 data-i18n="project25-title">
+                  FreeSpeech SAAC: Comunicador CAA con Widget Universal para Web y Moodle
+                </h3>
+                <img
+                  width="1920"
+                  height="1080"
+                  class="img-responsive"
+                  data-lazy="./img/projects/freespeech-saac.webp"
+                  alt="FreeSpeech SAAC - Tablero de Comunicación Aumentativa y Alternativa" />
+                <a
+                  href="https://github.com/ingelectronicadj/freespeech"
+                  class="link-new-window"
+                  data-i18n-aria="project25-aria">
+                  <span data-i18n="project25-link">Ver proyecto SAAC</span>
+                </a>
+              </div>
+              <div>
+                <h3 data-i18n="project26-title">
+                  react-aria-live v3.0: Regiones Vivas para VoiceOver (macOS/iOS) y NVDA
+                </h3>
+                <img
+                  width="1920"
+                  height="1080"
+                  class="img-responsive"
+                  data-lazy="./img/projects/react-aria-live.webp"
+                  alt="react-aria-live - Laboratorio de verificación con Inspector DOM" />
+                <a
+                  href="https://github.com/ingelectronicadj/react-aria-live"
+                  class="link-new-window"
+                  data-i18n-aria="project26-aria">
+                  <span data-i18n="project26-link">Ver librería React</span>
+                </a>
+              </div>
+              <div>
+                <h3 data-i18n="project27-title">
+                  Reproductor Educativo LSC v2.0 y Glosario Matemático en Lengua de Señas
+                </h3>
+                <img
+                  width="1920"
+                  height="1080"
+                  class="img-responsive"
+                  data-lazy="./img/projects/reproductor-lsc-v2.webp"
+                  alt="Reproductor Educativo y Glosario Matemático en Lengua de Señas Colombiana" />
+                <a
+                  href="https://github.com/ingelectronicadj/ReproductorLSC"
+                  class="link-new-window"
+                  data-i18n-aria="project27-aria">
+                  <span data-i18n="project27-link">Ver repositorio LSC</span>
+                </a>
+              </div>
+              <div>
                 <h3 data-i18n="project21-title">
                   Consolidado de procedimientos de inspección para accesibilidad
                   web
@@ -2078,6 +2233,38 @@
                   class="img-responsive thumbnail"
                   data-lazy="./img/projects/widget.a11ypro.tech.webp"
                   alt="Accesify Accessibility Widget" />
+              </div>
+              <div>
+                <img
+                  width="1920"
+                  height="1080"
+                  class="img-responsive thumbnail"
+                  data-lazy="./img/projects/pa11y-batch.webp"
+                  alt="Miniatura del proyecto: Pa11y Batch WCAG 2.2" />
+              </div>
+              <div>
+                <img
+                  width="1920"
+                  height="1080"
+                  class="img-responsive thumbnail"
+                  data-lazy="./img/projects/freespeech-saac.webp"
+                  alt="Miniatura del proyecto: FreeSpeech SAAC" />
+              </div>
+              <div>
+                <img
+                  width="1920"
+                  height="1080"
+                  class="img-responsive thumbnail"
+                  data-lazy="./img/projects/react-aria-live.webp"
+                  alt="Miniatura del proyecto: react-aria-live v3.0" />
+              </div>
+              <div>
+                <img
+                  width="1920"
+                  height="1080"
+                  class="img-responsive thumbnail"
+                  data-lazy="./img/projects/reproductor-lsc-v2.webp"
+                  alt="Miniatura del proyecto: Reproductor Educativo LSC v2.0" />
               </div>
               <div>
                 <img
@@ -2397,9 +2584,9 @@
                 Leer artículo
               </a>
             </div>
-            <div class="resume-image ml-md-4 mt-3 mt-md-0 flex-shrink-0" style="width: 150px; height: 150px;">
-              <a href="./blog/ia-automatizacion-wcag.html" class="diploma-thumbnail-link m-0 h-100" style="max-width: 150px !important;" aria-hidden="true" tabindex="-1">
-                <img src="./img/blog/blog_ia_wcag.webp" alt="" width="150" height="150" loading="lazy" class="diploma-thumbnail img-fluid h-100 w-100" style="object-fit: cover;" aria-hidden="true" />
+            <div class="resume-image ml-md-4 mt-3 mt-md-0 flex-shrink-0" style="width: 248px; height: 152px;">
+              <a href="./blog/ia-automatizacion-wcag.html" class="diploma-thumbnail-link m-0 h-100" style="width: 248px !important; max-width: 100% !important;" aria-hidden="true" tabindex="-1">
+                <img src="./img/blog/thumb_ia_wcag.webp" alt="" width="248" height="152" loading="lazy" class="diploma-thumbnail img-fluid h-100 w-100" style="object-fit: cover; border-radius: 10px;" aria-hidden="true" />
               </a>
             </div>
           </article>
@@ -2423,9 +2610,9 @@
                 Leer artículo
               </a>
             </div>
-            <div class="resume-image ml-md-4 mt-3 mt-md-0 flex-shrink-0" style="width: 150px; height: 150px;">
-              <a href="./blog/mejores-practicas-aria.html" class="diploma-thumbnail-link m-0 h-100" style="max-width: 150px !important;" aria-hidden="true" tabindex="-1">
-                <img src="./img/blog/blog_aria_spa.webp" alt="" width="150" height="150" loading="lazy" class="diploma-thumbnail img-fluid h-100 w-100" style="object-fit: cover;" aria-hidden="true" />
+            <div class="resume-image ml-md-4 mt-3 mt-md-0 flex-shrink-0" style="width: 248px; height: 152px;">
+              <a href="./blog/mejores-practicas-aria.html" class="diploma-thumbnail-link m-0 h-100" style="width: 248px !important; max-width: 100% !important;" aria-hidden="true" tabindex="-1">
+                <img src="./img/blog/thumb_aria_spa.webp" alt="" width="248" height="152" loading="lazy" class="diploma-thumbnail img-fluid h-100 w-100" style="object-fit: cover; border-radius: 10px;" aria-hidden="true" />
               </a>
             </div>
           </article>
@@ -2449,9 +2636,9 @@
                 Leer artículo
               </a>
             </div>
-            <div class="resume-image ml-md-4 mt-3 mt-md-0 flex-shrink-0" style="width: 150px; height: 150px;">
-              <a href="./blog/comparativa-testing-tools.html" class="diploma-thumbnail-link m-0 h-100" style="max-width: 150px !important;" aria-hidden="true" tabindex="-1">
-                <img src="./img/blog/blog_testing_tools.webp" alt="" width="150" height="150" loading="lazy" class="diploma-thumbnail img-fluid h-100 w-100" style="object-fit: cover;" aria-hidden="true" />
+            <div class="resume-image ml-md-4 mt-3 mt-md-0 flex-shrink-0" style="width: 248px; height: 152px;">
+              <a href="./blog/comparativa-testing-tools.html" class="diploma-thumbnail-link m-0 h-100" style="width: 248px !important; max-width: 100% !important;" aria-hidden="true" tabindex="-1">
+                <img src="./img/blog/thumb_testing_tools.webp" alt="" width="248" height="152" loading="lazy" class="diploma-thumbnail img-fluid h-100 w-100" style="object-fit: cover; border-radius: 10px;" aria-hidden="true" />
               </a>
             </div>
           </article>
@@ -2733,7 +2920,7 @@
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
       defer></script>
-    <script src="./js/bundle.min.js?v=2.4.0" defer></script>
+    <script src="./js/bundle.min.js?v=2.5.0" defer></script>
 
     <!-- Accesibility widget - Accesify -->
     <script defer

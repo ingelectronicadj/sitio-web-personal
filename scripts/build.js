@@ -44,7 +44,7 @@ function buildBlogPages(posts) {
   for (const post of posts) {
     const html = ejs.render(
       template,
-      { post, version: VERSION },
+      { post, allPosts: posts, version: VERSION },
       { filename: templatePath, views: [VIEWS_DIR] },
     );
     const outPath = path.join(BLOG_OUT_DIR, `${post.slug}.html`);
@@ -74,9 +74,9 @@ function renderCardHtml(post) {
                 Leer artículo
               </a>
             </div>
-            <div class="resume-image ml-md-4 mt-3 mt-md-0 flex-shrink-0" style="width: 150px; height: 150px;">
-              <a href="./blog/${post.slug}.html" class="diploma-thumbnail-link m-0 h-100" style="max-width: 150px !important;" aria-hidden="true" tabindex="-1">
-                <img src="./${post.image}" alt="" width="150" height="150" loading="lazy" class="diploma-thumbnail img-fluid h-100 w-100" style="object-fit: cover;" aria-hidden="true" />
+            <div class="resume-image ml-md-4 mt-3 mt-md-0 flex-shrink-0" style="width: 248px; height: 152px;">
+              <a href="./blog/${post.slug}.html" class="diploma-thumbnail-link m-0 h-100" style="width: 248px !important; max-width: 100% !important;" aria-hidden="true" tabindex="-1">
+                <img src="./${post.thumbImage || post.image}" alt="" width="248" height="152" loading="lazy" class="diploma-thumbnail img-fluid h-100 w-100" style="object-fit: cover; border-radius: 10px;" aria-hidden="true" />
               </a>
             </div>
           </article>`;

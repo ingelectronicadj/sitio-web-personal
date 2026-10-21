@@ -83,9 +83,9 @@ a:focus-visible {
   object-fit: contain;
   object-position: center;
   width: 100%;
-  border-radius: 5px;
-  background-color: #f8f9fa;
-  margin-bottom: 1rem;
+  border-radius: 8px;
+  background-color: transparent;
+  margin-bottom: 0.75rem;
 }
 
 .slider-for > div {
@@ -1271,7 +1271,8 @@ ul.horizontal li a.active {
 @media screen and (max-width: 767.98px) {
   #blog article.resume-item .resume-image {
     width: 100% !important;
-    height: 176px !important;
+    height: auto !important;
+    aspect-ratio: 1200 / 630;
   }
   #blog article.resume-item .diploma-thumbnail-link {
     width: 100% !important;
@@ -2087,10 +2088,7 @@ main {
 
 /* 1. Botones circulares de icono (44x44): controles sidebar, hamburguesa,
       redes sociales, flechas carrusel, volver arriba, paginacion */
-#projects > .my-auto,
-.sliderProjects,
-.sliderProjects .slider-for,
-.sliderProjects .slider-nav {
+#projects > .my-auto {
   max-width: 100% !important;
   width: 100% !important;
   min-width: 0 !important;
@@ -2098,28 +2096,41 @@ main {
 }
 
 .sliderProjects {
+  width: 90% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
   position: relative;
-  overflow: hidden;
+  overflow: visible !important;
 }
 
-.sliderProjects .slick-prev,
+@media (max-width: 991.98px) {
+  .sliderProjects {
+    width: 100% !important;
+  }
+  .sliderProjects .slick-prev {
+    left: 6px !important;
+    z-index: 20 !important;
+  }
+  .sliderProjects .slick-next {
+    right: 6px !important;
+    z-index: 20 !important;
+  }
+}
+
 .events-carousel .slick-prev {
   left: 12px !important;
   z-index: 20 !important;
 }
 
-.sliderProjects .slick-next,
 .events-carousel .slick-next {
   right: 12px !important;
   z-index: 20 !important;
 }
 
 @media (max-width: 767.98px) {
-  .sliderProjects .slick-prev,
   .events-carousel .slick-prev {
     left: 6px !important;
   }
-  .sliderProjects .slick-next,
   .events-carousel .slick-next {
     right: 6px !important;
   }
@@ -2258,19 +2269,115 @@ main {
 
 .slick-prev:before,
 .slick-next:before,
-.slick-prev:focus:not(:focus-visible):before,
-.slick-next:focus:not(:focus-visible):before,
-.slick-prev:active:before,
-.slick-next:active:before {
+.slick-prev:focus:not(:focus-visible):not(:hover):before,
+.slick-next:focus:not(:focus-visible):not(:hover):before {
   font-size: 16px !important;
+  line-height: 1 !important;
   color: var(--btn-fg) !important;
+  opacity: 1 !important;
 }
 
 .slick-prev:hover:before,
 .slick-next:hover:before,
+.slick-prev:hover:focus:before,
+.slick-next:hover:focus:before,
+.slick-prev:hover:focus:not(:focus-visible):before,
+.slick-next:hover:focus:not(:focus-visible):before,
+.slick-prev:active:before,
+.slick-next:active:before,
 .slick-prev:focus-visible:before,
 .slick-next:focus-visible:before {
+  font-size: 16px !important;
+  line-height: 1 !important;
   color: var(--btn-hover-fg) !important;
+  opacity: 1 !important;
+}
+
+/* Mejoras visuales en el carrusel de Proyectos (.sliderProjects) sin recortar sombras */
+.sliderProjects .slider-for .slick-list {
+  padding: 4px 6px 14px 6px !important;
+  margin: -4px -6px -14px -6px !important;
+}
+
+.sliderProjects .slider-for .slick-track {
+  display: flex !important;
+  align-items: flex-end !important;
+}
+
+.sliderProjects .slider-for h3 {
+  margin-bottom: 0.75rem !important;
+  font-size: clamp(1.25rem, 2.2vw, 1.55rem);
+}
+
+.sliderProjects .slider-for img.img-responsive {
+  border-radius: 10px;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+/* Botón Ver proyecto en la misma fila horizontal a la derecha del botón Pausa (38x38) */
+.sliderProjects .slider-for a.link-new-window {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  height: 38px !important;
+  min-height: 38px !important;
+  gap: 0.45rem;
+  margin-top: 0.25rem !important;
+  margin-bottom: 0.25rem !important;
+  margin-left: 50px !important;
+  padding: 0 1.2rem !important;
+  background: var(--btn-bg) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1.5px solid var(--btn-border) !important;
+  border-radius: 999px !important;
+  color: var(--btn-fg) !important;
+  box-shadow: var(--btn-shadow);
+  font-weight: 700 !important;
+  font-size: 0.88rem !important;
+  text-decoration: none !important;
+  vertical-align: middle;
+  transition: all 0.22s ease !important;
+}
+
+.sliderProjects .slider-for a.link-new-window:hover,
+.sliderProjects .slider-for a.link-new-window:focus-visible {
+  background: var(--btn-hover-bg) !important;
+  border-color: var(--btn-hover-bg) !important;
+  color: var(--btn-hover-fg) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--btn-hover-shadow);
+}
+
+.sliderProjects .slider-for a.link-new-window span {
+  color: inherit !important;
+}
+
+.sliderProjects .slider-nav {
+  margin-top: 1rem;
+  padding: 10px 4px;
+}
+
+.sliderProjects .slider-nav .slick-list {
+  padding: 8px 4px !important;
+}
+
+.sliderProjects .slider-nav .thumbnail {
+  border-radius: 8px;
+  opacity: 0.65;
+  border: 2px solid transparent;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  transition: opacity 0.22s ease, transform 0.22s ease, border-color 0.22s ease;
+  cursor: pointer;
+}
+
+.sliderProjects .slider-nav .thumbnail:hover,
+.sliderProjects .slider-nav .slick-current .thumbnail {
+  opacity: 1;
+  border-color: var(--btn-fg);
+  box-shadow: none !important;
 }
 
 /* 2. Boton pausa/play de carrusel (38x38 circulo glass con icono FontAwesome centrado) */
@@ -2299,6 +2406,12 @@ main {
     color 0.22s ease,
     transform 0.22s ease,
     box-shadow 0.22s ease !important;
+}
+
+/* En .sliderProjects el botón Pausa (38x38) se alinea en la misma fila que el botón Ver proyecto */
+.sliderProjects .slick-autoplay-toggle-button {
+  left: 6px !important;
+  bottom: 23px !important;
 }
 
 .events-carousel-wrapper .slick-autoplay-toggle-button {

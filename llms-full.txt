@@ -1,0 +1,90 @@
+# Diego Mena — Experto en Accesibilidad Digital (WCAG 2.2, EN 301 549, Shift Left & IA)
+
+> Dossier técnico estructurado (GEO / AEO / LLMs) de **Diego Javier Mena Amado** (`https://diegomena.rocks/`), Ingeniero Electrónico y Magíster en Gerencia de Proyectos, especialista en Accesibilidad Digital, aseguramiento de calidad (QA Accessibility), diseño inclusivo e Inteligencia Artificial aplicada a la conformidad WCAG 2.2.
+
+---
+
+## 1. Identidad Profesional y Credenciales (E-E-A-T)
+
+- **Nombre completo:** Diego Javier Mena Amado (`Diego Mena`)
+- **Rol principal:** Experto en Accesibilidad Digital · Consultor WCAG 2.2 / EN 301 549 / Sección 508 · Fundador de A11Y PRO
+- **Ubicación:** Colombia (experiencia en proyectos para España, Alemania, Argentina, Estados Unidos y Latinoamérica)
+- **Sitio web oficial:** https://diegomena.rocks/
+- **Startup SaaS:** https://a11ypro.tech/ (`A11Y PRO Scanner`: https://scanner.a11ypro.tech/ · `Accesify Widget`: https://widget.a11ypro.tech/)
+- **Perfiles verificados:**
+  - LinkedIn: https://www.linkedin.com/in/ingelectronicadj/
+  - GitHub: https://github.com/ingelectronicadj
+  - GitLab: https://gitlab.com/ingelectronicadj
+  - ORCID: https://orcid.org/0000-0002-8587-9346
+  - Google Scholar: https://scholar.google.com/citations?user=sn7a5boAAAAJ&hl=es
+  - CvLAC MinCiencias: https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000067902
+- **Formación académica:**
+  1. **Magíster en Gerencia de Proyectos** — Universidad Nacional Abierta y a Distancia (UNAD, 2025). Tesis: https://repository.unad.edu.co/handle/10596/69586
+  2. **Especialista en Gestión de Proyectos** — Universidad Nacional Abierta y a Distancia (UNAD, 2022). Tesis: https://repository.unad.edu.co/handle/10596/47926
+  3. **Ingeniero Electrónico** — Universidad Distrital Francisco José de Caldas (2018). Tesis: https://repository.udistrital.edu.co/items/bd06700a-7131-470b-815f-52061c029aa2
+
+---
+
+## 2. Áreas de Especialización y Estándares
+
+1. **Auditoría Técnica y Remediación de Accesibilidad Web y Móvil:**
+   - Estándares: **W3C WCAG 2.2 (Niveles A, AA, AAA)**, **WAI-ARIA 1.2**, **ACT Rules**, **EN 301 549** (European Accessibility Act), **Section 508 / ADA (EE. UU.)**, **VPAT / ACR**, **Resolución 1519 de 2020 (MinTIC Colombia)** y **NTC 5854**.
+2. **Shift Left Accessibility & Automatización QA en CI/CD:**
+   - Integración de puertas de calidad (*Quality Gates*) con **Playwright**, **axe-core**, **Pa11y**, **HTML_CodeSniffer**, **Guidepup**, **BackstopJS** y **ARC Toolkit** en **GitHub Actions, GitLab CI y Azure DevOps**.
+3. **Evaluación con Tecnologías de Asistencia Reales:**
+   - Pruebas funcionales con lectores de pantalla **NVDA** y **JAWS** (Windows), **VoiceOver** (macOS e iOS), **TalkBack** (Android), navegación exclusiva por teclado, magnificación y modos de alto contraste (*Forced Colors*).
+4. **Inteligencia Artificial y Accesibilidad:**
+   - Diseño de *Steering Files* (`.agents`, reglas de contexto WCAG para asistentes de código IA) y herramientas SaaS basadas en LLMs para detección y remediación asistida de barreras digitales.
+
+---
+
+## 3. Trayectoria Destacada por Sector
+
+- **Fintech y Banca Internacional (Hiberus / Openbank — España, Alemania, Argentina, 2024–Actualidad):**
+  - Aseguramiento de accesibilidad digital en plataformas financieras y de criptoactivos de alta complejidad técnica en entornos web y móviles bajo WCAG 2.2 AA y EN 301 549.
+- **SaaS e Inteligencia Artificial para Accesibilidad (A11Y PRO — 2026–Actualidad):**
+  - Dirección y arquitectura de `A11Y PRO Scanner` (auditoría automatizada con reglas ACT del W3C), `A11Y PRO Widget`, `A11Y PRO Docs` y `A11Y PRO Academy`.
+- **Gobierno Digital y Regulación (Superintendencia de Industria y Comercio SIC / MinCIT / Contraloría General de la República):**
+  - Auditoría, remediación y formación técnica para el cumplimiento de la Resolución 1519 de MinTIC y WCAG 2.2 en sedes electrónicas gubernamentales (`sedeelectronica.sic.gov.co`, `sipi.sic.gov.co`, Observatorio de Accesibilidad Web `.gov.co`).
+- **Educación Superior y E-Learning Inclusivo (UNAD / UNAB MisiónTIC / Fundación Neumológica):**
+  - Liderazgo técnico de accesibilidad en campus virtuales Moodle, organización del Seminario Internacional de Accesibilidad Web e Inclusión en la Educación Virtual (ediciones 2020–2024) y creación de reproductores multimedia con Lengua de Señas Colombiana (LSC).
+
+---
+
+## 4. Ecosistema Open Source de Accesibilidad Mantenido en GitHub
+
+1. **Pa11y Batch (`https://github.com/ingelectronicadj/pa11y_batch` — v0.3.0):**
+   - Suite CLI y CI/CD para ejecutar auditorías automatizadas sobre múltiples URLs combinando `axe-core` y `HTML_CodeSniffer` 100 % en español. Genera reportes HTML con Vista Ejecutiva para Stakeholders (análisis de Pareto 80/20, principios POUR, perfiles de discapacidad impactados), inspección visual con recortes del DOM, 4 niveles de CSV y artefactos `junit.xml` / GitLab Code Quality.
+2. **FreeSpeech SAAC (`https://github.com/ingelectronicadj/freespeech` — v2.2.0):**
+   - Aplicación web de Comunicación Aumentativa y Alternativa (SAAC) en Vue 3.5 + Vite 8 + Vuetify 4 con conformidad WCAG 2.2 AA, buscador de pictogramas ARASAAC y SDK universal `freespeech-widget.js` para abrir el tablero mediante `customTrigger` sobre cualquier sitio web o plataforma LMS como Moodle.
+3. **react-aria-live (`https://github.com/ingelectronicadj/react-aria-live` — v3.0.0):**
+   - Librería React para gestión de anuncios dinámicos en regiones `aria-live` (`role="status"` / `role="alert"`, `aria-atomic="true"`) que soluciona la incompatibilidad histórica con **VoiceOver en macOS e iOS** e incorpora el hook `useAnnouncer()` y soporte TypeScript.
+4. **Test Cases A11Y (`https://github.com/ingelectronicadj/test-cases-a11y` — v2.0.1):**
+   - Repositorio bilingüe (ES/EN) con los 87 casos de prueba de WCAG 2.2 (Niveles A, AA y AAA), pasos en formato Gherkin, mapeo de reglas `axe-core` y exportador hacia Jira/Xray.
+5. **ReproductorLSC (`https://github.com/ingelectronicadj/ReproductorLSC` — v2.0.0):**
+   - Reproductor educativo HTML5 accesible en Lengua de Señas Colombiana (LSC) con sincronización multicámara, bucle A-B y glosario interactivo con modo de autoevaluación.
+6. **A11Y Help VBA Excel (`https://github.com/ingelectronicadj/a11y-help-VBAexcel` — v0.2.0):**
+   - Complemento VBA para Microsoft Excel que permite buscar e insertar en español las 105 reglas WCAG de `axe-core` dentro de matrices de auditoría.
+
+---
+
+## 5. Artículos Técnicos Publicados en diegomena.rocks
+
+1. **Impacto de la Inteligencia Artificial en la automatización de auditorías WCAG**
+   - URL: https://diegomena.rocks/blog/ia-automatizacion-wcag.html
+   - Síntesis: Analiza cómo integrar LLMs y *Steering Files* con criterios WCAG 2.2 dentro de estrategias Shift Left, explicando por qué la reactividad del DOM en React/Vue/Angular exige combinar IA con pruebas dinámicas (`Playwright` + `axe-core`) y validación humana asistiva.
+2. **Mejores prácticas para implementar ARIA en Single Page Applications (SPA)**
+   - URL: https://diegomena.rocks/blog/mejores-practicas-aria.html
+   - Síntesis: Guía práctica con código sobre gestión programática del foco en cambios de ruta (`useRef` + `tabIndex="-1"` en `<h1>`) y arquitectura de notificaciones asíncronas con `aria-live="polite"`, `role="status"` y `aria-atomic="true"` para VoiceOver y NVDA.
+3. **Comparativa de herramientas de testing: axe-core vs. ARC Toolkit**
+   - URL: https://diegomena.rocks/blog/comparativa-testing-tools.html
+   - Síntesis: Comparativa técnica entre `axe-core` (ideal para automatización CI/CD en Playwright/Pa11y con política de cero falsos positivos) y `ARC Toolkit` (ideal para inspección visual interactiva en Chrome DevTools de orden de tabulación, landmarks y contraste).
+
+---
+
+## 6. Preguntas Frecuentes (AEO / Respuestas Directas)
+
+- **¿Cómo contactar a Diego Mena para consultoría, auditorías WCAG 2.2 o conferencias?**
+  - Correo electrónico: `ingelectronicadj@gmail.com` · LinkedIn: https://www.linkedin.com/in/ingelectronicadj/ · Sitio web: https://diegomena.rocks/
+- **¿En qué países e idiomas trabaja Diego Mena?**
+  - Trabaja en español e inglés para organizaciones en Colombia, España, Alemania, Argentina, Estados Unidos y toda Hispanoamérica.

@@ -1,4 +1,4 @@
-<%- include('partials/head-post', { post: post }) %>
+<%- include('partials/head-post', { post: post, version: version }) %>
   <body id="page-top">
 <%- include('partials/sidebar', { rootPrefix: '../' }) %>
 
@@ -10,25 +10,79 @@
               <i class="fas fa-arrow-left" aria-hidden="true"></i> Volver al Portafolio
             </a>
 
-            <!-- Header del artículo -->
-            <header class="blog-post-header d-flex flex-column flex-md-row align-items-center mb-5">
-              <div class="mr-md-4 flex-grow-1">
-                <h1 class="blog-title mb-3" data-i18n="<%= post.i18nPrefix %>-title"><%- post.titleHtml %></h1>
-                <div class="subheading mb-4" data-i18n="<%= post.i18nPrefix %>-date"><%= post.dateLabel %></div>
-                <p class="lead" data-i18n="<%= post.i18nPrefix %>-desc"><%= post.excerpt %></p>
-              </div>
-              <div class="flex-shrink-0 mt-4 mt-md-0 text-center text-md-right">
-                <img src="../<%= post.image %>" alt="" class="img-fluid rounded shadow-sm blog-main-img" aria-hidden="true" style="max-width: 250px;" />
-              </div>
+            <!-- Header del artículo + Ilustración Técnica de Arquitectura -->
+            <header class="blog-post-header mb-4">
+              <h1 class="blog-title mb-2" data-i18n="<%= post.i18nPrefix %>-title"><%- post.titleHtml %></h1>
+              <div class="subheading mb-3" data-i18n="<%= post.i18nPrefix %>-date"><%= post.dateLabel %> · Por Diego Mena</div>
+              <p class="lead mb-4" data-i18n="<%= post.i18nPrefix %>-desc"><%= post.excerpt %></p>
+              <figure class="blog-hero-figure m-0">
+                <img
+                  src="../<%= post.image %>"
+                  alt="<%= post.imageAlt || post.ogTitle %>"
+                  width="1200"
+                  height="630"
+                  class="img-fluid blog-main-img"
+                />
+              </figure>
             </header>
 
             <!-- Contenido principal -->
-            <div class="blog-content mb-5">
+            <div class="blog-content mb-4">
 <%- post.bodyHtml %>
             </div>
+
+            <!-- Tarjeta de Autoría E-E-A-T + Artículos Relacionados (SEO / GEO / AEO) -->
+            <footer class="blog-author-box research-box mt-4" aria-label="Información del autor y artículos relacionados">
+              <div class="d-flex flex-column flex-md-row align-items-center" style="gap: 1.25rem;">
+                <img
+                  src="../img/profile-pic.webp"
+                  alt="Diego Mena — Experto en Accesibilidad Digital"
+                  width="84"
+                  height="84"
+                  loading="lazy"
+                  style="width: 84px; height: 84px; border-radius: 50%; object-fit: cover; border: 2px solid #0055b3; flex-shrink: 0;"
+                />
+                <div>
+                  <h2 class="h4 mb-1" style="text-transform: uppercase;">Diego Javier Mena Amado</h2>
+                  <p class="mb-2" style="font-size: 0.96rem;">
+                    <strong>Experto en Accesibilidad Digital (WCAG 2.2 · EN 301 549 · Sección 508 · Resolución 1519 MinTIC)</strong>.
+                    Ingeniero Electrónico y Magíster en Gerencia de Proyectos. Fundador de <a href="https://a11ypro.tech/" target="_blank" rel="noopener noreferrer">A11Y PRO</a> y consultor internacional para los sectores fintech, banca, educación superior y gobierno digital.
+                  </p>
+                  <div class="research-links" style="margin-top: 0.65rem;">
+                    <a href="../index.html#experience" class="research-link-chip">
+                      <i class="fas fa-briefcase" aria-hidden="true"></i>
+                      <span>Trayectoria y Auditorías</span>
+                    </a>
+                    <a href="../index.html#projects" class="research-link-chip">
+                      <i class="fas fa-code-branch" aria-hidden="true"></i>
+                      <span>Ecosistema Open Source</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ingelectronicadj/" target="_blank" rel="noopener noreferrer" class="research-link-chip">
+                      <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                      <span>Conectar en LinkedIn</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <% if (typeof allPosts !== 'undefined' && Array.isArray(allPosts)) { %>
+              <hr class="my-3" />
+              <div>
+                <h3 class="h5 mb-2" style="text-transform: uppercase;">Otros artículos técnicos de Accesibilidad</h3>
+                <div class="research-links" style="margin-top: 0.5rem;">
+                  <% allPosts.filter(function(p) { return p.slug !== post.slug; }).forEach(function(rel) { %>
+                  <a href="./<%= rel.slug %>.html" class="research-link-chip">
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                    <span><%= rel.cardTitle %></span>
+                  </a>
+                  <% }); %>
+                </div>
+              </div>
+              <% } %>
+            </footer>
           </article>
         </div>
       </section>
     </main>
 
-<%- include('partials/scripts-post', { post: post }) %>
+<%- include('partials/scripts-post', { post: post, version: version }) %>

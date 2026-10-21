@@ -4,6 +4,7 @@ Allow: /
 
 # Explicitly allow LLM agents and web crawlers for agentic browsing
 Allow: /llms.txt
+Allow: /llms-full.txt
 Allow: /index.md
 
 # Bloquear carpetas no relevantes para indexación

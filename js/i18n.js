@@ -252,6 +252,26 @@ const i18n = {
       "project20-link": "Ver observatorio",
       "project20-aria":
         "Ver Panorama de la accesibilidad web en Colombia para sitios web gov.co - 5,000+ sitios gov.co",
+      "project24-title":
+        "Pa11y Batch: Suite de Auditoría WCAG 2.2 en Español y CI/CD",
+      "project24-link": "Ver repositorio",
+      "project24-aria":
+        "Ver repositorio de Pa11y Batch en GitHub (Se abre en una nueva pestaña)",
+      "project25-title":
+        "FreeSpeech SAAC: Comunicador CAA con Widget Universal para Web y Moodle",
+      "project25-link": "Ver proyecto SAAC",
+      "project25-aria":
+        "Ver repositorio de FreeSpeech SAAC en GitHub (Se abre en una nueva pestaña)",
+      "project26-title":
+        "react-aria-live v3.0: Regiones Vivas para VoiceOver (macOS/iOS) y NVDA",
+      "project26-link": "Ver librería React",
+      "project26-aria":
+        "Ver repositorio de react-aria-live en GitHub (Se abre en una nueva pestaña)",
+      "project27-title":
+        "Reproductor Educativo LSC v2.0 y Glosario Matemático en Lengua de Señas",
+      "project27-link": "Ver repositorio LSC",
+      "project27-aria":
+        "Ver repositorio de ReproductorLSC en GitHub (Se abre en una nueva pestaña)",
 
       // Interests section
       "section-interests": "Intereses",
@@ -610,6 +630,26 @@ const i18n = {
       "project20-link": "View observatory",
       "project20-aria":
         "View Overview of web accessibility in Colombia for gov.co websites - 5,000+ gov.co sites",
+      "project24-title":
+        "Pa11y Batch: Spanish WCAG 2.2 Auditing Suite & CI/CD",
+      "project24-link": "View repository",
+      "project24-aria":
+        "View Pa11y Batch repository on GitHub (Opens in a new tab)",
+      "project25-title":
+        "FreeSpeech SAAC: AAC Communicator with Universal Web & Moodle Widget",
+      "project25-link": "View SAAC project",
+      "project25-aria":
+        "View FreeSpeech SAAC repository on GitHub (Opens in a new tab)",
+      "project26-title":
+        "react-aria-live v3.0: Live Regions for VoiceOver (macOS/iOS) & NVDA",
+      "project26-link": "View React library",
+      "project26-aria":
+        "View react-aria-live repository on GitHub (Opens in a new tab)",
+      "project27-title":
+        "LSC Educational Player v2.0 & Sign Language Math Glossary",
+      "project27-link": "View LSC repository",
+      "project27-aria":
+        "View ReproductorLSC repository on GitHub (Opens in a new tab)",
 
       // Interests section
       "section-interests": "Interests",
