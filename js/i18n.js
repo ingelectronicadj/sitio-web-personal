@@ -272,6 +272,11 @@ const i18n = {
       "project27-link": "Ver repositorio LSC",
       "project27-aria":
         "Ver repositorio de ReproductorLSC en GitHub (Se abre en una nueva pestaña)",
+      "project28-title":
+        "TalkBack A11Y Auditor: Auditor Lineal de Android TalkBack e Inspector WebView CDP",
+      "project28-link": "Ver auditor TalkBack",
+      "project28-aria":
+        "Ver repositorio de TalkBack A11Y Auditor en GitHub (Se abre en una nueva pestaña)",
 
       // Interests section
       "section-interests": "Intereses",
@@ -286,6 +291,7 @@ const i18n = {
       "oss-ecosystem-header": "Ecosistema Open Source de Accesibilidad (GitHub)",
       "oss-ecosystem-desc":
         "Herramientas, librerías y repositorios abiertos mantenidos para la comunidad global de ingeniería de accesibilidad, automatización QA e inclusión educativa:",
+      "oss-talkback-auditor": "TalkBack A11Y Auditor (Android + OCR + CDP)",
       "oss-pa11y-batch": "Pa11y Batch (Auditoría WCAG ES + CI/CD)",
       "oss-freespeech": "FreeSpeech SAAC (Vue 3 + Custom Trigger LMS)",
       "oss-react-aria-live": "react-aria-live (VoiceOver + useAnnouncer)",
@@ -650,6 +656,11 @@ const i18n = {
       "project27-link": "View LSC repository",
       "project27-aria":
         "View ReproductorLSC repository on GitHub (Opens in a new tab)",
+      "project28-title":
+        "TalkBack A11Y Auditor: Android TalkBack Linear Auditor & WebView CDP Inspector",
+      "project28-link": "View TalkBack auditor",
+      "project28-aria":
+        "View TalkBack A11Y Auditor repository on GitHub (Opens in a new tab)",
 
       // Interests section
       "section-interests": "Interests",
@@ -664,6 +675,7 @@ const i18n = {
       "oss-ecosystem-header": "Open Source Accessibility Ecosystem (GitHub)",
       "oss-ecosystem-desc":
         "Open-source tools, libraries, and repositories maintained for the global accessibility engineering, QA automation, and inclusive education community:",
+      "oss-talkback-auditor": "TalkBack A11Y Auditor (Android + OCR + CDP)",
       "oss-pa11y-batch": "Pa11y Batch (Spanish WCAG Audits + CI/CD)",
       "oss-freespeech": "FreeSpeech SAAC (Vue 3 + LMS Custom Trigger)",
       "oss-react-aria-live": "react-aria-live (VoiceOver + useAnnouncer)",

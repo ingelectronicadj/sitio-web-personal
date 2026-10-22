@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.5.2] - 2026-10-22
+
+### Added
+
+- **Incorporación de `talkback-a11y-auditor` (`v0.3.1`) al portafolio y ecosistema Open Source**:
+  - Nueva diapositiva y miniatura en el carrusel `#projects` (`img/projects/talkback-a11y-auditor.webp`) con mockup MacBook Air de fondo transparente mostrando el reporte interactivo WCAG 2.2, la secuencia lineal de voz hablada por OCR (`Vision.framework`), la inspección de WebViews vía Chrome DevTools Protocol (CDP) y las opciones de remediación A/B.
+  - Nuevo enlace en el bloque **Ecosistema Open Source de Accesibilidad (GitHub)** (`index.html`) y traducciones ES/EN (`project28-*`, `oss-talkback-auditor`) en `js/i18n.js`.
+  - Nuevo nodo estructurado `SoftwareSourceCode` (`#oss-talkback-a11y-auditor`) en el `@graph` JSON-LD de `index.html` y documentación técnica actualizada en `index.md`, `llms.txt` y `llms-full.txt`.
+
 ## [2.5.1] - 2026-10-21
 
 ### Changed

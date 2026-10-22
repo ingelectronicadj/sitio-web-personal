@@ -91,7 +91,7 @@
       crossorigin />
     <link href="./vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
     <!-- Bundle unificado de estilos (bootstrap + slick + resume + darkMode_v2 + blog) -->
-    <link rel="stylesheet" href="./css/bundle.min.css?v=2.5.1" />
+    <link rel="stylesheet" href="./css/bundle.min.css?v=2.5.2" />
     <meta name="theme-color" content="#0a0a1a" />
     <link rel="preload" as="image" href="./img/carrusel/Team-Hiberus.webp" />
 
@@ -451,6 +451,15 @@
               "#interestsTitle",
               ".lead"
             ]
+          },
+          {
+            "@type": "SoftwareSourceCode",
+            "@id": "https://diegomena.rocks/#oss-talkback-a11y-auditor",
+            "name": "TalkBack A11Y Auditor: Auditor Lineal de Android TalkBack e Inspector WebView (WCAG 2.2)",
+            "description": "Herramienta automatizada de auditoría lineal para Android TalkBack mediante gestos swipe reales vía QEMU, captura de voz hablada por OCR (Vision.framework), inspección de DOM/ARIA e IndexedDB en WebViews vía Chrome DevTools Protocol (CDP) y generación de reportes interactivos WCAG 2.2.",
+            "codeRepository": "https://github.com/ingelectronicadj/talkback-a11y-auditor",
+            "programmingLanguage": ["Python", "Swift"],
+            "author": { "@id": "https://diegomena.rocks/#person" }
           },
           {
             "@type": "SoftwareSourceCode",
@@ -1904,6 +1913,23 @@
                   </a>
               </div>
               <div>
+                <h3 data-i18n="project28-title">
+                  TalkBack A11Y Auditor: Auditor Lineal de Android TalkBack e Inspector WebView CDP
+                </h3>
+                <img
+                  width="1920"
+                  height="1080"
+                  class="img-responsive"
+                  data-lazy="./img/projects/talkback-a11y-auditor.webp"
+                  alt="TalkBack A11Y Auditor - Reporte interactivo WCAG 2.2 con captura de voz OCR e inspección WebView CDP" />
+                <a
+                  href="https://github.com/ingelectronicadj/talkback-a11y-auditor"
+                  class="link-new-window"
+                  data-i18n-aria="project28-aria">
+                  <span data-i18n="project28-link">Ver auditor TalkBack</span>
+                </a>
+              </div>
+              <div>
                 <h3 data-i18n="project24-title">
                   Pa11y Batch: Suite de Auditoría WCAG 2.2 en Español y CI/CD
                 </h3>
@@ -2249,6 +2275,14 @@
                   width="1920"
                   height="1080"
                   class="img-responsive thumbnail"
+                  data-lazy="./img/projects/talkback-a11y-auditor.webp"
+                  alt="Miniatura del proyecto: TalkBack A11Y Auditor" />
+              </div>
+              <div>
+                <img
+                  width="1920"
+                  height="1080"
+                  class="img-responsive thumbnail"
                   data-lazy="./img/projects/pa11y-batch.webp"
                   alt="Miniatura del proyecto: Pa11y Batch WCAG 2.2" />
               </div>
@@ -2401,6 +2435,19 @@
               Herramientas, librerías y repositorios abiertos mantenidos para la comunidad global de ingeniería de accesibilidad, automatización QA e inclusión educativa:
             </p>
             <div class="research-links">
+              <a
+                href="https://github.com/ingelectronicadj/talkback-a11y-auditor"
+                class="research-link-chip"
+                target="_blank"
+                rel="noopener noreferrer">
+                <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                <span data-i18n="oss-talkback-auditor">
+                  TalkBack A11Y Auditor (Android + OCR + CDP)
+                </span>
+                <span class="visually-hidden" data-i18n="opens-new-tab">
+                  (Se abre en una nueva pestaña)
+                </span>
+              </a>
               <a
                 href="https://github.com/ingelectronicadj/pa11y_batch"
                 class="research-link-chip"
@@ -2930,7 +2977,7 @@
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
       defer></script>
-    <script src="./js/bundle.min.js?v=2.5.1" defer></script>
+    <script src="./js/bundle.min.js?v=2.5.2" defer></script>
 
     <!-- Accesibility widget - Accesify -->
     <script defer

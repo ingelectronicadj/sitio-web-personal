@@ -14,6 +14,7 @@
 - [Comparativa de Herramientas de Testing: axe-core vs. ARC Toolkit](https://diegomena.rocks/blog/comparativa-testing-tools.html)
 
 ## Ecosistema Open Source de Accesibilidad (GitHub)
+- [talkback-a11y-auditor (Auditor Lineal de Android TalkBack con QEMU + OCR + Inspector WebView CDP)](https://github.com/ingelectronicadj/talkback-a11y-auditor)
 - [pa11y_batch (Auditorías WCAG en Español + Vista Stakeholders + CI/CD)](https://github.com/ingelectronicadj/pa11y_batch)
 - [FreeSpeech SAAC (Comunicador CAA en Vue 3 + Widget Universal Custom Trigger)](https://github.com/ingelectronicadj/freespeech)
 - [react-aria-live (Regiones aria-live en React compatibles con VoiceOver y NVDA)](https://github.com/ingelectronicadj/react-aria-live)

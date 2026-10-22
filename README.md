@@ -2,7 +2,7 @@
 
 Sitio web personal, portafolio profesional y blog técnico de **Diego Mena** (Experto en Accesibilidad Digital — WCAG 2.2, Auditorías, Shift Left Testing e IA), desplegado en [diegomena.rocks](https://diegomena.rocks/).
 
-- **Versión actual:** `2.5.1`
+- **Versión actual:** `2.5.2`
 - **Despliegue:** Cloudflare Pages (estático generado con Node.js + EJS + esbuild)
 
 ---

@@ -25,12 +25,13 @@ Lideré la transformación y el aseguramiento de la accesibilidad digital en los
 Lideré proyectos de ingeniería de software, automatización de procesos y auditoría de accesibilidad para la optimización de Entornos Virtuales de Aprendizaje (AVA).
 
 ## Ecosistema Open Source de Accesibilidad (GitHub)
-1. **[pa11y_batch](https://github.com/ingelectronicadj/pa11y_batch)** (`v0.3.0`) - Suite CLI y CI/CD (GitHub Actions, GitLab CI, Azure DevOps) para auditorías automatizadas WCAG con `axe-core` + `HTML_CodeSniffer` en español, vista ejecutiva para Stakeholders, inspección visual de hallazgos y 4 niveles de CSV.
-2. **[FreeSpeech SAAC](https://github.com/ingelectronicadj/freespeech)** (`v2.2.0`) - Comunicador Aumentativo y Alternativo (SAAC) en Vue 3.5 + Vite 8 + Vuetify 4 con conformidad WCAG 2.2 AA, buscador ARASAAC y widget flotante universal (`customTrigger`) para cualquier sitio web o LMS (Moodle).
-3. **[react-aria-live](https://github.com/ingelectronicadj/react-aria-live)** (`v3.0.0`) - Librería React de anuncios `aria-live` con soporte completo para VoiceOver (macOS/iOS), NVDA, JAWS y TalkBack, hook `useAnnouncer()` y TypeScript.
-4. **[test-cases-a11y](https://github.com/ingelectronicadj/test-cases-a11y)** (`v2.0.1`) - Repositorio bilingüe (ES/EN) con los 87 casos de prueba WCAG 2.2 (Niveles A, AA y AAA), reglas `axe-core` y exportador para Jira/Xray.
-5. **[ReproductorLSC](https://github.com/ingelectronicadj/ReproductorLSC)** (`v2.0.0`) - Reproductor educativo HTML5 accesible en Lengua de Señas Colombiana (LSC) con sincronización multicámara, repetición A-B y glosario interactivo.
-6. **[a11y-help-VBAexcel](https://github.com/ingelectronicadj/a11y-help-VBAexcel)** (`v0.2.0`) - Complemento VBA para Microsoft Excel que consulta e inserta las 105 reglas WCAG de `axe-core` en español dentro de matrices de auditoría.
+1. **[talkback-a11y-auditor](https://github.com/ingelectronicadj/talkback-a11y-auditor)** (`v0.3.1`) - Auditor lineal de accesibilidad para Android TalkBack con gestos swipe reales vía QEMU, captura de voz hablada por OCR (`Vision.framework`), inspección DOM/ARIA e `IndexedDB` en WebViews mediante Chrome DevTools Protocol (CDP), 16 reglas `TB-*` mapeadas a los 86 criterios de WCAG 2.2 y reportes interactivos HTML.
+2. **[pa11y_batch](https://github.com/ingelectronicadj/pa11y_batch)** (`v0.3.0`) - Suite CLI y CI/CD (GitHub Actions, GitLab CI, Azure DevOps) para auditorías automatizadas WCAG con `axe-core` + `HTML_CodeSniffer` en español, vista ejecutiva para Stakeholders, inspección visual de hallazgos y 4 niveles de CSV.
+3. **[FreeSpeech SAAC](https://github.com/ingelectronicadj/freespeech)** (`v2.2.0`) - Comunicador Aumentativo y Alternativo (SAAC) en Vue 3.5 + Vite 8 + Vuetify 4 con conformidad WCAG 2.2 AA, buscador ARASAAC y widget flotante universal (`customTrigger`) para cualquier sitio web o LMS (Moodle).
+4. **[react-aria-live](https://github.com/ingelectronicadj/react-aria-live)** (`v3.0.0`) - Librería React de anuncios `aria-live` con soporte completo para VoiceOver (macOS/iOS), NVDA, JAWS y TalkBack, hook `useAnnouncer()` y TypeScript.
+5. **[test-cases-a11y](https://github.com/ingelectronicadj/test-cases-a11y)** (`v2.0.1`) - Repositorio bilingüe (ES/EN) con los 87 casos de prueba WCAG 2.2 (Niveles A, AA y AAA), reglas `axe-core` y exportador para Jira/Xray.
+6. **[ReproductorLSC](https://github.com/ingelectronicadj/ReproductorLSC)** (`v2.0.0`) - Reproductor educativo HTML5 accesible en Lengua de Señas Colombiana (LSC) con sincronización multicámara, repetición A-B y glosario interactivo.
+7. **[a11y-help-VBAexcel](https://github.com/ingelectronicadj/a11y-help-VBAexcel)** (`v0.2.0`) - Complemento VBA para Microsoft Excel que consulta e inserta las 105 reglas WCAG de `axe-core` en español dentro de matrices de auditoría.
 
 ## Educación
 - **Magíster en Gerencia de Proyectos** — Universidad Nacional Abierta y a Distancia (UNAD)
