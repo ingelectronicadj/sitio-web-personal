@@ -7,9 +7,6 @@ Allow: /llms.txt
 Allow: /llms-full.txt
 Allow: /index.md
 
-# Bloquear carpetas no relevantes para indexación
-Disallow: /vendor/
-Disallow: /docs/
 
 # Bots de CITA en busquedas de IA (no confundir con bots de entrenamiento)
 User-agent: OAI-SearchBot

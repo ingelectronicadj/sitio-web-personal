@@ -1,0 +1,6 @@
+/*
+  Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'sha256-lp1YuCdmQnpv/aKYDgIZEo2dtXeZHI+sFO4CiYK98Fg=' https://widget.a11ypro.tech https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://widget.a11ypro.tech; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://widget.a11ypro.tech https://cloudflareinsights.com https://a.nel.cloudflare.com; frame-ancestors 'self'; upgrade-insecure-requests; block-all-mixed-content
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), usb=()

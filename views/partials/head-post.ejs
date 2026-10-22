@@ -11,6 +11,9 @@
       content="<%= post.metaDescription %>"
     />
     <meta name="author" content="Diego Javier Mena Amado" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'sha256-lp1YuCdmQnpv/aKYDgIZEo2dtXeZHI+sFO4CiYK98Fg=' https://widget.a11ypro.tech https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://widget.a11ypro.tech; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://widget.a11ypro.tech https://cloudflareinsights.com https://a.nel.cloudflare.com; upgrade-insecure-requests; block-all-mixed-content" />
     <% if (post.keywords) { %>
     <meta name="keywords" content="<%= post.keywords %>" />
     <% } %>

@@ -175,3 +175,25 @@ $(document).ready(function () {
     $("body, html").animate({ scrollTop: "1000px" }, 1000);
   });
 });
+
+// Reconstrucción accesible de correo bajo interacción del usuario
+(function initSecureEmail() {
+  const emailLink = document.getElementById("contact-email-link");
+  if (!emailLink) return;
+  const user = emailLink.getAttribute("data-user");
+  const domain = emailLink.getAttribute("data-domain");
+  if (user && domain) {
+    const address = user + "@" + domain;
+    const activate = function () {
+      emailLink.href = "mailto:" + address;
+      const textSpan = document.getElementById("contact-email-text");
+      if (textSpan && textSpan.textContent !== address) {
+        textSpan.textContent = address;
+      }
+    };
+    emailLink.addEventListener("focus", activate, { once: true });
+    emailLink.addEventListener("mouseover", activate, { once: true });
+    emailLink.addEventListener("click", activate);
+  }
+})();
+

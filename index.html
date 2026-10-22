@@ -51,10 +51,11 @@
       href="https://diegomena.rocks/llms-full.txt"
       title="Diego Mena — Dossier Técnico Completo para LLMs y Motores de Respuesta" />
 
-    <!-- Preconexiones a orígenes CDN externos -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-    <!-- Widget de accesibilidad activo (Accesify) -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'sha256-lp1YuCdmQnpv/aKYDgIZEo2dtXeZHI+sFO4CiYK98Fg=' https://widget.a11ypro.tech https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://widget.a11ypro.tech; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://widget.a11ypro.tech https://cloudflareinsights.com https://a.nel.cloudflare.com; upgrade-insecure-requests; block-all-mixed-content" />
+
+    <!-- Widget de accesibilidad activo (Accesify / A11Y PRO) -->
     <link
       rel="preconnect"
       href="https://widget.a11ypro.tech"
@@ -160,7 +161,6 @@
             "description": "Ingeniero electrónico, Magíster en Gerencia de Proyectos. Más de 5 años de experiencia en accesibilidad digital, QA y auditorías WCAG 2.2 para sectores fintech, gobierno y e-learning.",
             "url": "https://diegomena.rocks/",
             "image": "https://diegomena.rocks/img/profile-pic.webp",
-            "email": "ingelectronicadj@gmail.com",
             "knowsAbout": [
               "Web Accessibility",
               "WCAG 2.2",
@@ -277,15 +277,15 @@
           },
           {
             "@type": "SoftwareApplication",
-            "@id": "https://diegomena.rocks/#moodle-a11ypro",
-            "name": "Moodle A11Y PRO — Plataforma Educativa Accesible",
-            "description": "Plataforma LMS basada en Moodle con enfoque en accesibilidad web y estándares de calidad educativa para la formación de formadores y cursos inclusivos.",
-            "url": "https://moodle.a11ypro.tech/",
+            "@id": "https://diegomena.rocks/#academy-a11ypro",
+            "name": "A11Y PRO Academy — Plataforma Educativa Accesible",
+            "description": "Espacio de formación especializada diseñado para capacitar a equipos de diseño y tecnología en metodologías y desarrollo web accesible.",
+            "url": "https://academy.a11ypro.tech/",
             "applicationCategory": "EducationalApplication",
             "operatingSystem": "Web",
             "author": { "@id": "https://diegomena.rocks/#person" },
             "provider": { "@id": "https://diegomena.rocks/#a11ypro" },
-            "keywords": "LMS, Moodle, accessible e-learning, inclusive education, NTC6576"
+            "keywords": "LMS, accessible e-learning, inclusive education, NTC6576"
           },
           {
             "@type": "Event",
@@ -294,7 +294,7 @@
             "description": "Inclusión desde las tecnologías, diversidad y equidad desde las Instituciones de Educación Superior.",
             "startDate": "2024-10",
             "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
-            "url": "https://datateca.unad.edu.co/cdn-para-cursos-moodle/seminario-accesibilidad-web/2024/",
+            "url": "https://conferencias.unad.edu.co/",
             "organizer": { "@id": "https://diegomena.rocks/#person" },
             "about": [
               "Web Accessibility",
@@ -303,7 +303,7 @@
             ],
             "location": {
               "@type": "VirtualLocation",
-              "url": "https://datateca.unad.edu.co/cdn-para-cursos-moodle/seminario-accesibilidad-web/2024/"
+              "url": "https://conferencias.unad.edu.co/"
             }
           },
           {
@@ -313,7 +313,7 @@
             "description": "Reflexiones y acciones para el tránsito hacia una cultura inclusiva universitaria.",
             "startDate": "2023-10",
             "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
-            "url": "https://datateca.unad.edu.co/cdn-para-cursos-moodle/seminario-accesibilidad-web/2023/",
+            "url": "https://conferencias.unad.edu.co/",
             "organizer": { "@id": "https://diegomena.rocks/#person" },
             "about": ["Web Accessibility", "Inclusive University Culture"]
           },
@@ -324,7 +324,7 @@
             "description": "La tecnología adaptada a las necesidades de una Educación inclusiva.",
             "startDate": "2022-11",
             "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
-            "url": "https://datateca.unad.edu.co/cdn-para-cursos-moodle/seminario-accesibilidad-web/2022/",
+            "url": "https://conferencias.unad.edu.co/",
             "organizer": { "@id": "https://diegomena.rocks/#person" },
             "about": [
               "Web Accessibility",
@@ -339,7 +339,7 @@
             "description": "Buenas prácticas en el desarrollo web accesible.",
             "startDate": "2021-11",
             "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
-            "url": "https://datateca.unad.edu.co/cdn-para-cursos-moodle/seminario-accesibilidad-web/2021/",
+            "url": "https://conferencias.unad.edu.co/",
             "performer": { "@id": "https://diegomena.rocks/#person" },
             "about": ["Accessible Web Development", "WCAG Best Practices"]
           },
@@ -755,11 +755,14 @@
                 <div class="hero-contact-row">
                   <span class="sr-only" data-i18n="about-email-label">E-mail:</span>
                   <a
-                    href="mailto:ingelectronicadj@gmail.com"
-                    class="hero-contact-item"
-                    aria-label="Correo personal: ingelectronicadj@gmail.com">
+                    href="#"
+                    id="contact-email-link"
+                    class="hero-contact-item secure-email"
+                    data-user="ingelectronicadj"
+                    data-domain="gmail.com"
+                    aria-label="Contactar por correo electrónico">
                     <i class="fas fa-envelope" aria-hidden="true"></i>
-                    <span>ingelectronicadj@gmail.com</span>
+                    <span id="contact-email-text">Contactar por correo</span>
                   </a>
                   <span class="sr-only" data-i18n="about-contact-label">Contacto:</span>
                   <a
@@ -2118,7 +2121,7 @@
                   data-lazy="./img/projects/seminario-accesibilidad.webp"
                   alt="Séptimo Seminario de Accesibilidad Web e Inclusión en la Educación Virtual" />
                 <a
-                  href="https://datateca.unad.edu.co/cdn-para-cursos-moodle/seminario-accesibilidad-web/2024/"
+                  href="https://conferencias.unad.edu.co/"
                   class="link-new-window"
                   data-i18n-aria="project2-aria">
                   <span data-i18n="project2-link">
@@ -2137,7 +2140,7 @@
                   data-lazy="./img/projects/autocomplete.webp"
                   alt="Foro educativo distrital 2024" />
                 <a
-                  href="https://moodle.a11ypro.tech/apps/formulario-awesome-complete/"
+                  href="https://academy.a11ypro.tech/apps/formulario-awesome-complete/"
                   class="link-new-window"
                   data-i18n-aria="project3-aria">
                   <span data-i18n="project3-link">Ver plataforma del foro</span>
@@ -2748,7 +2751,7 @@
             <div class="resume-content mr-auto">
               <i class="fas fa-user-circle" aria-hidden="true"></i>
               <a
-                href="https://datateca.unad.edu.co/cdn-para-cursos-moodle/seminario-accesibilidad-web/2024/"
+                href="https://conferencias.unad.edu.co/"
                 class="link-new-window">
                 <i>
                   <b data-i18n="award1-text">
@@ -2774,7 +2777,7 @@
             <div class="resume-content mr-auto">
               <i class="fas fa-user-circle" aria-hidden="true"></i>
               <a
-                href="https://datateca.unad.edu.co/cdn-para-cursos-moodle/seminario-accesibilidad-web/2023/"
+                href="https://conferencias.unad.edu.co/"
                 class="link-new-window">
                 <i>
                   <b data-i18n="award2-text">
@@ -2800,7 +2803,7 @@
             <div class="resume-content mr-auto">
               <i class="fas fa-user-circle" aria-hidden="true"></i>
               <a
-                href="https://datateca.unad.edu.co/cdn-para-cursos-moodle/seminario-accesibilidad-web/2022/"
+                href="https://conferencias.unad.edu.co/"
                 class="link-new-window">
                 <i>
                   <b data-i18n="award3-text">
@@ -2826,7 +2829,7 @@
             <div class="resume-content mr-auto">
               <i class="fas fa-user-circle" aria-hidden="true"></i>
               <a
-                href="https://datateca.unad.edu.co/cdn-para-cursos-moodle/seminario-accesibilidad-web/2021/"
+                href="https://conferencias.unad.edu.co/"
                 class="link-new-window">
                 <i>
                   <b data-i18n="award4-text">
@@ -2966,17 +2969,10 @@
         </span>
       </a>
     </main>
-    <!-- jQuery + GSAP (CDN) + Bundle JS unificado -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"
-      defer></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-      defer></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-      defer></script>
+    <script src="./vendor/js/jquery.min.js"></script>
+    <script src="./vendor/js/jquery.easing.min.js" defer></script>
+    <script src="./vendor/js/gsap.min.js" defer></script>
+    <script src="./vendor/js/scroll-trigger.min.js" defer></script>
     <script src="./js/bundle.min.js?v=2.5.2" defer></script>
 
     <!-- Accesibility widget - Accesify -->

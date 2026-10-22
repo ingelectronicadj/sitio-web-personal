@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "dependency-cruiser": "^18.1.0",
-    "esbuild": "^0.23.0",
+    "esbuild": "^0.25.0",
     "madge": "^8.0.0"
   }
 }

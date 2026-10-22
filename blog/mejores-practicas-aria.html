@@ -11,6 +11,9 @@
       content="Un recorrido técnico sobre el manejo del foco, regiones en vivo (aria-live) y notificaciones asíncronas para garantizar una navegación sin barreras en React y Angular."
     />
     <meta name="author" content="Diego Javier Mena Amado" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'sha256-lp1YuCdmQnpv/aKYDgIZEo2dtXeZHI+sFO4CiYK98Fg=' https://widget.a11ypro.tech https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://widget.a11ypro.tech; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://widget.a11ypro.tech https://cloudflareinsights.com https://a.nel.cloudflare.com; upgrade-insecure-requests; block-all-mixed-content" />
     
     <meta name="keywords" content="WAI-ARIA 1.2, aria-live, Single Page Applications, React accessibility, VoiceOver, NVDA, gestion del foco, WCAG 2.4.3, WCAG 4.1.3, Diego Mena" />
     
@@ -454,8 +457,7 @@
       </section>
     </main>
 
-    <!-- jQuery + Bundle JS unificado -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../vendor/js/jquery.min.js"></script>
     <script src="../js/bundle.min.js?v=2.5.2"></script>
     <script src="./js/mejores-practicas-aria-i18n.js"></script>
 
