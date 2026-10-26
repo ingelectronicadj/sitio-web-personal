@@ -277,6 +277,11 @@ const i18n = {
       "project28-link": "Ver auditor TalkBack",
       "project28-aria":
         "Ver repositorio de TalkBack A11Y Auditor en GitHub (Se abre en una nueva pestaña)",
+      "project29-title":
+        "VoiceOver A11Y Auditor: Auditor Lineal de iOS VoiceOver e Inspector WKWebView RWI",
+      "project29-link": "Ver auditor VoiceOver",
+      "project29-aria":
+        "Ver repositorio de VoiceOver A11Y Auditor en GitHub (Se abre en una nueva pestaña)",
 
       // Interests section
       "section-interests": "Intereses",
@@ -291,6 +296,7 @@ const i18n = {
       "oss-ecosystem-header": "Ecosistema Open Source de Accesibilidad (GitHub)",
       "oss-ecosystem-desc":
         "Herramientas, librerías y repositorios abiertos mantenidos para la comunidad global de ingeniería de accesibilidad, automatización QA e inclusión educativa:",
+      "oss-voiceover-auditor": "VoiceOver A11Y Auditor (iOS + AXAudit + RWI)",
       "oss-talkback-auditor": "TalkBack A11Y Auditor (Android + OCR + CDP)",
       "oss-pa11y-batch": "Pa11y Batch (Auditoría WCAG ES + CI/CD)",
       "oss-freespeech": "FreeSpeech SAAC (Vue 3 + Custom Trigger LMS)",
@@ -661,6 +667,11 @@ const i18n = {
       "project28-link": "View TalkBack auditor",
       "project28-aria":
         "View TalkBack A11Y Auditor repository on GitHub (Opens in a new tab)",
+      "project29-title":
+        "VoiceOver A11Y Auditor: iOS VoiceOver Linear Auditor & WKWebView RWI Inspector",
+      "project29-link": "View VoiceOver auditor",
+      "project29-aria":
+        "View VoiceOver A11Y Auditor repository on GitHub (Opens in a new tab)",
 
       // Interests section
       "section-interests": "Interests",
@@ -675,6 +686,7 @@ const i18n = {
       "oss-ecosystem-header": "Open Source Accessibility Ecosystem (GitHub)",
       "oss-ecosystem-desc":
         "Open-source tools, libraries, and repositories maintained for the global accessibility engineering, QA automation, and inclusive education community:",
+      "oss-voiceover-auditor": "VoiceOver A11Y Auditor (iOS + AXAudit + RWI)",
       "oss-talkback-auditor": "TalkBack A11Y Auditor (Android + OCR + CDP)",
       "oss-pa11y-batch": "Pa11y Batch (Spanish WCAG Audits + CI/CD)",
       "oss-freespeech": "FreeSpeech SAAC (Vue 3 + LMS Custom Trigger)",

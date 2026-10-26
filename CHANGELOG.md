@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.5.4] - 2026-10-26
+
+### Added
+
+- **Incorporación de `voiceover-a11y-auditor` (`v0.1.0`) al portafolio y ecosistema Open Source**:
+  - Nueva diapositiva y miniatura en el carrusel `#projects` (`img/projects/voiceover-a11y-auditor.webp`) con mockup MacBook Air de fondo transparente mostrando el reporte interactivo WCAG 2.2 para iOS Simulator, la secuencia lineal de voz hablada vía `XDMDeviceManager` / `AXAudit`, la inspección de `WKWebView` mediante Safari Remote Web Inspector (RWI) y las opciones de remediación A/B (`WKWebView` HTML/WAI-ARIA y `SwiftUI` / `UIKit`).
+  - Nuevo enlace en el bloque **Ecosistema Open Source de Accesibilidad (GitHub)** (`index.html`) y traducciones ES/EN (`project29-*`, `oss-voiceover-auditor`) en `js/i18n.js`.
+  - Nuevo nodo estructurado `SoftwareSourceCode` (`#oss-voiceover-a11y-auditor`) en el `@graph` JSON-LD de `index.html` y documentación técnica actualizada en `index.md`, `llms.txt` y `llms-full.txt`.
+
 ## [2.5.3] - 2026-10-26
 
 ### Fixed

@@ -9,7 +9,7 @@
       name="description"
       content="Perfil profesional de Diego Mena. Experto en accesibilidad digital con +5 años en auditorías WCAG 2.2, EN 301 549 y Sección 508. Especializado en fintech, gobierno y e-learning. De la conformidad al impacto real." />
     <meta name="author" content="Diego Javier Mena Amado" />
-    <meta name="app-version" content="2.5.3-f3292c9b" />
+    <meta name="app-version" content="2.5.4-823397ae" />
     <script>
       (function () {
         try {
@@ -93,7 +93,7 @@
       crossorigin />
     <link href="./vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
     <!-- Bundle unificado de estilos (bootstrap + slick + resume + darkMode_v2 + blog) -->
-    <link rel="stylesheet" href="./css/bundle.min.css?v=2.5.3-95dc7bb6" />
+    <link rel="stylesheet" href="./css/bundle.min.css?v=2.5.4-95dc7bb6" />
     <meta name="theme-color" content="#0a0a1a" />
     <link rel="preload" as="image" href="./img/carrusel/Team-Hiberus.webp" />
 
@@ -452,6 +452,15 @@
               "#interestsTitle",
               ".lead"
             ]
+          },
+          {
+            "@type": "SoftwareSourceCode",
+            "@id": "https://diegomena.rocks/#oss-voiceover-a11y-auditor",
+            "name": "VoiceOver A11Y Auditor: Auditor Lineal de iOS VoiceOver e Inspector WKWebView (WCAG 2.2)",
+            "description": "Herramienta automatizada de auditoría lineal para iOS VoiceOver sobre Xcode Simulator (UIKit, SwiftUI y WKWebView) mediante XDMDeviceManager y AXAudit, adaptación automática de paquetes .ipa arm64, inspección de DOM/ARIA e IndexedDB vía Safari Remote Web Inspector (RWI) y reportes interactivos WCAG 2.2.",
+            "codeRepository": "https://github.com/ingelectronicadj/voiceover-a11y-auditor",
+            "programmingLanguage": ["Python", "Swift"],
+            "author": { "@id": "https://diegomena.rocks/#person" }
           },
           {
             "@type": "SoftwareSourceCode",
@@ -1917,6 +1926,23 @@
                   </a>
               </div>
               <div>
+                <h3 data-i18n="project29-title">
+                  VoiceOver A11Y Auditor: Auditor Lineal de iOS VoiceOver e Inspector WKWebView RWI
+                </h3>
+                <img
+                  width="1920"
+                  height="1080"
+                  class="img-responsive"
+                  data-lazy="./img/projects/voiceover-a11y-auditor.webp"
+                  alt="VoiceOver A11Y Auditor - Reporte interactivo WCAG 2.2 para iOS Simulator con AXAudit Bridge e inspección WKWebView RWI" />
+                <a
+                  href="https://github.com/ingelectronicadj/voiceover-a11y-auditor"
+                  class="link-new-window"
+                  data-i18n-aria="project29-aria">
+                  <span data-i18n="project29-link">Ver auditor VoiceOver</span>
+                </a>
+              </div>
+              <div>
                 <h3 data-i18n="project28-title">
                   TalkBack A11Y Auditor: Auditor Lineal de Android TalkBack e Inspector WebView CDP
                 </h3>
@@ -2279,6 +2305,14 @@
                   width="1920"
                   height="1080"
                   class="img-responsive thumbnail"
+                  data-lazy="./img/projects/voiceover-a11y-auditor.webp"
+                  alt="Miniatura del proyecto: VoiceOver A11Y Auditor" />
+              </div>
+              <div>
+                <img
+                  width="1920"
+                  height="1080"
+                  class="img-responsive thumbnail"
                   data-lazy="./img/projects/talkback-a11y-auditor.webp"
                   alt="Miniatura del proyecto: TalkBack A11Y Auditor" />
               </div>
@@ -2439,6 +2473,19 @@
               Herramientas, librerías y repositorios abiertos mantenidos para la comunidad global de ingeniería de accesibilidad, automatización QA e inclusión educativa:
             </p>
             <div class="research-links">
+              <a
+                href="https://github.com/ingelectronicadj/voiceover-a11y-auditor"
+                class="research-link-chip"
+                target="_blank"
+                rel="noopener noreferrer">
+                <i class="fab fa-apple" aria-hidden="true"></i>
+                <span data-i18n="oss-voiceover-auditor">
+                  VoiceOver A11Y Auditor (iOS + AXAudit + RWI)
+                </span>
+                <span class="visually-hidden" data-i18n="opens-new-tab">
+                  (Se abre en una nueva pestaña)
+                </span>
+              </a>
               <a
                 href="https://github.com/ingelectronicadj/talkback-a11y-auditor"
                 class="research-link-chip"
@@ -2974,7 +3021,7 @@
     <script src="./vendor/js/jquery.easing.min.js" defer></script>
     <script src="./vendor/js/gsap.min.js" defer></script>
     <script src="./vendor/js/scroll-trigger.min.js" defer></script>
-    <script src="./js/bundle.min.js?v=2.5.3-401af78f" defer></script>
+    <script src="./js/bundle.min.js?v=2.5.4-527fb59c" defer></script>
 
     <!-- Accesibility widget - Accesify -->
     <script defer

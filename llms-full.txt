@@ -53,19 +53,21 @@
 
 ## 4. Ecosistema Open Source de Accesibilidad Mantenido en GitHub
 
-1. **TalkBack A11Y Auditor (`https://github.com/ingelectronicadj/talkback-a11y-auditor` - v0.3.1):**
+1. **VoiceOver A11Y Auditor (`https://github.com/ingelectronicadj/voiceover-a11y-auditor` - v0.1.0):**
+   - Herramienta de auditoría lineal de accesibilidad para iOS VoiceOver sobre Xcode / iOS Simulator (equivalente a NVDA Speech Viewer / Accessibility Inspector para apps nativas `UIKit`, `SwiftUI` e híbridas `WKWebView`). Conecta directamente mediante `XDMDeviceManager` y `AXAudit`, adapta paquetes `.ipa` (`arm64`) para correr en el simulador en Apple Silicon, inspecciona en vivo el DOM/ARIA e `IndexedDB` de `WKWebView` vía Safari Remote Web Inspector (`WebInspector.framework`), evalúa 16 reglas `VO-*` mapeadas a los 86 criterios oficiales WCAG 2.2 y genera reportes HTML interactivos multi-viewport.
+2. **TalkBack A11Y Auditor (`https://github.com/ingelectronicadj/talkback-a11y-auditor` - v0.3.1):**
    - Herramienta de auditoría lineal de accesibilidad para Android TalkBack sobre emuladores Android (equivalente a NVDA Speech Viewer / Accessibility Insights para apps nativas Android Views, Jetpack Compose e híbridas WebView). Ejecuta gestos swipe lineales reales vía consola QEMU, captura el anuncio hablado real con OCR (`Vision.framework`), inspecciona en vivo el DOM/ARIA e `IndexedDB` de WebViews mediante Chrome DevTools Protocol (CDP), evalúa 16 reglas `TB-*` mapeadas a los 86 criterios oficiales WCAG 2.2 y genera reportes HTML interactivos.
-2. **Pa11y Batch (`https://github.com/ingelectronicadj/pa11y_batch` - v0.3.0):**
+3. **Pa11y Batch (`https://github.com/ingelectronicadj/pa11y_batch` - v0.3.0):**
    - Suite CLI y CI/CD para ejecutar auditorías automatizadas sobre múltiples URLs combinando `axe-core` y `HTML_CodeSniffer` 100 % en español. Genera reportes HTML con Vista Ejecutiva para Stakeholders (análisis de Pareto 80/20, principios POUR, perfiles de discapacidad impactados), inspección visual con recortes del DOM, 4 niveles de CSV y artefactos `junit.xml` / GitLab Code Quality.
-3. **FreeSpeech SAAC (`https://github.com/ingelectronicadj/freespeech` - v2.2.0):**
+4. **FreeSpeech SAAC (`https://github.com/ingelectronicadj/freespeech` - v2.2.0):**
    - Aplicación web de Comunicación Aumentativa y Alternativa (SAAC) en Vue 3.5 + Vite 8 + Vuetify 4 con conformidad WCAG 2.2 AA, buscador de pictogramas ARASAAC y SDK universal `freespeech-widget.js` para abrir el tablero mediante `customTrigger` sobre cualquier sitio web o plataforma LMS como Moodle.
-4. **react-aria-live (`https://github.com/ingelectronicadj/react-aria-live` - v3.0.0):**
+5. **react-aria-live (`https://github.com/ingelectronicadj/react-aria-live` - v3.0.0):**
    - Librería React para gestión de anuncios dinámicos en regiones `aria-live` (`role="status"` / `role="alert"`, `aria-atomic="true"`) que soluciona la incompatibilidad histórica con **VoiceOver en macOS e iOS** e incorpora el hook `useAnnouncer()` y soporte TypeScript.
-5. **Test Cases A11Y (`https://github.com/ingelectronicadj/test-cases-a11y` - v2.0.1):**
+6. **Test Cases A11Y (`https://github.com/ingelectronicadj/test-cases-a11y` - v2.0.1):**
    - Repositorio bilingüe (ES/EN) con los 87 casos de prueba de WCAG 2.2 (Niveles A, AA y AAA), pasos en formato Gherkin, mapeo de reglas `axe-core` y exportador hacia Jira/Xray.
-6. **ReproductorLSC (`https://github.com/ingelectronicadj/ReproductorLSC` - v2.0.0):**
+7. **ReproductorLSC (`https://github.com/ingelectronicadj/ReproductorLSC` - v2.0.0):**
    - Reproductor educativo HTML5 accesible en Lengua de Señas Colombiana (LSC) con sincronización multicámara, bucle A-B y glosario interactivo con modo de autoevaluación.
-7. **A11Y Help VBA Excel (`https://github.com/ingelectronicadj/a11y-help-VBAexcel` - v0.2.0):**
+8. **A11Y Help VBA Excel (`https://github.com/ingelectronicadj/a11y-help-VBAexcel` - v0.2.0):**
    - Complemento VBA para Microsoft Excel que permite buscar e insertar en español las 105 reglas WCAG de `axe-core` dentro de matrices de auditoría.
 
 ---
