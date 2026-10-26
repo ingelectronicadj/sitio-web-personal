@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.5.3] - 2026-10-26
+
+### Fixed
+
+- **Invalidación integral de caché y purga definitiva del antiguo Service Worker (`sw.js`, `_headers`, `scripts/build.js`, `js/controls-init.js`)**:
+  - Restaurado de forma permanente `/sw.js` como worker de auto-desregistro (*kill-switch*) junto con reglas en `_headers` para Cloudflare Pages (`Content-Type: application/javascript`, `Cache-Control: no-cache, no-store, must-revalidate`). Al haberse eliminado `sw.js` en `v2.4.0`, Cloudflare Pages respondía al endpoint `/sw.js` con el fallback HTML (`Content-Type: text/html`) y `max-age=14400`, provocando que los navegadores con la antigua PWA (`v43_cache_CV_Diego`) rechazaran la actualización del Service Worker por error de MIME type y conservaran indefinidamente la versión antigua en `CacheStorage`.
+  - Añadida rutina de limpieza en `js/controls-init.js` (compatible con la política `Content-Security-Policy` `script-src 'self'`) que desregistra cualquier Service Worker activo, vacía `window.caches` y fuerza `fetch(location.href, { cache: "reload" })` + `location.reload()` una sola vez por sesión.
+  - *Cache-busting* automático por hash de contenido SHA-256 en `scripts/build.js` (`?v=2.5.3-<hash>`) para `css/bundle.min.css`, `js/bundle.min.js` y `blog/js/<slug>-i18n.js`.
+  - Generación de `version.json` con `buildId` determinista y verificación silenciosa en `js/controls-init.js` (incluyendo restauraciones desde `bfcache` en `pageshow`) para recargar automáticamente si el navegador sirvió un documento HTML obsoleto.
+
 ## [2.5.2] - 2026-10-22
 
 ### Added

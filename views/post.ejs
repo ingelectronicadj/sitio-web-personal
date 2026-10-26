@@ -1,4 +1,4 @@
-<%- include('partials/head-post', { post: post, version: version }) %>
+<%- include('partials/head-post', { post: post, version: version, cssVersion: cssVersion, buildId: buildId }) %>
   <body id="page-top">
 <%- include('partials/sidebar', { rootPrefix: '../' }) %>
 
@@ -85,4 +85,4 @@
       </section>
     </main>
 
-<%- include('partials/scripts-post', { post: post, version: version }) %>
+<%- include('partials/scripts-post', { post: post, version: version, jsVersion: jsVersion, i18nVersion: i18nVersion }) %>

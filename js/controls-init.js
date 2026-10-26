@@ -117,4 +117,107 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }, 200);
   }
+
+  // Purga de Service Worker / CacheStorage heredado (compatible con CSP script-src 'self')
+  try {
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.getRegistrations().then(function (regs) {
+        if (regs.length > 0) {
+          Promise.all(
+            regs.map(function (r) {
+              return r.unregister();
+            }),
+          )
+            .then(function () {
+              return "caches" in window
+                ? caches.keys().then(function (ks) {
+                    return Promise.all(
+                      ks.map(function (k) {
+                        return caches.delete(k);
+                      }),
+                    );
+                  })
+                : null;
+            })
+            .then(function () {
+              if (!sessionStorage.getItem("sw_purged")) {
+                sessionStorage.setItem("sw_purged", "1");
+                fetch(window.location.href, {
+                  cache: "reload",
+                  credentials: "same-origin",
+                }).finally(function () {
+                  window.location.reload();
+                });
+              }
+            });
+        } else if ("caches" in window) {
+          caches.keys().then(function (ks) {
+            if (ks.length > 0) {
+              ks.forEach(function (k) {
+                caches.delete(k);
+              });
+            }
+          });
+        }
+      });
+    }
+  } catch (e) {}
+
+  // Verificacion silenciosa de frescura de HTML contra /version.json
+  function checkAppVersionFreshness() {
+    try {
+      if (
+        !window.fetch ||
+        (window.location.protocol !== "http:" &&
+          window.location.protocol !== "https:")
+      ) {
+        return;
+      }
+      var metaVer = document.querySelector('meta[name="app-version"]');
+      var currentBuildId = metaVer ? metaVer.getAttribute("content") : null;
+      if (!currentBuildId) return;
+
+      var isBlogPage = window.location.pathname.indexOf("/blog/") !== -1;
+      var versionUrl =
+        (isBlogPage ? "../version.json" : "./version.json") +
+        "?t=" +
+        Date.now();
+
+      fetch(versionUrl, {
+        cache: "no-store",
+        credentials: "same-origin",
+        headers: {
+          "Cache-Control": "no-cache, no-store, must-revalidate",
+          Pragma: "no-cache",
+        },
+      })
+        .then(function (res) {
+          return res.ok ? res.json() : null;
+        })
+        .then(function (data) {
+          if (
+            data &&
+            data.buildId &&
+            data.buildId !== currentBuildId &&
+            sessionStorage.getItem("app_ver_reloaded") !== data.buildId
+          ) {
+            sessionStorage.setItem("app_ver_reloaded", data.buildId);
+            fetch(window.location.href, {
+              cache: "reload",
+              credentials: "same-origin",
+            }).finally(function () {
+              window.location.reload();
+            });
+          }
+        })
+        .catch(function () {});
+    } catch (e) {}
+  }
+
+  checkAppVersionFreshness();
+  window.addEventListener("pageshow", function (event) {
+    if (event.persisted) {
+      checkAppVersionFreshness();
+    }
+  });
 });

@@ -2,7 +2,7 @@
 
 Sitio web personal, portafolio profesional y blog técnico de **Diego Mena** (Experto en Accesibilidad Digital — WCAG 2.2, Auditorías, Shift Left Testing e IA), desplegado en [diegomena.rocks](https://diegomena.rocks/).
 
-- **Versión actual:** `2.5.2`
+- **Versión actual:** `2.5.3`
 - **Despliegue:** Cloudflare Pages (estático generado con Node.js + EJS + esbuild)
 
 ---
@@ -35,6 +35,9 @@ Sitio web personal, portafolio profesional y blog técnico de **Diego Mena** (Ex
 ├── scripts/
 │   └── build.js               # Pipeline: EJS -> HTML + esbuild CSS/JS + sitemap.xml
 ├── index.html                 # Página principal del portafolio
+├── sw.js                      # Service Worker kill-switch permanente para limpiar PWA heredada
+├── _headers                   # Cabeceras CSP, Cache-Control y Content-Type para Cloudflare Pages
+├── version.json               # [Generado] Manifiesto de versión y hashes SHA-256 del build
 ├── robots.txt                 # Directivas para buscadores y bots de citación IA
 ├── sitemap.xml                # [Generado] Mapa XML del sitio
 └── llms.txt                   # Mapa estructurado para agentes y motores generativos

@@ -4,3 +4,20 @@
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), usb=()
+
+/sw.js
+  Cache-Control: no-cache, no-store, must-revalidate
+  Content-Type: application/javascript; charset=utf-8
+
+/version.json
+  Cache-Control: no-cache, no-store, must-revalidate
+  Content-Type: application/json; charset=utf-8
+
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/blog/*.html
+  Cache-Control: public, max-age=0, must-revalidate
