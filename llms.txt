@@ -14,6 +14,7 @@
 - [Comparativa de Herramientas de Testing: axe-core vs. ARC Toolkit](https://diegomena.rocks/blog/comparativa-testing-tools.html)
 
 ## Ecosistema Open Source de Accesibilidad (GitHub)
+- [nvda-a11y-auditor (Auditor Lineal de NVDA en Web Desktop con Chrome CDP + Comparativa Cross-Platform)](https://github.com/ingelectronicadj/nvda-a11y-auditor)
 - [voiceover-a11y-auditor (Auditor Lineal de iOS VoiceOver en Xcode Simulator + Inspector WKWebView RWI)](https://github.com/ingelectronicadj/voiceover-a11y-auditor)
 - [talkback-a11y-auditor (Auditor Lineal de Android TalkBack con QEMU + OCR + Inspector WebView CDP)](https://github.com/ingelectronicadj/talkback-a11y-auditor)
 - [pa11y_batch (Auditorías WCAG en Español + Vista Stakeholders + CI/CD)](https://github.com/ingelectronicadj/pa11y_batch)

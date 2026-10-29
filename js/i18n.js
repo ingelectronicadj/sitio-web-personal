@@ -292,10 +292,65 @@ const i18n = {
       "interests-p3":
         'Mi evolución técnica, desde la automatización, siempre ha estado guiada por los ODS y la "Ciencia para la paz", la cual busca comprender las causas de violencia y construir soluciones tecnológicas y sociales que fomenten la convivencia pacífica, la equidad y la justicia social. Me interesa aportar activamente a comunidades de software libre y a una educación de calidad que no deje a nadie atrás. Cada línea de código que escribo tiene un propósito claro: construir una red más humana, accesible y ética.',
 
-      // Research section
+      // Open Source Ecosystem
       "oss-ecosystem-header": "Ecosistema Open Source de Accesibilidad (GitHub)",
       "oss-ecosystem-desc":
-        "Herramientas, librerías y repositorios abiertos mantenidos para la comunidad global de ingeniería de accesibilidad, automatización QA e inclusión educativa:",
+        "Herramientas, librerías y suites abiertas desarrolladas y mantenidas para la comunidad global de ingeniería de accesibilidad, automatización QA e inclusión digital:",
+      "oss-filter-all": "Todos (9)",
+      "oss-filter-screenreaders": "Lectores de Pantalla & QA (4)",
+      "oss-filter-libraries": "Librerías & WCAG (3)",
+      "oss-filter-inclusion": "Inclusión & SAAC (2)",
+      "oss-cat-screenreaders": "Lectores de Pantalla & Automatización QA",
+      "oss-cat-libraries": "Librerías Web & Suites de Validación WCAG",
+      "oss-cat-inclusion": "Inclusión, SAAC & Accesibilidad Sensorial",
+
+      // Items
+      "oss-nvda-auditor-title": "NVDA A11Y Auditor",
+      "oss-nvda-auditor-badge": "Windows · NVDA · Chrome CDP",
+      "oss-nvda-auditor-desc":
+        "Auditor lineal para Web Desktop con NVDA y Chrome vía CDP. Emula modo exploración y foco, extrae subtítulos del speech viewer en vivo, inspecciona W3C AccName 1.2 y evalúa 86 criterios WCAG 2.2 con comparativa cross-platform.",
+
+      "oss-voiceover-auditor-title": "VoiceOver A11Y Auditor",
+      "oss-voiceover-auditor-badge": "iOS · AXAudit · Safari RWI",
+      "oss-voiceover-auditor-desc":
+        "Auditor lineal para iOS VoiceOver sobre Xcode Simulator (UIKit, SwiftUI y WKWebView) mediante AXAudit Bridge, adaptación arm64, inspección DOM/ARIA e IndexedDB vía Safari RWI y reportes interactivos WCAG 2.2.",
+
+      "oss-talkback-auditor-title": "TalkBack A11Y Auditor",
+      "oss-talkback-auditor-badge": "Android · OCR · Chrome CDP",
+      "oss-talkback-auditor-desc":
+        "Auditor lineal para Android TalkBack con gestos swipe reales vía QEMU, captura de voz hablada por OCR, inspección de DOM/ARIA en WebViews vía CDP y generación de reportes interactivos WCAG 2.2.",
+
+      "oss-pa11y-batch-title": "Pa11y Batch",
+      "oss-pa11y-batch-badge": "Node.js · axe-core · CI/CD",
+      "oss-pa11y-batch-desc":
+        "Suite CLI y CI/CD para auditorías automatizadas de accesibilidad web con axe-core y HTML_CodeSniffer en español, vista ejecutiva para Stakeholders, inspección visual del DOM y artefactos JUnit.",
+
+      "oss-react-aria-live-title": "react-aria-live",
+      "oss-react-aria-live-badge": "React · TypeScript · ARIA Live",
+      "oss-react-aria-live-desc":
+        "Librería React para anuncios dinámicos en regiones aria-live (polite/assertive) compatible con VoiceOver en iOS/macOS, NVDA y JAWS, con hook useAnnouncer() y tipado estricto TypeScript.",
+
+      "oss-test-cases-title": "Test Cases A11Y",
+      "oss-test-cases-badge": "WCAG 2.2 · 87 Criterios · Gherkin",
+      "oss-test-cases-desc":
+        "Catálogo estructurado y bilingüe con los 87 criterios de conformidad WCAG 2.2 (Niveles A, AA y AAA), pasos en formato Gherkin, mapeo de reglas axe-core y exportador hacia Jira/Xray.",
+
+      "oss-vba-excel-title": "A11Y Help VBA Excel",
+      "oss-vba-excel-badge": "Excel VBA · axe-core ES",
+      "oss-vba-excel-desc":
+        "Complemento VBA para Microsoft Excel que permite consultar e insertar en español las 105 reglas de accesibilidad de axe-core dentro de matrices de auditoría y gestión de hallazgos.",
+
+      "oss-freespeech-title": "FreeSpeech SAAC",
+      "oss-freespeech-badge": "Vue 3 · SAAC / AAC · Moodle LMS",
+      "oss-freespeech-desc":
+        "Sistema Aumentativo y Alternativo de Comunicación (SAAC) en Vue 3.5 + Vite con conformidad WCAG 2.2 AA, buscador de pictogramas ARASAAC y SDK universal adaptable para LMS y portales web.",
+
+      "oss-reproductor-lsc-title": "Reproductor LSC",
+      "oss-reproductor-lsc-badge": "HTML5 Video · LSC · Inclusión",
+      "oss-reproductor-lsc-desc":
+        "Reproductor educativo HTML5 accesible en Lengua de Señas Colombiana (LSC) con sincronización multicámara, repetición de bucle A-B y glosario interactivo con autoevaluación.",
+
+      // Legacy fallback strings
       "oss-voiceover-auditor": "VoiceOver A11Y Auditor (iOS + AXAudit + RWI)",
       "oss-talkback-auditor": "TalkBack A11Y Auditor (Android + OCR + CDP)",
       "oss-pa11y-batch": "Pa11y Batch (Auditoría WCAG ES + CI/CD)",
@@ -682,10 +737,65 @@ const i18n = {
       "interests-p3":
         'My technical evolution, starting from automation, has always been guided by the SDGs and "Science for Peace", which seeks to understand the causes of violence and build technological and social solutions that promote peaceful coexistence, equity and social justice. I am interested in actively contributing to free software communities and to a quality education that leaves no one behind. Every line of code I write has a clear purpose: to build a more human, accessible, and ethical network.',
 
-      // Research section
+      // Open Source Ecosystem
       "oss-ecosystem-header": "Open Source Accessibility Ecosystem (GitHub)",
       "oss-ecosystem-desc":
-        "Open-source tools, libraries, and repositories maintained for the global accessibility engineering, QA automation, and inclusive education community:",
+        "Open-source tools, libraries, and suites developed and maintained for the global accessibility engineering, QA automation, and digital inclusion community:",
+      "oss-filter-all": "All (9)",
+      "oss-filter-screenreaders": "Screen Readers & QA (4)",
+      "oss-filter-libraries": "Libraries & WCAG (3)",
+      "oss-filter-inclusion": "Inclusion & AAC (2)",
+      "oss-cat-screenreaders": "Screen Readers & QA Automation",
+      "oss-cat-libraries": "Web Libraries & WCAG Validation Suites",
+      "oss-cat-inclusion": "Inclusion, AAC & Sensory Accessibility",
+
+      // Items
+      "oss-nvda-auditor-title": "NVDA A11Y Auditor",
+      "oss-nvda-auditor-badge": "Windows · NVDA · Chrome CDP",
+      "oss-nvda-auditor-desc":
+        "Automated linear accessibility auditor for Web Desktop with NVDA and Chrome via CDP. Emulates browse and focus mode, extracts speech viewer captions, inspects W3C AccName 1.2, and evaluates 86 WCAG 2.2 criteria with cross-platform comparison.",
+
+      "oss-voiceover-auditor-title": "VoiceOver A11Y Auditor",
+      "oss-voiceover-auditor-badge": "iOS · AXAudit · Safari RWI",
+      "oss-voiceover-auditor-desc":
+        "Automated linear auditor for iOS VoiceOver on Xcode Simulator (UIKit, SwiftUI, and WKWebView) via AXAudit Bridge, arm64 adaptation, DOM/ARIA and IndexedDB inspection via Safari RWI, and interactive WCAG 2.2 reports.",
+
+      "oss-talkback-auditor-title": "TalkBack A11Y Auditor",
+      "oss-talkback-auditor-badge": "Android · OCR · Chrome CDP",
+      "oss-talkback-auditor-desc":
+        "Automated linear auditor for Android TalkBack with real swipe gestures via QEMU, spoken speech capture via OCR, WebView DOM/ARIA inspection via CDP, and interactive WCAG 2.2 reports.",
+
+      "oss-pa11y-batch-title": "Pa11y Batch",
+      "oss-pa11y-batch-badge": "Node.js · axe-core · CI/CD",
+      "oss-pa11y-batch-desc":
+        "CLI & CI/CD suite for automated web accessibility audits combining axe-core and HTML_CodeSniffer in Spanish, Executive Stakeholder reports, visual DOM crops, and JUnit artifacts.",
+
+      "oss-react-aria-live-title": "react-aria-live",
+      "oss-react-aria-live-badge": "React · TypeScript · ARIA Live",
+      "oss-react-aria-live-desc":
+        "React library for dynamic aria-live announcements (polite/assertive) solving historical incompatibility with VoiceOver on iOS/macOS, NVDA, and JAWS, with useAnnouncer() hook and TypeScript.",
+
+      "oss-test-cases-title": "Test Cases A11Y",
+      "oss-test-cases-badge": "WCAG 2.2 · 87 Criteria · Gherkin",
+      "oss-test-cases-desc":
+        "Structured bilingual repository with all 87 WCAG 2.2 success criteria (Levels A, AA, and AAA), Gherkin scenarios, axe-core rule mapping, and Jira/Xray exporter.",
+
+      "oss-vba-excel-title": "A11Y Help VBA Excel",
+      "oss-vba-excel-badge": "Excel VBA · axe-core ES",
+      "oss-vba-excel-desc":
+        "Microsoft Excel VBA add-in to look up and insert 105 axe-core accessibility rules in Spanish directly into audit spreadsheets and compliance matrices.",
+
+      "oss-freespeech-title": "FreeSpeech SAAC",
+      "oss-freespeech-badge": "Vue 3 · AAC · Moodle LMS",
+      "oss-freespeech-desc":
+        "Augmentative and Alternative Communication (AAC) web app in Vue 3.5 + Vite with WCAG 2.2 AA compliance, ARASAAC pictogram search, and universal SDK with adaptive triggers for LMS.",
+
+      "oss-reproductor-lsc-title": "Reproductor LSC",
+      "oss-reproductor-lsc-badge": "HTML5 Video · LSC · Inclusion",
+      "oss-reproductor-lsc-desc":
+        "Accessible HTML5 multimedia player with interactive glossary, multi-camera synchronization, and A-B loop repetition featuring Colombian Sign Language interpretation.",
+
+      // Legacy fallback strings
       "oss-voiceover-auditor": "VoiceOver A11Y Auditor (iOS + AXAudit + RWI)",
       "oss-talkback-auditor": "TalkBack A11Y Auditor (Android + OCR + CDP)",
       "oss-pa11y-batch": "Pa11y Batch (Spanish WCAG Audits + CI/CD)",

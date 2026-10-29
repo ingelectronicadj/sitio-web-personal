@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.5.5] - 2026-10-28
+
+### Added
+
+- **Incorporación de `nvda-a11y-auditor` (`v0.1.0`) y rediseño modular del Ecosistema Open Source de Accesibilidad**:
+  - Incorporado el nuevo proyecto `nvda-a11y-auditor` (auditor lineal de accesibilidad para Web Desktop con NVDA y Google Chrome vía Chrome DevTools Protocol, emulación de modo exploración y foco, captura de voz hablada del speech viewer, inspección AccName 1.2 y evaluación de 86 criterios WCAG 2.2).
+  - Rediseño completo de la sección **Ecosistema Open Source de Accesibilidad (GitHub)**: estructuración semántica en tarjetas interactivas (`.oss-card`) con categorización por dominios (Lectores de Pantalla & Automatización QA, Librerías Web & Validación WCAG, e Inclusión, SAAC & Accesibilidad Sensorial).
+  - Barra de filtrado accesible con estados dinámicos `aria-pressed`, anuncio en región en vivo (`role="status" aria-live="polite"`) y fallback visual sin JavaScript.
+  - Soporte completo para modo oscuro (`darkMode_v2.css`), modo de colores forzados del sistema operativo (`forced-colors: active`), anillos de foco de alto contraste (`:focus-visible`) y diseño adaptable a 320 px (WCAG 1.4.10 Reflow).
+  - Nuevo nodo estructurado `SoftwareSourceCode` (`#oss-nvda-a11y-auditor`) en el `@graph` JSON-LD de `index.html` y documentación técnica actualizada en `index.md`, `llms.txt` y `llms-full.txt`.
+
 ## [2.5.4] - 2026-10-26
 
 ### Added

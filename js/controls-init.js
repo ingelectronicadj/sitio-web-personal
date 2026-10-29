@@ -214,6 +214,43 @@ document.addEventListener("DOMContentLoaded", function () {
     } catch (e) {}
   }
 
+  // Filtro accesible para el Ecosistema Open Source de Accesibilidad
+  (function initOssFilter() {
+    var filterButtons = document.querySelectorAll(".oss-filter-btn");
+    var categories = document.querySelectorAll(".oss-category");
+    var liveRegion = document.getElementById("oss-filter-status");
+    if (!filterButtons.length || !categories.length) return;
+
+    filterButtons.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var targetFilter = btn.getAttribute("data-filter");
+        filterButtons.forEach(function (b) {
+          var isCurrent = b === btn;
+          b.classList.toggle("active", isCurrent);
+          b.setAttribute("aria-pressed", String(isCurrent));
+        });
+
+        var visibleCount = 0;
+        categories.forEach(function (cat) {
+          var catType = cat.getAttribute("data-category");
+          var show = targetFilter === "all" || catType === targetFilter;
+          cat.classList.toggle("is-hidden", !show);
+          if (show) {
+            visibleCount += cat.querySelectorAll(".oss-card").length;
+          }
+        });
+
+        if (liveRegion) {
+          var lang = (typeof i18n !== "undefined" && i18n.currentLang) || "es";
+          liveRegion.textContent =
+            lang === "en"
+              ? "Showing " + visibleCount + " open source repositories."
+              : "Mostrando " + visibleCount + " repositorios open source.";
+        }
+      });
+    });
+  })();
+
   checkAppVersionFreshness();
   window.addEventListener("pageshow", function (event) {
     if (event.persisted) {

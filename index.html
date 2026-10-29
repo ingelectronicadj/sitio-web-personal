@@ -9,7 +9,7 @@
       name="description"
       content="Perfil profesional de Diego Mena. Experto en accesibilidad digital con +5 años en auditorías WCAG 2.2, EN 301 549 y Sección 508. Especializado en fintech, gobierno y e-learning. De la conformidad al impacto real." />
     <meta name="author" content="Diego Javier Mena Amado" />
-    <meta name="app-version" content="2.5.4-823397ae" />
+    <meta name="app-version" content="2.5.5-26f11113" />
     <script>
       (function () {
         try {
@@ -93,7 +93,7 @@
       crossorigin />
     <link href="./vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
     <!-- Bundle unificado de estilos (bootstrap + slick + resume + darkMode_v2 + blog) -->
-    <link rel="stylesheet" href="./css/bundle.min.css?v=2.5.4-95dc7bb6" />
+    <link rel="stylesheet" href="./css/bundle.min.css?v=2.5.5-9a67954e" />
     <meta name="theme-color" content="#0a0a1a" />
     <link rel="preload" as="image" href="./img/carrusel/Team-Hiberus.webp" />
 
@@ -452,6 +452,15 @@
               "#interestsTitle",
               ".lead"
             ]
+          },
+          {
+            "@type": "SoftwareSourceCode",
+            "@id": "https://diegomena.rocks/#oss-nvda-a11y-auditor",
+            "name": "NVDA A11Y Auditor: Auditor Lineal de Accesibilidad para Web Desktop con NVDA y Chrome CDP (WCAG 2.2)",
+            "description": "Herramienta automatizada de auditoría lineal de accesibilidad para Web Desktop con NVDA y Google Chrome vía Chrome DevTools Protocol (CDP). Emula modo exploración y foco, extrae subtítulos del speech viewer en vivo, inspecciona DOM/ARIA y W3C AccName 1.2, evalúa 86 criterios WCAG 2.2 y genera reportes interactivos HTML con matriz comparativa cross-platform.",
+            "codeRepository": "https://github.com/ingelectronicadj/nvda-a11y-auditor",
+            "programmingLanguage": ["Python", "JavaScript"],
+            "author": { "@id": "https://diegomena.rocks/#person" }
           },
           {
             "@type": "SoftwareSourceCode",
@@ -2465,118 +2474,337 @@
             </div>
           </div>
 
-          <div class="research-box mt-4 animate-fade-up">
-            <h3 data-i18n="oss-ecosystem-header">
-              Ecosistema Open Source de Accesibilidad (GitHub)
-            </h3>
-            <p class="lead" data-i18n="oss-ecosystem-desc">
-              Herramientas, librerías y repositorios abiertos mantenidos para la comunidad global de ingeniería de accesibilidad, automatización QA e inclusión educativa:
+          <div class="research-box oss-ecosystem-box mt-4 animate-fade-up">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-2">
+              <h3 data-i18n="oss-ecosystem-header" class="mb-0">
+                Ecosistema Open Source de Accesibilidad (GitHub)
+              </h3>
+              <span class="oss-counter-pill" aria-hidden="true">
+                <i class="fab fa-github" aria-hidden="true"></i> 9 repos
+              </span>
+            </div>
+            <p class="lead mb-3" data-i18n="oss-ecosystem-desc">
+              Herramientas, librerías y suites abiertas desarrolladas y mantenidas para la comunidad global de ingeniería de accesibilidad, automatización QA e inclusión digital:
             </p>
-            <div class="research-links">
-              <a
-                href="https://github.com/ingelectronicadj/voiceover-a11y-auditor"
-                class="research-link-chip"
-                target="_blank"
-                rel="noopener noreferrer">
-                <i class="fab fa-apple" aria-hidden="true"></i>
-                <span data-i18n="oss-voiceover-auditor">
-                  VoiceOver A11Y Auditor (iOS + AXAudit + RWI)
-                </span>
-                <span class="visually-hidden" data-i18n="opens-new-tab">
-                  (Se abre en una nueva pestaña)
-                </span>
-              </a>
-              <a
-                href="https://github.com/ingelectronicadj/talkback-a11y-auditor"
-                class="research-link-chip"
-                target="_blank"
-                rel="noopener noreferrer">
-                <i class="fas fa-mobile-alt" aria-hidden="true"></i>
-                <span data-i18n="oss-talkback-auditor">
-                  TalkBack A11Y Auditor (Android + OCR + CDP)
-                </span>
-                <span class="visually-hidden" data-i18n="opens-new-tab">
-                  (Se abre en una nueva pestaña)
-                </span>
-              </a>
-              <a
-                href="https://github.com/ingelectronicadj/pa11y_batch"
-                class="research-link-chip"
-                target="_blank"
-                rel="noopener noreferrer">
-                <i class="fas fa-terminal" aria-hidden="true"></i>
-                <span data-i18n="oss-pa11y-batch">
-                  Pa11y Batch (Auditoría WCAG ES + CI/CD)
-                </span>
-                <span class="visually-hidden" data-i18n="opens-new-tab">
-                  (Se abre en una nueva pestaña)
-                </span>
-              </a>
-              <a
-                href="https://github.com/ingelectronicadj/freespeech"
-                class="research-link-chip"
-                target="_blank"
-                rel="noopener noreferrer">
-                <i class="fas fa-comments" aria-hidden="true"></i>
-                <span data-i18n="oss-freespeech">
-                  FreeSpeech SAAC (Vue 3 + Custom Trigger LMS)
-                </span>
-                <span class="visually-hidden" data-i18n="opens-new-tab">
-                  (Se abre en una nueva pestaña)
-                </span>
-              </a>
-              <a
-                href="https://github.com/ingelectronicadj/react-aria-live"
-                class="research-link-chip"
-                target="_blank"
-                rel="noopener noreferrer">
-                <i class="fas fa-broadcast-tower" aria-hidden="true"></i>
-                <span data-i18n="oss-react-aria-live">
-                  react-aria-live (VoiceOver + useAnnouncer)
-                </span>
-                <span class="visually-hidden" data-i18n="opens-new-tab">
-                  (Se abre en una nueva pestaña)
-                </span>
-              </a>
-              <a
-                href="https://github.com/ingelectronicadj/test-cases-a11y"
-                class="research-link-chip"
-                target="_blank"
-                rel="noopener noreferrer">
-                <i class="fas fa-vial" aria-hidden="true"></i>
-                <span data-i18n="oss-test-cases">
-                  Test Cases A11Y (87 Criterios WCAG 2.2)
-                </span>
-                <span class="visually-hidden" data-i18n="opens-new-tab">
-                  (Se abre en una nueva pestaña)
-                </span>
-              </a>
-              <a
-                href="https://github.com/ingelectronicadj/ReproductorLSC"
-                class="research-link-chip"
-                target="_blank"
-                rel="noopener noreferrer">
-                <i class="fas fa-sign-language" aria-hidden="true"></i>
-                <span data-i18n="oss-reproductor-lsc">
-                  Reproductor LSC (HTML5 + Glosario Señas)
-                </span>
-                <span class="visually-hidden" data-i18n="opens-new-tab">
-                  (Se abre en una nueva pestaña)
-                </span>
-              </a>
-              <a
-                href="https://github.com/ingelectronicadj/a11y-help-VBAexcel"
-                class="research-link-chip"
-                target="_blank"
-                rel="noopener noreferrer">
-                <i class="fas fa-file-excel" aria-hidden="true"></i>
-                <span data-i18n="oss-vba-excel">
-                  A11Y Help VBA Excel (Catálogo axe-core ES)
-                </span>
-                <span class="visually-hidden" data-i18n="opens-new-tab">
-                  (Se abre en una nueva pestaña)
-                </span>
-              </a>
+
+            <!-- Barra de Filtros Accesible (aria-pressed) -->
+            <div class="oss-filter-toolbar" role="toolbar" aria-label="Filtro de proyectos open source">
+              <button
+                type="button"
+                class="oss-filter-btn active"
+                data-filter="all"
+                aria-pressed="true">
+                <span data-i18n="oss-filter-all">Todos (9)</span>
+              </button>
+              <button
+                type="button"
+                class="oss-filter-btn"
+                data-filter="screenreaders"
+                aria-pressed="false">
+                <i class="fas fa-robot mr-1" aria-hidden="true"></i>
+                <span data-i18n="oss-filter-screenreaders">Lectores de Pantalla & QA (4)</span>
+              </button>
+              <button
+                type="button"
+                class="oss-filter-btn"
+                data-filter="libraries"
+                aria-pressed="false">
+                <i class="fas fa-code-branch mr-1" aria-hidden="true"></i>
+                <span data-i18n="oss-filter-libraries">Librerías & WCAG (3)</span>
+              </button>
+              <button
+                type="button"
+                class="oss-filter-btn"
+                data-filter="inclusion"
+                aria-pressed="false">
+                <i class="fas fa-universal-access mr-1" aria-hidden="true"></i>
+                <span data-i18n="oss-filter-inclusion">Inclusión & SAAC (2)</span>
+              </button>
+            </div>
+
+            <!-- Región en vivo para anuncio de filtrado al lector de pantalla -->
+            <div role="status" aria-live="polite" id="oss-filter-status" class="sr-only"></div>
+
+            <!-- Categoria 1: Lectores de Pantalla & QA -->
+            <div class="oss-category" data-category="screenreaders">
+              <h4 class="oss-category-title">
+                <i class="fas fa-robot" aria-hidden="true"></i>
+                <span data-i18n="oss-cat-screenreaders">Lectores de Pantalla & Automatización QA</span>
+                <span class="oss-cat-count" aria-hidden="true">4</span>
+              </h4>
+              <div class="oss-grid">
+                <!-- NVDA Auditor -->
+                <a
+                  href="https://github.com/ingelectronicadj/nvda-a11y-auditor"
+                  class="oss-card"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <div class="oss-card-header">
+                    <div class="oss-card-icon-title">
+                      <div class="oss-card-icon" aria-hidden="true">
+                        <i class="fab fa-windows"></i>
+                      </div>
+                      <h5 class="oss-card-title" data-i18n="oss-nvda-auditor-title">
+                        NVDA A11Y Auditor
+                      </h5>
+                    </div>
+                    <i class="fas fa-external-link-alt oss-card-external" aria-hidden="true"></i>
+                  </div>
+                  <span class="oss-card-badge" data-i18n="oss-nvda-auditor-badge">
+                    Windows · NVDA · Chrome CDP
+                  </span>
+                  <p class="oss-card-desc" data-i18n="oss-nvda-auditor-desc">
+                    Auditor lineal para Web Desktop con NVDA y Chrome vía CDP. Emula modo exploración y foco, extrae subtítulos del speech viewer en vivo, inspecciona W3C AccName 1.2 y evalúa 86 criterios WCAG 2.2 con comparativa cross-platform.
+                  </p>
+                  <span class="visually-hidden" data-i18n="opens-new-tab">
+                    (Se abre en una nueva pestaña)
+                  </span>
+                </a>
+
+                <!-- VoiceOver Auditor -->
+                <a
+                  href="https://github.com/ingelectronicadj/voiceover-a11y-auditor"
+                  class="oss-card"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <div class="oss-card-header">
+                    <div class="oss-card-icon-title">
+                      <div class="oss-card-icon" aria-hidden="true">
+                        <i class="fab fa-apple"></i>
+                      </div>
+                      <h5 class="oss-card-title" data-i18n="oss-voiceover-auditor-title">
+                        VoiceOver A11Y Auditor
+                      </h5>
+                    </div>
+                    <i class="fas fa-external-link-alt oss-card-external" aria-hidden="true"></i>
+                  </div>
+                  <span class="oss-card-badge" data-i18n="oss-voiceover-auditor-badge">
+                    iOS · AXAudit · Safari RWI
+                  </span>
+                  <p class="oss-card-desc" data-i18n="oss-voiceover-auditor-desc">
+                    Auditor lineal para iOS VoiceOver sobre Xcode Simulator (UIKit, SwiftUI y WKWebView) mediante AXAudit Bridge, adaptación arm64, inspección DOM/ARIA e IndexedDB vía Safari RWI y reportes interactivos WCAG 2.2.
+                  </p>
+                  <span class="visually-hidden" data-i18n="opens-new-tab">
+                    (Se abre en una nueva pestaña)
+                  </span>
+                </a>
+
+                <!-- TalkBack Auditor -->
+                <a
+                  href="https://github.com/ingelectronicadj/talkback-a11y-auditor"
+                  class="oss-card"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <div class="oss-card-header">
+                    <div class="oss-card-icon-title">
+                      <div class="oss-card-icon" aria-hidden="true">
+                        <i class="fab fa-android"></i>
+                      </div>
+                      <h5 class="oss-card-title" data-i18n="oss-talkback-auditor-title">
+                        TalkBack A11Y Auditor
+                      </h5>
+                    </div>
+                    <i class="fas fa-external-link-alt oss-card-external" aria-hidden="true"></i>
+                  </div>
+                  <span class="oss-card-badge" data-i18n="oss-talkback-auditor-badge">
+                    Android · OCR · Chrome CDP
+                  </span>
+                  <p class="oss-card-desc" data-i18n="oss-talkback-auditor-desc">
+                    Auditor lineal para Android TalkBack con gestos swipe reales vía QEMU, captura de voz hablada por OCR, inspección de DOM/ARIA en WebViews vía CDP y generación de reportes interactivos WCAG 2.2.
+                  </p>
+                  <span class="visually-hidden" data-i18n="opens-new-tab">
+                    (Se abre en una nueva pestaña)
+                  </span>
+                </a>
+
+                <!-- Pa11y Batch -->
+                <a
+                  href="https://github.com/ingelectronicadj/pa11y_batch"
+                  class="oss-card"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <div class="oss-card-header">
+                    <div class="oss-card-icon-title">
+                      <div class="oss-card-icon" aria-hidden="true">
+                        <i class="fas fa-terminal"></i>
+                      </div>
+                      <h5 class="oss-card-title" data-i18n="oss-pa11y-batch-title">
+                        Pa11y Batch
+                      </h5>
+                    </div>
+                    <i class="fas fa-external-link-alt oss-card-external" aria-hidden="true"></i>
+                  </div>
+                  <span class="oss-card-badge" data-i18n="oss-pa11y-batch-badge">
+                    Node.js · axe-core · CI/CD
+                  </span>
+                  <p class="oss-card-desc" data-i18n="oss-pa11y-batch-desc">
+                    Suite CLI y CI/CD para auditorías automatizadas de accesibilidad web con axe-core y HTML_CodeSniffer en español, vista ejecutiva para Stakeholders, inspección visual del DOM y artefactos JUnit.
+                  </p>
+                  <span class="visually-hidden" data-i18n="opens-new-tab">
+                    (Se abre en una nueva pestaña)
+                  </span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Categoria 2: Librerías Web & Suites de Validación WCAG -->
+            <div class="oss-category" data-category="libraries">
+              <h4 class="oss-category-title">
+                <i class="fas fa-code-branch" aria-hidden="true"></i>
+                <span data-i18n="oss-cat-libraries">Librerías Web & Suites de Validación WCAG</span>
+                <span class="oss-cat-count" aria-hidden="true">3</span>
+              </h4>
+              <div class="oss-grid">
+                <!-- react-aria-live -->
+                <a
+                  href="https://github.com/ingelectronicadj/react-aria-live"
+                  class="oss-card"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <div class="oss-card-header">
+                    <div class="oss-card-icon-title">
+                      <div class="oss-card-icon" aria-hidden="true">
+                        <i class="fab fa-react"></i>
+                      </div>
+                      <h5 class="oss-card-title" data-i18n="oss-react-aria-live-title">
+                        react-aria-live
+                      </h5>
+                    </div>
+                    <i class="fas fa-external-link-alt oss-card-external" aria-hidden="true"></i>
+                  </div>
+                  <span class="oss-card-badge" data-i18n="oss-react-aria-live-badge">
+                    React · TypeScript · ARIA Live
+                  </span>
+                  <p class="oss-card-desc" data-i18n="oss-react-aria-live-desc">
+                    Librería React para anuncios dinámicos en regiones aria-live (polite/assertive) compatible con VoiceOver en iOS/macOS, NVDA y JAWS, con hook useAnnouncer() y tipado estricto TypeScript.
+                  </p>
+                  <span class="visually-hidden" data-i18n="opens-new-tab">
+                    (Se abre en una nueva pestaña)
+                  </span>
+                </a>
+
+                <!-- Test Cases A11Y -->
+                <a
+                  href="https://github.com/ingelectronicadj/test-cases-a11y"
+                  class="oss-card"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <div class="oss-card-header">
+                    <div class="oss-card-icon-title">
+                      <div class="oss-card-icon" aria-hidden="true">
+                        <i class="fas fa-vial"></i>
+                      </div>
+                      <h5 class="oss-card-title" data-i18n="oss-test-cases-title">
+                        Test Cases A11Y
+                      </h5>
+                    </div>
+                    <i class="fas fa-external-link-alt oss-card-external" aria-hidden="true"></i>
+                  </div>
+                  <span class="oss-card-badge" data-i18n="oss-test-cases-badge">
+                    WCAG 2.2 · 87 Criterios · Gherkin
+                  </span>
+                  <p class="oss-card-desc" data-i18n="oss-test-cases-desc">
+                    Catálogo estructurado y bilingüe con los 87 criterios de conformidad WCAG 2.2 (Niveles A, AA y AAA), pasos en formato Gherkin, mapeo de reglas axe-core y exportador hacia Jira/Xray.
+                  </p>
+                  <span class="visually-hidden" data-i18n="opens-new-tab">
+                    (Se abre en una nueva pestaña)
+                  </span>
+                </a>
+
+                <!-- A11Y Help VBA Excel -->
+                <a
+                  href="https://github.com/ingelectronicadj/a11y-help-VBAexcel"
+                  class="oss-card"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <div class="oss-card-header">
+                    <div class="oss-card-icon-title">
+                      <div class="oss-card-icon" aria-hidden="true">
+                        <i class="fas fa-file-excel"></i>
+                      </div>
+                      <h5 class="oss-card-title" data-i18n="oss-vba-excel-title">
+                        A11Y Help VBA Excel
+                      </h5>
+                    </div>
+                    <i class="fas fa-external-link-alt oss-card-external" aria-hidden="true"></i>
+                  </div>
+                  <span class="oss-card-badge" data-i18n="oss-vba-excel-badge">
+                    Excel VBA · axe-core ES
+                  </span>
+                  <p class="oss-card-desc" data-i18n="oss-vba-excel-desc">
+                    Complemento VBA para Microsoft Excel que permite consultar e insertar en español las 105 reglas de accesibilidad de axe-core dentro de matrices de auditoría y gestión de hallazgos.
+                  </p>
+                  <span class="visually-hidden" data-i18n="opens-new-tab">
+                    (Se abre en una nueva pestaña)
+                  </span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Categoria 3: Inclusión, SAAC & Accesibilidad Sensorial -->
+            <div class="oss-category" data-category="inclusion">
+              <h4 class="oss-category-title">
+                <i class="fas fa-universal-access" aria-hidden="true"></i>
+                <span data-i18n="oss-cat-inclusion">Inclusión, SAAC & Accesibilidad Sensorial</span>
+                <span class="oss-cat-count" aria-hidden="true">2</span>
+              </h4>
+              <div class="oss-grid">
+                <!-- FreeSpeech SAAC -->
+                <a
+                  href="https://github.com/ingelectronicadj/freespeech"
+                  class="oss-card"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <div class="oss-card-header">
+                    <div class="oss-card-icon-title">
+                      <div class="oss-card-icon" aria-hidden="true">
+                        <i class="fas fa-comments"></i>
+                      </div>
+                      <h5 class="oss-card-title" data-i18n="oss-freespeech-title">
+                        FreeSpeech SAAC
+                      </h5>
+                    </div>
+                    <i class="fas fa-external-link-alt oss-card-external" aria-hidden="true"></i>
+                  </div>
+                  <span class="oss-card-badge" data-i18n="oss-freespeech-badge">
+                    Vue 3 · SAAC / AAC · Moodle LMS
+                  </span>
+                  <p class="oss-card-desc" data-i18n="oss-freespeech-desc">
+                    Sistema Aumentativo y Alternativo de Comunicación (SAAC) en Vue 3.5 + Vite con conformidad WCAG 2.2 AA, buscador de pictogramas ARASAAC y SDK universal adaptable para LMS y portales web.
+                  </p>
+                  <span class="visually-hidden" data-i18n="opens-new-tab">
+                    (Se abre en una nueva pestaña)
+                  </span>
+                </a>
+
+                <!-- Reproductor LSC -->
+                <a
+                  href="https://github.com/ingelectronicadj/ReproductorLSC"
+                  class="oss-card"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <div class="oss-card-header">
+                    <div class="oss-card-icon-title">
+                      <div class="oss-card-icon" aria-hidden="true">
+                        <i class="fas fa-sign-language"></i>
+                      </div>
+                      <h5 class="oss-card-title" data-i18n="oss-reproductor-lsc-title">
+                        Reproductor LSC
+                      </h5>
+                    </div>
+                    <i class="fas fa-external-link-alt oss-card-external" aria-hidden="true"></i>
+                  </div>
+                  <span class="oss-card-badge" data-i18n="oss-reproductor-lsc-badge">
+                    HTML5 Video · LSC · Inclusión
+                  </span>
+                  <p class="oss-card-desc" data-i18n="oss-reproductor-lsc-desc">
+                    Reproductor educativo HTML5 accesible en Lengua de Señas Colombiana (LSC) con sincronización multicámara, repetición de bucle A-B y glosario interactivo con autoevaluación.
+                  </p>
+                  <span class="visually-hidden" data-i18n="opens-new-tab">
+                    (Se abre en una nueva pestaña)
+                  </span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -3021,7 +3249,7 @@
     <script src="./vendor/js/jquery.easing.min.js" defer></script>
     <script src="./vendor/js/gsap.min.js" defer></script>
     <script src="./vendor/js/scroll-trigger.min.js" defer></script>
-    <script src="./js/bundle.min.js?v=2.5.4-527fb59c" defer></script>
+    <script src="./js/bundle.min.js?v=2.5.5-0ed5fbbb" defer></script>
 
     <!-- Accesibility widget - Accesify -->
     <script defer

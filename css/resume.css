@@ -1822,6 +1822,226 @@ ul.horizontal li a.active {
   outline: 3px solid rgba(0, 85, 179, 0.4);
 }
 
+/* --- Ecosistema Open Source de Accesibilidad --- */
+.oss-counter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(0, 85, 179, 0.08);
+  color: #0055b3;
+  border: 1px solid rgba(0, 85, 179, 0.22);
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.oss-filter-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.15rem 0 1.65rem 0;
+}
+
+.oss-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background-color: #ffffff;
+  border: 1.5px solid #d7e6fb;
+  color: #0055b3;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.86rem;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  box-shadow: 0 1px 3px rgba(0, 85, 179, 0.05);
+}
+
+.oss-filter-btn:hover {
+  background-color: #f0f7ff;
+  border-color: #0055b3;
+  color: #003e82;
+  transform: translateY(-1px);
+}
+
+.oss-filter-btn.active {
+  background-color: #0055b3;
+  border-color: #0055b3;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 85, 179, 0.25);
+}
+
+.oss-category {
+  margin-bottom: 2rem;
+  transition: opacity 0.25s ease;
+}
+
+.oss-category:last-child {
+  margin-bottom: 0.5rem;
+}
+
+.oss-category.is-hidden {
+  display: none !important;
+}
+
+.oss-category-title {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #0b2a4d;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.95rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1.5px solid rgba(0, 85, 179, 0.12);
+}
+
+.oss-category-title i {
+  color: #0055b3;
+}
+
+.oss-cat-count {
+  display: inline-block;
+  background: #e0f2fe;
+  color: #0369a1;
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 0.12rem 0.5rem;
+  border-radius: 999px;
+  margin-left: auto;
+}
+
+.oss-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: 1.1rem;
+}
+
+.oss-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid #d7e6fb;
+  border-left: 3.5px solid #0055b3;
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-decoration: none !important;
+  color: inherit;
+  min-width: 0;
+  box-shadow: 0 2px 8px rgba(11, 42, 77, 0.05);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.oss-card:hover {
+  transform: translateY(-3px);
+  border-color: #0055b3;
+  box-shadow: 0 8px 22px rgba(0, 85, 179, 0.12);
+  text-decoration: none !important;
+}
+
+.oss-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-bottom: 0.65rem;
+}
+
+.oss-card-icon-title {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-width: 0;
+}
+
+.oss-card-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(0, 85, 179, 0.08);
+  color: #0055b3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+  transition: transform 0.22s ease;
+}
+
+.oss-card:hover .oss-card-icon {
+  transform: scale(1.08);
+}
+
+.oss-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0055b3;
+  margin: 0;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.oss-card-external {
+  color: #64748b;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+  transition: transform 0.22s ease, color 0.22s ease;
+}
+
+.oss-card:hover .oss-card-external {
+  color: #0055b3;
+  transform: translate(2px, -2px);
+}
+
+.oss-card-badge {
+  display: inline-block;
+  align-self: flex-start;
+  background-color: #e0f2fe;
+  color: #0369a1;
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  margin-bottom: 0.7rem;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  letter-spacing: 0.01em;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.oss-card-desc {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #334155;
+  margin: 0;
+  flex-grow: 1;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+@media (max-width: 575.98px) {
+  .oss-grid {
+    grid-template-columns: 1fr;
+  }
+  .oss-filter-toolbar {
+    gap: 0.35rem;
+  }
+  .oss-filter-btn {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.8rem;
+  }
+}
+
 /* --- Animación fade-up nativa (reemplaza a AOS) --- */
 /* Estado inicial: invisible y desplazado hacia abajo */
 .animate-fade-up {
@@ -2796,6 +3016,23 @@ main {
   .scroll-progress {
     background: Highlight;
   }
+
+  .oss-counter-pill,
+  .oss-filter-btn,
+  .oss-cat-count,
+  .oss-card,
+  .oss-card-badge {
+    border: 1px solid ButtonBorder !important;
+    outline: 2px solid transparent !important;
+  }
+
+  .oss-filter-btn.active,
+  .oss-filter-btn:focus-visible,
+  .oss-card:hover,
+  .oss-card:focus-visible {
+    border: 2px solid Highlight !important;
+    outline: 2px solid Highlight !important;
+  }
 }
 
 /* Doble anillo de foco al final del archivo: debe ganar sobre cualquier box-shadow de componentes */
@@ -2812,6 +3049,8 @@ button:focus-visible,
 .pagination-btn:focus-visible,
 .pagination-number-btn:focus-visible,
 .research-link-chip:focus-visible,
+.oss-filter-btn:focus-visible,
+.oss-card:focus-visible,
 .diploma-thumbnail-link:focus-visible,
 #sideNav *:focus-visible,
 #navbar ul.horizontal li a:focus-visible,
