@@ -20,6 +20,7 @@
 
 - Clave `blog-back-btn` ausente en `js/i18n.js` (ES/EN): el botón "Volver al Portafolio" quedaba sin traducir al alternar idioma en los 13 artículos.
 - Fallback `window.i18n.updateContent(...)` inexistente en los `-i18n.js` por artículo (método real: `changeLang`); corregido en la plantilla generada por `scripts/build.js`.
+- Vulnerabilidad moderada de Dependabot: `minimatch@10.2.6` (GHSA-g3hv-75wg-m249, DoS por globparts amplification) transitiva vía `madge` → `typescript-estree`; fijada a `11.0.1` mediante `pnpm.overrides` en `package.json`.
 
 ## [2.5.6] - 2026-11-05
 
