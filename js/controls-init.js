@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         });
       },
-      { threshold: 0.12 },
+      { threshold: 0.01 },
     );
     document.querySelectorAll(".animate-fade-up").forEach(function (el) {
       fadeObserver.observe(el);
