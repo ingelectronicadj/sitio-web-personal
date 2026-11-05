@@ -1,0 +1,41 @@
+{
+  "order": 10,
+  "slug": "test-cases-a11y",
+  "pageTitle": "Test Cases A11Y: 87 casos WCAG 2.2 en Gherkin - Diego Mena",
+  "ogTitle": "Test Cases A11Y: 87 casos de prueba bilingües WCAG 2.2 en formato Gherkin",
+  "cardTitle": "Test Cases A11Y: 87 casos de prueba bilingües WCAG 2.2",
+  "cardTitleI18n": "Test Cases A11Y: 87 casos de prueba bilingües WCAG 2.2",
+  "titleHtml": "<span class=\"text-primary\">Test Cases A11Y</span>: 87 casos de prueba bilingües WCAG 2.2",
+  "metaDescription": "Catálogo open source y bilingüe de los 87 criterios de conformidad WCAG 2.2 (A, AA, AAA) con pasos en formato Gherkin, mapeo a reglas axe-core y exportación hacia Jira y Xray.",
+  "dateLabel": "Noviembre 2026 · Testing WCAG",
+  "datePublished": "2026-11-05",
+  "dateModified": "2026-11-05",
+  "excerpt": "Catálogo estructurado y bilingüe con los 87 criterios de conformidad WCAG 2.2 (Niveles A, AA y AAA), pasos en formato Gherkin, mapeo de reglas axe-core y exportador hacia Jira/Xray.",
+  "cardAria": "Leer artículo sobre Test Cases A11Y",
+  "image": "img/blog/blog_test_cases_a11y.webp",
+  "imageAlt": "Catálogo Test Cases A11Y con los 87 criterios WCAG 2.2 organizados en casos Gherkin bilingües con mapeo a reglas axe-core y exportación a Jira",
+  "keywords": "test cases accesibilidad, WCAG 2.2, Gherkin, BDD, axe-core, Jira, Xray, QA accesibilidad, casos de prueba bilingües, open source, Diego Mena",
+  "bodyFile": "content/blog/test-cases-a11y.body.html",
+  "i18n": {
+    "en": {
+      "pageTitle": "Test Cases A11Y: 87 WCAG 2.2 cases in Gherkin - Diego Mena",
+      "cardTitle": "Test Cases A11Y: 87 bilingual WCAG 2.2 test cases",
+      "cardDate": "November 2026 · WCAG Testing",
+      "cardDesc": "Structured bilingual catalog of the 87 WCAG 2.2 success criteria (Levels A, AA and AAA) with Gherkin-format steps, axe-core rule mapping and a Jira/Xray exporter.",
+      "cardLink": "Read article",
+      "cardAria": "Read article about Test Cases A11Y",
+      "articles": {
+        "article10-p1": "An audit without reproducible test cases is an opinion. Test Cases A11Y turns the 87 WCAG 2.2 success criteria (levels A, AA and AAA) into a structured, bilingual catalog of executable procedures, ready to integrate into any team's QA cycle.",
+        "article10-h2-1": "Gherkin as a lingua franca",
+        "article10-p2": "Each criterion is documented in Gherkin format (Given / When / Then), the same language used by BDD tools like Cucumber. This way, an accessibility test case can be executed by a human auditor, but it can also evolve into an automatable specification without being rewritten.",
+        "article10-h2-2": "Mapping to axe-core rules",
+        "article10-p3": "Each case states which axe-core rules partially cover it and which part demands human verification. This distinction is key: automated tools cover a fraction of WCAG, and the catalog makes explicit exactly where the boundary between automatable and manual lies for each criterion.",
+        "article10-h2-3": "Export to Jira and Xray",
+        "article10-p4": "The catalog includes an exporter that transforms the cases into Jira and Xray import format, so the accessibility test plan lives alongside the rest of the project's quality management instead of sitting in an isolated spreadsheet.",
+        "article10-h2-4": "Bilingual by design",
+        "article10-p5": "All cases exist in Spanish and English, allowing international teams to audit with the same corpus and report in the client's language without improvised translations that distort WCAG's normative wording.",
+        "article10-p6": "The catalog is open source at <a href=\"https://github.com/ingelectronicadj/test-cases-a11y\" target=\"_blank\" rel=\"noopener noreferrer\">github.com/ingelectronicadj/test-cases-a11y</a>."
+      }
+    }
+  }
+}

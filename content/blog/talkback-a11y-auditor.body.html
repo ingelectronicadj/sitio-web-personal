@@ -1,0 +1,32 @@
+              <p data-i18n="article6-p1">TalkBack es el lector de pantalla dominante en Android, pero auditar con él de forma manual exige gestos precisos y una escucha atenta que no escala. TalkBack A11Y Auditor automatiza ese recorrido dentro de un emulador QEMU, produciendo un reporte lineal de lo que TalkBack anuncia realmente en cada elemento.</p>
+
+              <h2 data-i18n="article6-h2-1">Gestos swipe reales sobre QEMU</h2>
+              <p data-i18n="article6-p2">A diferencia de las inspecciones estáticas del árbol de accesibilidad, el auditor inyecta gestos de deslizamiento reales en el emulador, los mismos que ejecuta una persona usuaria para avanzar por la interfaz. Esto expone problemas que el árbol declara pero el recorrido no alcanza: elementos fuera del orden de foco, regiones inalcanzables o controles duplicados.</p>
+
+              <h2 data-i18n="article6-h2-2">Captura de la salida hablada por OCR</h2>
+              <p data-i18n="article6-p3">El componente más original del proyecto es la captura de la voz hablada: TalkBack no expone su salida de forma programática, así que el auditor graba la salida de audio del emulador y la transcribe mediante OCR/ASR para obtener el texto literal de cada anuncio. Esa transcripción queda vinculada al elemento enfocado en ese instante.</p>
+
+              <h2 data-i18n="article6-h2-3">Inspección del WebView vía Chrome CDP</h2>
+              <p data-i18n="article6-p4">Para el contenido web embebido, el auditor se conecta al WebView de Android mediante Chrome DevTools Protocol y evalúa el DOM, los roles ARIA y los nombres accesibles computados, del mismo modo que lo hace el auditor NVDA en escritorio. El cruce entre el DOM y lo verbalizado permite detectar divergencias entre lo que el marcado declara y lo que TalkBack pronuncia.</p>
+
+              <div class="blog-code-container my-4" role="region" aria-label="Ejemplo de ejecución del auditor TalkBack sobre emulador Android">
+                <div class="blog-code-header" aria-hidden="true">
+                  <div class="blog-code-dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                  </div>
+                  <div class="blog-code-title">terminal</div>
+                </div>
+                <pre class="blog-code-snippet" tabindex="0"><code><span class="code-key">python</span> -m talkback_auditor \
+  --avd Pixel_7_API_34 --app com.ejemplo.app \
+  --ocr tesseract --wcag 2.2 --report html
+
+<span class="code-comment"># Swipes reales + transcripcion OCR de TalkBack</span>
+<span class="code-comment"># + inspeccion CDP del WebView en un solo reporte</span></code></pre>
+              </div>
+
+              <h2 data-i18n="article6-h2-4">La trilogía cross-platform completa</h2>
+              <p data-i18n="article6-p5">Con este auditor se cierra la trilogía del ecosistema: NVDA A11Y Auditor en escritorio Windows, VoiceOver A11Y Auditor en iOS y TalkBack A11Y Auditor en Android. Ejecutar los tres sobre la misma interfaz revela divergencias de interpretación entre lectores de pantalla que ninguna auditoría mono-plataforma detectaría.</p>
+
+              <p data-i18n="article6-p6">El proyecto es open source y está disponible en <a href="https://github.com/ingelectronicadj/talkback-a11y-auditor" target="_blank" rel="noopener noreferrer">github.com/ingelectronicadj/talkback-a11y-auditor</a>.</p>

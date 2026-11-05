@@ -1,0 +1,31 @@
+              <p data-i18n="article10-p1">Una auditoría sin casos de prueba reproducibles es una opinión. Test Cases A11Y convierte los 87 criterios de conformidad de WCAG 2.2 (niveles A, AA y AAA) en un catálogo estructurado y bilingüe de procedimientos ejecutables, listo para integrarse en el ciclo de QA de cualquier equipo.</p>
+
+              <h2 data-i18n="article10-h2-1">Gherkin como lengua franca</h2>
+              <p data-i18n="article10-p2">Cada criterio se documenta en formato Gherkin (Given / When / Then), el mismo lenguaje que usan las herramientas BDD como Cucumber. Así, un caso de prueba de accesibilidad lo puede ejecutar un auditor humano, pero también evolucionar hacia una especificación automatizable sin rescribirlo.</p>
+
+              <div class="blog-code-container my-4" role="region" aria-label="Ejemplo de caso de prueba WCAG en formato Gherkin">
+                <div class="blog-code-header" aria-hidden="true">
+                  <div class="blog-code-dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                  </div>
+                  <div class="blog-code-title">2.4.7-foco-visible.feature</div>
+                </div>
+                <pre class="blog-code-snippet" tabindex="0"><code><span class="code-key">Escenario:</span> Indicador de foco visible en enlaces
+  <span class="code-key">Dado</span> que el usuario navega solo con teclado
+  <span class="code-key">Cuando</span> pulsa Tab hasta el primer enlace del contenido
+  <span class="code-key">Entonces</span> el indicador de foco es visible
+  <span class="code-key">Y</span> su contraste con el fondo adyacente es de al menos 3:1</code></pre>
+              </div>
+
+              <h2 data-i18n="article10-h2-2">Mapeo con reglas axe-core</h2>
+              <p data-i18n="article10-p3">Cada caso indica qué reglas de axe-core lo cubren parcialmente y qué parte exige verificación humana. Esta distinción es clave: las herramientas automáticas cubren una fracción de WCAG, y el catálogo explicita exactamente cuál es la frontera entre lo automatizable y lo manual en cada criterio.</p>
+
+              <h2 data-i18n="article10-h2-3">Exportación a Jira y Xray</h2>
+              <p data-i18n="article10-p4">El catálogo incluye un exportador que transforma los casos al formato de importación de Jira y Xray, para que el plan de pruebas de accesibilidad viva junto al resto de la gestión de calidad del proyecto en lugar de quedar en una hoja de cálculo aislada.</p>
+
+              <h2 data-i18n="article10-h2-4">Bilingüe desde el diseño</h2>
+              <p data-i18n="article10-p5">Todos los casos existen en español e inglés, lo que permite a equipos internacionales auditar con el mismo corpus y reportar en el idioma del cliente sin traducciones improvisadas que distorsionen la redacción normativa de WCAG.</p>
+
+              <p data-i18n="article10-p6">El catálogo es open source en <a href="https://github.com/ingelectronicadj/test-cases-a11y" target="_blank" rel="noopener noreferrer">github.com/ingelectronicadj/test-cases-a11y</a>.</p>

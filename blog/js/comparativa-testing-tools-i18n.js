@@ -1,5 +1,6 @@
 /**
- * Diccionario de traducciones específico para el Artículo 3 del Blog.
+ * Diccionario de traducciones específico para el artículo "Comparativa de herramientas de testing: axe-core vs ARC Toolkit".
+ * GENERADO por scripts/build.js - editar content/blog/comparativa-testing-tools.json y .body.html
  */
 (function() {
   const blog3Translations = {
@@ -8,7 +9,7 @@
       "article3-p1": "Las herramientas automatizadas son el primer nivel de defensa en cualquier estrategia \"Shift Left\", capaces de capturar entre el 30% y el 50% de los errores totales de accesibilidad (WCAG). En este artículo, ponemos frente a frente a dos gigantes de la industria: axe-core de Deque Systems y ARC Toolkit de TPGi.",
       "article3-h2-1": "Axe-Core: El Rey de la Integración (CI/CD)",
       "article3-p2": "El mayor superpoder de axe-core es su API extremadamente amigable para desarrolladores. Al estar construido puramente en JavaScript, puede inyectarse en Cypress, Selenium, Jest, Pa11y y, mi favorito personal, Playwright. Esto permite romper los despliegues si la interfaz de usuario introduce regresiones de accesibilidad.",
-      "article3-p3": "Al arrojar un error por cada violación encontrada en la terminal, axe-core educa activamente al equipo de desarrollo mientras escriben el código.",
+      "article3-p3": "Al arrojar un error por cada violación encontrada, axe-core educa activamente al equipo de desarrollo mientras escriben el código.",
       "article3-h2-2": "ARC Toolkit: Auditoría Visual Profunda",
       "article3-p4": "Mientras que axe-core brilla en la terminal, ARC Toolkit (una extensión del navegador) brilla en la pantalla. Esta herramienta destaca por su capacidad de inyectar estilos visuales en el DOM para mostrar el orden lógico de lectura, destacar contenedores sin regiones ARIA y verificar el espaciado y el flujo estructural visualmente.",
       "article3-h2-3": "El Veredicto",
@@ -36,7 +37,7 @@
       if (window.i18n && window.i18n.translations) {
         Object.assign(window.i18n.translations.es, blog3Translations.es);
         Object.assign(window.i18n.translations.en, blog3Translations.en);
-        window.i18n.updateContent(window.i18n.currentLang);
+        window.i18n.changeLang(window.i18n.currentLang);
       }
     });
   }

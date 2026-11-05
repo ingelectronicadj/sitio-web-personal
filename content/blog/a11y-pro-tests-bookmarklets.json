@@ -1,0 +1,41 @@
+{
+  "order": 7,
+  "slug": "a11y-pro-tests-bookmarklets",
+  "pageTitle": "A11Y PRO Tests: 21 bookmarklets WCAG 2.2 - Diego Mena",
+  "ogTitle": "A11Y PRO Tests: 21 inspectores WCAG 2.2 en un bookmarklet bilingüe",
+  "cardTitle": "A11Y PRO Tests: 21 inspectores WCAG 2.2 en un bookmarklet bilingüe",
+  "cardTitleI18n": "A11Y PRO Tests: 21 inspectores WCAG 2.2 en un bookmarklet bilingüe",
+  "titleHtml": "<span class=\"text-primary\">A11Y PRO Tests</span>: 21 inspectores WCAG 2.2 en un bookmarklet bilingüe",
+  "metaDescription": "Suite open source de 21 inspectores WCAG 2.2 ejecutables como bookmarklet: Zoom 200%, Reflow 320px, contraste, orden de foco, target size y regiones live, con laboratorio en vivo en tests.a11ypro.tech.",
+  "dateLabel": "Noviembre 2026 · Testing WCAG",
+  "datePublished": "2026-11-05",
+  "dateModified": "2026-11-05",
+  "excerpt": "Suite interactiva de 21 inspectores WCAG 2.2 en un único bookmarklet bilingüe (Zoom 200%, Reflow 320px, Contraste, Orden de foco, Target Size, Regiones Live) y laboratorio en tests.a11ypro.tech.",
+  "cardAria": "Leer artículo sobre A11Y PRO Tests",
+  "image": "img/blog/blog_a11y_pro_tests.webp",
+  "imageAlt": "Panel de la suite A11Y PRO Tests con 21 inspectores WCAG 2.2 activados como bookmarklet sobre una página web en auditoría",
+  "keywords": "bookmarklet accesibilidad, WCAG 2.2, zoom 200, reflow 320px, contraste, orden de foco, target size 2.5.8, aria-live, A11Y PRO, open source, Diego Mena",
+  "bodyFile": "content/blog/a11y-pro-tests-bookmarklets.body.html",
+  "i18n": {
+    "en": {
+      "pageTitle": "A11Y PRO Tests: 21 WCAG 2.2 bookmarklets - Diego Mena",
+      "cardTitle": "A11Y PRO Tests: 21 WCAG 2.2 inspectors in a bilingual bookmarklet",
+      "cardDate": "November 2026 · WCAG Testing",
+      "cardDesc": "Interactive suite of 21 WCAG 2.2 inspectors in a single bilingual bookmarklet (200% Zoom, 320px Reflow, Contrast, Focus Order, Target Size, Live Regions) plus a lab at tests.a11ypro.tech.",
+      "cardLink": "Read article",
+      "cardAria": "Read article about A11Y PRO Tests",
+      "articles": {
+        "article7-p1": "A large share of WCAG criteria cannot be verified by an automated engine: they require interaction, zoom, resizing or keyboard navigation. A11Y PRO Tests packages 21 inspectors for those \"manual\" criteria into a single bilingual bookmarklet that runs on any page, with nothing to install and no extension permissions required.",
+        "article7-h2-1": "Why a bookmarklet",
+        "article7-p2": "A bookmarklet is JavaScript saved as a favorite: it runs in the context of the current page, with the same permissions as the document itself. This allows injecting inspection probes even in environments where extensions are blocked by corporate policies, a real limitation when auditing banking and government portals.",
+        "article7-h2-2": "The 21 inspectors",
+        "article7-p3": "The suite covers the most costly manual WCAG 2.2 verifications: 200% Zoom simulation (1.4.4), 320px Reflow (1.4.10), text and UI component contrast (1.4.3 / 1.4.11), visual focus-order tracing including the focus-not-obscured criterion (2.4.11), target size measurement 2.5.8 and real-time aria-live region monitoring.",
+        "article7-h2-3": "Live laboratory",
+        "article7-p4": "The project includes a lab at <a href=\"https://tests.a11ypro.tech/\" target=\"_blank\" rel=\"noopener noreferrer\">tests.a11ypro.tech</a> where each inspector can be tried on deliberately accessible and inaccessible pages. It is both an audit tool and a training environment for learning to recognize each criterion in context.",
+        "article7-h2-4": "Bilingual and install-free",
+        "article7-p5": "All inspectors operate in Spanish and English and emit reports the auditor can attach to their findings matrices. Being a browser favorite, the adoption barrier is zero: drag the link to the bookmarks bar and run.",
+        "article7-p6": "The repository is open source at <a href=\"https://gitlab.com/a11ypro/a11y-pro-tests\" target=\"_blank\" rel=\"noopener noreferrer\">gitlab.com/a11ypro/a11y-pro-tests</a>."
+      }
+    }
+  }
+}

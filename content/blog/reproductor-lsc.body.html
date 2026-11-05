@@ -1,0 +1,31 @@
+              <p data-i18n="article12-p1">Para la comunidad sorda colombiana, la Lengua de Señas Colombiana (LSC) es lengua primera y el español escrito es una segunda lengua. Un reproductor de video convencional no basta para aprenderla: hace falta ver la seña desde varios ángulos, repetir fragmentos y consultar el glosario. Reproductor LSC nació para eso.</p>
+
+              <h2 data-i18n="article12-h2-1">Sincronización multicámara</h2>
+              <p data-i18n="article12-p2">La seña es tridimensional: involucra manos, expresión facial y orientación corporal. El reproductor reproduce dos o más flujos de video en perfecta sincronía (frontal y lateral), permitiendo alternar o combinar vistas sin perder el punto temporal, algo que requiere control preciso de la API HTMLMediaElement.</p>
+
+              <h2 data-i18n="article12-h2-2">Bucle A-B para la práctica</h2>
+              <p data-i18n="article12-p3">Aprender una seña exige repetición. El modo bucle A-B permite marcar un punto de inicio y uno de fin y reproducir ese fragmento en ciclo, sin intervención, hasta dominar la producción. El control se expone tanto a ratón como a teclado, con anuncios en región en vivo del rango seleccionado.</p>
+
+              <div class="blog-code-container my-4" role="region" aria-label="Ejemplo de implementación del bucle A-B con la API de video HTML5">
+                <div class="blog-code-header" aria-hidden="true">
+                  <div class="blog-code-dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                  </div>
+                  <div class="blog-code-title">loopAB.js</div>
+                </div>
+                <pre class="blog-code-snippet" tabindex="0"><code>video.addEventListener(<span class="code-string">'timeupdate'</span>, () =&gt; {
+  <span class="code-key">if</span> (loopB !== <span class="code-key">null</span> &amp;&amp; video.currentTime &gt;= loopB) {
+    video.currentTime = loopA; <span class="code-comment">// reinicia el fragmento</span>
+  }
+});</code></pre>
+              </div>
+
+              <h2 data-i18n="article12-h2-3">Glosario interactivo con autoevaluación</h2>
+              <p data-i18n="article12-p4">El componente pedagógico se completa con un glosario de señas navegable y un modo autoevaluación que oculta la glosa y reta al estudiante a reconocer la seña mostrada. Los resultados se anuncian en una región <code>role="status"</code> para no perder el contexto.</p>
+
+              <h2 data-i18n="article12-h2-4">Accesible también para quien no usa lengua de señas</h2>
+              <p data-i18n="article12-p5">La propia interfaz del reproductor cumple los principios que predica: controles nativos operables por teclado, foco visible, etiquetas en español y LSC, y compatibilidad con lectores de pantalla. El objetivo es que la herramienta sirva tanto a docentes oyentes como a estudiantes sordos.</p>
+
+              <p data-i18n="article12-p6">El proyecto es open source en <a href="https://github.com/ingelectronicadj/ReproductorLSC" target="_blank" rel="noopener noreferrer">github.com/ingelectronicadj/ReproductorLSC</a>.</p>

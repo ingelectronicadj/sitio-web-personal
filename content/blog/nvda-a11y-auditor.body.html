@@ -1,0 +1,31 @@
+              <p data-i18n="article4-p1">Auditar con un lector de pantalla real es la única forma de conocer la experiencia verdadera de una persona usuaria ciega, pero hacerlo de forma manual es lento y difícil de reproducir. NVDA A11Y Auditor resuelve ese problema orquestando NVDA en Windows para recorrer la página de forma lineal y registrar exactamente lo que el lector anuncia.</p>
+
+              <h2 data-i18n="article4-h2-1">Dos sondas de navegación: exploración y foco</h2>
+              <p data-i18n="article4-p2">La herramienta ejecuta dos pasadas independientes sobre la misma URL. La sonda de modo exploración (browse mode) simula las teclas de navegación rápida de NVDA para recorrer encabezados, enlaces, formularios y regiones. La sonda de foco (focus mode) tabula secuencialmente por cada control interactivo, comparando el orden de tabulación real contra el orden visual y el DOM.</p>
+
+              <h2 data-i18n="article4-h2-2">Speech viewer como fuente de verdad</h2>
+              <p data-i18n="article4-p3">En lugar de inferir la salida del lector desde el DOM, el auditor captura los subtítulos del speech viewer de NVDA en tiempo real. Cada anuncio se asocia al elemento que lo produjo, lo que permite detectar nombres accesibles vacíos, roles incorrectos o anuncios duplicados con evidencia literal de lo que escuchó el usuario.</p>
+
+              <h2 data-i18n="article4-h2-3">Inspección AccName vía Chrome DevTools Protocol</h2>
+              <p data-i18n="article4-p4">En paralelo a la escucha, el auditor abre una sesión de Chrome DevTools Protocol (CDP) y consulta el árbol de accesibilidad del navegador para evaluar el algoritmo W3C AccName 1.2: <code>aria-label</code>, <code>aria-labelledby</code>, contenido de texto y atributos nativos. El resultado se contrasta con el anuncio de NVDA para detectar divergencias entre lo computado y lo verbalizado.</p>
+
+              <div class="blog-code-container my-4" role="region" aria-label="Ejemplo de ejecución del auditor NVDA desde línea de comandos">
+                <div class="blog-code-header" aria-hidden="true">
+                  <div class="blog-code-dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                  </div>
+                  <div class="blog-code-title">terminal</div>
+                </div>
+                <pre class="blog-code-snippet" tabindex="0"><code><span class="code-key">python</span> -m nvda_auditor --url https://ejemplo.com \
+  --probes browse,focus --wcag 2.2 --report html
+
+<span class="code-comment"># Salida: reporte interactivo con 86 criterios evaluados</span>
+<span class="code-comment"># + evidencia literal del speech viewer por hallazgo</span></code></pre>
+              </div>
+
+              <h2 data-i18n="article4-h2-4">86 criterios WCAG 2.2 y comparativa cross-platform</h2>
+              <p data-i18n="article4-p5">El reporte final evalúa 86 criterios de conformidad WCAG 2.2 y cruza los resultados con sus homólogos VoiceOver A11Y Auditor (iOS) y TalkBack A11Y Auditor (Android). Esa comparativa cross-platform revela comportamientos divergentes entre lectores de pantalla frente al mismo marcado, un punto ciego habitual en las auditorías que solo usan un único AT.</p>
+
+              <p data-i18n="article4-p6">El proyecto es open source y está disponible en <a href="https://github.com/ingelectronicadj/nvda-a11y-auditor" target="_blank" rel="noopener noreferrer">github.com/ingelectronicadj/nvda-a11y-auditor</a>.</p>

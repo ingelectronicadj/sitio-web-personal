@@ -1,0 +1,41 @@
+{
+  "order": 13,
+  "slug": "vba-excel-a11y",
+  "pageTitle": "A11Y Help VBA Excel: reglas WCAG dentro de Excel - Diego Mena",
+  "ogTitle": "A11Y Help VBA Excel: las 105 reglas de axe-core en español dentro de Excel",
+  "cardTitle": "A11Y Help VBA Excel: las 105 reglas de axe-core dentro de Excel",
+  "cardTitleI18n": "A11Y Help VBA Excel: las 105 reglas de axe-core dentro de Excel",
+  "titleHtml": "<span class=\"text-primary\">A11Y Help VBA Excel</span>: las 105 reglas de axe-core dentro de Excel",
+  "metaDescription": "Complemento open source en VBA para Microsoft Excel que permite buscar e insertar las 105 reglas de axe-core en español dentro de matrices de auditoría y gestión de hallazgos de accesibilidad.",
+  "dateLabel": "Noviembre 2026 · Herramientas",
+  "datePublished": "2026-11-05",
+  "dateModified": "2026-11-05",
+  "excerpt": "Complemento VBA para Microsoft Excel que permite consultar e insertar en español las 105 reglas de accesibilidad de axe-core dentro de matrices de auditoría y gestión de hallazgos.",
+  "cardAria": "Leer artículo sobre A11Y Help VBA Excel",
+  "image": "img/blog/blog_vba_excel.webp",
+  "imageAlt": "Panel del complemento A11Y Help VBA Excel con buscador de las 105 reglas de axe-core en español insertando una descripción en una matriz de auditoría",
+  "keywords": "VBA Excel accesibilidad, axe-core reglas español, matriz auditoría WCAG, complemento Excel, hallazgos accesibilidad, open source, Diego Mena",
+  "bodyFile": "content/blog/vba-excel-a11y.body.html",
+  "i18n": {
+    "en": {
+      "pageTitle": "A11Y Help VBA Excel: WCAG rules inside Excel - Diego Mena",
+      "cardTitle": "A11Y Help VBA Excel: the 105 axe-core rules inside Excel",
+      "cardDate": "November 2026 · Tools",
+      "cardDesc": "VBA add-in for Microsoft Excel that lets you query and insert, in Spanish, the 105 axe-core accessibility rules inside audit matrices and findings management.",
+      "cardLink": "Read article",
+      "cardAria": "Read article about A11Y Help VBA Excel",
+      "articles": {
+        "article13-p1": "In real-world auditing, Excel remains the working tool: findings matrices, criteria traceability and evidence live in spreadsheets. A11Y Help VBA Excel brings the normative reference to where work already happens, instead of forcing a jump between documentation and the matrix.",
+        "article13-h2-1": "105 axe-core rules in Spanish",
+        "article13-p2": "The add-in embeds the complete catalog of the 105 axe-core rules translated into Spanish: rule identifier, associated WCAG criteria, level, impact and failure description. Each rule can be looked up with an incremental search and inserted directly into the active cell.",
+        "article13-h2-2": "Search integrated into the matrix",
+        "article13-p3": "The flow is simple: the auditor writes a finding, opens the add-in panel, filters by criterion or free text and clicks insert. The matching rule is written in its normalized format, eliminating the transcription errors that were common when copying descriptions from the web or from axe reports.",
+        "article13-h2-3": "Why VBA and not an external app",
+        "article13-p4": "Because the goal was zero friction: no admin-privilege installs, no external services and no network dependencies. A .bas file imports into any corporate Excel and works even in the restricted environments typical of banking and government where many audits operate.",
+        "article13-h2-4": "Ecosystem companion",
+        "article13-p5": "Together with Test Cases A11Y (Gherkin test cases) and Pa11y Batch (bulk automation), this add-in covers the third leg of the workflow: formal findings documentation in the tool QA teams actually use.",
+        "article13-p6": "The project is open source at <a href=\"https://github.com/ingelectronicadj/a11y-help-VBAexcel\" target=\"_blank\" rel=\"noopener noreferrer\">github.com/ingelectronicadj/a11y-help-VBAexcel</a>."
+      }
+    }
+  }
+}

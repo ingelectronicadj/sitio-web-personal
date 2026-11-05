@@ -1,0 +1,41 @@
+{
+  "order": 5,
+  "slug": "voiceover-a11y-auditor",
+  "pageTitle": "VoiceOver A11Y Auditor: auditorías en iOS Simulator - Diego Mena",
+  "ogTitle": "VoiceOver A11Y Auditor: auditorías lineales de iOS en Xcode Simulator",
+  "cardTitle": "VoiceOver A11Y Auditor: auditorías lineales de iOS en Xcode Simulator",
+  "cardTitleI18n": "VoiceOver A11Y Auditor: auditorías lineales de iOS en Xcode Simulator",
+  "titleHtml": "<span class=\"text-primary\">VoiceOver A11Y Auditor</span>: auditorías lineales de iOS en Xcode Simulator",
+  "metaDescription": "Herramienta open source que audita aplicaciones iOS (UIKit, SwiftUI y WKWebView) con VoiceOver sobre Xcode Simulator mediante AXAudit Bridge y Safari Remote Web Inspector.",
+  "dateLabel": "Noviembre 2026 · Lectores de Pantalla",
+  "datePublished": "2026-11-05",
+  "dateModified": "2026-11-05",
+  "excerpt": "Auditor lineal para iOS VoiceOver sobre Xcode Simulator (UIKit, SwiftUI y WKWebView) mediante AXAudit Bridge, adaptación arm64, inspección DOM/ARIA e IndexedDB vía Safari RWI y reportes interactivos WCAG 2.2.",
+  "cardAria": "Leer artículo sobre VoiceOver A11Y Auditor",
+  "image": "img/blog/blog_voiceover_auditor.webp",
+  "imageAlt": "Diagrama técnico del auditor VoiceOver iOS con AXAudit Bridge, Xcode Simulator arm64 e inspección de WKWebView vía Safari Remote Web Inspector",
+  "keywords": "VoiceOver, iOS accessibility audit, Xcode Simulator, AXAudit, WKWebView, Safari Web Inspector, SwiftUI, UIKit, WCAG 2.2, open source, Diego Mena",
+  "bodyFile": "content/blog/voiceover-a11y-auditor.body.html",
+  "i18n": {
+    "en": {
+      "pageTitle": "VoiceOver A11Y Auditor: audits on iOS Simulator - Diego Mena",
+      "cardTitle": "VoiceOver A11Y Auditor: linear iOS audits in Xcode Simulator",
+      "cardDate": "November 2026 · Screen Readers",
+      "cardDesc": "Linear auditor for iOS VoiceOver on Xcode Simulator (UIKit, SwiftUI and WKWebView) via AXAudit Bridge, arm64 adaptation, DOM/ARIA and IndexedDB inspection via Safari RWI and interactive WCAG 2.2 reports.",
+      "cardLink": "Read article",
+      "cardAria": "Read article about VoiceOver A11Y Auditor",
+      "articles": {
+        "article5-p1": "Mobile audits are usually limited to static code reviews or sporadic manual VoiceOver testing. VoiceOver A11Y Auditor brings the ecosystem's linear audit philosophy to iOS: it traverses the interface element by element inside the Xcode Simulator and literally documents what the screen reader announces.",
+        "article5-h2-1": "AXAudit Bridge: from simulator to report",
+        "article5-p2": "The core of the tool is AXAudit Bridge, a bridge that leverages Apple's accessibility audit services to enumerate the app's accessible hierarchy: labels, traits, values and on-screen frames. On that foundation, the auditor reproduces the VoiceOver rotor and swipe-gesture traversal, in the same order a user would experience it.",
+        "article5-h2-2": "UIKit, SwiftUI and WKWebView coverage",
+        "article5-p3": "The auditor is UI-technology agnostic: it evaluates UIKit views, SwiftUI components and web content embedded in WKWebView equally. For web views, it opens a Safari Remote Web Inspector (RWI) session to inspect the DOM, ARIA roles and even IndexedDB-persisted state, something unreachable from the native accessibility layer.",
+        "article5-h2-3": "arm64 adaptation and reproducible execution",
+        "article5-p4": "The tool includes an adaptation layer for Apple Silicon chips (arm64) that normalizes differences between simulator architectures. Each run produces an interactive report with findings mapped to WCAG 2.2 criteria, traceable and repeatable, enabling integration into QA pipelines where only manual review previously fit.",
+        "article5-h2-4": "Why literal evidence matters",
+        "article5-p5": "Saying a button \"probably announces well\" is not an audit. By capturing the real sequence of VoiceOver announcements and cross-referencing it with the accessibility tree and the RWI-inspected DOM, every finding is backed by reproducible evidence, the same yardstick applied by the ecosystem's NVDA and TalkBack auditors.",
+        "article5-p6": "The project is open source and available at <a href=\"https://github.com/ingelectronicadj/voiceover-a11y-auditor\" target=\"_blank\" rel=\"noopener noreferrer\">github.com/ingelectronicadj/voiceover-a11y-auditor</a>."
+      }
+    }
+  }
+}

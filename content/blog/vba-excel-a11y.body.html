@@ -1,0 +1,33 @@
+              <p data-i18n="article13-p1">En la práctica real de la auditoría, Excel sigue siendo la herramienta de trabajo: matrices de hallazgos, trazabilidad de criterios y evidencias viven en hojas de cálculo. A11Y Help VBA Excel lleva la referencia normativa al lugar donde ya se trabaja, en lugar de obligar a saltar entre la documentación y la matriz.</p>
+
+              <h2 data-i18n="article13-h2-1">105 reglas de axe-core en español</h2>
+              <p data-i18n="article13-p2">El complemento incorpora el catálogo completo de las 105 reglas de axe-core traducidas al español: identificador de regla, criterios WCAG asociados, nivel, impacto y descripción de la falla. Cada regla puede consultarse con un buscador incremental e insertarse directamente en la celda activa.</p>
+
+              <h2 data-i18n="article13-h2-2">Buscador integrado en la matriz</h2>
+              <p data-i18n="article13-p3">El flujo es simple: el auditor redacta un hallazgo, abre el panel del complemento, filtra por criterio o texto libre y pulsa insertar. La regla correspondiente se escribe con su formato normalizado, eliminando los errores de transcripción que eran habituales al copiar descripciones desde la web o desde reportes de axe.</p>
+
+              <div class="blog-code-container my-4" role="region" aria-label="Ejemplo de función VBA que inserta una regla axe-core en la celda activa">
+                <div class="blog-code-header" aria-hidden="true">
+                  <div class="blog-code-dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                  </div>
+                  <div class="blog-code-title">InsertarRegla.bas</div>
+                </div>
+                <pre class="blog-code-snippet" tabindex="0"><code><span class="code-key">Sub</span> InsertarReglaAxe(reglaId <span class="code-key">As String</span>)
+  <span class="code-key">Dim</span> regla <span class="code-key">As</span> A11yRule
+  <span class="code-key">Set</span> regla = CatalogoAxe.Buscar(reglaId) <span class="code-comment">' 105 reglas ES</span>
+  <span class="code-key">If Not</span> regla <span class="code-key">Is Nothing Then</span>
+    ActiveCell.Value = regla.DescripcionES
+  <span class="code-key">End If</span>
+<span class="code-key">End Sub</span></code></pre>
+              </div>
+
+              <h2 data-i18n="article13-h2-3">Por qué VBA y no una app externa</h2>
+              <p data-i18n="article13-p4">Porque el objetivo era cero fricción: sin instalaciones con permisos de administrador, sin servicios externos y sin dependencias de red. Un archivo .bas se importa en cualquier Excel corporativo y funciona incluso en los entornos restringidos típicos de banca y gobierno donde operan muchas auditorías.</p>
+
+              <h2 data-i18n="article13-h2-4">Complemento del ecosistema</h2>
+              <p data-i18n="article13-p5">Junto a Test Cases A11Y (casos de prueba Gherkin) y Pa11y Batch (automatización masiva), este complemento cubre la tercera pata del flujo: la documentación formal de hallazgos en la herramienta que los equipos de QA realmente usan.</p>
+
+              <p data-i18n="article13-p6">El proyecto es open source en <a href="https://github.com/ingelectronicadj/a11y-help-VBAexcel" target="_blank" rel="noopener noreferrer">github.com/ingelectronicadj/a11y-help-VBAexcel</a>.</p>

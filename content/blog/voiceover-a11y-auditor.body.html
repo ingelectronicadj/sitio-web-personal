@@ -1,0 +1,32 @@
+              <p data-i18n="article5-p1">Las auditorías móviles suelen limitarse a revisiones estáticas del código o a pruebas manuales esporádicas con VoiceOver. VoiceOver A11Y Auditor lleva la misma filosofía de auditoría lineal del ecosistema a iOS: recorre la interfaz elemento a elemento dentro del Xcode Simulator y documenta literalmente lo que el lector de pantalla anuncia.</p>
+
+              <h2 data-i18n="article5-h2-1">AXAudit Bridge: del simulador al reporte</h2>
+              <p data-i18n="article5-p2">El núcleo de la herramienta es AXAudit Bridge, un puente que aprovecha los servicios de auditoría de accesibilidad de Apple para enumerar la jerarquía accesible de la app: etiquetas, traits, valores y marcos en pantalla. Sobre esa base, el auditor reproduce el recorrido del rotor y del gesto de deslizamiento de VoiceOver, en el mismo orden en que lo experimentaría una persona usuaria.</p>
+
+              <h2 data-i18n="article5-h2-2">Cobertura UIKit, SwiftUI y WKWebView</h2>
+              <p data-i18n="article5-p3">El auditor no distingue entre tecnologías de interfaz: evalúa por igual vistas UIKit, componentes SwiftUI y contenido web embebido en WKWebView. Para las vistas web, abre una sesión de Safari Remote Web Inspector (RWI) que permite inspeccionar el DOM, los roles ARIA e incluso el estado persistido en IndexedDB, algo inalcanzable desde la capa nativa de accesibilidad.</p>
+
+              <h2 data-i18n="article5-h2-3">Adaptación arm64 y ejecución reproducible</h2>
+              <p data-i18n="article5-p4">La herramienta incluye una capa de adaptación para chips Apple Silicon (arm64) que normaliza las diferencias entre arquitecturas del simulador. Cada ejecución produce un reporte interactivo con los hallazgos mapeados a criterios WCAG 2.2, trazable y repetible, lo que habilita su integración en pipelines de QA donde antes solo cabía la revisión manual.</p>
+
+              <div class="blog-code-container my-4" role="region" aria-label="Ejemplo de ejecución del auditor VoiceOver sobre un simulador de iOS">
+                <div class="blog-code-header" aria-hidden="true">
+                  <div class="blog-code-dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                  </div>
+                  <div class="blog-code-title">terminal</div>
+                </div>
+                <pre class="blog-code-snippet" tabindex="0"><code><span class="code-key">python</span> -m voiceover_auditor \
+  --simulator <span class="code-string">"iPhone 16 Pro"</span> \
+  --app com.ejemplo.app --wcag 2.2 --report html
+
+<span class="code-comment"># Inspección AXAudit + Safari RWI sobre WKWebView</span>
+<span class="code-comment"># Reporte WCAG 2.2 con evidencia por elemento</span></code></pre>
+              </div>
+
+              <h2 data-i18n="article5-h2-4">Por qué importa la evidencia literal</h2>
+              <p data-i18n="article5-p5">Decir que un botón "probablemente se anuncia bien" no es una auditoría. Al capturar la secuencia real de anuncios de VoiceOver y cruzarla con el árbol accesible y el DOM inspeccionado vía RWI, cada hallazgo queda respaldado por evidencia reproducible, la misma vara de medir que aplican los auditores NVDA y TalkBack del ecosistema.</p>
+
+              <p data-i18n="article5-p6">El proyecto es open source y está disponible en <a href="https://github.com/ingelectronicadj/voiceover-a11y-auditor" target="_blank" rel="noopener noreferrer">github.com/ingelectronicadj/voiceover-a11y-auditor</a>.</p>

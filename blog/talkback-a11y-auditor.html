@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Herramienta open source que audita apps Android con TalkBack sobre QEMU: envía gestos swipe reales, captura la voz hablada por OCR e inspecciona el WebView mediante Chrome DevTools Protocol."
+    />
+    <meta name="author" content="Diego Javier Mena Amado" />
+    <meta name="app-version" content="2.5.7-a53b33da" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'sha256-lp1YuCdmQnpv/aKYDgIZEo2dtXeZHI+sFO4CiYK98Fg=' https://widget.a11ypro.tech https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://widget.a11ypro.tech; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://widget.a11ypro.tech https://cloudflareinsights.com https://a.nel.cloudflare.com; upgrade-insecure-requests; block-all-mixed-content" />
+    
+    <meta name="keywords" content="TalkBack, Android accessibility audit, QEMU emulator, OCR, WebView, Chrome DevTools Protocol, WCAG 2.2, open source, Diego Mena" />
+    
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem("status_contrast") === "true") {
+            document.documentElement.classList.add("dark");
+          }
+          var l = localStorage.getItem("preferred_lang");
+          if (l && l !== "es") {
+            document.documentElement.lang = l;
+            document.documentElement.classList.add("i18n-pending");
+            setTimeout(function () {
+              document.documentElement.classList.remove("i18n-pending");
+            }, 2000);
+          }
+        } catch (e) {}
+      })();
+    </script>
+
+    <title data-i18n="blog6-page-title">
+      TalkBack A11Y Auditor: auditorías en Android con OCR - Diego Mena
+    </title>
+
+    <link rel="icon" type="image/webp" href="../img/favicon-diego.webp" />
+    <link rel="alternate" hreflang="es" href="https://diegomena.rocks/blog/talkback-a11y-auditor.html" />
+    <link rel="alternate" hreflang="en" href="https://diegomena.rocks/blog/talkback-a11y-auditor.html" />
+    <link rel="alternate" hreflang="x-default" href="https://diegomena.rocks/blog/talkback-a11y-auditor.html" />
+    <link rel="alternate" type="text/markdown" href="https://diegomena.rocks/llms-full.txt" title="Diego Mena — Full LLM Technical Context" />
+
+    <!-- Tipografía auto-alojada con preload para eliminar salto tipográfico (FOUT/CLS) -->
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="../css/fonts/saira-700-normal-latin.woff2"
+      crossorigin />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="../css/fonts/muli-400-normal-latin.woff2"
+      crossorigin />
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+
+    <!-- Bundle unificado de estilos (bootstrap + resume + darkMode + blog + slick) -->
+    <link rel="stylesheet" href="../css/bundle.min.css?v=2.5.7-6727f954" />
+
+    <!-- Canonical + Open Graph + Twitter Card (articulo) -->
+    <link rel="canonical" href="https://diegomena.rocks/blog/talkback-a11y-auditor.html" />
+    <meta property="og:url" content="https://diegomena.rocks/blog/talkback-a11y-auditor.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="TalkBack A11Y Auditor: auditorías lineales de Android con gestos reales y OCR" />
+    <meta property="og:description" content="Herramienta open source que audita apps Android con TalkBack sobre QEMU: envía gestos swipe reales, captura la voz hablada por OCR e inspecciona el WebView mediante Chrome DevTools Protocol." />
+    <meta property="og:image" content="https://diegomena.rocks/img/blog/blog_talkback_auditor.webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Diagrama técnico del auditor TalkBack Android con gestos swipe sobre emulador QEMU, transcripción OCR de la salida hablada e inspección WebView vía Chrome DevTools Protocol" />
+    <meta property="article:published_time" content="2026-11-05" />
+    <meta property="article:modified_time" content="2026-11-05" />
+    <meta property="article:author" content="https://diegomena.rocks/#person" />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:site_name" content="Diego Mena — Experto en Accesibilidad Digital" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="TalkBack A11Y Auditor: auditorías lineales de Android con gestos reales y OCR" />
+    <meta name="twitter:description" content="Herramienta open source que audita apps Android con TalkBack sobre QEMU: envía gestos swipe reales, captura la voz hablada por OCR e inspecciona el WebView mediante Chrome DevTools Protocol." />
+    <meta name="twitter:image" content="https://diegomena.rocks/img/blog/blog_talkback_auditor.webp" />
+    <meta name="twitter:image:alt" content="Diagrama técnico del auditor TalkBack Android con gestos swipe sobre emulador QEMU, transcripción OCR de la salida hablada e inspección WebView vía Chrome DevTools Protocol" />
+
+    <!-- Datos estructurados JSON-LD (BlogPosting + Person E-E-A-T + BreadcrumbList) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BlogPosting",
+            "@id": "https://diegomena.rocks/blog/talkback-a11y-auditor.html#post",
+            "mainEntityOfPage": "https://diegomena.rocks/blog/talkback-a11y-auditor.html",
+            "headline": "TalkBack A11Y Auditor: auditorías lineales de Android con gestos reales y OCR",
+            "description": "Herramienta open source que audita apps Android con TalkBack sobre QEMU: envía gestos swipe reales, captura la voz hablada por OCR e inspecciona el WebView mediante Chrome DevTools Protocol.",
+            "url": "https://diegomena.rocks/blog/talkback-a11y-auditor.html",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://diegomena.rocks/img/blog/blog_talkback_auditor.webp",
+              "width": 1200,
+              "height": 630,
+              "caption": "Diagrama técnico del auditor TalkBack Android con gestos swipe sobre emulador QEMU, transcripción OCR de la salida hablada e inspección WebView vía Chrome DevTools Protocol"
+            },
+            "inLanguage": ["es", "en"],
+            "datePublished": "2026-11-05",
+            "dateModified": "2026-11-05",
+            "keywords": "TalkBack, Android accessibility audit, QEMU emulator, OCR, WebView, Chrome DevTools Protocol, WCAG 2.2, open source, Diego Mena",
+            "isPartOf": { "@id": "https://diegomena.rocks/#website" },
+            "author": { "@id": "https://diegomena.rocks/#person" },
+            "publisher": { "@id": "https://diegomena.rocks/#person" }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://diegomena.rocks/#person",
+            "name": "Diego Javier Mena Amado",
+            "jobTitle": "Experto en Accesibilidad Digital (WCAG 2.2 · EN 301 549 · Shift Left)",
+            "url": "https://diegomena.rocks/",
+            "image": "https://diegomena.rocks/img/profile-pic.webp",
+            "sameAs": [
+              "https://www.linkedin.com/in/ingelectronicadj/",
+              "https://github.com/ingelectronicadj",
+              "https://gitlab.com/ingelectronicadj",
+              "https://scholar.google.com/citations?user=sn7a5boAAAAJ&hl=es",
+              "https://orcid.org/0000-0002-8587-9346",
+              "https://a11ypro.tech"
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://diegomena.rocks/blog/talkback-a11y-auditor.html#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Diego Mena — Portafolio",
+                "item": "https://diegomena.rocks/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Artículos de Accesibilidad Digital",
+                "item": "https://diegomena.rocks/#blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "TalkBack A11Y Auditor: auditorías lineales de Android con gestos reales y OCR",
+                "item": "https://diegomena.rocks/blog/talkback-a11y-auditor.html"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+
+  <body id="page-top">
+    <canvas id="ambient-canvas" class="ambient-canvas" aria-hidden="true"></canvas>
+    <!-- Navbar superior destacado -->
+    <nav id="navbar" aria-label="Destacados">
+      <ul class="horizontal">
+        <li class="first-nav">
+          <a
+            href="../index.html#experience"
+            class="nav-link"
+            data-i18n="nav-experience">
+            Experiencia
+          </a>
+        </li>
+        <li>
+          <a
+            href="../index.html#skills"
+            class="nav-link"
+            data-i18n="nav-skills">
+            Habilidades
+          </a>
+        </li>
+        <li>
+          <a
+            href="../index.html#projects"
+            class="nav-link"
+            data-i18n="nav-projects">
+            Proyectos
+          </a>
+        </li>
+        <li class="last-nav">
+          <a
+            href="../index.html#blog"
+            class="nav-link"
+            data-i18n="nav-blog">
+            Artículos
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Sidebar compartida (controles de tema / idioma / microinteracciones + navegacion) -->
+    <aside
+      class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
+      id="sideNav"
+      aria-label="Barra lateral de navegación y utilidades">
+      <header class="navbar-brand d-none d-lg-block">
+        <a href="../index.html" aria-label="Ir a la página de inicio">
+          <img
+            class="img-fluid img-profile rounded-circle mx-auto mb-2"
+            src="../img/profile-pic.webp"
+            alt="Fotografía Diego Mena"
+            title="Fotografía Diego Mena"
+            width="1024"
+            height="1024"
+            fetchpriority="high" />
+        </a>
+      </header>
+      <div class="toogleContainer">
+        <input
+          id="checkSwitch"
+          type="checkbox"
+          class="btn-contrast sr-only"
+          tabindex="-1"
+          aria-hidden="true" />
+        <button
+          type="button"
+          id="themeToggle"
+          class="ctrl-btn"
+          data-i18n-aria="theme-toggle-label"
+          data-i18n-title="theme-toggle-label"
+          aria-label="Cambiar a modo oscuro"
+          aria-pressed="false">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </button>
+        <button
+          type="button"
+          id="langToggle"
+          class="ctrl-btn"
+          data-i18n-title="lang-toggle-label"
+          aria-label="Cambiar idioma del sitio: ES">
+          <span id="langCode" class="ctrl-btn-text">ES</span>
+        </button>
+        <button
+          type="button"
+          id="fxToggle"
+          class="ctrl-btn"
+          data-i18n-aria="fx-toggle-label"
+          data-i18n-title="fx-toggle-label"
+          aria-label="Pausar microinteracciones"
+          aria-pressed="true">
+          <i class="fas fa-magic" aria-hidden="true"></i>
+        </button>
+      </div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <nav
+        class="collapse navbar-collapse"
+        id="navbarSupportedContent"
+        aria-label="Principal">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="../index.html#welcome-section"
+              data-i18n="nav-about">
+              Acerca de mí
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="../index.html#experience"
+              data-i18n="nav-experience-side">
+              Experiencia
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="../index.html#education"
+              data-i18n="nav-education">
+              Educación
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="../index.html#skills"
+              data-i18n="nav-skills-side">
+              Habilidades
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="../index.html#projects"
+              data-i18n="nav-projects-side">
+              Proyectos
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="../index.html#interests"
+              data-i18n="nav-interests">
+              Intereses
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              href="../index.html#blog"
+              data-i18n="nav-blog-side">
+              Artículos
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="../index.html#awards"
+              data-i18n="nav-awards">
+              Eventos
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+
+    <main>
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column">
+        <div class="my-auto">
+          <article>
+            <a href="../index.html#blog" class="back-btn" data-i18n="blog-back-btn">
+              <i class="fas fa-arrow-left" aria-hidden="true"></i> Volver al Portafolio
+            </a>
+
+            <!-- Header del artículo + Ilustración Técnica de Arquitectura -->
+            <header class="blog-post-header mb-4">
+              <h1 class="blog-title mb-2" data-i18n="blog6-title"><span class="text-primary">TalkBack A11Y Auditor</span>: auditorías lineales de Android con gestos reales</h1>
+              <div class="subheading mb-3" data-i18n="blog6-date">Noviembre 2026 · Lectores de Pantalla · Por Diego Mena</div>
+              <p class="lead mb-4" data-i18n="blog6-desc">Auditor lineal para Android TalkBack con gestos swipe reales vía QEMU, captura de voz hablada por OCR, inspección de DOM/ARIA en WebView vía Chrome CDP y reportes interactivos WCAG 2.2.</p>
+              <figure class="blog-hero-figure m-0">
+                <img
+                  src="../img/blog/blog_talkback_auditor.webp"
+                  alt="Diagrama técnico del auditor TalkBack Android con gestos swipe sobre emulador QEMU, transcripción OCR de la salida hablada e inspección WebView vía Chrome DevTools Protocol"
+                  width="1200"
+                  height="630"
+                  class="img-fluid blog-main-img"
+                />
+              </figure>
+            </header>
+
+            <!-- Contenido principal -->
+            <div class="blog-content mb-4">
+              <p data-i18n="article6-p1">TalkBack es el lector de pantalla dominante en Android, pero auditar con él de forma manual exige gestos precisos y una escucha atenta que no escala. TalkBack A11Y Auditor automatiza ese recorrido dentro de un emulador QEMU, produciendo un reporte lineal de lo que TalkBack anuncia realmente en cada elemento.</p>
+
+              <h2 data-i18n="article6-h2-1">Gestos swipe reales sobre QEMU</h2>
+              <p data-i18n="article6-p2">A diferencia de las inspecciones estáticas del árbol de accesibilidad, el auditor inyecta gestos de deslizamiento reales en el emulador, los mismos que ejecuta una persona usuaria para avanzar por la interfaz. Esto expone problemas que el árbol declara pero el recorrido no alcanza: elementos fuera del orden de foco, regiones inalcanzables o controles duplicados.</p>
+
+              <h2 data-i18n="article6-h2-2">Captura de la salida hablada por OCR</h2>
+              <p data-i18n="article6-p3">El componente más original del proyecto es la captura de la voz hablada: TalkBack no expone su salida de forma programática, así que el auditor graba la salida de audio del emulador y la transcribe mediante OCR/ASR para obtener el texto literal de cada anuncio. Esa transcripción queda vinculada al elemento enfocado en ese instante.</p>
+
+              <h2 data-i18n="article6-h2-3">Inspección del WebView vía Chrome CDP</h2>
+              <p data-i18n="article6-p4">Para el contenido web embebido, el auditor se conecta al WebView de Android mediante Chrome DevTools Protocol y evalúa el DOM, los roles ARIA y los nombres accesibles computados, del mismo modo que lo hace el auditor NVDA en escritorio. El cruce entre el DOM y lo verbalizado permite detectar divergencias entre lo que el marcado declara y lo que TalkBack pronuncia.</p>
+
+              <div class="blog-code-container my-4" role="region" aria-label="Ejemplo de ejecución del auditor TalkBack sobre emulador Android">
+                <div class="blog-code-header" aria-hidden="true">
+                  <div class="blog-code-dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                  </div>
+                  <div class="blog-code-title">terminal</div>
+                </div>
+                <pre class="blog-code-snippet" tabindex="0"><code><span class="code-key">python</span> -m talkback_auditor \
+  --avd Pixel_7_API_34 --app com.ejemplo.app \
+  --ocr tesseract --wcag 2.2 --report html
+
+<span class="code-comment"># Swipes reales + transcripcion OCR de TalkBack</span>
+<span class="code-comment"># + inspeccion CDP del WebView en un solo reporte</span></code></pre>
+              </div>
+
+              <h2 data-i18n="article6-h2-4">La trilogía cross-platform completa</h2>
+              <p data-i18n="article6-p5">Con este auditor se cierra la trilogía del ecosistema: NVDA A11Y Auditor en escritorio Windows, VoiceOver A11Y Auditor en iOS y TalkBack A11Y Auditor en Android. Ejecutar los tres sobre la misma interfaz revela divergencias de interpretación entre lectores de pantalla que ninguna auditoría mono-plataforma detectaría.</p>
+
+              <p data-i18n="article6-p6">El proyecto es open source y está disponible en <a href="https://github.com/ingelectronicadj/talkback-a11y-auditor" target="_blank" rel="noopener noreferrer">github.com/ingelectronicadj/talkback-a11y-auditor</a>.</p>
+            </div>
+
+            <!-- Tarjeta de Autoría E-E-A-T + Artículos Relacionados (SEO / GEO / AEO) -->
+            <footer class="blog-author-box research-box mt-4" aria-label="Información del autor y artículos relacionados">
+              <div class="d-flex flex-column flex-md-row align-items-center" style="gap: 1.25rem;">
+                <img
+                  src="../img/profile-pic.webp"
+                  alt="Diego Mena — Experto en Accesibilidad Digital"
+                  width="84"
+                  height="84"
+                  loading="lazy"
+                  style="width: 84px; height: 84px; border-radius: 50%; object-fit: cover; border: 2px solid #0055b3; flex-shrink: 0;"
+                />
+                <div>
+                  <h2 class="h4 mb-1" style="text-transform: uppercase;">Diego Javier Mena Amado</h2>
+                  <p class="mb-2" style="font-size: 0.96rem;">
+                    <strong>Experto en Accesibilidad Digital (WCAG 2.2 · EN 301 549 · Sección 508 · Resolución 1519 MinTIC)</strong>.
+                    Ingeniero Electrónico y Magíster en Gerencia de Proyectos. Fundador de <a href="https://a11ypro.tech/" target="_blank" rel="noopener noreferrer">A11Y PRO</a> y consultor internacional para los sectores fintech, banca, educación superior y gobierno digital.
+                  </p>
+                  <div class="research-links" style="margin-top: 0.65rem;">
+                    <a href="../index.html#experience" class="research-link-chip">
+                      <i class="fas fa-briefcase" aria-hidden="true"></i>
+                      <span>Trayectoria y Auditorías</span>
+                    </a>
+                    <a href="../index.html#projects" class="research-link-chip">
+                      <i class="fas fa-code-branch" aria-hidden="true"></i>
+                      <span>Ecosistema Open Source</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ingelectronicadj/" target="_blank" rel="noopener noreferrer" class="research-link-chip">
+                      <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                      <span>Conectar en LinkedIn</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              
+              <hr class="my-3" />
+              <div>
+                <h3 class="h5 mb-2" style="text-transform: uppercase;">Otros artículos técnicos de Accesibilidad</h3>
+                <div class="research-links" style="margin-top: 0.5rem;">
+                  
+                  <a href="./ia-automatizacion-wcag.html" class="research-link-chip">
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                    <span>Impacto de la Inteligencia Artificial en la automatización de auditorías WCAG</span>
+                  </a>
+                  
+                  <a href="./mejores-practicas-aria.html" class="research-link-chip">
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                    <span>Mejores prácticas para implementar ARIA en Single Page Applications</span>
+                  </a>
+                  
+                  <a href="./comparativa-testing-tools.html" class="research-link-chip">
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                    <span>Comparativa de herramientas de testing: axe-core vs ARC Toolkit</span>
+                  </a>
+                  
+                  <a href="./nvda-a11y-auditor.html" class="research-link-chip">
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                    <span>NVDA A11Y Auditor: auditorías lineales con NVDA y Chrome CDP</span>
+                  </a>
+                  
+                  <a href="./voiceover-a11y-auditor.html" class="research-link-chip">
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                    <span>VoiceOver A11Y Auditor: auditorías lineales de iOS en Xcode Simulator</span>
+                  </a>
+                  
+                  <a href="./a11y-pro-tests-bookmarklets.html" class="research-link-chip">
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                    <span>A11Y PRO Tests: 21 inspectores WCAG 2.2 en un bookmarklet bilingüe</span>
+                  </a>
+                  
+                  <a href="./pa11y-batch-ci-cd.html" class="research-link-chip">
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                    <span>Pa11y Batch: auditorías WCAG masivas en español con CI/CD</span>
+                  </a>
+                  
+                  <a href="./react-aria-live.html" class="research-link-chip">
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                    <span>react-aria-live: regiones aria-live compatibles con lectores reales</span>
+                  </a>
+                  
+                  <a href="./test-cases-a11y.html" class="research-link-chip">
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                    <span>Test Cases A11Y: 87 casos de prueba bilingües WCAG 2.2</span>
+                  </a>
+                  
+                  <a href="./freespeech-saac.html" class="research-link-chip">
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                    <span>FreeSpeech SAAC: comunicador aumentativo en Vue 3 con WCAG 2.2 AA</span>
+                  </a>
+                  
+                  <a href="./reproductor-lsc.html" class="research-link-chip">
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                    <span>Reproductor LSC: video HTML5 educativo en Lengua de Señas Colombiana</span>
+                  </a>
+                  
+                  <a href="./vba-excel-a11y.html" class="research-link-chip">
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                    <span>A11Y Help VBA Excel: las 105 reglas de axe-core dentro de Excel</span>
+                  </a>
+                  
+                </div>
+              </div>
+              
+            </footer>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="../vendor/js/jquery.min.js"></script>
+    <script src="../js/bundle.min.js?v=2.5.7-f52da97d"></script>
+    <script src="./js/talkback-a11y-auditor-i18n.js?v=2.5.7-2617d03a"></script>
+
+    <!-- Widget de accesibilidad A11Y PRO -->
+    <script
+      defer
+      src="https://widget.a11ypro.tech/widget/js/launcher.min.js"
+      data-key="ak_live_55a9e27387d22ba7b455b4e3e5325004da70fc9747b6d189"
+      data-darkModeStrategy="native"
+      data-darkModeNativeClass="dark"
+      data-darkModeTrigger="#checkSwitch"></script>
+  </body>
+</html>
+

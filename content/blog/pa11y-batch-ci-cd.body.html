@@ -1,0 +1,33 @@
+              <p data-i18n="article8-p1">Auditar una URL es fácil; auditar quinientas con trazabilidad es otra cosa. Pa11y Batch nace para escalar las auditorías automatizadas: ejecuta axe-core y HTML_CodeSniffer sobre lotes completos de URLs y consolida los resultados en reportes en español pensados tanto para perfiles técnicos como para dirección.</p>
+
+              <h2 data-i18n="article8-h2-1">Dos motores, una matriz</h2>
+              <p data-i18n="article8-p2">Cada URL se evalúa con axe-core y con HTML_CodeSniffer de forma independiente. Correr dos motores reduce falsos negativos y permite contrastar criterios cuando las reglas se solapan: si ambos reportan el mismo elemento, la confianza del hallazgo aumenta; si divergen, el auditor humano decide con contexto.</p>
+
+              <h2 data-i18n="article8-h2-2">Vista ejecutiva para stakeholders</h2>
+              <p data-i18n="article8-p3">El reporte incluye una vista agregada orientada a perfiles no técnicos: tendencia de conformidad por nivel WCAG, distribución de severidades y evolución entre ejecuciones. Junto a ella, la vista técnica ofrece inspección visual del DOM con capturas y selectores precisos para cada violación.</p>
+
+              <h2 data-i18n="article8-h2-3">CI/CD con artefactos JUnit</h2>
+              <p data-i18n="article8-p4">La suite emite reportes en formato JUnit XML, el estándar que entienden Jenkins, GitLab CI, GitHub Actions y Azure DevOps. Esto permite convertir la accesibilidad en una puerta de calidad: el pipeline falla si aparecen violaciones por encima del umbral configurado.</p>
+
+              <div class="blog-code-container my-4" role="region" aria-label="Ejemplo de integración de Pa11y Batch en un pipeline de CI">
+                <div class="blog-code-header" aria-hidden="true">
+                  <div class="blog-code-dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                  </div>
+                  <div class="blog-code-title">pipeline.yml</div>
+                </div>
+                <pre class="blog-code-snippet" tabindex="0"><code>a11y_audit:
+  script:
+    - pa11y-batch --urls sitemap.txt --runners axe,htmlcs \
+        --level WCAG2AA --reporter junit --out reports/
+  artifacts:
+    reports:
+      junit: reports/a11y-*.xml</code></pre>
+              </div>
+
+              <h2 data-i18n="article8-h2-4">Web Studio y reportes en español</h2>
+              <p data-i18n="article8-p5">Sobre el motor CLI se monta <a href="https://pa11y.a11ypro.tech/" target="_blank" rel="noopener noreferrer">Pa11y Batch Web Studio</a>, una interfaz web para lanzar auditorías sin terminal. Uno de sus diferenciales es que los hallazgos, las descripciones de reglas y las recomendaciones se entregan íntegramente en español, algo que las herramientas originales no ofrecen.</p>
+
+              <p data-i18n="article8-p6">El proyecto es open source y está disponible en <a href="https://github.com/ingelectronicadj/pa11y_batch" target="_blank" rel="noopener noreferrer">github.com/ingelectronicadj/pa11y_batch</a>.</p>

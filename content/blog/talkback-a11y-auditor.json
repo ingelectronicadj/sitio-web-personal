@@ -1,0 +1,41 @@
+{
+  "order": 6,
+  "slug": "talkback-a11y-auditor",
+  "pageTitle": "TalkBack A11Y Auditor: auditorías en Android con OCR - Diego Mena",
+  "ogTitle": "TalkBack A11Y Auditor: auditorías lineales de Android con gestos reales y OCR",
+  "cardTitle": "TalkBack A11Y Auditor: auditorías lineales de Android con gestos reales",
+  "cardTitleI18n": "TalkBack A11Y Auditor: auditorías lineales de Android con gestos reales",
+  "titleHtml": "<span class=\"text-primary\">TalkBack A11Y Auditor</span>: auditorías lineales de Android con gestos reales",
+  "metaDescription": "Herramienta open source que audita apps Android con TalkBack sobre QEMU: envía gestos swipe reales, captura la voz hablada por OCR e inspecciona el WebView mediante Chrome DevTools Protocol.",
+  "dateLabel": "Noviembre 2026 · Lectores de Pantalla",
+  "datePublished": "2026-11-05",
+  "dateModified": "2026-11-05",
+  "excerpt": "Auditor lineal para Android TalkBack con gestos swipe reales vía QEMU, captura de voz hablada por OCR, inspección de DOM/ARIA en WebView vía Chrome CDP y reportes interactivos WCAG 2.2.",
+  "cardAria": "Leer artículo sobre TalkBack A11Y Auditor",
+  "image": "img/blog/blog_talkback_auditor.webp",
+  "imageAlt": "Diagrama técnico del auditor TalkBack Android con gestos swipe sobre emulador QEMU, transcripción OCR de la salida hablada e inspección WebView vía Chrome DevTools Protocol",
+  "keywords": "TalkBack, Android accessibility audit, QEMU emulator, OCR, WebView, Chrome DevTools Protocol, WCAG 2.2, open source, Diego Mena",
+  "bodyFile": "content/blog/talkback-a11y-auditor.body.html",
+  "i18n": {
+    "en": {
+      "pageTitle": "TalkBack A11Y Auditor: Android audits with OCR - Diego Mena",
+      "cardTitle": "TalkBack A11Y Auditor: linear Android audits with real gestures",
+      "cardDate": "November 2026 · Screen Readers",
+      "cardDesc": "Linear auditor for Android TalkBack with real swipe gestures via QEMU, spoken output capture via OCR, WebView DOM/ARIA inspection via Chrome CDP and interactive WCAG 2.2 reports.",
+      "cardLink": "Read article",
+      "cardAria": "Read article about TalkBack A11Y Auditor",
+      "articles": {
+        "article6-p1": "TalkBack is the dominant screen reader on Android, but auditing with it manually requires precise gestures and attentive listening that does not scale. TalkBack A11Y Auditor automates that traversal inside a QEMU emulator, producing a linear report of what TalkBack actually announces on each element.",
+        "article6-h2-1": "Real swipe gestures on QEMU",
+        "article6-p2": "Unlike static accessibility-tree inspections, the auditor injects real swipe gestures into the emulator, the same ones a user performs to move through the interface. This exposes problems the tree declares but the traversal never reaches: elements outside the focus order, unreachable regions or duplicated controls.",
+        "article6-h2-2": "Spoken output capture via OCR",
+        "article6-p3": "The most original component is spoken-voice capture: TalkBack does not expose its output programmatically, so the auditor records the emulator's audio output and transcribes it via OCR/ASR to obtain the literal text of each announcement. That transcription is linked to the element focused at that instant.",
+        "article6-h2-3": "WebView inspection via Chrome CDP",
+        "article6-p4": "For embedded web content, the auditor connects to Android's WebView through Chrome DevTools Protocol and evaluates the DOM, ARIA roles and computed accessible names, the same way the NVDA auditor does on desktop. Cross-referencing the DOM against the verbalized output detects divergences between what the markup declares and what TalkBack pronounces.",
+        "article6-h2-4": "The complete cross-platform trilogy",
+        "article6-p5": "This auditor completes the ecosystem's trilogy: NVDA A11Y Auditor on Windows desktop, VoiceOver A11Y Auditor on iOS and TalkBack A11Y Auditor on Android. Running all three on the same interface reveals interpretation divergences between screen readers that no single-platform audit would detect.",
+        "article6-p6": "The project is open source and available at <a href=\"https://github.com/ingelectronicadj/talkback-a11y-auditor\" target=\"_blank\" rel=\"noopener noreferrer\">github.com/ingelectronicadj/talkback-a11y-auditor</a>."
+      }
+    }
+  }
+}

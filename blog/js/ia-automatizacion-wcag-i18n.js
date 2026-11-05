@@ -1,12 +1,11 @@
 /**
- * Diccionario de traducciones específico para el Artículo 1 del Blog.
- * Se inyecta en el objeto global de i18n principal de forma separada.
+ * Diccionario de traducciones específico para el artículo "Impacto de la Inteligencia Artificial en la automatización de auditorías WCAG".
+ * GENERADO por scripts/build.js - editar content/blog/ia-automatizacion-wcag.json y .body.html
  */
 (function() {
   const blog1Translations = {
     es: {
       "blog1-page-title": "Impacto de la Inteligencia Artificial en auditorías WCAG - Diego Mena",
-      "blog-back-btn": "<i class=\"fas fa-arrow-left\" aria-hidden=\"true\"></i> Volver al Portafolio",
       "article1-p1": "El enfoque \"Shift Left\" (desplazar las pruebas hacia las etapas tempranas del ciclo de desarrollo) se ha posicionado como el camino correcto para garantizar productos digitales robustos. Es una visión técnica muy potente que, bien refinada, nos permitirá escalar significativamente la calidad de nuestras entregas. Al adoptar este enfoque en la accesibilidad, dejamos de tratar las auditorías WCAG como un cuello de botella al final del proceso, para convertirlas en un pilar del diseño y desarrollo.",
       "article1-h2-1": "La Brecha entre la IA y la Accesibilidad Dinámica",
       "article1-p2": "Sin embargo, desde la perspectiva estricta de QA y accesibilidad, todavía enfrentamos una brecha importante en la automatización. La Inteligencia Artificial y los Modelos de Lenguaje Grande (LLMs) son excelentes analizando la semántica estática del HTML, pero en proyectos reales modernos construidos con React, Angular o Vue, la accesibilidad es principalmente dinámica.",
@@ -22,7 +21,6 @@
     },
     en: {
       "blog1-page-title": "Impact of Artificial Intelligence on WCAG Audits - Diego Mena",
-      "blog-back-btn": "<i class=\"fas fa-arrow-left\" aria-hidden=\"true\"></i> Back to Portfolio",
       "article1-p1": "The \"Shift Left\" approach (moving testing to the early stages of the development cycle) has positioned itself as the right path to guarantee robust digital products. It is a very powerful technical vision that, properly refined, will allow us to significantly scale the quality of our deliveries. By adopting this approach in accessibility, we stop treating WCAG audits as a bottleneck at the end of the process, turning them into a pillar of design and development.",
       "article1-h2-1": "The Gap Between AI and Dynamic Accessibility",
       "article1-p2": "However, from a strict QA and accessibility perspective, we still face a significant gap in automation. Artificial Intelligence and Large Language Models (LLMs) are excellent at analyzing static HTML semantics, but in real modern projects built with React, Angular, or Vue, accessibility is primarily dynamic.",
@@ -38,18 +36,16 @@
     }
   };
 
-  // Inject translations into the global i18n object if it exists
+  // Inject translations
   if (window.i18n && window.i18n.translations) {
     Object.assign(window.i18n.translations.es, blog1Translations.es);
     Object.assign(window.i18n.translations.en, blog1Translations.en);
   } else {
-    // If it hasn't loaded yet, try again after DOMContentLoaded
     document.addEventListener("DOMContentLoaded", function() {
       if (window.i18n && window.i18n.translations) {
         Object.assign(window.i18n.translations.es, blog1Translations.es);
         Object.assign(window.i18n.translations.en, blog1Translations.en);
-        // Force an update to catch up
-        window.i18n.updateContent(window.i18n.currentLang);
+        window.i18n.changeLang(window.i18n.currentLang);
       }
     });
   }

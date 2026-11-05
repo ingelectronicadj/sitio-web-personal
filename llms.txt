@@ -9,9 +9,21 @@
 - [A11Y PRO - Soluciones SaaS de Accesibilidad](https://a11ypro.tech/)
 
 ## Artículos Técnicos de Accesibilidad
-- [Impacto de la IA y Automatización en Auditorías WCAG 2.2](https://diegomena.rocks/blog/ia-automatizacion-wcag.html)
-- [Mejores Prácticas WAI-ARIA y Gestión de Foco en SPA](https://diegomena.rocks/blog/mejores-practicas-aria.html)
-- [Comparativa de Herramientas de Testing: axe-core vs. ARC Toolkit](https://diegomena.rocks/blog/comparativa-testing-tools.html)
+<!-- LLMS_ARTICLES_START -->
+- [Impacto de la Inteligencia Artificial en la automatización de auditorías WCAG](https://diegomena.rocks/blog/ia-automatizacion-wcag.html)
+- [Mejores prácticas para implementar ARIA en Single Page Applications](https://diegomena.rocks/blog/mejores-practicas-aria.html)
+- [Comparativa de herramientas de testing: axe-core vs ARC Toolkit](https://diegomena.rocks/blog/comparativa-testing-tools.html)
+- [NVDA A11Y Auditor: auditorías lineales con NVDA y Chrome CDP](https://diegomena.rocks/blog/nvda-a11y-auditor.html)
+- [VoiceOver A11Y Auditor: auditorías lineales de iOS en Xcode Simulator](https://diegomena.rocks/blog/voiceover-a11y-auditor.html)
+- [TalkBack A11Y Auditor: auditorías lineales de Android con gestos reales](https://diegomena.rocks/blog/talkback-a11y-auditor.html)
+- [A11Y PRO Tests: 21 inspectores WCAG 2.2 en un bookmarklet bilingüe](https://diegomena.rocks/blog/a11y-pro-tests-bookmarklets.html)
+- [Pa11y Batch: auditorías WCAG masivas en español con CI/CD](https://diegomena.rocks/blog/pa11y-batch-ci-cd.html)
+- [react-aria-live: regiones aria-live compatibles con lectores reales](https://diegomena.rocks/blog/react-aria-live.html)
+- [Test Cases A11Y: 87 casos de prueba bilingües WCAG 2.2](https://diegomena.rocks/blog/test-cases-a11y.html)
+- [FreeSpeech SAAC: comunicador aumentativo en Vue 3 con WCAG 2.2 AA](https://diegomena.rocks/blog/freespeech-saac.html)
+- [Reproductor LSC: video HTML5 educativo en Lengua de Señas Colombiana](https://diegomena.rocks/blog/reproductor-lsc.html)
+- [A11Y Help VBA Excel: las 105 reglas de axe-core dentro de Excel](https://diegomena.rocks/blog/vba-excel-a11y.html)
+<!-- LLMS_ARTICLES_END -->
 
 ## Ecosistema Open Source de Accesibilidad (GitHub & GitLab)
 - [nvda-a11y-auditor (Auditor Lineal de Web Desktop NVDA + Sondas ARIA/Loading + Inspector Chrome CDP)](https://github.com/ingelectronicadj/nvda-a11y-auditor)

@@ -1,0 +1,41 @@
+{
+  "order": 4,
+  "slug": "nvda-a11y-auditor",
+  "pageTitle": "NVDA A11Y Auditor: auditorías lineales automatizadas - Diego Mena",
+  "ogTitle": "NVDA A11Y Auditor: auditorías lineales con NVDA y Chrome DevTools Protocol",
+  "cardTitle": "NVDA A11Y Auditor: auditorías lineales con NVDA y Chrome CDP",
+  "cardTitleI18n": "NVDA A11Y Auditor: auditorías lineales con NVDA y Chrome CDP",
+  "titleHtml": "<span class=\"text-primary\">NVDA A11Y Auditor</span>: auditorías lineales con NVDA y Chrome CDP",
+  "metaDescription": "Herramienta open source que orquesta NVDA en Windows para auditar webs de forma lineal: emula modo exploración y foco, captura el speech viewer en vivo e inspecciona el AccName mediante Chrome DevTools Protocol.",
+  "dateLabel": "Noviembre 2026 · Lectores de Pantalla",
+  "datePublished": "2026-11-05",
+  "dateModified": "2026-11-05",
+  "excerpt": "Auditor lineal para Web Desktop con NVDA y Chrome vía CDP. Emula modo exploración y foco, extrae subtítulos del speech viewer en vivo, inspecciona W3C AccName 1.2 y evalúa 86 criterios WCAG 2.2.",
+  "cardAria": "Leer artículo sobre NVDA A11Y Auditor",
+  "image": "img/blog/blog_nvda_auditor.webp",
+  "imageAlt": "Diagrama técnico del auditor NVDA con sondas de modo exploración y foco, captura del speech viewer e inspección AccName vía Chrome DevTools Protocol",
+  "keywords": "NVDA, lector de pantalla, auditoría accesibilidad, Chrome DevTools Protocol, AccName 1.2, WCAG 2.2, browse mode, focus mode, open source, Diego Mena",
+  "bodyFile": "content/blog/nvda-a11y-auditor.body.html",
+  "i18n": {
+    "en": {
+      "pageTitle": "NVDA A11Y Auditor: automated linear audits - Diego Mena",
+      "cardTitle": "NVDA A11Y Auditor: linear audits with NVDA and Chrome CDP",
+      "cardDate": "November 2026 · Screen Readers",
+      "cardDesc": "Linear auditor for Web Desktop with NVDA and Chrome via CDP. Emulates browse and focus modes, extracts live speech viewer captions, inspects W3C AccName 1.2 and evaluates 86 WCAG 2.2 criteria.",
+      "cardLink": "Read article",
+      "cardAria": "Read article about NVDA A11Y Auditor",
+      "articles": {
+        "article4-p1": "Auditing with a real screen reader is the only way to know the true experience of a blind user, but doing it manually is slow and hard to reproduce. NVDA A11Y Auditor solves this by orchestrating NVDA on Windows to traverse the page linearly and record exactly what the reader announces.",
+        "article4-h2-1": "Two navigation probes: browse and focus",
+        "article4-p2": "The tool runs two independent passes over the same URL. The browse mode probe simulates NVDA's quick navigation keys to traverse headings, links, forms and landmarks. The focus mode probe tabs sequentially through every interactive control, comparing the real tab order against the visual order and the DOM.",
+        "article4-h2-2": "Speech viewer as the source of truth",
+        "article4-p3": "Instead of inferring reader output from the DOM, the auditor captures NVDA's speech viewer captions in real time. Each announcement is linked to the element that produced it, enabling detection of empty accessible names, incorrect roles or duplicated announcements with literal evidence of what the user heard.",
+        "article4-h2-3": "AccName inspection via Chrome DevTools Protocol",
+        "article4-p4": "In parallel with listening, the auditor opens a Chrome DevTools Protocol (CDP) session and queries the browser's accessibility tree to evaluate the W3C AccName 1.2 algorithm: <code>aria-label</code>, <code>aria-labelledby</code>, text content and native attributes. The result is contrasted with NVDA's announcement to detect divergences between the computed and the verbalized name.",
+        "article4-h2-4": "86 WCAG 2.2 criteria and cross-platform comparison",
+        "article4-p5": "The final report evaluates 86 WCAG 2.2 success criteria and cross-references results with its counterparts VoiceOver A11Y Auditor (iOS) and TalkBack A11Y Auditor (Android). This cross-platform comparison reveals divergent screen reader behaviors against the same markup, a common blind spot in audits that use only one AT.",
+        "article4-p6": "The project is open source and available at <a href=\"https://github.com/ingelectronicadj/nvda-a11y-auditor\" target=\"_blank\" rel=\"noopener noreferrer\">github.com/ingelectronicadj/nvda-a11y-auditor</a>."
+      }
+    }
+  }
+}

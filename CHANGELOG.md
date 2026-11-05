@@ -1,5 +1,26 @@
 # Changelog
 
+## [2.5.7] - 2026-11-05
+
+### Added
+
+- **Pipeline de blog mejorado para publicación eficiente de nuevos artículos**:
+  - El cuerpo de cada artículo vive ahora en `content/blog/<slug>.body.html` (campo `bodyFile`), HTML plano editable sin escapes; `bodyHtml` inline en JSON sigue soportado como fallback.
+  - Las claves ES del artículo se extraen automáticamente del propio cuerpo (`data-i18n` → `innerHTML`); las traducciones EN viven en `i18n.en` del JSON (`cardTitle/cardDate/cardDesc/cardLink/cardAria/pageTitle` + `articles`).
+  - `scripts/build.js` genera `blog/js/<slug>-i18n.js`, sincroniza las claves `blogN-*` de `js/i18n.js` (marcadores `I18N_BLOG_ES/EN`) y las listas de artículos de `llms.txt`, `index.md` y `llms-full.txt` (marcadores `LLMS_ARTICLES`/`LLMSF_ARTICLES`).
+  - Derivación automática de `i18nPrefix` (`blog${order}`), `article${order}-*` y `thumbImage` (`blog_` → `thumb_`), más validación de slugs/orders duplicados, imágenes existentes y paridad de claves ES/EN con warnings en build.
+  - Migrados los 13 posts existentes al nuevo esquema (13 archivos `.body.html`, JSON saneados) sin cambios funcionales en la salida renderizada.
+
+- **Serie de 10 artículos técnicos del Ecosistema Open Source en `#blog`**:
+  - Un artículo por cada proyecto open source del portafolio, definidos en `content/blog/*.json` y renderizados por el pipeline `views/post.ejs`: `nvda-a11y-auditor`, `voiceover-a11y-auditor`, `talkback-a11y-auditor`, `a11y-pro-tests-bookmarklets`, `pa11y-batch-ci-cd`, `react-aria-live`, `test-cases-a11y`, `freespeech-saac`, `reproductor-lsc` y `vba-excel-a11y`.
+  - Diccionarios i18n bilingües por artículo en `blog/js/<slug>-i18n.js` (claves `article4`–`article13`) y tarjetas sincronizadas en `index.html` (claves `blog4`–`blog13`) con miniaturas `img/blog/thumb_*.webp`.
+  - Sincronizados `sitemap.xml` (14 URLs), `llms.txt`, `llms-full.txt` (síntesis por artículo) e `index.md`. Validación axe-core (WCAG 2.2 A/AA vía jsdom) con 0 violaciones en los 10 artículos y en `index.html`.
+
+### Fixed
+
+- Clave `blog-back-btn` ausente en `js/i18n.js` (ES/EN): el botón "Volver al Portafolio" quedaba sin traducir al alternar idioma en los 13 artículos.
+- Fallback `window.i18n.updateContent(...)` inexistente en los `-i18n.js` por artículo (método real: `changeLang`); corregido en la plantilla generada por `scripts/build.js`.
+
 ## [2.5.6] - 2026-11-05
 
 ### Added

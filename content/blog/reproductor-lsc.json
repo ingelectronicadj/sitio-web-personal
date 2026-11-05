@@ -1,0 +1,41 @@
+{
+  "order": 12,
+  "slug": "reproductor-lsc",
+  "pageTitle": "Reproductor LSC: video accesible en Lengua de Señas - Diego Mena",
+  "ogTitle": "Reproductor LSC: reproductor HTML5 educativo en Lengua de Señas Colombiana",
+  "cardTitle": "Reproductor LSC: video HTML5 educativo en Lengua de Señas Colombiana",
+  "cardTitleI18n": "Reproductor LSC: video HTML5 educativo en Lengua de Señas Colombiana",
+  "titleHtml": "<span class=\"text-primary\">Reproductor LSC</span>: video HTML5 educativo en Lengua de Señas Colombiana",
+  "metaDescription": "Reproductor educativo open source en HTML5 para contenido en Lengua de Señas Colombiana: sincronización multicámara, bucle A-B para práctica y glosario interactivo con autoevaluación.",
+  "dateLabel": "Noviembre 2026 · Inclusión",
+  "datePublished": "2026-11-05",
+  "dateModified": "2026-11-05",
+  "excerpt": "Reproductor educativo HTML5 accesible en Lengua de Señas Colombiana (LSC) con sincronización multicámara, repetición de bucle A-B y glosario interactivo con autoevaluación.",
+  "cardAria": "Leer artículo sobre Reproductor LSC",
+  "image": "img/blog/blog_reproductor_lsc.webp",
+  "imageAlt": "Reproductor educativo LSC con doble vista de cámara sincronizada para lengua de señas, control de bucle A-B y glosario interactivo lateral",
+  "keywords": "Lengua de Señas Colombiana, LSC, reproductor video accesible, HTML5 video, comunidad sorda, educación inclusiva, bucle A-B, open source, Diego Mena",
+  "bodyFile": "content/blog/reproductor-lsc.body.html",
+  "i18n": {
+    "en": {
+      "pageTitle": "LSC Player: accessible video in Sign Language - Diego Mena",
+      "cardTitle": "Reproductor LSC: educational HTML5 video in Colombian Sign Language",
+      "cardDate": "November 2026 · Inclusion",
+      "cardDesc": "Accessible HTML5 educational player in Colombian Sign Language (LSC) with multi-camera synchronization, A-B loop repetition and interactive glossary with self-assessment.",
+      "cardLink": "Read article",
+      "cardAria": "Read article about Reproductor LSC",
+      "articles": {
+        "article12-p1": "For the Colombian deaf community, Colombian Sign Language (LSC) is the first language and written Spanish is a second language. A conventional video player is not enough to learn it: you need to see the sign from multiple angles, repeat fragments and consult the glossary. Reproductor LSC was built for that.",
+        "article12-h2-1": "Multi-camera synchronization",
+        "article12-p2": "Signing is three-dimensional: it involves hands, facial expression and body orientation. The player plays two or more video streams in perfect sync (front and side), allowing views to be switched or combined without losing the temporal point, something that requires precise control of the HTMLMediaElement API.",
+        "article12-h2-2": "A-B loop for practice",
+        "article12-p3": "Learning a sign demands repetition. A-B loop mode lets you mark a start and end point and replay that fragment in a cycle, without intervention, until the production is mastered. The control is exposed to both mouse and keyboard, with live-region announcements of the selected range.",
+        "article12-h2-3": "Interactive glossary with self-assessment",
+        "article12-p4": "The pedagogical component is completed with a browsable sign glossary and a self-assessment mode that hides the gloss and challenges the student to recognize the displayed sign. Results are announced in a <code>role=\"status\"</code> region to preserve context.",
+        "article12-h2-4": "Accessible also for non-signers",
+        "article12-p5": "The player's own interface fulfills the principles it preaches: native keyboard-operable controls, visible focus, labels in Spanish and LSC, and screen reader compatibility. The goal is for the tool to serve hearing teachers and deaf students alike.",
+        "article12-p6": "The project is open source at <a href=\"https://github.com/ingelectronicadj/ReproductorLSC\" target=\"_blank\" rel=\"noopener noreferrer\">github.com/ingelectronicadj/ReproductorLSC</a>."
+      }
+    }
+  }
+}

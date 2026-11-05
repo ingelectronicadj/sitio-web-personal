@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Suite open source de 21 inspectores WCAG 2.2 ejecutables como bookmarklet: Zoom 200%, Reflow 320px, contraste, orden de foco, target size y regiones live, con laboratorio en vivo en tests.a11ypro.tech."
+    />
+    <meta name="author" content="Diego Javier Mena Amado" />
+    <meta name="app-version" content="2.5.7-a53b33da" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'sha256-lp1YuCdmQnpv/aKYDgIZEo2dtXeZHI+sFO4CiYK98Fg=' https://widget.a11ypro.tech https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://widget.a11ypro.tech; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://widget.a11ypro.tech https://cloudflareinsights.com https://a.nel.cloudflare.com; upgrade-insecure-requests; block-all-mixed-content" />
+    
+    <meta name="keywords" content="bookmarklet accesibilidad, WCAG 2.2, zoom 200, reflow 320px, contraste, orden de foco, target size 2.5.8, aria-live, A11Y PRO, open source, Diego Mena" />
+    
+    <script>
+      (function () {
+        try {
+          if (localStorage.getItem("status_contrast") === "true") {
+            document.documentElement.classList.add("dark");
+          }
+          var l = localStorage.getItem("preferred_lang");
+          if (l && l !== "es") {
+            document.documentElement.lang = l;
+            document.documentElement.classList.add("i18n-pending");
+            setTimeout(function () {
+              document.documentElement.classList.remove("i18n-pending");
+            }, 2000);
+          }
+        } catch (e) {}
+      })();
+    </script>
+
+    <title data-i18n="blog7-page-title">
+      A11Y PRO Tests: 21 bookmarklets WCAG 2.2 - Diego Mena
+    </title>
+
+    <link rel="icon" type="image/webp" href="../img/favicon-diego.webp" />
+    <link rel="alternate" hreflang="es" href="https://diegomena.rocks/blog/a11y-pro-tests-bookmarklets.html" />
+    <link rel="alternate" hreflang="en" href="https://diegomena.rocks/blog/a11y-pro-tests-bookmarklets.html" />
+    <link rel="alternate" hreflang="x-default" href="https://diegomena.rocks/blog/a11y-pro-tests-bookmarklets.html" />
+    <link rel="alternate" type="text/markdown" href="https://diegomena.rocks/llms-full.txt" title="Diego Mena — Full LLM Technical Context" />
+
+    <!-- Tipografía auto-alojada con preload para eliminar salto tipográfico (FOUT/CLS) -->
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="../css/fonts/saira-700-normal-latin.woff2"
+      crossorigin />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="../css/fonts/muli-400-normal-latin.woff2"
+      crossorigin />
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+
+    <!-- Bundle unificado de estilos (bootstrap + resume + darkMode + blog + slick) -->
+    <link rel="stylesheet" href="../css/bundle.min.css?v=2.5.7-6727f954" />
+
+    <!-- Canonical + Open Graph + Twitter Card (articulo) -->
+    <link rel="canonical" href="https://diegomena.rocks/blog/a11y-pro-tests-bookmarklets.html" />
+    <meta property="og:url" content="https://diegomena.rocks/blog/a11y-pro-tests-bookmarklets.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="A11Y PRO Tests: 21 inspectores WCAG 2.2 en un bookmarklet bilingüe" />
+    <meta property="og:description" content="Suite open source de 21 inspectores WCAG 2.2 ejecutables como bookmarklet: Zoom 200%, Reflow 320px, contraste, orden de foco, target size y regiones live, con laboratorio en vivo en tests.a11ypro.tech." />
+    <meta property="og:image" content="https://diegomena.rocks/img/blog/blog_a11y_pro_tests.webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Panel de la suite A11Y PRO Tests con 21 inspectores WCAG 2.2 activados como bookmarklet sobre una página web en auditoría" />
+    <meta property="article:published_time" content="2026-11-05" />
+    <meta property="article:modified_time" content="2026-11-05" />
+    <meta property="article:author" content="https://diegomena.rocks/#person" />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:site_name" content="Diego Mena — Experto en Accesibilidad Digital" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="A11Y PRO Tests: 21 inspectores WCAG 2.2 en un bookmarklet bilingüe" />
+    <meta name="twitter:description" content="Suite open source de 21 inspectores WCAG 2.2 ejecutables como bookmarklet: Zoom 200%, Reflow 320px, contraste, orden de foco, target size y regiones live, con laboratorio en vivo en tests.a11ypro.tech." />
+    <meta name="twitter:image" content="https://diegomena.rocks/img/blog/blog_a11y_pro_tests.webp" />
+    <meta name="twitter:image:alt" content="Panel de la suite A11Y PRO Tests con 21 inspectores WCAG 2.2 activados como bookmarklet sobre una página web en auditoría" />
+
+    <!-- Datos estructurados JSON-LD (BlogPosting + Person E-E-A-T + BreadcrumbList) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "BlogPosting",
+            "@id": "https://diegomena.rocks/blog/a11y-pro-tests-bookmarklets.html#post",
+            "mainEntityOfPage": "https://diegomena.rocks/blog/a11y-pro-tests-bookmarklets.html",
+            "headline": "A11Y PRO Tests: 21 inspectores WCAG 2.2 en un bookmarklet bilingüe",
+            "description": "Suite open source de 21 inspectores WCAG 2.2 ejecutables como bookmarklet: Zoom 200%, Reflow 320px, contraste, orden de foco, target size y regiones live, con laboratorio en vivo en tests.a11ypro.tech.",
+            "url": "https://diegomena.rocks/blog/a11y-pro-tests-bookmarklets.html",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://diegomena.rocks/img/blog/blog_a11y_pro_tests.webp",
+              "width": 1200,
+              "height": 630,
+              "caption": "Panel de la suite A11Y PRO Tests con 21 inspectores WCAG 2.2 activados como bookmarklet sobre una página web en auditoría"
+            },
+            "inLanguage": ["es", "en"],
+            "datePublished": "2026-11-05",
+            "dateModified": "2026-11-05",
+            "keywords": "bookmarklet accesibilidad, WCAG 2.2, zoom 200, reflow 320px, contraste, orden de foco, target size 2.5.8, aria-live, A11Y PRO, open source, Diego Mena",
+            "isPartOf": { "@id": "https://diegomena.rocks/#website" },
+            "author": { "@id": "https://diegomena.rocks/#person" },
+            "publisher": { "@id": "https://diegomena.rocks/#person" }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://diegomena.rocks/#person",
+            "name": "Diego Javier Mena Amado",
+            "jobTitle": "Experto en Accesibilidad Digital (WCAG 2.2 · EN 301 549 · Shift Left)",
+            "url": "https://diegomena.rocks/",
+            "image": "https://diegomena.rocks/img/profile-pic.webp",
+            "sameAs": [
+              "https://www.linkedin.com/in/ingelectronicadj/",
+              "https://github.com/ingelectronicadj",
+              "https://gitlab.com/ingelectronicadj",
+              "https://scholar.google.com/citations?user=sn7a5boAAAAJ&hl=es",
+              "https://orcid.org/0000-0002-8587-9346",
+              "https://a11ypro.tech"
+            ]
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://diegomena.rocks/blog/a11y-pro-tests-bookmarklets.html#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Diego Mena — Portafolio",
+                "item": "https://diegomena.rocks/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Artículos de Accesibilidad Digital",
+                "item": "https://diegomena.rocks/#blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "A11Y PRO Tests: 21 inspectores WCAG 2.2 en un bookmarklet bilingüe",
+                "item": "https://diegomena.rocks/blog/a11y-pro-tests-bookmarklets.html"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+
+  <body id="page-top">
+    <canvas id="ambient-canvas" class="ambient-canvas" aria-hidden="true"></canvas>
+    <!-- Navbar superior destacado -->
+    <nav id="navbar" aria-label="Destacados">
+      <ul class="horizontal">
+        <li class="first-nav">
+          <a
+            href="../index.html#experience"
+            class="nav-link"
+            data-i18n="nav-experience">
+            Experiencia
+          </a>
+        </li>
+        <li>
+          <a
+            href="../index.html#skills"
+            class="nav-link"
+            data-i18n="nav-skills">
+            Habilidades
+          </a>
+        </li>
+        <li>
+          <a
+            href="../index.html#projects"
+            class="nav-link"
+            data-i18n="nav-projects">
+            Proyectos
+          </a>
+        </li>
+        <li class="last-nav">
+          <a
+            href="../index.html#blog"
+            class="nav-link"
+            data-i18n="nav-blog">
+            Artículos
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Sidebar compartida (controles de tema / idioma / microinteracciones + navegacion) -->
+    <aside
+      class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
+      id="sideNav"
+      aria-label="Barra lateral de navegación y utilidades">
+      <header class="navbar-brand d-none d-lg-block">
+        <a href="../index.html" aria-label="Ir a la página de inicio">
+          <img
+            class="img-fluid img-profile rounded-circle mx-auto mb-2"
+            src="../img/profile-pic.webp"
+            alt="Fotografía Diego Mena"
+            title="Fotografía Diego Mena"
+            width="1024"
+            height="1024"
+            fetchpriority="high" />
+        </a>
+      </header>
+      <div class="toogleContainer">
+        <input
+          id="checkSwitch"
+          type="checkbox"
+          class="btn-contrast sr-only"
+          tabindex="-1"
+          aria-hidden="true" />
+        <button
+          type="button"
+          id="themeToggle"
+          class="ctrl-btn"
+          data-i18n-aria="theme-toggle-label"
+          data-i18n-title="theme-toggle-label"
+          aria-label="Cambiar a modo oscuro"
+          aria-pressed="false">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </button>
+        <button
+          type="button"
+          id="langToggle"
+          class="ctrl-btn"
+          data-i18n-title="lang-toggle-label"
+          aria-label="Cambiar idioma del sitio: ES">
+          <span id="langCode" class="ctrl-btn-text">ES</span>
+        </button>
+        <button
+          type="button"
+          id="fxToggle"
+          class="ctrl-btn"
+          data-i18n-aria="fx-toggle-label"
+          data-i18n-title="fx-toggle-label"
+          aria-label="Pausar microinteracciones"
+          aria-pressed="true">
+          <i class="fas fa-magic" aria-hidden="true"></i>
+        </button>
+      </div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <nav
+        class="collapse navbar-collapse"
+        id="navbarSupportedContent"
+        aria-label="Principal">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="../index.html#welcome-section"
+              data-i18n="nav-about">
+              Acerca de mí
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="../index.html#experience"
+              data-i18n="nav-experience-side">
+              Experiencia
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="../index.html#education"
+              data-i18n="nav-education">
+              Educación
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="../index.html#skills"
+              data-i18n="nav-skills-side">
+              Habilidades
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="../index.html#projects"
+              data-i18n="nav-projects-side">
+              Proyectos
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="../index.html#interests"
+              data-i18n="nav-interests">
+              Intereses
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              href="../index.html#blog"
+              data-i18n="nav-blog-side">
+              Artículos
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="../index.html#awards"
+              data-i18n="nav-awards">
+              Eventos
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+
+    <main>
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column">
+        <div class="my-auto">
+          <article>
+            <a href="../index.html#blog" class="back-btn" data-i18n="blog-back-btn">
+              <i class="fas fa-arrow-left" aria-hidden="true"></i> Volver al Portafolio
+            </a>
+
+            <!-- Header del artículo + Ilustración Técnica de Arquitectura -->
+            <header class="blog-post-header mb-4">
+              <h1 class="blog-title mb-2" data-i18n="blog7-title"><span class="text-primary">A11Y PRO Tests</span>: 21 inspectores WCAG 2.2 en un bookmarklet bilingüe</h1>
+              <div class="subheading mb-3" data-i18n="blog7-date">Noviembre 2026 · Testing WCAG · Por Diego Mena</div>
+              <p class="lead mb-4" data-i18n="blog7-desc">Suite interactiva de 21 inspectores WCAG 2.2 en un único bookmarklet bilingüe (Zoom 200%, Reflow 320px, Contraste, Orden de foco, Target Size, Regiones Live) y laboratorio en tests.a11ypro.tech.</p>
+              <figure class="blog-hero-figure m-0">
+                <img
+                  src="../img/blog/blog_a11y_pro_tests.webp"
+                  alt="Panel de la suite A11Y PRO Tests con 21 inspectores WCAG 2.2 activados como bookmarklet sobre una página web en auditoría"
+                  width="1200"
+                  height="630"
+                  class="img-fluid blog-main-img"
+                />
+              </figure>
+            </header>
+
+            <!-- Contenido principal -->
+            <div class="blog-content mb-4">
+              <p data-i18n="article7-p1">Gran parte de los criterios WCAG no puede verificarlos un motor automático: requieren interacción, zoom, redimensión o navegación por teclado. A11Y PRO Tests empaqueta 21 inspectores de esos criterios "manuales" en un único bookmarklet bilingüe que se ejecuta sobre cualquier página, sin instalar nada ni depender de permisos de extensión.</p>
+
+              <h2 data-i18n="article7-h2-1">Por qué un bookmarklet</h2>
+              <p data-i18n="article7-p2">Un bookmarklet es JavaScript guardado como favorito: se ejecuta en el contexto de la página actual, con los mismos permisos que el propio documento. Esto permite inyectar sondas de inspección incluso en entornos donde las extensiones están bloqueadas por políticas corporativas, una limitación real en auditorías sobre portales bancarios y gubernamentales.</p>
+
+              <h2 data-i18n="article7-h2-2">Los 21 inspectores</h2>
+              <p data-i18n="article7-p3">La suite cubre las verificaciones manuales más costosas de WCAG 2.2: simulación de Zoom al 200% (1.4.4), Reflow a 320px (1.4.10), contraste de texto y de componentes UI (1.4.3 / 1.4.11), trazado visual del orden de foco incluyendo el criterio de no ocultamiento del foco (2.4.11), medición de tamaño de objetivo 2.5.8 y monitorización de regiones aria-live en tiempo real.</p>
+
+              <div class="blog-code-container my-4" role="region" aria-label="Ejemplo de ejecución del inspector de orden de foco desde la consola">
+                <div class="blog-code-header" aria-hidden="true">
+                  <div class="blog-code-dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                  </div>
+                  <div class="blog-code-title">inspector-foco.js</div>
+                </div>
+                <pre class="blog-code-snippet" tabindex="0"><code><span class="code-comment">// Traza el orden de tabulacion con insignias numeradas</span>
+<span class="code-key">const</span> focusables = [...document.querySelectorAll(
+  <span class="code-string">'a[href], button, input, select, textarea, [tabindex]'</span>
+)].filter(el =&gt; el.tabIndex &gt;= 0 &amp;&amp; el.offsetParent !== <span class="code-key">null</span>);
+
+focusables.forEach((el, i) =&gt; el.insertAdjacentHTML(
+  <span class="code-string">'afterbegin'</span>, <span class="code-string">`&lt;b class="a11y-tag"&gt;${i + 1}&lt;/b&gt;`</span>
+));</code></pre>
+              </div>
+
+              <h2 data-i18n="article7-h2-3">Laboratorio en vivo</h2>
+              <p data-i18n="article7-p4">El proyecto incluye un laboratorio en <a href="https://tests.a11ypro.tech/" target="_blank" rel="noopener noreferrer">tests.a11ypro.tech</a> donde cada inspector puede probarse sobre páginas deliberadamente accesibles e inaccesibles. Es a la vez una herramienta de auditoría y un entorno de formación para aprender a reconocer cada criterio en contexto.</p>
+
+              <h2 data-i18n="article7-h2-4">Bilingüe y sin instalación</h2>
+              <p data-i18n="article7-p5">Todos los inspectores operan en español e inglés y emiten reportes que el auditor puede anexar a sus matrices de hallazgos. Al ser un favorito del navegador, la barrera de adopción es cero: arrastrar el enlace a la barra de marcadores y ejecutar.</p>
+
+              <p data-i18n="article7-p6">El repositorio es open source en <a href="https://gitlab.com/a11ypro/a11y-pro-tests" target="_blank" rel="noopener noreferrer">gitlab.com/a11ypro/a11y-pro-tests</a>.</p>
+            </div>
+
+            <!-- Tarjeta de Autoría E-E-A-T + Artículos Relacionados (SEO / GEO / AEO) -->
+            <footer class="blog-author-box research-box mt-4" aria-label="Información del autor y artículos relacionados">
+              <div class="d-flex flex-column flex-md-row align-items-center" style="gap: 1.25rem;">
+                <img
+                  src="../img/profile-pic.webp"
+                  alt="Diego Mena — Experto en Accesibilidad Digital"
+                  width="84"
+                  height="84"
+                  loading="lazy"
+                  style="width: 84px; height: 84px; border-radius: 50%; object-fit: cover; border: 2px solid #0055b3; flex-shrink: 0;"
+                />
+                <div>
+                  <h2 class="h4 mb-1" style="text-transform: uppercase;">Diego Javier Mena Amado</h2>
+                  <p class="mb-2" style="font-size: 0.96rem;">
+                    <strong>Experto en Accesibilidad Digital (WCAG 2.2 · EN 301 549 · Sección 508 · Resolución 1519 MinTIC)</strong>.
+                    Ingeniero Electrónico y Magíster en Gerencia de Proyectos. Fundador de <a href="https://a11ypro.tech/" target="_blank" rel="noopener noreferrer">A11Y PRO</a> y consultor internacional para los sectores fintech, banca, educación superior y gobierno digital.
+                  </p>
+                  <div class="research-links" style="margin-top: 0.65rem;">
+                    <a href="../index.html#experience" class="research-link-chip">
+                      <i class="fas fa-briefcase" aria-hidden="true"></i>
+                      <span>Trayectoria y Auditorías</span>
+                    </a>
+                    <a href="../index.html#projects" class="research-link-chip">
+                      <i class="fas fa-code-branch" aria-hidden="true"></i>
+                      <span>Ecosistema Open Source</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ingelectronicadj/" target="_blank" rel="noopener noreferrer" class="research-link-chip">
+                      <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                      <span>Conectar en LinkedIn</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              
+              <hr class="my-3" />
+              <div>
+                <h3 class="h5 mb-2" style="text-transform: uppercase;">Otros artículos técnicos de Accesibilidad</h3>
+                <div class="research-links" style="margin-top: 0.5rem;">
+                  
+                  <a href="./ia-automatizacion-wcag.html" class="research-link-chip">
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                    <span>Impacto de la Inteligencia Artificial en la automatización de auditorías WCAG</span>
+                  </a>
+                  
+                  <a href="./mejores-practicas-aria.html" class="research-link-chip">
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                    <span>Mejores prácticas para implementar ARIA en Single Page Applications</span>
+                  </a>
+                  
+                  <a href="./comparativa-testing-tools.html" class="research-link-chip">
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                    <span>Comparativa de herramientas de testing: axe-core vs ARC Toolkit</span>
+                  </a>
+                  
+                  <a href="./nvda-a11y-auditor.html" class="research-link-chip">
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                    <span>NVDA A11Y Auditor: auditorías lineales con NVDA y Chrome CDP</span>
+                  </a>
+                  
+                  <a href="./voiceover-a11y-auditor.html" class="research-link-chip">
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                    <span>VoiceOver A11Y Auditor: auditorías lineales de iOS en Xcode Simulator</span>
+                  </a>
+                  
+                  <a href="./talkback-a11y-auditor.html" class="research-link-chip">
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                    <span>TalkBack A11Y Auditor: auditorías lineales de Android con gestos reales</span>
+                  </a>
+                  
+                  <a href="./pa11y-batch-ci-cd.html" class="research-link-chip">
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                    <span>Pa11y Batch: auditorías WCAG masivas en español con CI/CD</span>
+                  </a>
+                  
+                  <a href="./react-aria-live.html" class="research-link-chip">
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                    <span>react-aria-live: regiones aria-live compatibles con lectores reales</span>
+                  </a>
+                  
+                  <a href="./test-cases-a11y.html" class="research-link-chip">
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                    <span>Test Cases A11Y: 87 casos de prueba bilingües WCAG 2.2</span>
+                  </a>
+                  
+                  <a href="./freespeech-saac.html" class="research-link-chip">
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                    <span>FreeSpeech SAAC: comunicador aumentativo en Vue 3 con WCAG 2.2 AA</span>
+                  </a>
+                  
+                  <a href="./reproductor-lsc.html" class="research-link-chip">
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                    <span>Reproductor LSC: video HTML5 educativo en Lengua de Señas Colombiana</span>
+                  </a>
+                  
+                  <a href="./vba-excel-a11y.html" class="research-link-chip">
+                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                    <span>A11Y Help VBA Excel: las 105 reglas de axe-core dentro de Excel</span>
+                  </a>
+                  
+                </div>
+              </div>
+              
+            </footer>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="../vendor/js/jquery.min.js"></script>
+    <script src="../js/bundle.min.js?v=2.5.7-f52da97d"></script>
+    <script src="./js/a11y-pro-tests-bookmarklets-i18n.js?v=2.5.7-6deaa059"></script>
+
+    <!-- Widget de accesibilidad A11Y PRO -->
+    <script
+      defer
+      src="https://widget.a11ypro.tech/widget/js/launcher.min.js"
+      data-key="ak_live_55a9e27387d22ba7b455b4e3e5325004da70fc9747b6d189"
+      data-darkModeStrategy="native"
+      data-darkModeNativeClass="dark"
+      data-darkModeTrigger="#checkSwitch"></script>
+  </body>
+</html>
+

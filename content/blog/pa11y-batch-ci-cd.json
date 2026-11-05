@@ -1,0 +1,41 @@
+{
+  "order": 8,
+  "slug": "pa11y-batch-ci-cd",
+  "pageTitle": "Pa11y Batch: auditorías WCAG masivas en español y CI/CD - Diego Mena",
+  "ogTitle": "Pa11y Batch: auditorías WCAG masivas en español con Web Studio y CI/CD",
+  "cardTitle": "Pa11y Batch: auditorías WCAG masivas en español con CI/CD",
+  "cardTitleI18n": "Pa11y Batch: auditorías WCAG masivas en español con CI/CD",
+  "titleHtml": "<span class=\"text-primary\">Pa11y Batch</span>: auditorías WCAG masivas en español con CI/CD",
+  "metaDescription": "Suite open source basada en pa11y, axe-core y HTML_CodeSniffer para auditar lotes de URLs con reportes en español, vista ejecutiva para stakeholders y artefactos JUnit para pipelines CI/CD.",
+  "dateLabel": "Noviembre 2026 · Automatización",
+  "datePublished": "2026-11-05",
+  "dateModified": "2026-11-05",
+  "excerpt": "Suite Web Studio, CLI y CI/CD para auditorías automatizadas de accesibilidad con axe-core y HTML_CodeSniffer en español, vista ejecutiva para Stakeholders, inspección visual del DOM y artefactos JUnit.",
+  "cardAria": "Leer artículo sobre Pa11y Batch",
+  "image": "img/blog/blog_pa11y_batch.webp",
+  "imageAlt": "Arquitectura de Pa11y Batch con lotes de URLs evaluadas por axe-core y HTML_CodeSniffer, vista ejecutiva de stakeholders y artefactos JUnit para CI/CD",
+  "keywords": "pa11y, axe-core, HTML_CodeSniffer, auditoría WCAG masiva, CI/CD accesibilidad, JUnit, reportes accesibilidad español, open source, Diego Mena",
+  "bodyFile": "content/blog/pa11y-batch-ci-cd.body.html",
+  "i18n": {
+    "en": {
+      "pageTitle": "Pa11y Batch: bulk WCAG audits in Spanish and CI/CD - Diego Mena",
+      "cardTitle": "Pa11y Batch: bulk WCAG audits in Spanish with CI/CD",
+      "cardDate": "November 2026 · Automation",
+      "cardDesc": "Web Studio suite, CLI and CI/CD for automated accessibility audits with axe-core and HTML_CodeSniffer in Spanish, executive Stakeholder view, visual DOM inspection and JUnit artifacts.",
+      "cardLink": "Read article",
+      "cardAria": "Read article about Pa11y Batch",
+      "articles": {
+        "article8-p1": "Auditing one URL is easy; auditing five hundred with traceability is another matter. Pa11y Batch was built to scale automated audits: it runs axe-core and HTML_CodeSniffer over entire batches of URLs and consolidates results into Spanish-language reports aimed at both technical staff and management.",
+        "article8-h2-1": "Two engines, one matrix",
+        "article8-p2": "Each URL is evaluated independently by axe-core and HTML_CodeSniffer. Running two engines reduces false negatives and lets you cross-check criteria when rules overlap: if both flag the same element, confidence in the finding increases; if they diverge, the human auditor decides with context.",
+        "article8-h2-2": "Executive view for stakeholders",
+        "article8-p3": "The report includes an aggregated view aimed at non-technical profiles: conformance trend by WCAG level, severity distribution and evolution between runs. Alongside it, the technical view offers visual DOM inspection with screenshots and precise selectors for each violation.",
+        "article8-h2-3": "CI/CD with JUnit artifacts",
+        "article8-p4": "The suite emits reports in JUnit XML format, the standard understood by Jenkins, GitLab CI, GitHub Actions and Azure DevOps. This turns accessibility into a quality gate: the pipeline fails if violations appear above the configured threshold.",
+        "article8-h2-4": "Web Studio and Spanish reports",
+        "article8-p5": "On top of the CLI engine sits <a href=\"https://pa11y.a11ypro.tech/\" target=\"_blank\" rel=\"noopener noreferrer\">Pa11y Batch Web Studio</a>, a web interface to launch audits without a terminal. One of its differentiators is that findings, rule descriptions and recommendations are delivered entirely in Spanish, something the original tools do not offer.",
+        "article8-p6": "The project is open source and available at <a href=\"https://github.com/ingelectronicadj/pa11y_batch\" target=\"_blank\" rel=\"noopener noreferrer\">github.com/ingelectronicadj/pa11y_batch</a>."
+      }
+    }
+  }
+}

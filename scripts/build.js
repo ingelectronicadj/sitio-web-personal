@@ -7,9 +7,12 @@
  *    y escribe version.json en la raiz para invalidacion automatica de cache HTML.
  * 4) Renderiza cada content/blog/*.json usando views/post.ejs -> blog/<slug>.html
  *    inyectando cssVersion, jsVersion, i18nVersion y buildId.
- * 5) Actualiza la lista de articulos, los parametros ?v=<version>-<hash> y
- *    <meta name="app-version"> dentro de index.html.
- * 6) Sincroniza sitemap.xml.
+ *    El cuerpo del articulo vive en content/blog/<slug>.body.html (campo bodyFile;
+ *    bodyHtml inline sigue soportado). Las claves i18n ES se extraen del propio
+ *    cuerpo via data-i18n; las traducciones EN viven en post.i18n.en.
+ * 5) Genera blog/js/<slug>-i18n.js, sincroniza las claves blogN-* de js/i18n.js
+ *    (marcadores I18N_BLOG_ES/EN), las listas de articulos de llms.txt, index.md
+ *    y llms-full.txt, las tarjetas de index.html y sitemap.xml.
  */
 const fs = require("fs");
 const path = require("path");
@@ -30,6 +33,90 @@ function shortHash(content) {
   return crypto.createHash("sha256").update(content).digest("hex").slice(0, 8);
 }
 
+function extractI18nKeys(html) {
+  const keys = {};
+  const re = /<([a-zA-Z0-9]+)\b[^>]*data-i18n="([^"]+)"[^>]*>([\s\S]*?)<\/\1>/g;
+  let m;
+  while ((m = re.exec(html))) keys[m[2]] = m[3].trim();
+  return keys;
+}
+
+function enrichPost(post) {
+  // Prefijos i18n derivados del orden (override: i18nPrefix explicito)
+  post.i18nPrefix = post.i18nPrefix || `blog${post.order}`;
+  const p = post.i18nPrefix;
+
+  // Miniatura auto-derivada: blog_X.webp -> thumb_X.webp
+  if (!post.thumbImage && post.image) {
+    const derived = post.image.replace("blog_", "thumb_");
+    if (derived !== post.image && fs.existsSync(path.join(ROOT, derived))) {
+      post.thumbImage = derived;
+    }
+  }
+
+  // Cuerpo: archivo externo (preferido) o bodyHtml inline (legacy)
+  if (post.bodyFile) {
+    post.bodyHtml = fs
+      .readFileSync(path.join(ROOT, post.bodyFile), "utf8")
+      .trimEnd();
+  }
+
+  // Las claves ES del articulo se extraen del propio cuerpo (data-i18n -> innerHTML)
+  post.esArticleKeys = extractI18nKeys(post.bodyHtml || "");
+
+  post.cardI18nEs = {
+    [`${p}-title`]: post.cardTitleI18n || post.titleHtml,
+    [`${p}-date`]: post.dateLabel,
+    [`${p}-desc`]: post.excerpt,
+    [`${p}-link`]: post.cardLinkEs || "Leer artículo",
+    [`${p}-aria`]: post.cardAria,
+  };
+  const en = (post.i18n && post.i18n.en) || {};
+  post.cardI18nEn = {
+    [`${p}-title`]: en.cardTitle || post.cardI18nEs[`${p}-title`],
+    [`${p}-date`]: en.cardDate || post.dateLabel,
+    [`${p}-desc`]: en.cardDesc || post.excerpt,
+    [`${p}-link`]: en.cardLink || "Read article",
+    [`${p}-aria`]: en.cardAria || post.cardAria,
+  };
+  post.i18nPage = {
+    es: { [`${p}-page-title`]: post.pageTitle, ...post.esArticleKeys },
+    en: {
+      [`${p}-page-title`]: en.pageTitle || post.pageTitle,
+      ...(en.articles || {}),
+    },
+  };
+}
+
+function validatePosts(posts) {
+  const seenSlug = new Set();
+  const seenOrder = new Set();
+  for (const post of posts) {
+    if (!post.slug || seenSlug.has(post.slug))
+      throw new Error(`[ERROR] slug duplicado o ausente: ${post.slug}`);
+    seenSlug.add(post.slug);
+    if (post.order === undefined || seenOrder.has(post.order))
+      throw new Error(`[ERROR] order duplicado o ausente: ${post.slug}`);
+    seenOrder.add(post.order);
+    if (!post.bodyHtml)
+      throw new Error(`[ERROR] ${post.slug}: sin bodyFile ni bodyHtml`);
+    for (const img of [post.image, post.thumbImage]) {
+      if (img && !fs.existsSync(path.join(ROOT, img)))
+        console.log(`[WARN] ${post.slug}: imagen no encontrada ${img}`);
+    }
+    const esKeys = Object.keys(post.esArticleKeys);
+    const enKeys = Object.keys((post.i18n && post.i18n.en && post.i18n.en.articles) || {});
+    if (!enKeys.length) {
+      console.log(`[WARN] ${post.slug}: sin traducciones EN (i18n.en.articles)`);
+    } else {
+      for (const k of esKeys.filter((k) => !enKeys.includes(k)))
+        console.log(`[WARN] ${post.slug}: clave ES sin traducción EN -> ${k}`);
+      for (const k of enKeys.filter((k) => !esKeys.includes(k)))
+        console.log(`[WARN] ${post.slug}: clave EN sin uso en el cuerpo -> ${k}`);
+    }
+  }
+}
+
 function loadPosts() {
   const files = fs
     .readdirSync(CONTENT_DIR)
@@ -38,6 +125,8 @@ function loadPosts() {
     JSON.parse(fs.readFileSync(path.join(CONTENT_DIR, f), "utf8")),
   );
   posts.sort((a, b) => (a.order || 999) - (b.order || 999));
+  posts.forEach(enrichPost);
+  validatePosts(posts);
   return posts;
 }
 
@@ -162,15 +251,112 @@ function computeBuildId(posts, cssVersion, jsVersion) {
   return `${VERSION}-${hash}`;
 }
 
+function renderPostI18nJs(post) {
+  const fmt = (obj) =>
+    Object.entries(obj)
+      .map(([k, v]) => `      ${JSON.stringify(k)}: ${JSON.stringify(v)}`)
+      .join(",\n");
+  const v = `${post.i18nPrefix}Translations`;
+  return `/**
+ * Diccionario de traducciones específico para el artículo "${post.cardTitle}".
+ * GENERADO por scripts/build.js - editar content/blog/${post.slug}.json y .body.html
+ */
+(function() {
+  const ${v} = {
+    es: {
+${fmt(post.i18nPage.es)}
+    },
+    en: {
+${fmt(post.i18nPage.en)}
+    }
+  };
+
+  // Inject translations
+  if (window.i18n && window.i18n.translations) {
+    Object.assign(window.i18n.translations.es, ${v}.es);
+    Object.assign(window.i18n.translations.en, ${v}.en);
+  } else {
+    document.addEventListener("DOMContentLoaded", function() {
+      if (window.i18n && window.i18n.translations) {
+        Object.assign(window.i18n.translations.es, ${v}.es);
+        Object.assign(window.i18n.translations.en, ${v}.en);
+        window.i18n.changeLang(window.i18n.currentLang);
+      }
+    });
+  }
+})();
+`;
+}
+
+function replaceBetweenMarkers(src, startMarker, endMarker, block, endIndent = "") {
+  const s = src.indexOf(startMarker);
+  const e = src.indexOf(endMarker);
+  if (s === -1 || e === -1 || e < s) {
+    console.log(`[WARN] Marcadores no encontrados: ${startMarker}`);
+    return src;
+  }
+  return (
+    src.slice(0, s + startMarker.length) +
+    "\n" +
+    block +
+    "\n" +
+    endIndent +
+    src.slice(e)
+  );
+}
+
+// Sincroniza las claves blogN-* (tarjetas + cabecera) dentro de js/i18n.js
+function syncI18nMarkers(posts) {
+  const i18nPath = path.join(JS_DIR, "i18n.js");
+  let src = fs.readFileSync(i18nPath, "utf8");
+  const fmtLines = (map) =>
+    Object.entries(map)
+      .map(([k, v]) => `      ${JSON.stringify(k)}: ${JSON.stringify(v)},`)
+      .join("\n");
+  const esBlock = posts.map((p) => fmtLines(p.cardI18nEs)).join("\n");
+  const enBlock = posts.map((p) => fmtLines(p.cardI18nEn)).join("\n");
+  src = replaceBetweenMarkers(src, "// I18N_BLOG_ES_START", "// I18N_BLOG_ES_END", esBlock, "      ");
+  src = replaceBetweenMarkers(src, "// I18N_BLOG_EN_START", "// I18N_BLOG_EN_END", enBlock, "      ");
+  fs.writeFileSync(i18nPath, src, "utf8");
+  console.log(`[OK] js/i18n.js sincronizado (${posts.length} posts x2 idiomas)`);
+}
+
+// Sincroniza listas de articulos en llms.txt, index.md y llms-full.txt
+function syncLlmsMarkers(posts) {
+  const url = (p) => `https://diegomena.rocks/blog/${p.slug}.html`;
+  const mdList = posts.map((p) => `- [${p.cardTitle}](${url(p)})`).join("\n");
+  const fullList = posts
+    .map(
+      (p, i) =>
+        `${i + 1}. **${p.cardTitle}**\n   - URL: ${url(p)}\n   - Síntesis: ${p.excerpt}`,
+    )
+    .join("\n");
+  const targets = [
+    { file: "llms.txt", marker: "LLMS_ARTICLES", block: mdList },
+    { file: "index.md", marker: "LLMS_ARTICLES", block: mdList },
+    { file: "llms-full.txt", marker: "LLMSF_ARTICLES", block: fullList },
+  ];
+  for (const t of targets) {
+    const fp = path.join(ROOT, t.file);
+    let src = fs.readFileSync(fp, "utf8");
+    src = replaceBetweenMarkers(
+      src,
+      `<!-- ${t.marker}_START -->`,
+      `<!-- ${t.marker}_END -->`,
+      t.block,
+    );
+    fs.writeFileSync(fp, src, "utf8");
+  }
+  console.log("[OK] llms.txt / index.md / llms-full.txt sincronizados");
+}
+
 function buildBlogPages(posts, { cssVersion, jsVersion, buildId }) {
   const templatePath = path.join(VIEWS_DIR, "post.ejs");
   const template = fs.readFileSync(templatePath, "utf8");
   for (const post of posts) {
     const i18nPath = path.join(BLOG_OUT_DIR, "js", `${post.slug}-i18n.js`);
-    const i18nHash = fs.existsSync(i18nPath)
-      ? shortHash(fs.readFileSync(i18nPath, "utf8"))
-      : shortHash(post.slug);
-    const i18nVersion = `${VERSION}-${i18nHash}`;
+    fs.writeFileSync(i18nPath, renderPostI18nJs(post), "utf8");
+    const i18nVersion = `${VERSION}-${shortHash(fs.readFileSync(i18nPath, "utf8"))}`;
 
     const html = ejs.render(
       template,
@@ -266,11 +452,14 @@ function syncSitemap(posts) {
 
 function run() {
   const posts = loadPosts();
+  // i18n.js se sincroniza ANTES del bundle JS (va dentro)
+  syncI18nMarkers(posts);
   const cssVersion = buildCssBundle();
   const jsVersion = buildJsBundle();
   const buildId = computeBuildId(posts, cssVersion, jsVersion);
   buildBlogPages(posts, { cssVersion, jsVersion, buildId });
   syncIndexBlogCards(posts, { cssVersion, jsVersion, buildId });
+  syncLlmsMarkers(posts);
   writeVersionManifest({ buildId, cssVersion, jsVersion });
   syncSitemap(posts);
 }

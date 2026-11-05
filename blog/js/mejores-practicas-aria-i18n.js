@@ -1,18 +1,19 @@
 /**
- * Diccionario de traducciones específico para el Artículo 2 del Blog.
+ * Diccionario de traducciones específico para el artículo "Mejores prácticas para implementar ARIA en Single Page Applications".
+ * GENERADO por scripts/build.js - editar content/blog/mejores-practicas-aria.json y .body.html
  */
 (function() {
   const blog2Translations = {
     es: {
       "blog2-page-title": "Mejores prácticas para implementar ARIA en SPA - Diego Mena",
-      "article2-p1": "Las Single Page Applications (SPA) ofrecen experiencias fluidas, pero destruyen la semántica nativa del navegador al cambiar de ruta. Al no recargar la página, los lectores de pantalla se quedan en silencio tras hacer clic en un enlace, desorientando completamente al usuario con discapacidad visual.",
+      "article2-p1": "Las Single Page Applications (SPA) ofrecen experiencias fluidas, pero destruyen la semántica nativa del navegador al cambiar de ruta. Al no recargar la página, los lectores de pantalla se quedan en silencio tras hacer clic en un enlace, desorientando completamente al usuario.",
       "article2-h2-1": "Gestión del Foco Programático",
-      "article2-p2": "El primer paso es asegurar que el foco del teclado se mueva lógicamente cuando la vista cambia. Una técnica recomendada es enfocar el contenedor principal o el encabezado principal de la nueva vista montada tan pronto como la transición de la ruta finalice.",
-      "article2-p3": "Asegúrate de que el elemento que va a recibir el foco (si no es un elemento interactivo por defecto) tenga un atributo <code>tabindex=\"-1\"</code> para que pueda recibir el foco mediante JavaScript sin alterar la secuencia natural de tabulación del usuario.",
+      "article2-p2": "El primer paso es asegurar que el foco del teclado se mueva lógicamente cuando la vista cambia. Una técnica recomendada es enfocar el contenedor principal o el <code>&lt;h1&gt;</code> de la nueva vista montada.",
+      "article2-p3": "Asegúrate de que el elemento que va a recibir el foco (si no es un elemento interactivo por defecto) tenga un atributo <code>tabindex=\"-1\"</code> para que pueda recibir el foco mediante JavaScript sin alterar la secuencia natural de tabulación.",
       "article2-h2-2": "Regiones en Vivo (aria-live)",
-      "article2-p4": "Las notificaciones asíncronas como 'Guardado con éxito' o alertas de error no son leídas automáticamente a menos que las marques como regiones en vivo. Usar <code>aria-live=\"polite\"</code> es ideal para notificaciones informativas, mientras que <code>aria-live=\"assertive\"</code> o <code>role=\"alert\"</code> debe reservarse para errores críticos que exigen la atención inmediata.",
+      "article2-p4": "Las notificaciones asíncronas como \"Guardado con éxito\" o alertas de error no son leídas automáticamente a menos que las marques como regiones en vivo. Usar <code>aria-live=\"polite\"</code> es ideal para notificaciones informativas, mientras que <code>aria-live=\"assertive\"</code> o <code>role=\"alert\"</code> debe reservarse para errores críticos que exigen la atención inmediata del usuario.",
       "article2-h2-3": "Modales y Trampas de Foco (Focus Trap)",
-      "article2-p5": "Abrir un componente modal en una SPA requiere, por norma, crear una 'trampa de foco'. Esto significa que la tabulación debe ciclar internamente dentro del modal y no permitir que el usuario interactúe con el fondo oscurecido por error. Además, la tecla <code>Escape</code> siempre debe cerrar la ventana emergente para mantener los atajos nativos esperados."
+      "article2-p5": "Abrir un componente modal en una SPA requiere, por norma, crear una \"trampa de foco\". Esto significa que la tabulación debe ciclar internamente dentro del modal y no permitir que el usuario interactúe con el fondo oscurecido por error. Además, la tecla <code>Escape</code> siempre debe cerrar la ventana emergente."
     },
     en: {
       "blog2-page-title": "Best practices for implementing ARIA in SPA - Diego Mena",
@@ -36,7 +37,7 @@
       if (window.i18n && window.i18n.translations) {
         Object.assign(window.i18n.translations.es, blog2Translations.es);
         Object.assign(window.i18n.translations.en, blog2Translations.en);
-        window.i18n.updateContent(window.i18n.currentLang);
+        window.i18n.changeLang(window.i18n.currentLang);
       }
     });
   }

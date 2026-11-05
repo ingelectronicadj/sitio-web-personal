@@ -1,0 +1,41 @@
+{
+  "order": 11,
+  "slug": "freespeech-saac",
+  "pageTitle": "FreeSpeech SAAC: comunicador aumentativo accesible - Diego Mena",
+  "ogTitle": "FreeSpeech SAAC: comunicador aumentativo en Vue 3 con WCAG 2.2 AA",
+  "cardTitle": "FreeSpeech SAAC: comunicador aumentativo en Vue 3 con WCAG 2.2 AA",
+  "cardTitleI18n": "FreeSpeech SAAC: comunicador aumentativo en Vue 3 con WCAG 2.2 AA",
+  "titleHtml": "<span class=\"text-primary\">FreeSpeech SAAC</span>: comunicador aumentativo en Vue 3 con WCAG 2.2 AA",
+  "metaDescription": "Sistema Aumentativo y Alternativo de Comunicación open source en Vue 3 con 345 pictogramas ARASAAC offline, conformidad WCAG 2.2 AA y SDK universal integrable en LMS y portales.",
+  "dateLabel": "Noviembre 2026 · Inclusión",
+  "datePublished": "2026-11-05",
+  "dateModified": "2026-11-05",
+  "excerpt": "Sistema Aumentativo y Alternativo de Comunicación (SAAC) en Vue 3.5 + Vite con conformidad WCAG 2.2 AA, 345 pictogramas ARASAAC offline y SDK universal adaptable para LMS y portales web.",
+  "cardAria": "Leer artículo sobre FreeSpeech SAAC",
+  "image": "img/blog/blog_freespeech_saac.webp",
+  "imageAlt": "Interfaz del comunicador FreeSpeech SAAC con tablero de pictogramas ARASAAC, frase en construcción y vocalización por síntesis de voz",
+  "keywords": "SAAC, AAC, comunicación aumentativa, pictogramas ARASAAC, Vue 3, Web Speech API, WCAG 2.2 AA, discapacidad comunicación, open source, Diego Mena",
+  "bodyFile": "content/blog/freespeech-saac.body.html",
+  "i18n": {
+    "en": {
+      "pageTitle": "FreeSpeech SAAC: accessible augmentative communicator - Diego Mena",
+      "cardTitle": "FreeSpeech SAAC: augmentative communicator in Vue 3 with WCAG 2.2 AA",
+      "cardDate": "November 2026 · Inclusion",
+      "cardDesc": "Augmentative and Alternative Communication (AAC) system in Vue 3.5 + Vite with WCAG 2.2 AA conformance, 345 offline ARASAAC pictograms and a universal SDK adaptable for LMS and web portals.",
+      "cardLink": "Read article",
+      "cardAria": "Read article about FreeSpeech SAAC",
+      "articles": {
+        "article11-p1": "People with communication disabilities rely on augmentative and alternative communication systems (AAC) to express themselves, but most commercial options are expensive or require installed apps. FreeSpeech SAAC is a pictogram communicator that runs in the browser, built with Vue 3.5 + Vite and designed with WCAG 2.2 AA conformance from the ground up.",
+        "article11-h2-1": "345 offline ARASAAC pictograms",
+        "article11-p2": "The visual vocabulary uses the ARASAAC catalog, the open reference in pictography for augmentative communication. The 345 pictograms are served locally, so the communicator works offline: a critical requirement in classrooms, rural areas or institutions with restricted networks.",
+        "article11-h2-2": "Accessibility that is practiced, not just preached",
+        "article11-p3": "Being a tool for people with disabilities demanded an exemplary standard: touch targets of at least 24x24 px (2.5.8), AA contrast in all states, full keyboard navigation, live regions for the constructed phrase and voice synthesis via the Web Speech API to vocalize each selection.",
+        "article11-h2-3": "Universal SDK with customizable trigger",
+        "article11-p4": "Beyond the full application at <a href=\"https://freespeech.a11ypro.tech/\" target=\"_blank\" rel=\"noopener noreferrer\">freespeech.a11ypro.tech</a>, the project includes an SDK integrable into LMS platforms and web portals. The host can configure the trigger (button, keyboard shortcut or custom element) without touching the communicator's core.",
+        "article11-h2-4": "Why it matters",
+        "article11-p5": "Communicating is a right. A web-based, free, offline and accessible AAC removes the economic and technical barriers that leave many people without an alternative voice today. Publishing it as open source aims to let any institution deploy and adapt it without licenses.",
+        "article11-p6": "The project is open source at <a href=\"https://github.com/ingelectronicadj/freespeech\" target=\"_blank\" rel=\"noopener noreferrer\">github.com/ingelectronicadj/freespeech</a>."
+      }
+    }
+  }
+}

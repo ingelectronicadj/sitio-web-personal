@@ -78,15 +78,47 @@
 
 ## 5. Artículos Técnicos Publicados en diegomena.rocks
 
+<!-- LLMSF_ARTICLES_START -->
 1. **Impacto de la Inteligencia Artificial en la automatización de auditorías WCAG**
    - URL: https://diegomena.rocks/blog/ia-automatizacion-wcag.html
-   - Síntesis: Analiza cómo integrar LLMs y *Steering Files* con criterios WCAG 2.2 dentro de estrategias Shift Left, explicando por qué la reactividad del DOM en React/Vue/Angular exige combinar IA con pruebas dinámicas (`Playwright` + `axe-core`) y validación humana asistiva.
-2. **Mejores prácticas para implementar ARIA en Single Page Applications (SPA)**
+   - Síntesis: Exploramos cómo los modelos de lenguaje pueden asistir en la detección de problemas complejos de accesibilidad y las limitaciones actuales frente a la evaluación humana especializada.
+2. **Mejores prácticas para implementar ARIA en Single Page Applications**
    - URL: https://diegomena.rocks/blog/mejores-practicas-aria.html
-   - Síntesis: Guía práctica con código sobre gestión programática del foco en cambios de ruta (`useRef` + `tabIndex="-1"` en `<h1>`) y arquitectura de notificaciones asíncronas con `aria-live="polite"`, `role="status"` y `aria-atomic="true"` para VoiceOver y NVDA.
-3. **Comparativa de herramientas de testing: axe-core vs. ARC Toolkit**
+   - Síntesis: Un recorrido técnico sobre el manejo del foco, regiones en vivo (aria-live) y notificaciones asíncronas para garantizar una navegación sin barreras en React y Angular.
+3. **Comparativa de herramientas de testing: axe-core vs ARC Toolkit**
    - URL: https://diegomena.rocks/blog/comparativa-testing-tools.html
-   - Síntesis: Comparativa técnica entre `axe-core` (ideal para automatización CI/CD en Playwright/Pa11y con política de cero falsos positivos) y `ARC Toolkit` (ideal para inspección visual interactiva en Chrome DevTools de orden de tabulación, landmarks y contraste).
+   - Síntesis: Análisis detallado de las ventajas y casos de uso ideales para dos de las herramientas más potentes del mercado en la identificación automatizada de barreras digitales.
+4. **NVDA A11Y Auditor: auditorías lineales con NVDA y Chrome CDP**
+   - URL: https://diegomena.rocks/blog/nvda-a11y-auditor.html
+   - Síntesis: Auditor lineal para Web Desktop con NVDA y Chrome vía CDP. Emula modo exploración y foco, extrae subtítulos del speech viewer en vivo, inspecciona W3C AccName 1.2 y evalúa 86 criterios WCAG 2.2.
+5. **VoiceOver A11Y Auditor: auditorías lineales de iOS en Xcode Simulator**
+   - URL: https://diegomena.rocks/blog/voiceover-a11y-auditor.html
+   - Síntesis: Auditor lineal para iOS VoiceOver sobre Xcode Simulator (UIKit, SwiftUI y WKWebView) mediante AXAudit Bridge, adaptación arm64, inspección DOM/ARIA e IndexedDB vía Safari RWI y reportes interactivos WCAG 2.2.
+6. **TalkBack A11Y Auditor: auditorías lineales de Android con gestos reales**
+   - URL: https://diegomena.rocks/blog/talkback-a11y-auditor.html
+   - Síntesis: Auditor lineal para Android TalkBack con gestos swipe reales vía QEMU, captura de voz hablada por OCR, inspección de DOM/ARIA en WebView vía Chrome CDP y reportes interactivos WCAG 2.2.
+7. **A11Y PRO Tests: 21 inspectores WCAG 2.2 en un bookmarklet bilingüe**
+   - URL: https://diegomena.rocks/blog/a11y-pro-tests-bookmarklets.html
+   - Síntesis: Suite interactiva de 21 inspectores WCAG 2.2 en un único bookmarklet bilingüe (Zoom 200%, Reflow 320px, Contraste, Orden de foco, Target Size, Regiones Live) y laboratorio en tests.a11ypro.tech.
+8. **Pa11y Batch: auditorías WCAG masivas en español con CI/CD**
+   - URL: https://diegomena.rocks/blog/pa11y-batch-ci-cd.html
+   - Síntesis: Suite Web Studio, CLI y CI/CD para auditorías automatizadas de accesibilidad con axe-core y HTML_CodeSniffer en español, vista ejecutiva para Stakeholders, inspección visual del DOM y artefactos JUnit.
+9. **react-aria-live: regiones aria-live compatibles con lectores reales**
+   - URL: https://diegomena.rocks/blog/react-aria-live.html
+   - Síntesis: Librería React para anuncios dinámicos en regiones aria-live (polite/assertive) compatible con VoiceOver en iOS/macOS, NVDA y JAWS, con hook useAnnouncer() y tipado estricto TypeScript.
+10. **Test Cases A11Y: 87 casos de prueba bilingües WCAG 2.2**
+   - URL: https://diegomena.rocks/blog/test-cases-a11y.html
+   - Síntesis: Catálogo estructurado y bilingüe con los 87 criterios de conformidad WCAG 2.2 (Niveles A, AA y AAA), pasos en formato Gherkin, mapeo de reglas axe-core y exportador hacia Jira/Xray.
+11. **FreeSpeech SAAC: comunicador aumentativo en Vue 3 con WCAG 2.2 AA**
+   - URL: https://diegomena.rocks/blog/freespeech-saac.html
+   - Síntesis: Sistema Aumentativo y Alternativo de Comunicación (SAAC) en Vue 3.5 + Vite con conformidad WCAG 2.2 AA, 345 pictogramas ARASAAC offline y SDK universal adaptable para LMS y portales web.
+12. **Reproductor LSC: video HTML5 educativo en Lengua de Señas Colombiana**
+   - URL: https://diegomena.rocks/blog/reproductor-lsc.html
+   - Síntesis: Reproductor educativo HTML5 accesible en Lengua de Señas Colombiana (LSC) con sincronización multicámara, repetición de bucle A-B y glosario interactivo con autoevaluación.
+13. **A11Y Help VBA Excel: las 105 reglas de axe-core dentro de Excel**
+   - URL: https://diegomena.rocks/blog/vba-excel-a11y.html
+   - Síntesis: Complemento VBA para Microsoft Excel que permite consultar e insertar en español las 105 reglas de accesibilidad de axe-core dentro de matrices de auditoría y gestión de hallazgos.
+<!-- LLMSF_ARTICLES_END -->
 
 ---
 

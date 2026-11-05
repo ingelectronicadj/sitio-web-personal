@@ -1,0 +1,33 @@
+              <p data-i18n="article11-p1">Las personas con discapacidades de la comunicación dependen de sistemas aumentativos y alternativos (SAAC/AAC) para expresarse, pero la mayoría de opciones comerciales son costosas o exigen apps instaladas. FreeSpeech SAAC es un comunicador de pictogramas que corre en el navegador, construido en Vue 3.5 + Vite y diseñado con conformidad WCAG 2.2 AA desde la base.</p>
+
+              <h2 data-i18n="article11-h2-1">345 pictogramas ARASAAC offline</h2>
+              <p data-i18n="article11-p2">El vocabulario visual usa el catálogo ARASAAC, la referencia abierta en pictografía para comunicación aumentativa. Los 345 pictogramas se sirven localmente, así que el comunicador funciona sin conexión: un requisito crítico en aulas, zonas rurales o instituciones con redes restringidas.</p>
+
+              <h2 data-i18n="article11-h2-2">Accesibilidad que se practica, no solo se predica</h2>
+              <p data-i18n="article11-p3">Ser una herramienta para personas con discapacidad obligaba a un estándar ejemplar: objetivos táctiles de al menos 24x24 px (2.5.8), contraste AA en todos los estados, navegación completa por teclado, regiones en vivo para la frase construida y síntesis de voz mediante la Web Speech API para vocalizar cada selección.</p>
+
+              <div class="blog-code-container my-4" role="region" aria-label="Ejemplo de vocalización de la frase construida con Web Speech API">
+                <div class="blog-code-header" aria-hidden="true">
+                  <div class="blog-code-dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                  </div>
+                  <div class="blog-code-title">speak.ts</div>
+                </div>
+                <pre class="blog-code-snippet" tabindex="0"><code><span class="code-key">export function</span> speak(phrase: <span class="code-key">string</span>) {
+  <span class="code-key">const</span> utterance = <span class="code-key">new</span> SpeechSynthesisUtterance(phrase);
+  utterance.lang = <span class="code-string">'es-CO'</span>;
+  utterance.rate = 0.9;
+  speechSynthesis.cancel(); <span class="code-comment">// evita colas solapadas</span>
+  speechSynthesis.speak(utterance);
+}</code></pre>
+              </div>
+
+              <h2 data-i18n="article11-h2-3">SDK universal con trigger personalizable</h2>
+              <p data-i18n="article11-p4">Además de la aplicación completa en <a href="https://freespeech.a11ypro.tech/" target="_blank" rel="noopener noreferrer">freespeech.a11ypro.tech</a>, el proyecto incluye un SDK integrable en plataformas LMS y portales web. El anfitrión puede configurar el disparador (botón, atajo de teclado o elemento propio) sin tocar el núcleo del comunicador.</p>
+
+              <h2 data-i18n="article11-h2-4">Por qué importa</h2>
+              <p data-i18n="article11-p5">Comunicarse es un derecho. Un SAAC web, gratuito, offline y accesible elimina las barreras económicas y técnicas que hoy dejan a muchas personas sin una voz alternativa. Publicarlo como open source busca que cualquier institución pueda desplegarlo y adaptarlo sin licencias.</p>
+
+              <p data-i18n="article11-p6">El proyecto es open source en <a href="https://github.com/ingelectronicadj/freespeech" target="_blank" rel="noopener noreferrer">github.com/ingelectronicadj/freespeech</a>.</p>
