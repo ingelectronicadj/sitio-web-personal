@@ -253,15 +253,15 @@ const i18n = {
       "project20-aria":
         "Ver Panorama de la accesibilidad web en Colombia para sitios web gov.co - 5,000+ sitios gov.co",
       "project24-title":
-        "Pa11y Batch: Suite de Auditoría WCAG 2.2 en Español y CI/CD",
-      "project24-link": "Ver repositorio",
+        "Pa11y Batch Web Studio: Auditoría WCAG 2.2 en Español y CI/CD",
+      "project24-link": "Abrir Pa11y Web Studio",
       "project24-aria":
-        "Ver repositorio de Pa11y Batch en GitHub (Se abre en una nueva pestaña)",
+        "Abrir aplicación Pa11y Batch Web Studio en pa11y.a11ypro.tech (Se abre en una nueva pestaña)",
       "project25-title":
         "FreeSpeech SAAC: Comunicador CAA con Widget Universal para Web y Moodle",
-      "project25-link": "Ver proyecto SAAC",
+      "project25-link": "Abrir comunicador SAAC",
       "project25-aria":
-        "Ver repositorio de FreeSpeech SAAC en GitHub (Se abre en una nueva pestaña)",
+        "Abrir comunicador FreeSpeech SAAC en freespeech.a11ypro.tech (Se abre en una nueva pestaña)",
       "project26-title":
         "react-aria-live v3.0: Regiones Vivas para VoiceOver (macOS/iOS) y NVDA",
       "project26-link": "Ver librería React",
@@ -282,6 +282,16 @@ const i18n = {
       "project29-link": "Ver auditor VoiceOver",
       "project29-aria":
         "Ver repositorio de VoiceOver A11Y Auditor en GitHub (Se abre en una nueva pestaña)",
+      "project30-title":
+        "NVDA A11Y Auditor: Auditor Lineal de Web Desktop NVDA e Inspector Chrome CDP",
+      "project30-link": "Ver auditor NVDA",
+      "project30-aria":
+        "Ver repositorio de NVDA A11Y Auditor en GitHub (Se abre en una nueva pestaña)",
+      "project31-title":
+        "A11Y PRO Tests: Suite Interactiva de Bookmarklets y Laboratorio WCAG 2.2",
+      "project31-link": "Abrir laboratorio Tests",
+      "project31-aria":
+        "Abrir laboratorio interactivo A11Y PRO Tests en tests.a11ypro.tech (Se abre en una nueva pestaña)",
 
       // Interests section
       "section-interests": "Intereses",
@@ -293,11 +303,13 @@ const i18n = {
         'Mi evolución técnica, desde la automatización, siempre ha estado guiada por los ODS y la "Ciencia para la paz", la cual busca comprender las causas de violencia y construir soluciones tecnológicas y sociales que fomenten la convivencia pacífica, la equidad y la justicia social. Me interesa aportar activamente a comunidades de software libre y a una educación de calidad que no deje a nadie atrás. Cada línea de código que escribo tiene un propósito claro: construir una red más humana, accesible y ética.',
 
       // Research section
-      "oss-ecosystem-header": "Ecosistema Open Source de Accesibilidad (GitHub)",
+      "oss-ecosystem-header": "Ecosistema Open Source de Accesibilidad (GitHub & GitLab)",
       "oss-ecosystem-desc":
         "Herramientas, librerías y repositorios abiertos mantenidos para la comunidad global de ingeniería de accesibilidad, automatización QA e inclusión educativa:",
+      "oss-nvda-auditor": "NVDA A11Y Auditor (Web Desktop + Chrome CDP)",
       "oss-voiceover-auditor": "VoiceOver A11Y Auditor (iOS + AXAudit + RWI)",
       "oss-talkback-auditor": "TalkBack A11Y Auditor (Android + OCR + CDP)",
+      "oss-a11y-pro-tests": "A11Y PRO Tests (21 Bookmarklets WCAG 2.2 + Lab)",
       "oss-pa11y-batch": "Pa11y Batch (Auditoría WCAG ES + CI/CD)",
       "oss-freespeech": "FreeSpeech SAAC (Vue 3 + Custom Trigger LMS)",
       "oss-react-aria-live": "react-aria-live (VoiceOver + useAnnouncer)",
@@ -643,15 +655,15 @@ const i18n = {
       "project20-aria":
         "View Overview of web accessibility in Colombia for gov.co websites - 5,000+ gov.co sites",
       "project24-title":
-        "Pa11y Batch: Spanish WCAG 2.2 Auditing Suite & CI/CD",
-      "project24-link": "View repository",
+        "Pa11y Batch Web Studio: Spanish WCAG 2.2 Auditing Suite & CI/CD",
+      "project24-link": "Open Pa11y Web Studio",
       "project24-aria":
-        "View Pa11y Batch repository on GitHub (Opens in a new tab)",
+        "Open Pa11y Batch Web Studio application at pa11y.a11ypro.tech (Opens in a new tab)",
       "project25-title":
         "FreeSpeech SAAC: AAC Communicator with Universal Web & Moodle Widget",
-      "project25-link": "View SAAC project",
+      "project25-link": "Open SAAC communicator",
       "project25-aria":
-        "View FreeSpeech SAAC repository on GitHub (Opens in a new tab)",
+        "Open FreeSpeech SAAC communicator at freespeech.a11ypro.tech (Opens in a new tab)",
       "project26-title":
         "react-aria-live v3.0: Live Regions for VoiceOver (macOS/iOS) & NVDA",
       "project26-link": "View React library",
@@ -672,6 +684,16 @@ const i18n = {
       "project29-link": "View VoiceOver auditor",
       "project29-aria":
         "View VoiceOver A11Y Auditor repository on GitHub (Opens in a new tab)",
+      "project30-title":
+        "NVDA A11Y Auditor: Web Desktop NVDA Linear Auditor & Chrome CDP Inspector",
+      "project30-link": "View NVDA auditor",
+      "project30-aria":
+        "View NVDA A11Y Auditor repository on GitHub (Opens in a new tab)",
+      "project31-title":
+        "A11Y PRO Tests: Interactive Bookmarklet Suite & WCAG 2.2 Testing Lab",
+      "project31-link": "Open Tests Lab",
+      "project31-aria":
+        "Open A11Y PRO Tests interactive lab at tests.a11ypro.tech (Opens in a new tab)",
 
       // Interests section
       "section-interests": "Interests",
@@ -683,11 +705,13 @@ const i18n = {
         'My technical evolution, starting from automation, has always been guided by the SDGs and "Science for Peace", which seeks to understand the causes of violence and build technological and social solutions that promote peaceful coexistence, equity and social justice. I am interested in actively contributing to free software communities and to a quality education that leaves no one behind. Every line of code I write has a clear purpose: to build a more human, accessible, and ethical network.',
 
       // Research section
-      "oss-ecosystem-header": "Open Source Accessibility Ecosystem (GitHub)",
+      "oss-ecosystem-header": "Open Source Accessibility Ecosystem (GitHub & GitLab)",
       "oss-ecosystem-desc":
         "Open-source tools, libraries, and repositories maintained for the global accessibility engineering, QA automation, and inclusive education community:",
+      "oss-nvda-auditor": "NVDA A11Y Auditor (Web Desktop + Chrome CDP)",
       "oss-voiceover-auditor": "VoiceOver A11Y Auditor (iOS + AXAudit + RWI)",
       "oss-talkback-auditor": "TalkBack A11Y Auditor (Android + OCR + CDP)",
+      "oss-a11y-pro-tests": "A11Y PRO Tests (21 WCAG 2.2 Bookmarklets + Lab)",
       "oss-pa11y-batch": "Pa11y Batch (Spanish WCAG Audits + CI/CD)",
       "oss-freespeech": "FreeSpeech SAAC (Vue 3 + LMS Custom Trigger)",
       "oss-react-aria-live": "react-aria-live (VoiceOver + useAnnouncer)",
