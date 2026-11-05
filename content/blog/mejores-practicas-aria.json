@@ -16,6 +16,11 @@
   "imageAlt": "Diagrama técnico de gestión de foco programático y regiones aria-live con role status y aria-atomic true en aplicaciones SPA React, Vue y Angular",
   "keywords": "WAI-ARIA 1.2, aria-live, Single Page Applications, React accessibility, VoiceOver, NVDA, gestion del foco, WCAG 2.4.3, WCAG 4.1.3, Diego Mena",
   "bodyFile": "content/blog/mejores-practicas-aria.body.html",
+  "related": [
+    "react-aria-live",
+    "ia-automatizacion-wcag",
+    "a11y-pro-tests-bookmarklets"
+  ],
   "i18n": {
     "en": {
       "pageTitle": "Best practices for implementing ARIA in SPA - Diego Mena",

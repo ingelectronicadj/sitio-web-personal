@@ -16,6 +16,11 @@
   "imageAlt": "Diagrama del hook useAnnouncer de react-aria-live publicando anuncios polite y assertive hacia regiones aria-live leídas por VoiceOver, NVDA y JAWS",
   "keywords": "react-aria-live, aria-live, useAnnouncer, React accessibility, TypeScript, VoiceOver, NVDA, JAWS, live regions, WCAG 4.1.3, open source, Diego Mena",
   "bodyFile": "content/blog/react-aria-live.body.html",
+  "related": [
+    "mejores-practicas-aria",
+    "voiceover-a11y-auditor",
+    "talkback-a11y-auditor"
+  ],
   "i18n": {
     "en": {
       "pageTitle": "react-aria-live: accessible announcements in React - Diego Mena",

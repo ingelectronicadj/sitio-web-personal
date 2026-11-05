@@ -16,6 +16,11 @@
   "imageAlt": "Panel de la suite A11Y PRO Tests con 21 inspectores WCAG 2.2 activados como bookmarklet sobre una página web en auditoría",
   "keywords": "bookmarklet accesibilidad, WCAG 2.2, zoom 200, reflow 320px, contraste, orden de foco, target size 2.5.8, aria-live, A11Y PRO, open source, Diego Mena",
   "bodyFile": "content/blog/a11y-pro-tests-bookmarklets.body.html",
+  "related": [
+    "test-cases-a11y",
+    "pa11y-batch-ci-cd",
+    "comparativa-testing-tools"
+  ],
   "i18n": {
     "en": {
       "pageTitle": "A11Y PRO Tests: 21 WCAG 2.2 bookmarklets - Diego Mena",

@@ -15,6 +15,11 @@
   "imageAlt": "Diagrama de arquitectura Shift Left Accessibility con Inteligencia Artificial, Steering Files y los 4 principios WCAG 2.2 (Perceptible, Operable, Comprensible, Robusto)",
   "keywords": "accesibilidad web, inteligencia artificial, auditoria WCAG 2.2, Shift Left testing, EN 301 549, axe-core, Playwright, Pa11y, Diego Mena",
   "bodyFile": "content/blog/ia-automatizacion-wcag.body.html",
+  "related": [
+    "comparativa-testing-tools",
+    "mejores-practicas-aria",
+    "pa11y-batch-ci-cd"
+  ],
   "i18n": {
     "en": {
       "pageTitle": "Impact of Artificial Intelligence on WCAG Audits - Diego Mena",

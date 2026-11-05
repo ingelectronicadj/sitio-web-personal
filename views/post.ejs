@@ -65,12 +65,17 @@
                 </div>
               </div>
 
-              <% if (typeof allPosts !== 'undefined' && Array.isArray(allPosts)) { %>
+              <%
+                var related = (post.relatedPosts && post.relatedPosts.length)
+                  ? post.relatedPosts
+                  : allPosts.filter(function(p) { return p.slug !== post.slug; }).slice(0, 3);
+              %>
+              <% if (related.length) { %>
               <hr class="my-3" />
               <div>
-                <h3 class="h5 mb-2" style="text-transform: uppercase;">Otros artículos técnicos de Accesibilidad</h3>
+                <h3 class="h5 mb-2" style="text-transform: uppercase;">Artículos relacionados</h3>
                 <div class="research-links" style="margin-top: 0.5rem;">
-                  <% allPosts.filter(function(p) { return p.slug !== post.slug; }).forEach(function(rel) { %>
+                  <% related.forEach(function(rel) { %>
                   <a href="./<%= rel.slug %>.html" class="research-link-chip">
                     <i class="fas fa-book-open" aria-hidden="true"></i>
                     <span><%= rel.cardTitle %></span>

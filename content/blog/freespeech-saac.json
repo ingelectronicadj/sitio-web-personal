@@ -16,6 +16,11 @@
   "imageAlt": "Interfaz del comunicador FreeSpeech SAAC con tablero de pictogramas ARASAAC, frase en construcción y vocalización por síntesis de voz",
   "keywords": "SAAC, AAC, comunicación aumentativa, pictogramas ARASAAC, Vue 3, Web Speech API, WCAG 2.2 AA, discapacidad comunicación, open source, Diego Mena",
   "bodyFile": "content/blog/freespeech-saac.body.html",
+  "related": [
+    "reproductor-lsc",
+    "react-aria-live",
+    "mejores-practicas-aria"
+  ],
   "i18n": {
     "en": {
       "pageTitle": "FreeSpeech SAAC: accessible augmentative communicator - Diego Mena",

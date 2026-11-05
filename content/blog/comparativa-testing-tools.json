@@ -16,6 +16,11 @@
   "imageAlt": "Cuadro comparativo técnico entre axe-core en pipelines CI/CD y ARC Toolkit en Chrome DevTools para pruebas de accesibilidad WCAG 2.2 AA",
   "keywords": "axe-core, ARC Toolkit, testing de accesibilidad, QA accessibility, Playwright, Pa11y, automatizacion WCAG 2.2, Diego Mena",
   "bodyFile": "content/blog/comparativa-testing-tools.body.html",
+  "related": [
+    "pa11y-batch-ci-cd",
+    "a11y-pro-tests-bookmarklets",
+    "test-cases-a11y"
+  ],
   "i18n": {
     "en": {
       "pageTitle": "Testing tools comparison: axe-core vs ARC Toolkit - Diego Mena",

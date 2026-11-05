@@ -16,6 +16,11 @@
   "imageAlt": "Arquitectura de Pa11y Batch con lotes de URLs evaluadas por axe-core y HTML_CodeSniffer, vista ejecutiva de stakeholders y artefactos JUnit para CI/CD",
   "keywords": "pa11y, axe-core, HTML_CodeSniffer, auditoría WCAG masiva, CI/CD accesibilidad, JUnit, reportes accesibilidad español, open source, Diego Mena",
   "bodyFile": "content/blog/pa11y-batch-ci-cd.body.html",
+  "related": [
+    "comparativa-testing-tools",
+    "a11y-pro-tests-bookmarklets",
+    "vba-excel-a11y"
+  ],
   "i18n": {
     "en": {
       "pageTitle": "Pa11y Batch: bulk WCAG audits in Spanish and CI/CD - Diego Mena",

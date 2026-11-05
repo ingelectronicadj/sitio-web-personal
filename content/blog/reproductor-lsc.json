@@ -16,6 +16,11 @@
   "imageAlt": "Reproductor educativo LSC con doble vista de cámara sincronizada para lengua de señas, control de bucle A-B y glosario interactivo lateral",
   "keywords": "Lengua de Señas Colombiana, LSC, reproductor video accesible, HTML5 video, comunidad sorda, educación inclusiva, bucle A-B, open source, Diego Mena",
   "bodyFile": "content/blog/reproductor-lsc.body.html",
+  "related": [
+    "freespeech-saac",
+    "mejores-practicas-aria",
+    "react-aria-live"
+  ],
   "i18n": {
     "en": {
       "pageTitle": "LSC Player: accessible video in Sign Language - Diego Mena",

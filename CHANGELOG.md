@@ -10,6 +10,7 @@
   - `scripts/build.js` genera `blog/js/<slug>-i18n.js`, sincroniza las claves `blogN-*` de `js/i18n.js` (marcadores `I18N_BLOG_ES/EN`) y las listas de artículos de `llms.txt`, `index.md` y `llms-full.txt` (marcadores `LLMS_ARTICLES`/`LLMSF_ARTICLES`).
   - Derivación automática de `i18nPrefix` (`blog${order}`), `article${order}-*` y `thumbImage` (`blog_` → `thumb_`), más validación de slugs/orders duplicados, imágenes existentes y paridad de claves ES/EN con warnings en build.
   - Migrados los 13 posts existentes al nuevo esquema (13 archivos `.body.html`, JSON saneados) sin cambios funcionales en la salida renderizada.
+  - Campo `related` en el JSON de cada post: el pie del artículo muestra ahora 3 artículos relacionados curados por temática ("Artículos relacionados") en lugar del listado completo; fallback a los 3 primeros si falta el campo.
 
 - **Serie de 10 artículos técnicos del Ecosistema Open Source en `#blog`**:
   - Un artículo por cada proyecto open source del portafolio, definidos en `content/blog/*.json` y renderizados por el pipeline `views/post.ejs`: `nvda-a11y-auditor`, `voiceover-a11y-auditor`, `talkback-a11y-auditor`, `a11y-pro-tests-bookmarklets`, `pa11y-batch-ci-cd`, `react-aria-live`, `test-cases-a11y`, `freespeech-saac`, `reproductor-lsc` y `vba-excel-a11y`.

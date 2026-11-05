@@ -126,6 +126,16 @@ function loadPosts() {
   );
   posts.sort((a, b) => (a.order || 999) - (b.order || 999));
   posts.forEach(enrichPost);
+  const bySlug = new Map(posts.map((p) => [p.slug, p]));
+  for (const post of posts) {
+    if (Array.isArray(post.related)) {
+      post.relatedPosts = post.related
+        .map((s) => bySlug.get(s))
+        .filter(Boolean);
+      if (post.relatedPosts.length !== post.related.length)
+        console.log(`[WARN] ${post.slug}: algún slug en "related" no existe`);
+    }
+  }
   validatePosts(posts);
   return posts;
 }
@@ -244,7 +254,9 @@ function computeBuildId(posts, cssVersion, jsVersion) {
       "<!-- BLOG_CARDS -->",
     );
 
-  const postsPayload = JSON.stringify(posts);
+  const postsPayload = JSON.stringify(posts, (k, v) =>
+    k === "relatedPosts" ? v.map((p) => p.slug) : v,
+  );
   const hash = shortHash(
     `${VERSION}|${cssVersion}|${jsVersion}|${normalizedIndex}|${postsPayload}`,
   );

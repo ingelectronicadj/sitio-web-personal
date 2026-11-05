@@ -16,6 +16,11 @@
   "imageAlt": "Catálogo Test Cases A11Y con los 87 criterios WCAG 2.2 organizados en casos Gherkin bilingües con mapeo a reglas axe-core y exportación a Jira",
   "keywords": "test cases accesibilidad, WCAG 2.2, Gherkin, BDD, axe-core, Jira, Xray, QA accesibilidad, casos de prueba bilingües, open source, Diego Mena",
   "bodyFile": "content/blog/test-cases-a11y.body.html",
+  "related": [
+    "a11y-pro-tests-bookmarklets",
+    "pa11y-batch-ci-cd",
+    "vba-excel-a11y"
+  ],
   "i18n": {
     "en": {
       "pageTitle": "Test Cases A11Y: 87 WCAG 2.2 cases in Gherkin - Diego Mena",

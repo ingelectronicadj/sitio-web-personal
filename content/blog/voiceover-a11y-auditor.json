@@ -16,6 +16,11 @@
   "imageAlt": "Diagrama técnico del auditor VoiceOver iOS con AXAudit Bridge, Xcode Simulator arm64 e inspección de WKWebView vía Safari Remote Web Inspector",
   "keywords": "VoiceOver, iOS accessibility audit, Xcode Simulator, AXAudit, WKWebView, Safari Web Inspector, SwiftUI, UIKit, WCAG 2.2, open source, Diego Mena",
   "bodyFile": "content/blog/voiceover-a11y-auditor.body.html",
+  "related": [
+    "nvda-a11y-auditor",
+    "talkback-a11y-auditor",
+    "react-aria-live"
+  ],
   "i18n": {
     "en": {
       "pageTitle": "VoiceOver A11Y Auditor: audits on iOS Simulator - Diego Mena",

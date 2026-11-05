@@ -16,6 +16,11 @@
   "imageAlt": "Panel del complemento A11Y Help VBA Excel con buscador de las 105 reglas de axe-core en español insertando una descripción en una matriz de auditoría",
   "keywords": "VBA Excel accesibilidad, axe-core reglas español, matriz auditoría WCAG, complemento Excel, hallazgos accesibilidad, open source, Diego Mena",
   "bodyFile": "content/blog/vba-excel-a11y.body.html",
+  "related": [
+    "test-cases-a11y",
+    "pa11y-batch-ci-cd",
+    "a11y-pro-tests-bookmarklets"
+  ],
   "i18n": {
     "en": {
       "pageTitle": "A11Y Help VBA Excel: WCAG rules inside Excel - Diego Mena",

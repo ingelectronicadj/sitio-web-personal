@@ -16,6 +16,11 @@
   "imageAlt": "Diagrama técnico del auditor TalkBack Android con gestos swipe sobre emulador QEMU, transcripción OCR de la salida hablada e inspección WebView vía Chrome DevTools Protocol",
   "keywords": "TalkBack, Android accessibility audit, QEMU emulator, OCR, WebView, Chrome DevTools Protocol, WCAG 2.2, open source, Diego Mena",
   "bodyFile": "content/blog/talkback-a11y-auditor.body.html",
+  "related": [
+    "nvda-a11y-auditor",
+    "voiceover-a11y-auditor",
+    "test-cases-a11y"
+  ],
   "i18n": {
     "en": {
       "pageTitle": "TalkBack A11Y Auditor: Android audits with OCR - Diego Mena",

@@ -16,6 +16,11 @@
   "imageAlt": "Diagrama técnico del auditor NVDA con sondas de modo exploración y foco, captura del speech viewer e inspección AccName vía Chrome DevTools Protocol",
   "keywords": "NVDA, lector de pantalla, auditoría accesibilidad, Chrome DevTools Protocol, AccName 1.2, WCAG 2.2, browse mode, focus mode, open source, Diego Mena",
   "bodyFile": "content/blog/nvda-a11y-auditor.body.html",
+  "related": [
+    "voiceover-a11y-auditor",
+    "talkback-a11y-auditor",
+    "test-cases-a11y"
+  ],
   "i18n": {
     "en": {
       "pageTitle": "NVDA A11Y Auditor: automated linear audits - Diego Mena",
