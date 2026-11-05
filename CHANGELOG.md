@@ -1,16 +1,24 @@
 # Changelog
 
-## [2.5.5] - 2026-11-05
+## [2.5.6] - 2026-11-05
 
 ### Added
 
-- **Incorporación de `nvda-a11y-auditor` (`v0.6.2`) y `A11Y PRO Tests` (`v1.16.0`) al portafolio y ecosistema Open Source**:
-  - Nueva diapositiva y miniatura en el carrusel `#projects` (`img/projects/nvda-a11y-auditor.webp`) con mockup MacBook Air de fondo transparente mostrando el reporte interactivo WCAG 2.2 para Web Desktop con NVDA y Google Chrome, la secuencia lineal de voz hablada en *Browse Mode* / *Focus Mode*, las sondas `loading_probe` y `probe_control`, el cálculo W3C ACCNAME 1.2 y las opciones de remediación A/B.
-  - Nueva diapositiva y miniatura para **A11Y PRO Tests** (`img/projects/a11y-pro-tests.webp`, desplegado en `https://tests.a11ypro.tech/` y liberado en `https://gitlab.com/a11ypro/a11y-pro-tests`) mostrando los 21 inspectores interactivos agrupados por principios POUR y el laboratorio de errores WCAG 2.2 en vivo.
-  - Enlaces actualizados a las aplicaciones desplegadas en producción de **Pa11y Batch Web Studio** (`https://pa11y.a11ypro.tech/`) y **FreeSpeech SAAC** (`https://freespeech.a11ypro.tech/`), junto con sus repositorios en el bloque **Ecosistema Open Source de Accesibilidad (GitHub & GitLab)** (`index.html`, `js/i18n.js`).
-  - Nuevos nodos estructurados `SoftwareSourceCode` (`#oss-nvda-a11y-auditor` y `#oss-a11y-pro-tests`) en el `@graph` JSON-LD de `index.html` y documentación técnica actualizada en `index.md`, `llms.txt` y `llms-full.txt`.
-- **Actualización de la captura de `FreeSpeech SAAC` (`v2.9.3`) en el carrusel `#projects` (`img/projects/freespeech-saac.webp`)**:
-  - Regenerada con los pictogramas ARASAAC reales, clave de color Fitzgerald, identidad A11Y PRO, tira de `Frecuentes`, botón `Borrar última` y botón `Imprimir tablero`.
+- **Diapositivas en `#projects` para `nvda-a11y-auditor` (`v0.6.2`), incorporación de `A11Y PRO Tests` (`v1.16.0`) y URLs en producción**:
+  - Nueva diapositiva y miniatura en el carrusel `#projects` (`img/projects/nvda-a11y-auditor.webp`) con mockup MacBook Air de fondo transparente mostrando el reporte interactivo WCAG 2.2 para Web Desktop con NVDA y Google Chrome, las sondas `loading_probe` y `probe_control`, el cálculo W3C ACCNAME 1.2 y las opciones de remediación A/B.
+  - Incorporado **A11Y PRO Tests** (`img/projects/a11y-pro-tests.webp`, desplegado en `https://tests.a11ypro.tech/` y liberado en `https://gitlab.com/a11ypro/a11y-pro-tests`) tanto en el carrusel `#projects` como en las tarjetas filtrables del **Ecosistema Open Source de Accesibilidad (GitHub & GitLab)** (`10 repos`), JSON-LD (`#oss-a11y-pro-tests`) y dossiers `index.md`, `llms.txt` y `llms-full.txt`.
+  - Enlaces actualizados a las aplicaciones desplegadas en producción de **Pa11y Batch Web Studio** (`https://pa11y.a11ypro.tech/`) y **FreeSpeech SAAC** (`https://freespeech.a11ypro.tech/`), y regenerada la captura `img/projects/freespeech-saac.webp` con la interfaz real `v2.9.3` (pictogramas ARASAAC locales, clave Fitzgerald, identidad A11Y PRO, tira `Frecuentes`, botón `Borrar última` e `Imprimir tablero`).
+
+## [2.5.5] - 2026-10-28
+
+### Added
+
+- **Incorporación de `nvda-a11y-auditor` (`v0.1.0`) y rediseño modular del Ecosistema Open Source de Accesibilidad**:
+  - Incorporado el nuevo proyecto `nvda-a11y-auditor` (auditor lineal de accesibilidad para Web Desktop con NVDA y Google Chrome vía Chrome DevTools Protocol, emulación de modo exploración y foco, captura de voz hablada del speech viewer, inspección AccName 1.2 y evaluación de 86 criterios WCAG 2.2).
+  - Rediseño completo de la sección **Ecosistema Open Source de Accesibilidad (GitHub)**: estructuración semántica en tarjetas interactivas (`.oss-card`) con categorización por dominios (Lectores de Pantalla & Automatización QA, Librerías Web & Validación WCAG, e Inclusión, SAAC & Accesibilidad Sensorial).
+  - Barra de filtrado accesible con estados dinámicos `aria-pressed`, anuncio en región en vivo (`role="status" aria-live="polite"`) y fallback visual sin JavaScript.
+  - Soporte completo para modo oscuro (`darkMode_v2.css`), modo de colores forzados del sistema operativo (`forced-colors: active`), anillos de foco de alto contraste (`:focus-visible`) y diseño adaptable a 320 px (WCAG 1.4.10 Reflow).
+  - Nuevo nodo estructurado `SoftwareSourceCode` (`#oss-nvda-a11y-auditor`) en el `@graph` JSON-LD de `index.html` y documentación técnica actualizada en `index.md`, `llms.txt` y `llms-full.txt`.
 
 ## [2.5.4] - 2026-10-26
 
